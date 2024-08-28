@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01dee96ac4de4c62956bb42688fff1d, type: 3}
+  m_Name: IMSParams
+  m_EditorClassIdentifier: 
+  TrackName: IMS
+  LAT_ORIGIN: 39.793154
+  LON_ORIGIN: -86.238866
+  HEIGHT_ORIGIN: 219
+  trackRotation: {x: 0, y: 0, z: 0}
+  carRotation: {x: 0, y: 180, z: 0}
+  trackScaling: {x: 1, y: 1, z: 1}
+  spawnDeltaPos: {x: 0, y: 0, z: -10}
+  carSpawnPositions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: -5}
+  - {x: 0, y: 0, z: -10}
+  - {x: 0, y: 0, z: -15}
+  - {x: 0, y: 0, z: -20}
+  - {x: 0, y: 0, z: -25}
+  - {x: 0, y: 0, z: -30}
+  - {x: 0, y: 0, z: -35}
+  - {x: 0, y: 0, z: -40}
+  - {x: 0, y: 0, z: -45}
+  - {x: 0, y: 0, z: -50}
+  - {x: 0, y: 0, z: -55}
+  - {x: 0, y: 0, z: -60}
+  - {x: 0, y: 0, z: -65}
+  - {x: 0, y: 0, z: -70}
+  - {x: 0, y: 0, z: -75}
+  - {x: 0, y: 0, z: -80}
+  - {x: 0, y: 0, z: -85}
+  - {x: 0, y: 0, z: -90}
+  - {x: 0, y: 0, z: -95}
+  - {x: 0, y: 0, z: -100}
+  - {x: 0, y: 0, z: -105}
+  - {x: 0, y: 0, z: -110}
+  - {x: 0, y: 0, z: -115}
+  - {x: 0, y: 0, z: -120}
+  - {x: 0, y: 0, z: -125}
+  - {x: 0, y: 0, z: -130}
+  - {x: 0, y: 0, z: -135}
+  - {x: 0, y: 0, z: -140}
+  - {x: 0, y: 0, z: -145}
+  - {x: 0, y: 0, z: -150}
+  - {x: 0, y: 0, z: -155}
+  - {x: 0, y: 0, z: -160}
+  - {x: 0, y: 0, z: -165}
+  - {x: 0, y: 0, z: -170}
+  - {x: 0, y: 0, z: -175}
+  - {x: 0, y: 0, z: -180}
+  - {x: 0, y: 0, z: -185}
+  - {x: 0, y: 0, z: -190}
+  - {x: 0, y: 0, z: -195}
+  - {x: 0, y: 0, z: -200}
+  - {x: 0, y: 0, z: -205}
+  - {x: 0, y: 0, z: -210}
+  - {x: 0, y: 0, z: -215}
+  - {x: 0, y: 0, z: -220}
+  - {x: 0, y: 0, z: -225}
+  - {x: 0, y: 0, z: -230}
+  - {x: 0, y: 0, z: -235}
+  - {x: 0, y: 0, z: -240}
+  - {x: 0, y: 0, z: -245}
+  - {x: 0, y: 0, z: -250}
+  - {x: 0, y: 0, z: -255}
+  trackInfo: {fileID: 11400000, guid: 9c05b5a52b7d1226cbda482e5a234828, type: 2}

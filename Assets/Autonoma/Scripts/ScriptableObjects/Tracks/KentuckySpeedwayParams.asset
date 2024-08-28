@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01dee96ac4de4c62956bb42688fff1d, type: 3}
+  m_Name: KentuckySpeedwayParams
+  m_EditorClassIdentifier: 
+  TrackName: Kentucky Speedway
+  LAT_ORIGIN: 38.712574
+  LON_ORIGIN: -84.918558
+  HEIGHT_ORIGIN: 223
+  trackRotation: {x: 0, y: 169, z: 0}
+  carRotation: {x: 0, y: -144, z: 5}
+  trackScaling: {x: 1, y: 1, z: 1}
+  spawnDeltaPos: {x: -5, y: 0, z: -5}
+  carSpawnPositions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 5, y: 0, z: -5}
+  - {x: 10, y: 0, z: -10}
+  - {x: 15, y: 0, z: -15}
+  - {x: 20, y: 0, z: -20}
+  - {x: 25, y: 0, z: -25}
+  - {x: 30, y: 0, z: -30}
+  - {x: 35, y: 0, z: -35}
+  - {x: 40, y: 0, z: -40}
+  - {x: 45, y: 0, z: -45}
+  - {x: 50, y: 0, z: -50}
+  - {x: 55, y: 0, z: -55}
+  - {x: 60, y: 0, z: -60}
+  - {x: 65, y: 0, z: -65}
+  - {x: 70, y: 0, z: -70}
+  - {x: 75, y: 0, z: -75}
+  - {x: 80, y: 0, z: -80}
+  - {x: 85, y: 0, z: -85}
+  - {x: 90, y: 0, z: -90}
+  - {x: 95, y: 0, z: -95}
+  - {x: 100, y: 0, z: -100}
+  - {x: 105, y: 0, z: -105}
+  - {x: 110, y: 0, z: -110}
+  - {x: 115, y: 0, z: -115}
+  - {x: 120, y: 0, z: -120}
+  - {x: 125, y: 0, z: -125}
+  - {x: 130, y: 0, z: -130}
+  - {x: 135, y: 0, z: -135}
+  - {x: 140, y: 0, z: -140}
+  - {x: 145, y: 0, z: -145}
+  - {x: 150, y: 0, z: -150}
+  - {x: 155, y: 0, z: -155}
+  - {x: 160, y: 0, z: -160}
+  - {x: 165, y: 0, z: -165}
+  - {x: 170, y: 0, z: -170}
+  - {x: 175, y: 0, z: -175}
+  - {x: 180, y: 0, z: -180}
+  - {x: 185, y: 0, z: -185}
+  - {x: 190, y: 0, z: -190}
+  - {x: 195, y: 0, z: -195}
+  - {x: 200, y: 0, z: -200}
+  - {x: 205, y: 0, z: -205}
+  - {x: 210, y: 0, z: -210}
+  - {x: 215, y: 0, z: -215}
+  - {x: 220, y: 0, z: -220}
+  - {x: 225, y: 0, z: -225}
+  - {x: 230, y: 0, z: -230}
+  - {x: 235, y: 0, z: -235}
+  - {x: 240, y: 0, z: -240}
+  - {x: 245, y: 0, z: -245}
+  - {x: 250, y: 0, z: -250}
+  - {x: 255, y: 0, z: -255}
+  trackInfo: {fileID: 11400000, guid: 496446b8874d48bc9accfea4eff6c72b, type: 2}
