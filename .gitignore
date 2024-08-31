@@ -73,9 +73,11 @@ crashlytics-build.properties
 
 
 # Large Track Prefabs (better to import)
+# Add any imported track assets to this to avoid overloading Git
 /Assets/IMSBankedPrefab/
 /Assets/IMSPrefab/
 /Assets/IMSBankingPrefab/
+/Assets/IMSBankedOldPrefab/
 /Assets/KentuckyPrefab/
-
+/ProjectSettings/
 

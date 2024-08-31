@@ -43,10 +43,12 @@ public class HUDManager : MonoBehaviour
     public TMP_InputField steerMean;
     public TMP_InputField steerVariance;
 
+    public Button injectPulseButton;
 
     void Start()
     {
         resetButton.onClick.AddListener( resetButtonPressed  );
+        injectPulseButton.onClick.AddListener( injectPulseButtonPressed  );
 
         steerMean.text = carController.steerNoiseGenerator.mean.ToString();
         steerVariance.text = carController.steerNoiseGenerator.variance.ToString();
@@ -90,6 +92,20 @@ public class HUDManager : MonoBehaviour
             wheel.driveTorque = 0f;
         }
     }
+
+    // Method called in Car Controller
+    void injectPulseButtonPressed()
+    {
+        if (carController != null)
+        {
+            carController.InjectPulse(); // Call the InjectPulse method from CarController
+        }
+        else
+        {
+            Debug.LogError("CarController reference is missing.");
+        }
+    }
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))

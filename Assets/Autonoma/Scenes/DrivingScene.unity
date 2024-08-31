@@ -1746,7 +1746,7 @@ MonoBehaviour:
   npc2VehiclePrefab: {fileID: 7209270688275563199, guid: e809bb1ba6022455a88ca77d0550ccbc, type: 3}
   kentuckyPrefab: {fileID: 1041701011421019593, guid: 883b7d05b5a49c7319a5c011eca575e5, type: 3}
   imsPrefab: {fileID: 2256583741266157160, guid: cb97f8699b2801abe89ef4378391bfde, type: 3}
-  imsBankedPrefab: {fileID: 2393770758800049007, guid: a6caa902651e1c0ddb035a5482e738eb, type: 3}
+  imsBankedPrefab: {fileID: 2181794777135109743, guid: 5f20a8e7c459958848ce539b08c718f9, type: 3}
   materials:
   - {fileID: 2100000, guid: 9880c9adf0e013c42bbc176e05cd544e, type: 2}
   - {fileID: 2100000, guid: 6de6ffd28aef1724a94edfe55836b35f, type: 2}

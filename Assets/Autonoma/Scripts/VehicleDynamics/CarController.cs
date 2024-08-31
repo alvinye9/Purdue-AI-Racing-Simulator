@@ -294,7 +294,9 @@ public class CarController : MonoBehaviour
     {
         getState();
         gearShifts();
-        calcWheelStAngle();
+        if (!isInjectingPulse){
+            calcWheelStAngle();
+        }
         calcBrakeTorque();
         calcEngineTorque();
         applyAeroForces();
@@ -311,6 +313,31 @@ public class CarController : MonoBehaviour
     {
         return Array.ConvertAll(doubleArray, item => (float)item);
     }
+
+    private bool isInjectingPulse = false;
+    // Functions to inject 300 ms 5 degree pulse to steering applied
+    public void InjectPulse()
+    {
+        float pulseAngle = 5.0f * Mathf.Deg2Rad; // Convert 5 degrees to radians
+        float pulseDuration = 0.3f; // 300 ms
+        StartCoroutine(InjectSteeringPulse(pulseAngle, pulseDuration));
+    }
+
+    // Coroutine to inject steering pulse
+    private IEnumerator InjectSteeringPulse(float angle, float duration)
+    {
+        isInjectingPulse = true;
+        float originalSteerApplied = steerAngleApplied;
+        steerAngleApplied += angle;
+        // Debug.Log("Altered steering: " + steerAngleApplied);
+        yield return new WaitForSeconds(duration);
+        steerAngleApplied = originalSteerApplied;
+        // Debug.Log("Steering returns back to: " + steerAngleApplied);
+        isInjectingPulse = false;
+    }
+
+
+
 
 // ============ Configuration File Functions ===============
     [System.Serializable]

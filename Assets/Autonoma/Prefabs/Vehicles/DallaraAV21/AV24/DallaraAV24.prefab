@@ -5606,7 +5606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3414981422621584317
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5651,7 +5651,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3573802129808822332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7846,6 +7846,8 @@ MonoBehaviour:
   modifiedFrequency: 150
   modifiedFrameId: utm
   modifiedChildFrameId: gps_top_ant1
+  pose_covariance: 0
+  twist_covariance: 0
   odomSim: {fileID: 2367501995259105064}
   gnssSim: {fileID: 1276364910490411621}
   imuSim: {fileID: 1852630012265285698}
@@ -7870,6 +7872,7 @@ MonoBehaviour:
   modifiedTopicName: /imu/data
   modifiedFrequency: 150
   modifiedFrameId: gps_top
+  orientation_covariance: 0.0001
   linear_acceleration_covariance: 0.0009
   angular_velocity_covariance: 0.00035
   imuSim: {fileID: 1852630012265285698}
@@ -7894,6 +7897,7 @@ MonoBehaviour:
   modifiedTopicName: /ins_twist
   modifiedFrequency: 150
   modifiedFrameId: gps_top
+  twist_covariance: 0
   imuSim: {fileID: 1852630012265285698}
   insSim: {fileID: 2650351264543764666}
 --- !u!114 &4254014722073836701
@@ -7917,6 +7921,7 @@ MonoBehaviour:
   modifiedTopicName: /fix
   modifiedFrequency: 150
   modifiedFrameId: gps_top_ant1
+  position_covariance: 0.0001
   gnssSim: {fileID: 1276364910490411621}
 --- !u!1 &5097809510578183039
 GameObject:
@@ -10719,6 +10724,8 @@ MonoBehaviour:
   rearDownforceGlobal: {x: 0, y: 0, z: 0}
   dragForce: {x: 0, y: 0, z: 0}
   dragForceGlobal: {x: 0, y: 0, z: 0}
+  bankingForce: {x: 0, y: 0, z: 0}
+  bankingForceGlobal: {x: 0, y: 0, z: 0}
   V: {x: 0, y: 0, z: 0}
   physicalActuator: 0
   vehicleState:
@@ -11960,6 +11967,8 @@ MonoBehaviour:
   modifiedFrequency: 150
   modifiedFrameId: utm
   modifiedChildFrameId: gps_com_ant1
+  pose_covariance: 0
+  twist_covariance: 0
   odomSim: {fileID: 8559567190625736841}
   gnssSim: {fileID: 7476927796417096252}
   imuSim: {fileID: 2962087100063474679}
@@ -11984,6 +11993,7 @@ MonoBehaviour:
   modifiedTopicName: /imu/data
   modifiedFrequency: 150
   modifiedFrameId: gps_com
+  orientation_covariance: 0.0001
   linear_acceleration_covariance: 0.0009
   angular_velocity_covariance: 0.00035
   imuSim: {fileID: 2962087100063474679}
@@ -12008,6 +12018,7 @@ MonoBehaviour:
   modifiedTopicName: /ins_twist
   modifiedFrequency: 150
   modifiedFrameId: gps_com
+  twist_covariance: 0
   imuSim: {fileID: 2962087100063474679}
   insSim: {fileID: 7971734390841681366}
 --- !u!114 &6623326602739002005
@@ -12031,6 +12042,7 @@ MonoBehaviour:
   modifiedTopicName: /fix
   modifiedFrequency: 150
   modifiedFrameId: gps_com_ant1
+  position_covariance: 0.0001
   gnssSim: {fileID: 7476927796417096252}
 --- !u!1 &8368226889100640804
 GameObject:
@@ -12326,6 +12338,8 @@ MonoBehaviour:
   modifiedFrequency: 150
   modifiedFrameId: utm
   modifiedChildFrameId: gps_bottom_ant1
+  pose_covariance: 0
+  twist_covariance: 0
   odomSim: {fileID: 2271686355297019082}
   gnssSim: {fileID: 937264494116879081}
   imuSim: {fileID: 9165012713855377893}
@@ -12350,6 +12364,7 @@ MonoBehaviour:
   modifiedTopicName: /imu/data
   modifiedFrequency: 150
   modifiedFrameId: gps_bottom
+  orientation_covariance: 0.0001
   linear_acceleration_covariance: 0.0009
   angular_velocity_covariance: 0.00035
   imuSim: {fileID: 9165012713855377893}
@@ -12374,6 +12389,7 @@ MonoBehaviour:
   modifiedTopicName: /ins_twist
   modifiedFrequency: 150
   modifiedFrameId: gps_bottom
+  twist_covariance: 0
   imuSim: {fileID: 9165012713855377893}
   insSim: {fileID: 3095526362630610121}
 --- !u!114 &8887205032323456383
@@ -12397,6 +12413,7 @@ MonoBehaviour:
   modifiedTopicName: /fix
   modifiedFrequency: 150
   modifiedFrameId: gps_bottom_ant1
+  position_covariance: 0.0001
   gnssSim: {fileID: 937264494116879081}
 --- !u!1 &8535690614254718050
 GameObject:
@@ -13149,6 +13166,98 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   heading2: 0
   secondaryAntPos: {x: 0, y: 0, z: 0}
+--- !u!1001 &7686979482890671234
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 5680628125143985666}
+    m_Modifications:
+    - target: {fileID: 2981485964404332988, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_text
+      value: Inject Steering Pulse (5 deg)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485964404332988, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485964404332988, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 62.487305
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 639.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266606, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -47
+      objectReference: {fileID: 0}
+    - target: {fileID: 2981485965919266607, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+      propertyPath: m_Name
+      value: Pulse
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+--- !u!114 &4885841188609078191 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2981485965919266605, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
+  m_PrefabInstance: {fileID: 7686979482890671234}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8436302807588711449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13253,6 +13362,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6412369717114208321}
     - target: {fileID: 3472893738558890868, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: injectPulse
+      value: 
+      objectReference: {fileID: 4885841188609078191}
+    - target: {fileID: 3472893738558890868, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: throttleMean
       value: 
       objectReference: {fileID: 573041478183225031}
@@ -13280,6 +13393,10 @@ PrefabInstance:
       propertyPath: throttleVariance
       value: 
       objectReference: {fileID: 3612988063464931348}
+    - target: {fileID: 3472893738558890868, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: injectPulseButton
+      value: 
+      objectReference: {fileID: 4885841188609078191}
     - target: {fileID: 3472893738558890868, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: wheels.Array.size
       value: 4
@@ -13536,6 +13653,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 8474116924963541328, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8474116926277152707, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
