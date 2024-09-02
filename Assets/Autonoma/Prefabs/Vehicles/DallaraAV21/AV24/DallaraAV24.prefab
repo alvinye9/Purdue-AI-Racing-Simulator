@@ -13175,7 +13175,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2981485964404332988, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
       propertyPath: m_text
-      value: Inject Steering Pulse (5 deg)
+      value: Inject Steering Disturbance
       objectReference: {fileID: 0}
     - target: {fileID: 2981485964404332988, guid: 3ace8e7f8e6284181b9e15426a954fd6, type: 3}
       propertyPath: m_fontSize

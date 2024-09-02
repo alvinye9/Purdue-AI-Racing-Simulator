@@ -49,6 +49,11 @@ public class CarController : MonoBehaviour
     public NoiseGenerator brakeNoiseGenerator;
     public NoiseGenerator throttleNoiseGenerator;
     // private string dataFilePath; //for changing gaussian noise on-the-fly
+
+    // Discrete transfer function History
+    private float[] steeringInputHistory = new float[2];  // [n-1, n-2]
+    private float[] steeringOutputHistory = new float[2]; // [n-1, n-2]
+
     void getState()
     {
         // take values from unity system and transform into VD coords
@@ -84,28 +89,47 @@ public class CarController : MonoBehaviour
     {   
         if (physicalActuator) 
         {
-            // Debug.Log("Physical Actuator Used for Calculating Steering Angle");
             steerAngleCmdBufPrev = steerAngleCmdBuf;
             steerAngleCmdBuf = HelperFunctions.pureDelay(steerAngleCmd,steerAngleCmdBufPrev, vehicleParams.steeringDelay);
             steerAngleApplied = steerAngleCmdBuf[vehicleParams.steeringDelay-1];
-            // Apply low pass filter and rate limiting to prevent abrupt changes in the applied steering angle
-            steerAngleApplied = HelperFunctions.lowPassFirstOrder(steerAngleApplied,steerAngleAppliedPrev,vehicleParams.steeringBandwidth);
-            steerAngleApplied = HelperFunctions.rateLimit(steerAngleApplied, steerAngleAppliedPrev , Mathf.Abs(vehicleParams.steeringRate/vehicleParams.steeringRatio)); //steerAngleApplied [rad]
+
+            // steerAngleApplied = HelperFunctions.lowPassFirstOrder(steerAngleApplied,steerAngleAppliedPrev,vehicleParams.steeringBandwidth); //dynamics approximated as LPF, not super accurate
+
+            steerAngleApplied = CalculateSteeringActuator(steerAngleApplied);
+
+            steerAngleApplied = HelperFunctions.rateLimit(steerAngleApplied, steerAngleAppliedPrev , Mathf.Abs(vehicleParams.steeringRate/vehicleParams.steeringRatio)); // Rate Limiter
             
             // Add Gaussian noise
             float steerNoise = (float)steerNoiseGenerator.NextGaussian();
             steerAngleApplied += steerNoise;
-
-            // Debug.Log("Steer Noise: " + steerNoise);
 
             steerAngleAppliedPrev = steerAngleApplied;
         }
         else
         {
             Debug.Log("Physical Actuator NOT used for Calculating Steering Angle");
-            steerAngleApplied = steerAngleCmd;
+            steerAngleApplied = steerAngleCmd; //radians
         }
     }
+
+    // New method for calculating steering actuator output based on Ethan's derived tf
+    private float CalculateSteeringActuator(float steeringInput)
+    {
+        // Calculate the new steering output using the transfer function
+        float newSteeringOutput = 1.9394f * steeringOutputHistory[0] - 0.9402f * steeringOutputHistory[1]
+                                  + 0.00041598f * steeringInputHistory[0] + 0.00040751f * steeringInputHistory[1];
+
+        // Update input history
+        steeringInputHistory[1] = steeringInputHistory[0];  // n-2 
+        steeringInputHistory[0] = steeringInput;            // n-1 = current input
+
+        // Update output history
+        steeringOutputHistory[1] = steeringOutputHistory[0];  // n-2 = n-1
+        steeringOutputHistory[0] = newSteeringOutput;         // n-1 = new output
+
+        return newSteeringOutput;
+    }
+
 
     void calcBrakeTorque()
     {   
@@ -255,6 +279,11 @@ public class CarController : MonoBehaviour
         carBody.mass = vehicleParams.mass;
         carBody.inertiaTensor = vehicleParams.Inertia;
         carBody.centerOfMass = vehicleParams.centerOfMass;
+
+        steeringInputHistory[0] = 0f;
+        steeringInputHistory[1] = 0f;
+        steeringOutputHistory[0] = 0f;
+        steeringOutputHistory[1] = 0f;
     }
 
 
@@ -290,8 +319,9 @@ public class CarController : MonoBehaviour
         Debug.DrawRay(transform.TransformPoint(vehicleParams.dragForcePos), dragForceGlobal*0.001f, Color.green);
     }
     
-    void FixedUpdate()
+    void FixedUpdate() //500 hz
     {
+        // Debug.Log(Time.fixedDeltaTime);
         getState();
         gearShifts();
         if (!isInjectingPulse){
@@ -315,15 +345,16 @@ public class CarController : MonoBehaviour
     }
 
     private bool isInjectingPulse = false;
-    // Functions to inject 300 ms 5 degree pulse to steering applied
+    // Functions to inject 3x 100 ms 5 degree pulses to steering applied, sperated by 300 ms apart
     public void InjectPulse()
     {
-        float pulseAngle = 5.0f * Mathf.Deg2Rad; // Convert 5 degrees to radians
-        float pulseDuration = 0.3f; // 300 ms
-        StartCoroutine(InjectSteeringPulse(pulseAngle, pulseDuration));
+        float pulseAngle = -20.0f * Mathf.Deg2Rad; // Approx 5 degrees
+        float pulseDuration = 0.1f; // 100 ms
+        float pulseInterval = 0.1f; // 300 ms
+        StartCoroutine(InjectMultipleSteeringPulses(pulseAngle, pulseDuration, pulseInterval, 3));
     }
 
-    // Coroutine to inject steering pulse
+    // Coroutine to inject  a single steering pulse
     private IEnumerator InjectSteeringPulse(float angle, float duration)
     {
         isInjectingPulse = true;
@@ -336,6 +367,35 @@ public class CarController : MonoBehaviour
         isInjectingPulse = false;
     }
 
+    // Coroutine to inject multiple steering pulses
+    private IEnumerator InjectMultipleSteeringPulses(float angle, float duration, float interval, int numPulses)
+    {
+        isInjectingPulse = true; // Mark as injecting pulse
+
+        float originalSteerApplied = steerAngleApplied; // Save the original steering angle
+
+        for (int i = 0; i < numPulses; i++)
+        {
+            // Inject a pulse
+            steerAngleApplied += angle;
+            Debug.Log($"Pulse {i + 1}: Altered steering to: {steerAngleApplied}");
+
+            // Wait for the duration of the pulse
+            yield return new WaitForSeconds(duration);
+
+            // Reset the steering angle
+            steerAngleApplied = originalSteerApplied;
+            Debug.Log($"Pulse {i + 1}: Steering returns back to: {steerAngleApplied}");
+
+            // Wait for the interval before the next pulse, except after the last pulse
+            if (i < numPulses - 1)
+            {
+                yield return new WaitForSeconds(interval);
+            }
+        }
+
+        isInjectingPulse = false; // Mark as not injecting pulse
+    }
 
 
 
