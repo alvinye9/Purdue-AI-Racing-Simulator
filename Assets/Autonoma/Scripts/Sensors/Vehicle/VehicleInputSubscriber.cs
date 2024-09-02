@@ -98,7 +98,7 @@ public class VehicleInputSubscriber : MonoBehaviour
         carController.steerAngleCmd = msg.Steering_cmd/carController.vehicleParams.steeringRatio; // max 200
         float maxAngleAtwheel = Mathf.Abs(carController.vehicleParams.maxSteeringAngle/carController.vehicleParams.steeringRatio);
         carController.steerAngleCmd = Mathf.Clamp(carController.steerAngleCmd,-maxAngleAtwheel,maxAngleAtwheel);
-        // Debug.Log("Steering Cmd: " + carController.steerAngleCmd ); //working
+
         carController.throttleCmd = msg.Throttle_cmd / 100f;
         carController.throttleCmd = Mathf.Clamp(carController.throttleCmd,0f,1f);
         carController.brakeCmd = msg.Brake_cmd; // 1 pasca = 1* 0.001*0.54nm
