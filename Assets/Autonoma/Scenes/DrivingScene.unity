@@ -1757,6 +1757,7 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 6d99debe121f1b64388a5eb194517808, type: 2}
   - {fileID: 2100000, guid: 0a642c0d4a4db3649a5674ac8d18c9c0, type: 2}
   - {fileID: 2100000, guid: 5f280d60d0b19f944af9a4da90382dfe, type: 2}
+  - {fileID: 2100000, guid: a687b7fb2dd6cc2d083184b22183a2f0, type: 2}
   raceControlMenu: {fileID: 2085758054}
   globalCameraManager: {fileID: 1737382122}
 --- !u!4 &1244294144

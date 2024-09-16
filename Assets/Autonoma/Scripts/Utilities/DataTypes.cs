@@ -283,6 +283,7 @@ public enum BodyColor
     YELLOW = 6,
     WHITE = 7,
     CARBON = 8,
+    PETE = 9,
 }
 
 public enum ControlType

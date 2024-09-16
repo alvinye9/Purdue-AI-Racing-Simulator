@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 265093349367042155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CoM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 1341395888945874675}
   - component: {fileID: 5423055168861571885}
   - component: {fileID: 3160944500062018388}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Race Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 778920747978058139}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -147,7 +147,7 @@ GameObject:
   - component: {fileID: 7764868907270333604}
   - component: {fileID: 5661810310451281154}
   - component: {fileID: 8169386783874695280}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,13 +228,13 @@ GameObject:
   m_Component:
   - component: {fileID: 8677418183653762106}
   - component: {fileID: 3512497580210409985}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: StateMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8677418183653762106
 Transform:
   m_ObjectHideFlags: 0
@@ -276,7 +276,7 @@ GameObject:
   - component: {fileID: 8682121675914494519}
   - component: {fileID: 699454990613697336}
   - component: {fileID: 7466215723008835166}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lap Timer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -364,7 +364,7 @@ GameObject:
   - component: {fileID: 8702814784834713146}
   - component: {fileID: 5068994879551247576}
   - component: {fileID: 7715356261801836254}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Chassis
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -451,7 +451,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2855584503223177042}
   - component: {fileID: 8200978788070277805}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: secondary_antenna_bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -496,7 +496,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7141177793444311766}
   - component: {fileID: 4365495329775686450}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: primary_antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -558,7 +558,7 @@ GameObject:
   - component: {fileID: 1337979631920797961}
   - component: {fileID: 6303681955522639068}
   - component: {fileID: 5980423138418892843}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FrontLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -643,7 +643,7 @@ GameObject:
   - component: {fileID: 2899046438883807965}
   - component: {fileID: 4639678421065763920}
   - component: {fileID: 3500007963875453826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,7 +724,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3120325384901687419}
   - component: {fileID: 2502420063283228160}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: secondary_antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -769,7 +769,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2339604242924694627}
   - component: {fileID: 2720712265146697749}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cameras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -820,7 +820,7 @@ GameObject:
   - component: {fileID: 5373187130177733118}
   - component: {fileID: 3098452644296850309}
   - component: {fileID: 2124973386110148781}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RearRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -906,7 +906,7 @@ GameObject:
   - component: {fileID: 2597197326491257032}
   - component: {fileID: 7777473554518491007}
   - component: {fileID: 1370581462633992112}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CameraSide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1103,7 +1103,7 @@ GameObject:
   - component: {fileID: 4323664406288097781}
   - component: {fileID: 3391155637642111517}
   - component: {fileID: 3658472608119463124}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Unit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1272,7 +1272,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3741342367577763096}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Vehicle Sensors
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1296,6 +1296,7 @@ Transform:
   - {fileID: 1341395888945874675}
   - {fileID: 8677418183653762106}
   - {fileID: 121783973230755657}
+  - {fileID: 5009513320595909130}
   m_Father: {fileID: 168215506830436621}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1310,7 +1311,7 @@ GameObject:
   - component: {fileID: 8498884682372632254}
   - component: {fileID: 1026636291454444237}
   - component: {fileID: 3477814418998174725}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BrakeLights
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1392,7 +1393,7 @@ GameObject:
   - component: {fileID: 5484117529459276321}
   - component: {fileID: 6648189097873639589}
   - component: {fileID: 124598845395936157}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1473,13 +1474,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1601746629100327062}
   - component: {fileID: 8131927037497070496}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Vectornav VN300
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1601746629100327062
 Transform:
   m_ObjectHideFlags: 0
@@ -1530,7 +1531,7 @@ GameObject:
   - component: {fileID: 2908494725573602331}
   - component: {fileID: 2962087100063474679}
   - component: {fileID: 7971734390841681366}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: imu_com
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1594,7 +1595,7 @@ GameObject:
   - component: {fileID: 1276364910490411621}
   - component: {fileID: 2367501995259105064}
   - component: {fileID: 2650351264543764666}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: primary_antenna_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1685,7 +1686,7 @@ GameObject:
   - component: {fileID: 9142148648830131746}
   - component: {fileID: 7152584463356708664}
   - component: {fileID: 4455334378670258449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CameraCockpit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1935,7 +1936,7 @@ GameObject:
   - component: {fileID: 3498479231007707235}
   - component: {fileID: 3068451020848101259}
   - component: {fileID: 3524256782579215021}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FrontRightWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2020,13 +2021,13 @@ GameObject:
   - component: {fileID: 121783973230755657}
   - component: {fileID: 6034879887106396305}
   - component: {fileID: 2698108564109349669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Raptor Inputs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &121783973230755657
 Transform:
   m_ObjectHideFlags: 0
@@ -2072,7 +2073,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49382583f3879461996c5b9f14d449c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  toRaptorTopic: /to_raptor
+  toRaptorTopic: /npc/to_raptor
   qosSettings:
     ReliabilityPolicy: 0
     DurabilityPolicy: 0
@@ -2088,7 +2089,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5688631160801622636}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2118,7 +2119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 168215506830436621}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: base_link
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2154,7 +2155,7 @@ GameObject:
   - component: {fileID: 3188772898658154026}
   - component: {fileID: 796775316920622589}
   - component: {fileID: 1475578800882164574}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Speed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2324,7 +2325,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4132205350820044561}
   - component: {fileID: 2816774568100383192}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RearRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2409,7 +2410,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8953254380639230531}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Models
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2444,7 +2445,7 @@ GameObject:
   - component: {fileID: 8302677348758105770}
   - component: {fileID: 8263471424214434861}
   - component: {fileID: 7242920845331687714}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: CameraBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2654,7 +2655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4244207851492798448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: URDF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2685,7 +2686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2927180454183878639}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Display
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2709,6 +2710,56 @@ Transform:
   m_Father: {fileID: 2952970676091985794}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &4852016188867953747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5009513320595909130}
+  - component: {fileID: 5964326202113643047}
+  m_Layer: 8
+  m_Name: Ghost Vehicle Inputs
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5009513320595909130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4852016188867953747}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3741342367577763096}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5964326202113643047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4852016188867953747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9214ce3fc5f155a43860b1e91586f1b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghostVehiclePositionTopic: /planning/ghost_veh_position
+  qosSettings:
+    ReliabilityPolicy: 0
+    DurabilityPolicy: 0
+    HistoryPolicy: 0
+    Depth: 0
+  npcCarController: {fileID: 2641844124633355042}
 --- !u!1 &4981053460932415300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2730,7 +2781,7 @@ GameObject:
   - component: {fileID: 6212924258190173930}
   - component: {fileID: 1347180254051482592}
   - component: {fileID: 4254014722073836701}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Novatel PWRPAK7 Top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2770,8 +2821,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /rawimu
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/rawimu
   modifiedFrequency: 125
   modifiedFrameId: 
   imuSim: {fileID: 1852630012265285698}
@@ -2792,8 +2843,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /bestgnsspos
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/bestgnsspos
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 1276364910490411621}
@@ -2814,8 +2865,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /bestpos
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/bestpos
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 1276364910490411621}
@@ -2836,8 +2887,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /bestgnssvel
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/bestgnssvel
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 1276364910490411621}
@@ -2858,8 +2909,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /bestvel
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/bestvel
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 1276364910490411621}
@@ -2880,8 +2931,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /inspva
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/inspva
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 1276364910490411621}
@@ -2903,8 +2954,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /heading2
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/heading2
   modifiedFrequency: 100
   modifiedFrameId: 
   heading2Sim: {fileID: 786613502490750100}
@@ -2925,8 +2976,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /imu/data_raw
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/imu/data_raw
   modifiedFrequency: 200
   modifiedFrameId: gps_top_imu
   linear_acceleration_covariance: 0.0009
@@ -2949,11 +3000,13 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /odom
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/odom
   modifiedFrequency: 150
   modifiedFrameId: utm
   modifiedChildFrameId: gps_top_ant1
+  pose_covariance: 0
+  twist_covariance: 0
   odomSim: {fileID: 2367501995259105064}
   gnssSim: {fileID: 1276364910490411621}
   imuSim: {fileID: 1852630012265285698}
@@ -2974,10 +3027,11 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /imu/data
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/imu/data
   modifiedFrequency: 150
   modifiedFrameId: gps_top
+  orientation_covariance: 0.0001
   linear_acceleration_covariance: 0.0009
   angular_velocity_covariance: 0.00035
   imuSim: {fileID: 1852630012265285698}
@@ -2998,10 +3052,11 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /ins_twist
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/ins_twist
   modifiedFrequency: 150
   modifiedFrameId: gps_top
+  twist_covariance: 0
   imuSim: {fileID: 1852630012265285698}
   insSim: {fileID: 2650351264543764666}
 --- !u!114 &4254014722073836701
@@ -3021,10 +3076,11 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_top
-  modifiedTopicName: /fix
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_top/fix
   modifiedFrequency: 150
   modifiedFrameId: gps_top_ant1
+  position_covariance: 0.0001
   gnssSim: {fileID: 1276364910490411621}
 --- !u!1 &5097809510578183039
 GameObject:
@@ -3036,7 +3092,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2025591404495882011}
   - component: {fileID: 2256715644974240670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FrontLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3123,7 +3179,7 @@ GameObject:
   - component: {fileID: 5166511958387835812}
   - component: {fileID: 622470623104667729}
   - component: {fileID: 6275786521238762999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3203,7 +3259,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2227532008319434199}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3238,7 +3294,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3051158044020413298}
   - component: {fileID: 8862465883945805614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RearLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3325,7 +3381,7 @@ GameObject:
   - component: {fileID: 5242657971242237727}
   - component: {fileID: 5746452513077402720}
   - component: {fileID: 4738499694965406777}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Steering_wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3407,7 +3463,7 @@ GameObject:
   - component: {fileID: 8369990351297348489}
   - component: {fileID: 2045153692149855603}
   - component: {fileID: 7706606495872483614}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3578,7 +3634,7 @@ GameObject:
   - component: {fileID: 7804304509004099775}
   - component: {fileID: 7476927796417096252}
   - component: {fileID: 8559567190625736841}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: primary_antenna_com
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3653,7 +3709,7 @@ GameObject:
   - component: {fileID: 5095448213874689740}
   - component: {fileID: 4989324796483684242}
   - component: {fileID: 7837302687997053683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RearLeftWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3737,7 +3793,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5148114995979938185}
   - component: {fileID: 4699972623634173051}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: imu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3786,7 +3842,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4482297241577972587}
   - component: {fileID: 1917767146925692908}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RearDifferential
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3837,7 +3893,7 @@ GameObject:
   - component: {fileID: 2733320378925327540}
   - component: {fileID: 8285166458844360552}
   - component: {fileID: 7516912410854777596}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3917,7 +3973,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2457366968186516150}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3950,7 +4006,7 @@ GameObject:
   - component: {fileID: 6815982442195808363}
   - component: {fileID: 7319405248093572083}
   - component: {fileID: 2934921997890924433}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4032,7 +4088,7 @@ GameObject:
   - component: {fileID: 426521637897781606}
   - component: {fileID: 4675790496635427296}
   - component: {fileID: 8033598555690376814}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4086,7 +4142,7 @@ GameObject:
   - component: {fileID: 545990755610022719}
   - component: {fileID: 9218124812783901865}
   - component: {fileID: 3993576962512676267}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4168,7 +4224,8 @@ GameObject:
   - component: {fileID: 1709914767340450853}
   - component: {fileID: 355629541803049267}
   - component: {fileID: 264682144810106634}
-  m_Layer: 0
+  - component: {fileID: 2641844124633355042}
+  m_Layer: 8
   m_Name: npcDallaraAV24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4221,7 +4278,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7209270688275563199}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c26f01681b0b77d4184067fed66a9ee5, type: 3}
   m_Name: 
@@ -4256,6 +4313,8 @@ MonoBehaviour:
   rearDownforceGlobal: {x: 0, y: 0, z: 0}
   dragForce: {x: 0, y: 0, z: 0}
   dragForceGlobal: {x: 0, y: 0, z: 0}
+  bankingForce: {x: 0, y: 0, z: 0}
+  bankingForceGlobal: {x: 0, y: 0, z: 0}
   V: {x: 0, y: 0, z: 0}
   physicalActuator: 0
   vehicleState:
@@ -4282,6 +4341,20 @@ MonoBehaviour:
     TEngine: 0
     TAxle: 0
     rpmEngine: 0
+--- !u!114 &2641844124633355042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209270688275563199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0bc899fe0747b02c9e8915d63b2737e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  carBody: {fileID: 355629541803049267}
+  recievedGhostPosition: 0
 --- !u!1 &7293124350473359422
 GameObject:
   m_ObjectHideFlags: 0
@@ -4292,7 +4365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7995123504212125032}
   - component: {fileID: 1852630012265285698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: imu_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4341,7 +4414,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6581405349750546391}
   - component: {fileID: 4632378104337921854}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Keyboard Inputs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4392,7 +4465,7 @@ GameObject:
   - component: {fileID: 8588754099198735822}
   - component: {fileID: 3833638218969755593}
   - component: {fileID: 3456712645695549670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: steering_wheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4502,7 +4575,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7457803249511159390}
   - component: {fileID: 2508216439780357768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FrontDifferential
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4553,7 +4626,7 @@ GameObject:
   - component: {fileID: 7553621590276622520}
   - component: {fileID: 4981725081452020137}
   - component: {fileID: 1316118982432992257}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sphere (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4634,7 +4707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8407998404640193794}
   - component: {fileID: 31108458706616580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FrontRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4719,7 +4792,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9094326747670652391}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4765,13 +4838,13 @@ GameObject:
   - component: {fileID: 3926320087379522216}
   - component: {fileID: 3231704798504243230}
   - component: {fileID: 6623326602739002005}
-  m_Layer: 0
-  m_Name: Novatel PWRPAK7 Top
+  m_Layer: 8
+  m_Name: Novatel PWRPAK7 COM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2038341668749198976
 Transform:
   m_ObjectHideFlags: 0
@@ -4806,7 +4879,7 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /npc
-  modifiedTopicName: /rawimu
+  modifiedTopicName: /COM/rawimu
   modifiedFrequency: 125
   modifiedFrameId: 
   imuSim: {fileID: 2962087100063474679}
@@ -4828,7 +4901,7 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /npc
-  modifiedTopicName: /bestgnsspos
+  modifiedTopicName: /COM/bestgnsspos
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 7476927796417096252}
@@ -4850,7 +4923,7 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /npc
-  modifiedTopicName: /bestpos
+  modifiedTopicName: /COM/bestpos
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 7476927796417096252}
@@ -4872,7 +4945,7 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /npc
-  modifiedTopicName: /bestgnssvel
+  modifiedTopicName: /COM/bestgnssvel
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 7476927796417096252}
@@ -4894,7 +4967,7 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /npc
-  modifiedTopicName: /bestvel
+  modifiedTopicName: /COM/bestvel
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 7476927796417096252}
@@ -4916,7 +4989,7 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /npc
-  modifiedTopicName: /inspva
+  modifiedTopicName: /COM/inspva
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 7476927796417096252}
@@ -4939,7 +5012,7 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /npc
-  modifiedTopicName: /heading2
+  modifiedTopicName: /COM/heading2
   modifiedFrequency: 100
   modifiedFrameId: 
   heading2Sim: {fileID: 3550243041375486607}
@@ -4961,7 +5034,7 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /npc
-  modifiedTopicName: /imu/data_raw
+  modifiedTopicName: /COM/imu/data_raw
   modifiedFrequency: 150
   modifiedFrameId: gps_com_imu
   linear_acceleration_covariance: 0.0009
@@ -4985,10 +5058,12 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /npc
-  modifiedTopicName: /odom
+  modifiedTopicName: /COM/odom
   modifiedFrequency: 150
   modifiedFrameId: utm
   modifiedChildFrameId: gps_com_ant1
+  pose_covariance: 0
+  twist_covariance: 0
   odomSim: {fileID: 8559567190625736841}
   gnssSim: {fileID: 7476927796417096252}
   imuSim: {fileID: 2962087100063474679}
@@ -5009,10 +5084,11 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /COM
-  modifiedTopicName: /imu/data
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /COM/imu/data
   modifiedFrequency: 150
   modifiedFrameId: gps_com
+  orientation_covariance: 0.0001
   linear_acceleration_covariance: 0.0009
   angular_velocity_covariance: 0.00035
   imuSim: {fileID: 2962087100063474679}
@@ -5033,10 +5109,11 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /COM
-  modifiedTopicName: /ins_twist
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /COM/ins_twist
   modifiedFrequency: 150
   modifiedFrameId: gps_com
+  twist_covariance: 0
   imuSim: {fileID: 2962087100063474679}
   insSim: {fileID: 7971734390841681366}
 --- !u!114 &6623326602739002005
@@ -5056,10 +5133,11 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /COM
-  modifiedTopicName: /fix
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /COM/fix
   modifiedFrequency: 150
   modifiedFrameId: gps_com_ant1
+  position_covariance: 0.0001
   gnssSim: {fileID: 7476927796417096252}
 --- !u!1 &8368226889100640804
 GameObject:
@@ -5071,7 +5149,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4529398539625728080}
   - component: {fileID: 9165012713855377893}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: imu_bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5131,7 +5209,7 @@ GameObject:
   - component: {fileID: 8940288827256647114}
   - component: {fileID: 7066934701519186640}
   - component: {fileID: 8887205032323456383}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Novatel PWRPAK7 Bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5171,8 +5249,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /rawimu
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/rawimu
   modifiedFrequency: 125
   modifiedFrameId: 
   imuSim: {fileID: 9165012713855377893}
@@ -5193,8 +5271,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /bestgnsspos
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/bestgnsspos
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 937264494116879081}
@@ -5215,8 +5293,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /bestpos
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/bestpos
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 937264494116879081}
@@ -5237,8 +5315,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /bestgnssvel
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/bestgnssvel
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 937264494116879081}
@@ -5259,8 +5337,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /bestvel
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/bestvel
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 937264494116879081}
@@ -5281,8 +5359,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /inspva
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/inspva
   modifiedFrequency: 100
   modifiedFrameId: 
   gnssSim: {fileID: 937264494116879081}
@@ -5304,8 +5382,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /heading2
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/heading2
   modifiedFrequency: 100
   modifiedFrameId: 
   heading2Sim: {fileID: 8200978788070277805}
@@ -5326,8 +5404,8 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /imu/data_raw
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/imu/data_raw
   modifiedFrequency: 150
   modifiedFrameId: gps_bottom_imu
   linear_acceleration_covariance: 0.0009
@@ -5350,11 +5428,13 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /odom
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/odom
   modifiedFrequency: 150
   modifiedFrameId: utm
   modifiedChildFrameId: gps_bottom_ant1
+  pose_covariance: 0
+  twist_covariance: 0
   odomSim: {fileID: 2271686355297019082}
   gnssSim: {fileID: 937264494116879081}
   imuSim: {fileID: 9165012713855377893}
@@ -5375,10 +5455,11 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /imu/data
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/imu/data
   modifiedFrequency: 150
   modifiedFrameId: gps_bottom
+  orientation_covariance: 0.0001
   linear_acceleration_covariance: 0.0009
   angular_velocity_covariance: 0.00035
   imuSim: {fileID: 9165012713855377893}
@@ -5399,10 +5480,11 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /ins_twist
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/ins_twist
   modifiedFrequency: 150
   modifiedFrameId: gps_bottom
+  twist_covariance: 0
   imuSim: {fileID: 9165012713855377893}
   insSim: {fileID: 3095526362630610121}
 --- !u!114 &8887205032323456383
@@ -5422,10 +5504,11 @@ MonoBehaviour:
     DurabilityPolicy: 2
     HistoryPolicy: 1
     Depth: 10
-  modifiedRosNamespace: /novatel_bottom
-  modifiedTopicName: /fix
+  modifiedRosNamespace: /npc
+  modifiedTopicName: /novatel_bottom/fix
   modifiedFrequency: 150
   modifiedFrameId: gps_bottom_ant1
+  position_covariance: 0.0001
   gnssSim: {fileID: 937264494116879081}
 --- !u!1 &8859879946194110538
 GameObject:
@@ -5440,7 +5523,7 @@ GameObject:
   - component: {fileID: 5443588839851123370}
   - component: {fileID: 3493830329575049262}
   - component: {fileID: 4062718848310937108}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Raptor Outputs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5520,6 +5603,8 @@ MonoBehaviour:
   ws_front_right: 0
   ws_rear_left: 0
   ws_rear_right: 0
+  brake_bias: 0
+  brake_bias_aim_switch: 0
 --- !u!114 &5443588839851123370
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5612,7 +5697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4904780021382527813}
   - component: {fileID: 3550243041375486607}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: secondary_antenna
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5659,7 +5744,7 @@ GameObject:
   - component: {fileID: 937264494116879081}
   - component: {fileID: 2271686355297019082}
   - component: {fileID: 3095526362630610121}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: primary_antenna_bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5746,7 +5831,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3558366476853582130}
   - component: {fileID: 786613502490750100}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: secondary_antenna_top
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5788,6 +5873,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1709914767340450853}
     m_Modifications:
+    - target: {fileID: 58014847429622812, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 84024072210346454, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5796,6 +5885,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 105800706280258165, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 232873621287037711, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5804,6 +5897,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 1574626901594321608, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1685147850231998353, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1876826825256899824, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontSize
       value: 6.9
@@ -5816,6 +5917,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 2477348251732741945, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2531341638578968573, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2531341638578968575, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5824,6 +5933,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 2531341639138524220, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2531341639138524222, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5832,6 +5945,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 2531341639490197193, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2531341639490197195, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5840,6 +5957,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 543803666187612670, guid: dda5002e99f4e4ac4a3619ce39c5f0e5, type: 2}
+    - target: {fileID: 2531341639670597129, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2531341639670597131, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5848,6 +5969,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 543803666187612670, guid: dda5002e99f4e4ac4a3619ce39c5f0e5, type: 2}
+    - target: {fileID: 2531341639839496418, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2531341639839496444, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5856,6 +5981,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 543803666187612670, guid: dda5002e99f4e4ac4a3619ce39c5f0e5, type: 2}
+    - target: {fileID: 2531341640070973325, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 2531341640070973327, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5864,6 +5993,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 2542644345040919956, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2796421159699825963, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3472893738558890868, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: car
       value: 
@@ -5912,6 +6049,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 3800662806604568208, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3979538834006360935, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -5920,6 +6061,18 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4045904915876123146, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4230362034145079923, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276362508873024870, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307237407741723163, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -6009,8 +6162,16 @@ PrefabInstance:
       value: HUD
       objectReference: {fileID: 0}
     - target: {fileID: 4307237407741723166, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307237407741723166, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307237407759966244, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4307237408279873208, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
@@ -6020,6 +6181,26 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4307237408279873215, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307237408680004720, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307237409085603590, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307237409526688524, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307237409639220908, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307237409639220909, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontSize
       value: 26.55
@@ -6032,6 +6213,18 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4307237409646470113, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307237409671697896, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4307237409756964760, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4307237409756964761, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -6068,6 +6261,26 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4796832247083372098, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5157691091077811018, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5264986396999440832, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5497808478329982446, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5610943250467628310, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5657347939386734222, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -6088,6 +6301,22 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6074454790980416910, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306617427131634639, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6438104438158088897, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6444239287580391756, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6517185064689468993, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -6096,6 +6325,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6618160314110661642, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6692650134187760398, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -6120,6 +6353,14 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 7574036581532099252, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7816614190481156161, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7841400009417545343, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontSize
       value: 8.5
@@ -6140,6 +6381,18 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 8321677555950152643, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474116924963541328, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8474116926277152705, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 8474116926277152707, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_fontAsset
       value: 
@@ -6148,6 +6401,10 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 543803666187612670, guid: dda5002e99f4e4ac4a3619ce39c5f0e5, type: 2}
+    - target: {fileID: 8865985129975621946, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 9033892979199678910, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: lapTimer
       value: 
@@ -6155,6 +6412,14 @@ PrefabInstance:
     - target: {fileID: 9033892979199678910, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9122070096291527263, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9210108290363957418, guid: b10632e639e294843b8c39d31d56ace2, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b10632e639e294843b8c39d31d56ace2, type: 3}

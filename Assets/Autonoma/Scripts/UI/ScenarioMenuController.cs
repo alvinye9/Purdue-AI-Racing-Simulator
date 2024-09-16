@@ -340,7 +340,7 @@ public class ScenarioMenuController : MonoBehaviour
             fillControlTypeDropdown(0,0);
             fillControlTypeDropdown(0,1);
             fillControlTypeDropdown(0,2); 
-            fillColorDropdown(0,0);
+            fillColorDropdown(9,0);
             fillColorDropdown(0,1);
             fillColorDropdown(0,2); 
 
@@ -354,41 +354,59 @@ public class ScenarioMenuController : MonoBehaviour
 
     private void checkForDefaultVehSetups()
     {
-        if (LoadedVehSetups.Count < 2)
+        if (LoadedVehSetups.Count < 1)
         {
-            tmpVehSetup.Name = "Default RC";
-            tmpVehSetup.IsLSD = true;
-            tmpVehSetup.IsIdealSteering = false;
-            tmpVehSetup.SteeringDelay = 0.01f;
-            tmpVehSetup.SteeringBW = 5f;
-            tmpVehSetup.MaxSteeringAngle = 240f;
-            tmpVehSetup.MaxSteeringRate = 500f;
-            tmpVehSetup.FrontRollBarRate = 463593f;
-            tmpVehSetup.RearRollBarRate = 358225f;
-            tmpVehSetup.SteeringRatio = 15f;
-            tmpVehSetup.BrakeConstant = 0.55f; 
-            tmpVehSetup.IsThermalTyre = true;
-            tmpVehSetup.AmbientTemp = 20f;
-            tmpVehSetup.TrackTemp = 25f;
-
-            saveVehicleSetup(tmpVehSetup);
-
-            tmpVehSetup.Name = "Default Oval";
+            tmpVehSetup.Name = "Default AV24";
             tmpVehSetup.IsLSD = false;
             tmpVehSetup.IsIdealSteering = false;
-            tmpVehSetup.SteeringDelay = 0.01f;
-            tmpVehSetup.SteeringBW = 5f;
+            tmpVehSetup.SteeringDelay = 0.065f;
+            tmpVehSetup.SteeringBW = 1.3f;
             tmpVehSetup.MaxSteeringAngle = 200f;
             tmpVehSetup.MaxSteeringRate = 360f;
             tmpVehSetup.FrontRollBarRate = 463593f;
             tmpVehSetup.RearRollBarRate = 0f;
-            tmpVehSetup.SteeringRatio = 19.5f;
-            tmpVehSetup.BrakeConstant = 0.55f;
+            tmpVehSetup.SteeringRatio = 15.015f;
+            tmpVehSetup.BrakeConstant = 0.55f; 
             tmpVehSetup.IsThermalTyre = true;
             tmpVehSetup.AmbientTemp = 20f;
             tmpVehSetup.TrackTemp = 25f;
-
+         
             saveVehicleSetup(tmpVehSetup);
+
+            // saveVehicleSetup(tmpVehSetup);
+            // tmpVehSetup.Name = "Default RC";
+            // tmpVehSetup.IsLSD = true;
+            // tmpVehSetup.IsIdealSteering = false;
+            // tmpVehSetup.SteeringDelay = 0.01f;
+            // tmpVehSetup.SteeringBW = 5f;
+            // tmpVehSetup.MaxSteeringAngle = 240f;
+            // tmpVehSetup.MaxSteeringRate = 500f;
+            // tmpVehSetup.FrontRollBarRate = 463593f;
+            // tmpVehSetup.RearRollBarRate = 358225f;
+            // tmpVehSetup.SteeringRatio = 15f;
+            // tmpVehSetup.BrakeConstant = 0.55f; 
+            // tmpVehSetup.IsThermalTyre = true;
+            // tmpVehSetup.AmbientTemp = 20f;
+            // tmpVehSetup.TrackTemp = 25f;
+
+            // saveVehicleSetup(tmpVehSetup);
+
+            // tmpVehSetup.Name = "Default Oval";
+            // tmpVehSetup.IsLSD = false;
+            // tmpVehSetup.IsIdealSteering = false;
+            // tmpVehSetup.SteeringDelay = 0.01f;
+            // tmpVehSetup.SteeringBW = 5f;
+            // tmpVehSetup.MaxSteeringAngle = 200f;
+            // tmpVehSetup.MaxSteeringRate = 360f;
+            // tmpVehSetup.FrontRollBarRate = 463593f;
+            // tmpVehSetup.RearRollBarRate = 0f;
+            // tmpVehSetup.SteeringRatio = 19.5f;
+            // tmpVehSetup.BrakeConstant = 0.55f;
+            // tmpVehSetup.IsThermalTyre = true;
+            // tmpVehSetup.AmbientTemp = 20f;
+            // tmpVehSetup.TrackTemp = 25f;
+
+            // saveVehicleSetup(tmpVehSetup);
         }
 
         fillVehSetupDropdown(0);
