@@ -30,18 +30,10 @@ public class CanSubscriber
 	{
 		if(msg.Id == msgDef.id)
 		{
-	        //Debug.Log("Deser Command " + msgDef.name, null);
-	        //Debug.Log("parsing can data: " + CanFrameBits.ByteArrayToString(msg.Data), null);
-
-			// old way
-			//List<double> signal_data = msgDef.deserialize_data(msg.Data);
-
-			// other old way
-			//List<double> signal_data = msgDef.stream_deserialize_data(msg.Data);
-
 			List<double> signal_data = msgDef.deser_data(msg.Data);
 
 			OnSignalData(signal_data);
+	        
 		}
 		else
 		{
