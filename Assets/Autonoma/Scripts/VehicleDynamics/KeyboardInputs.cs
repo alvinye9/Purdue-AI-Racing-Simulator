@@ -1,5 +1,5 @@
 /* 
-Copyright 2023 Autonoma, Inc.
+Copyright 2024 Purdue AI Racing.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -26,34 +26,54 @@ public class KeyboardInputs : MonoBehaviour
     {
         carController = HelperFunctions.GetParentComponent<CarController>(transform);
     }
-    void Update()
-    {
-        float throttleInput = Mathf.Clamp(Input.GetAxisRaw("Throttle"),0f,1f);
-        float brakeInput = Mathf.Clamp(Input.GetAxisRaw("Brake"),0f,1f);
-        if (throttleInput > throttle)
-            throttle = HelperFunctions.rateLimitUpdate(throttleInput,throttle,1.5f);
-        else
-            throttle = HelperFunctions.rateLimitUpdate(throttleInput,throttle,5f);
-        if (brakeInput > brake)
-            brake = HelperFunctions.rateLimitUpdate(brakeInput,brake,3.5f);
-        else
-            brake = HelperFunctions.rateLimitUpdate(brakeInput,brake,5f);
-        if (Mathf.Abs(Input.GetAxisRaw("Steering")) > Mathf.Abs(steering))
-            steering = HelperFunctions.rateLimitUpdate(Input.GetAxisRaw("Steering"),steering,3.5f);
-        else
-            steering = HelperFunctions.rateLimitUpdate(Input.GetAxisRaw("Steering"),steering,5f);
+    // void Update() //with rate limiting, currently broken
+    // {
+    //     float throttleInput = Mathf.Clamp(Input.GetAxisRaw("Throttle"),0f,1f);
+    //     float brakeInput = Mathf.Clamp(Input.GetAxisRaw("Brake"),0f,1f);
 
-        gearUp = Input.GetKey(KeyCode.Tab);
-        gearDown = Input.GetKey(KeyCode.CapsLock) || Input.GetKey(KeyCode.LeftShift);
+    //     if (throttleInput > throttle)
+    //         throttle = HelperFunctions.rateLimitUpdate(throttleInput,throttle,1.5f);
+    //     else
+    //         throttle = HelperFunctions.rateLimitUpdate(throttleInput,throttle,5f);
+    //     if (brakeInput > brake)
+    //         brake = HelperFunctions.rateLimitUpdate(brakeInput,brake,3.5f);
+    //     else
+    //         brake = HelperFunctions.rateLimitUpdate(brakeInput,brake,5f);
+    //     if (Mathf.Abs(Input.GetAxisRaw("Steering")) > Mathf.Abs(steering))
+    //         steering = HelperFunctions.rateLimitUpdate(Input.GetAxisRaw("Steering"),steering,3.5f);
+    //     else
+    //         steering = HelperFunctions.rateLimitUpdate(Input.GetAxisRaw("Steering"),steering,5f);
+
+    //     gearUp = Input.GetKey(KeyCode.Tab);
+    //     gearDown = Input.GetKey(KeyCode.CapsLock) || Input.GetKey(KeyCode.LeftShift);
+
+    //     carController.physicalActuator = true;
+    //     carController.gearUp = gearUp;
+    //     carController.gearDown = gearDown;
+    //     carController.steerAngleCmd = carController.vehicleParams.maxSteeringAngle*-steering/carController.vehicleParams.steeringRatio;
+    //     carController.throttleCmd = throttle;
+    //     carController.brakeCmd = brake*carController.vehicleParams.maxBrakeKpa;
+
+    //     carController.throttleCmd = Mathf.Clamp(carController.throttleCmd,0f,1f);
+    //     carController.brakeCmd = Mathf.Clamp(carController.brakeCmd,0f,carController.vehicleParams.maxBrakeKpa);
+    // }
+    void Update() //without rate limitng
+    {
+        throttle = Mathf.Clamp(Input.GetAxisRaw("Throttle"), 0f, 1f);
+        brake = Mathf.Clamp(Input.GetAxisRaw("Brake"), 0f, 1f);
+        steering = Input.GetAxisRaw("Steering");
+
+        // Debug.Log($"Throttle: {throttle}, Brake: {brake}, Steering: {steering}");
 
         carController.physicalActuator = true;
-        carController.gearUp = gearUp;
-        carController.gearDown = gearDown;
-        carController.steerAngleCmd = carController.vehicleParams.maxSteeringAngle*-steering/carController.vehicleParams.steeringRatio;
+        carController.gearUp = Input.GetKey(KeyCode.Tab);
+        carController.gearDown = Input.GetKey(KeyCode.CapsLock) || Input.GetKey(KeyCode.LeftShift);
+        carController.steerAngleCmd = carController.vehicleParams.maxSteeringAngle * -steering / carController.vehicleParams.steeringRatio;
         carController.throttleCmd = throttle;
-        carController.brakeCmd = brake*carController.vehicleParams.maxBrakeKpa;
+        carController.brakeCmd = brake * carController.vehicleParams.maxBrakeKpa;
 
-        carController.throttleCmd = Mathf.Clamp(carController.throttleCmd,0f,1f);
-        carController.brakeCmd = Mathf.Clamp(carController.brakeCmd,0f,carController.vehicleParams.maxBrakeKpa);
+        carController.throttleCmd = Mathf.Clamp(carController.throttleCmd, 0f, 1f);
+        carController.brakeCmd = Mathf.Clamp(carController.brakeCmd, 0f, carController.vehicleParams.maxBrakeKpa);
     }
+
 }

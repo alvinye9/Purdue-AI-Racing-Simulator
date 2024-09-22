@@ -9,7 +9,7 @@ using System;
 public class NpcCarController : MonoBehaviour
 {
     public Rigidbody carBody;
-    // public Rigidbody egoCarBody;
+    public Rigidbody egoCarBody; //seems to cause extra latency in the ego car
     
     public bool recievedGhostPosition = false;
     private bool hasUpdatedGhostParameters = false;
@@ -22,7 +22,15 @@ public class NpcCarController : MonoBehaviour
     void Start()
     {
         carBody = GetComponent<Rigidbody>();
-        // egoCarBody = GetComponent<Rigidbody>();
+        GameObject egoCarObject = GameObject.Find("DallaraAV24(Clone)");
+        if (egoCarObject != null)
+        {
+            egoCarBody = egoCarObject.GetComponent<Rigidbody>();
+        }
+        else
+        {
+            Debug.LogError("EgoCar object not found in the scene!");
+        }
 
     }
 
@@ -30,7 +38,19 @@ public class NpcCarController : MonoBehaviour
     {
         if (isMoving)
         {
-            targetPosition = HelperFunctions.vehDynCoord2Unity(targetPosition); //convert ghost_frame CRS (ENU??) -> Unity CRS
+            targetPosition = HelperFunctions.vehDynCoord2Unity(targetPosition); //convert ghost_frame CRS (conventional veh dyn CRS) -> Unity CRS
+            // targetPosition = HelperFunctions.enu2Unity(targetPosition); //use if parent transform for ghost vehicle is in ENU
+            // targetPosition.y = egoCarBody.position.y;
+            // targetPosition = targetPosition + egoCarBody.position; //ensure that the position is in the correct frame (ego car's center_of_gravity frame)
+
+            // Calculate the relative target position in the ego car's local space
+            Vector3 relativeTargetPosition = egoCarBody.transform.TransformPoint(targetPosition);
+            relativeTargetPosition.y = egoCarBody.position.y;
+            targetPosition = relativeTargetPosition;
+
+            
+            
+            
 
             float targetHeadingDegrees = Mathf.Rad2Deg * targetHeading;
             float unityHeading = -targetHeadingDegrees + 90.0f;  // Transform heading from ENU to Unity (LHS)

@@ -36,8 +36,17 @@ public class HelperFunctions
     public static Vector3 vehDynCoord2Unity(Vector3 rhdCoord)
     {
         // Transformation from Right-Hand Vehicle Dynamics (RHD) frame to Unity coordinate system, does opposite of unity2vehDynCoord()
+        // Vector3 unityCoord = new Vector3(rhdCoord.y, rhdCoord.z, -rhdCoord.x); //seems to work for unity global CRS
+        Vector3 unityCoord = new Vector3(-rhdCoord.y, rhdCoord.z, rhdCoord.x); //seems to work for ego car local CRS
 
-        Vector3 unityCoord = new Vector3(rhdCoord.y, rhdCoord.z, -rhdCoord.x);
+        return unityCoord;
+    }
+
+    public static Vector3 enu2Unity(Vector3 rhdCoord)
+    {
+        // Transformation from ENU frame to Unity coordinate system
+        Vector3 unityCoord = new Vector3(rhdCoord.x, rhdCoord.z, rhdCoord.y);
+
         return unityCoord;
     }
 
