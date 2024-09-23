@@ -1,6 +1,6 @@
 # How to Use Racing Simulator
 
-A vehicle simulator for the Dallara AV-21R. This simulator provides a way for teams to test their autonomous racing software with similar dynamics, sensors, and interface to the real car.
+A vehicle simulator for the Dallara AV-24. This simulator improves upon the original AWSIM developed by Autoware, and provides a high-fidelity testbed validated against real-world data. PAIRSIM interfaces with an autonomy stack to allow for testing of autonomous racing software with similar dynamics, sensors, and interface to the real car.
 
 ## Documentation
 1. How to use racing simulator (this page)
@@ -17,25 +17,21 @@ There are two options to run racing simulations:
 
 1. Download binary (recommended)
 
-    Download the most recent racing simulator build in the Github Releases.
-
-- Windows: Double-click the downloaded executable (.exe)
+    Download the most recent racing simulator [here](https://purdue0-my.sharepoint.com/my?id=%2Fpersonal%2Fye372%5Fpurdue%5Fedu%2FDocuments%2FResearch%2Fcustom%5Fsimulator&ga=1)
     
-- Linux:
+- Currently only compatible with Linux:
 
     - Double-click the downloaded executable (.so)
 
-    - The first time you may need to set the executable permissions with ```chmod +x AWSIM.so```
+    - The first time you may need to set the executable permissions with ```chmod +x PAIRSIM_vX.X.X.so```
 
 2. From the Unity Editor
 
-    a. To run directly from the Unity editor, clone the repository and make sure you are on the `racing-main` git branch.
+    a. To run directly from the Unity editor, clone the repository and make sure you are on the `main` git branch.
     
-    b. ***Run the script `sm_setup.sh` to set up the repository to pull the correct submodules.***
-    
-    c. Follow the instructions in [Getting Started - Setup Unity Project](GettingStarted/SetupUnityProject/index.md).
+    b. Follow the instructions in [Getting Started - Setup Unity Project](GettingStarted/SetupUnityProject/index.md).
 
-    d. Download and import `racetracks_v1.unitypackge`
+    c. Download and import `racetracks_v1.unitypackge`
 
     [Download racetrack assets (unitypackage)](https://netorgft10298407-my.sharepoint.com/:f:/g/personal/will_bryan_autonomalabs_com/EnFiHnKOU2VKpFyvuGNnSoEBHrcnGAxe8js3GnDwgTMl8Q?e=joBXev){.md-button .md-button--primary}
 
