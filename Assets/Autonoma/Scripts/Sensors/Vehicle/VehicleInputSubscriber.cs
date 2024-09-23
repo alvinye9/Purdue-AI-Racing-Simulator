@@ -46,48 +46,56 @@ public class VehicleInputSubscriber : MonoBehaviour
                 UpdateVehicleInputs(msg);
             }, qos);
 
-        canSteerCommandSubscriber = new CanSubscriber("steering_cmd", qosSettings, data_values => { //vehicle_inputs not triggering this
-            carController.steerAngleCmd = (float)data_values[1]/carController.vehicleParams.steeringRatio;
-            float maxAngleAtwheel = Mathf.Abs(carController.vehicleParams.maxSteeringAngle/carController.vehicleParams.steeringRatio);
-            carController.steerAngleCmd = Mathf.Clamp(carController.steerAngleCmd,-maxAngleAtwheel,maxAngleAtwheel);
-        });
+        // if not Npc, subscribe from CAN
+        int targetLayer = LayerMask.NameToLayer("Npc");
+        if (gameObject.layer != targetLayer)
+        {
+            Debug.Log("NOT NPC VEHICLE, STARTING CAN SUBSCRIBING");
 
-        canThrottleCommandSubscriber = new CanSubscriber("accelerator_cmd", qosSettings, data_values => {
-            carController.throttleCmd = (float)data_values[1] / 100f;
-            carController.throttleCmd = Mathf.Clamp(carController.throttleCmd,0f,1f);
-        });
+            canSteerCommandSubscriber = new CanSubscriber("steering_cmd", qosSettings, data_values => { //vehicle_inputs not triggering this
+                carController.steerAngleCmd = (float)data_values[1]/carController.vehicleParams.steeringRatio;
+                float maxAngleAtwheel = Mathf.Abs(carController.vehicleParams.maxSteeringAngle/carController.vehicleParams.steeringRatio);
+                carController.steerAngleCmd = Mathf.Clamp(carController.steerAngleCmd,-maxAngleAtwheel,maxAngleAtwheel);
+            });
 
-        canBrakeCommandSubscriber = new CanSubscriber("brake_pressure_cmd", qosSettings, data_values => {
-            carController.brakeCmd = (float)data_values[1];
-            carController.brakeCmd = Mathf.Clamp(carController.brakeCmd,0f,carController.vehicleParams.maxBrakeKpa);
-        });
+            canThrottleCommandSubscriber = new CanSubscriber("accelerator_cmd", qosSettings, data_values => {
+                carController.throttleCmd = (float)data_values[1] / 100f;
+                carController.throttleCmd = Mathf.Clamp(carController.throttleCmd,0f,1f);
+            });
 
-        canGearCommandSubscriber = new CanSubscriber("gear_shift_cmd", qosSettings, data_values => {
-            carController.gearUp = false;
-            carController.gearDown = false;
-            int newGear = (int)data_values[0];
-            if (newGear > carController.gear)
-            {
-                carController.gearUp = true;
-            }
-            if (newGear < carController.gear)
-            {
-                carController.gearDown = true;
-            }
-        });
+            canBrakeCommandSubscriber = new CanSubscriber("brake_pressure_cmd", qosSettings, data_values => {
+                carController.brakeCmd = (float)data_values[1];
+                carController.brakeCmd = Mathf.Clamp(carController.brakeCmd,0f,carController.vehicleParams.maxBrakeKpa);
+            });
 
-        canDashSwitchesCmdSubscriber = new CanSubscriber("dash_switches_cmd", qosSettings, data_values => {
-            // Debug.Log("Default Brake Bias: " + carController.vehicleParams.brakeBias );
-            if (carController.brakeCmd == 0f){
-                carController.vehicleParams.brakeBias = 0.5f;
-                if(!(data_values == null))
+            canGearCommandSubscriber = new CanSubscriber("gear_shift_cmd", qosSettings, data_values => {
+                carController.gearUp = false;
+                carController.gearDown = false;
+                int newGear = (int)data_values[0];
+                if (newGear > carController.gear)
                 {
-                    // Debug.Log("Dash Switches Cmd Message recieved: " + (0.5f + (float)data_values[2] / 100f));
-                    carController.vehicleParams.brakeBias = 0.5f + (float)data_values[2] / 100f;
+                    carController.gearUp = true;
                 }
-            }
-        });
+                if (newGear < carController.gear)
+                {
+                    carController.gearDown = true;
+                }
+            });
+
+            canDashSwitchesCmdSubscriber = new CanSubscriber("dash_switches_cmd", qosSettings, data_values => {
+                // Debug.Log("Default Brake Bias: " + carController.vehicleParams.brakeBias );
+                if (carController.brakeCmd == 0f){
+                    carController.vehicleParams.brakeBias = 0.5f;
+                    if(!(data_values == null))
+                    {
+                        // Debug.Log("Dash Switches Cmd Message recieved: " + (0.5f + (float)data_values[2] / 100f));
+                        carController.vehicleParams.brakeBias = 0.5f + (float)data_values[2] / 100f;
+                    }
+                }
+            });
+        }
     }
+
     void OnDestroy()
     {
         SimulatorROS2Node.RemoveSubscription<VehicleInputs>(vehicleInputsSubscriber);

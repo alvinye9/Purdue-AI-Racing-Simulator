@@ -91,6 +91,14 @@ public class VehicleDataPublisher : Publisher<VehicleData>
     }
     protected override void OnPublishMessage()
     {
+        // if Npc, skip publishing to CAN
+        int targetLayer = LayerMask.NameToLayer("Npc");
+        if (gameObject.layer == targetLayer)
+        {
+            // Debug.Log("NPC VEHICLE SKIP CAN PUBLISHING");
+            return;
+        }
+
         canWheelPotentiometerPublisher.Publish(new List<double>{
             vehSim.rr_damper_linear_potentiometer, 
             vehSim.rl_damper_linear_potentiometer,
