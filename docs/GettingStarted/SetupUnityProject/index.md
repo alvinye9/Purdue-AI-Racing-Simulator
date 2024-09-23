@@ -4,21 +4,21 @@
 
     It is advised to checkout the [Quick Start Demo](../QuickStartDemo) tutorial before reading this section.
 
-This page is a tutorial for setting up a AWSIM Unity project.
+This page is a tutorial for setting up a PAIRSIM Unity project.
 
 ## Environment preparation
 
 ### System setup
 
 === "Ubuntu 22"
-    1. Make sure your machine meets the [required hardware specifications](../QuickStartDemo/#pc-specs).
+    1. Make sure your machine meets the [required hardware specifications](https://docs.unity.cn/2021.1/Documentation/Manual/system-requirements.html).
         - *NOTE: PC requirements may vary depending on simulation contents which may change as the simulator develops*
     2. Prepare a desktop PC with Ubuntu 22.04 installed.
-    2. Install [Nvidia drivers and Vulkan Graphics API](../QuickStartDemo/#running-the-awsim-simulation-demo).
+    2. Install [Nvidia drivers and Vulkan Graphics API](../QuickStartDemo/index.md).
     3. Install [git](https://git-scm.com/).
 
 === "Windows"
-    1. Make sure your machine meets the [required hardware specifications](../QuickStartDemo/#pc-specs).
+    1. Make sure your machine meets the [required hardware specifications](https://docs.unity.cn/2021.1/Documentation/Manual/system-requirements.html).
         - *NOTE: PC requirements may vary depending on simulation contents which may change as the simulator develops*
     2. Prepare a desktop PC with Windows 10 or 11 (64 bit) installed.
     3. Install [git](https://git-scm.com/).
@@ -27,7 +27,7 @@ This page is a tutorial for setting up a AWSIM Unity project.
 
 !!! info
 
-    AWSIM's Unity version is currently **2021.1.7f1**
+    PAIRSIM's Unity version is currently **2021.1.7f1**
 
 Follow the steps below to install Unity on your machine:
 
@@ -75,7 +75,7 @@ To open the Unity PAIRSiM project in Unity Editor:
     - Click the `Open` button
 ![](image_6.png)
 
-    - Navigate the directory where the AWSIM repository was cloned to
+    - Navigate the directory where the PAIRSIM repository was cloned to
 ![](image_7.png)
 
     - The project should be added to `Projects` tab in Unity Hub. To launch the project in Unity Editor simply click the `Purdue-AI-Racing-Simulator` item
