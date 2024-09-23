@@ -1,4 +1,4 @@
-site_name: PAIRSIM racing document
+site_name: Purdue-AI-Racing Simulator Documentation
 
 repo_url: https://github.com/alvinye9/Purdue-AI-Racing-Simulator
 
@@ -29,7 +29,7 @@ markdown_extensions:
 nav:
   - Home: index.md
 
-  - Racing Sim:
+  - Simulator:
       - Overview: index.md
       - ROS2 Interface: RacingSim/ROS2Interface/index.md
       - Sensors: RacingSim/Sensors/index.md
