@@ -46,6 +46,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -61,7 +63,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -1663,8 +1665,8 @@
 <p>The tables of topics the racing sim publishes and subscribes from can be found below.
 The list can be extended by the user for the specific use case.
 To see how to custom messages type for ROS2, please refer to <a href="../../Components/ROS2/AddCustomROS2MessageType/">Add custom ROS2 message type</a> document.</p>
-<p><strong>The custom messages used for the racing simulator can be found <a href="https://github.com/autonomalabs/sim-msgs">HERE</a>.</strong></p>
-<p>Users can choose betweent the high-level ROS2 interface (<code>/vehicle_data</code>, <code>/powertrain_data</code>, <code>/race_control</code>, <code>/vehicle_inputs</code>, <code>/to_raptor</code>) OR the low-level CAN interface (<code>/from_can_bus</code>, <code>/to_can_bus</code>). The DBC file with the message definitions for the low-level CAN interface <a href="CAN1-INDY-V14">can be found here</a>.</p>
+<p><strong>The Autonoma custom messages used for the racing simulator can be found <a href="https://github.com/autonomalabs/sim-msgs">HERE</a>.</strong></p>
+<p>Users can choose to control the racecar via the high-level ROS2 interface (<code>/vehicle_data</code>, <code>/powertrain_data</code>, <code>/race_control</code>, <code>/vehicle_inputs</code>, <code>/to_raptor</code>) OR the low-level CAN interface (<code>/from_can_bus</code>, <code>/to_can_bus</code>). The DBC file with the message definitions for the 2024 low-level CAN interface <a href="CAN1-INDY-V17.dbc">can be found here</a>.</p>
 <h2 id="publisher-list">Publisher list</h2>
 <table>
 <thead>
@@ -1678,6 +1680,46 @@ To see how to custom messages type for ROS2, please refer to <a href="../../Comp
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align: left;">GNSS/INS</td>
+<td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/imu/data</code></td>
+<td style="text-align: left;"><code>sensor_msgs/msg/Imu</code></td>
+<td style="text-align: left;">gps_<top/bottom></td>
+<td style="text-align: left;"><code>100</code></td>
+<td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">GNSS/INS</td>
+<td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/imu/data_raw</code></td>
+<td style="text-align: left;"><code>sensor_msgs/msg/Imu</code></td>
+<td style="text-align: left;">gps_<top/bottom>_imu</td>
+<td style="text-align: left;"><code>100</code></td>
+<td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">GNSS/INS</td>
+<td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/ins_twist</code></td>
+<td style="text-align: left;"><code>geometry_msgs/msg/TwistWithCovarianceStamped</code></td>
+<td style="text-align: left;">gps_<top/bottom></td>
+<td style="text-align: left;"><code>100</code></td>
+<td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Odometry</td>
+<td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/odom</code></td>
+<td style="text-align: left;"><code>nav_msgs/msg/Odometry</code></td>
+<td style="text-align: left;">utm</td>
+<td style="text-align: left;"><code>100</code></td>
+<td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">Vehicle</td>
+<td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/fix</code></td>
+<td style="text-align: left;"><code>sensor_msgs/msg/NavSatFix</code></td>
+<td style="text-align: left;">gps_<top/bottom>_ant1</td>
+<td style="text-align: left;"><code>100</code></td>
+<td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
+</tr>
 <tr>
 <td style="text-align: left;">Vehicle</td>
 <td style="text-align: left;"><code>/vehicle_data</code></td>
@@ -1707,7 +1749,7 @@ To see how to custom messages type for ROS2, please refer to <a href="../../Comp
 <td style="text-align: left;"><code>/from_can_bus</code></td>
 <td style="text-align: left;"><code>can_msgs/Frame</code></td>
 <td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>10</code></td>
+<td style="text-align: left;"><code>500</code></td>
 <td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
 </tr>
 <tr>
@@ -1715,7 +1757,7 @@ To see how to custom messages type for ROS2, please refer to <a href="../../Comp
 <td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/rawimu</code></td>
 <td style="text-align: left;"><code>novatel_oem7_msgs/RAWIMU</code></td>
 <td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>125</code></td>
+<td style="text-align: left;"><code>100</code></td>
 <td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
 </tr>
 <tr>
@@ -1723,7 +1765,7 @@ To see how to custom messages type for ROS2, please refer to <a href="../../Comp
 <td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/bestpos</code></td>
 <td style="text-align: left;"><code>novatel_oem7_msgs/BESTPOS</code></td>
 <td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>20</code></td>
+<td style="text-align: left;"><code>100</code></td>
 <td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
 </tr>
 <tr>
@@ -1731,7 +1773,7 @@ To see how to custom messages type for ROS2, please refer to <a href="../../Comp
 <td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/bestgnsspos</code></td>
 <td style="text-align: left;"><code>novatel_oem7_msgs/BESTPOS</code></td>
 <td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>20</code></td>
+<td style="text-align: left;"><code>100</code></td>
 <td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
 </tr>
 <tr>
@@ -1739,7 +1781,7 @@ To see how to custom messages type for ROS2, please refer to <a href="../../Comp
 <td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/bestvel</code></td>
 <td style="text-align: left;"><code>novatel_oem7_msgs/BESTVEL</code></td>
 <td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>20</code></td>
+<td style="text-align: left;"><code>100</code></td>
 <td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
 </tr>
 <tr>
@@ -1747,7 +1789,7 @@ To see how to custom messages type for ROS2, please refer to <a href="../../Comp
 <td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/bestgnssvel</code></td>
 <td style="text-align: left;"><code>novatel_oem7_msgs/BESTVEL</code></td>
 <td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>20</code></td>
+<td style="text-align: left;"><code>100</code></td>
 <td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
 </tr>
 <tr>
@@ -1755,7 +1797,7 @@ To see how to custom messages type for ROS2, please refer to <a href="../../Comp
 <td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/inspva</code></td>
 <td style="text-align: left;"><code>novatel_oem7_msgs/INSPVA</code></td>
 <td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>20</code></td>
+<td style="text-align: left;"><code>100</code></td>
 <td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
 </tr>
 <tr>
@@ -1763,15 +1805,7 @@ To see how to custom messages type for ROS2, please refer to <a href="../../Comp
 <td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/heading2</code></td>
 <td style="text-align: left;"><code>novatel_oem7_msgs/HEADING2</code></td>
 <td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>20</code></td>
-<td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
-</tr>
-<tr>
-<td style="text-align: left;">GNSS/INS</td>
-<td style="text-align: left;"><code>/novatel_&lt;top/bottom&gt;/rawimux</code></td>
-<td style="text-align: left;"><code>sensor_msgs/Imu</code></td>
-<td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>125</code></td>
+<td style="text-align: left;"><code>100</code></td>
 <td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/10</code></td>
 </tr>
 <tr>
