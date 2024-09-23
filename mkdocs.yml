@@ -2,10 +2,14 @@ site_name: PAIRSIM racing document
 
 repo_url: https://github.com/alvinye9/Purdue-AI-Racing-Simulator
 
+extra_css:
+  - stylesheets/extra.css
+
 theme:
   name: material
   palette:
-    primary: indigo
+    primary: custom
+    accent: custom
   features:
     - navigation.sections
     - navigation.footer
