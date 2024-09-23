@@ -53,18 +53,23 @@ Follow the steps below to install Unity on your machine:
     - After successful installation the version will be available under the `Installs` tab in Unity Hub.
 ![](image_5.png)
 
-### Open AWSIM project
+### Open PAIRSIM project
 
-To open the Unity AWSIM project in Unity Editor:
-1. Make sure you have the AWSIM repository cloned
+To open the Unity PAIRSiM project in Unity Editor:
+1. Make sure you have the PAIRSIM repository cloned
     ```
-    git clone git@github.com:tier4/AWSIM.git
+    git clone git@github.com:alvinye9/Purdue-AI-Racing-Simulator.git
     ```
 
 2. Launch UnityHub.
     ```
     ./UnityHub.AppImage
     ```
+    or
+    ```
+    unityhub
+    ```
+
 
 3. Open the project in UnityHub
     - Click the `Open` button
@@ -73,7 +78,7 @@ To open the Unity AWSIM project in Unity Editor:
     - Navigate the directory where the AWSIM repository was cloned to
 ![](image_7.png)
 
-    - The project should be added to `Projects` tab in Unity Hub. To launch the project in Unity Editor simply click the `AWSIM` item
+    - The project should be added to `Projects` tab in Unity Hub. To launch the project in Unity Editor simply click the `Purdue-AI-Racing-Simulator` item
 ![](image_8.png)
 
     - The project is now ready to use
@@ -90,27 +95,20 @@ To open the Unity AWSIM project in Unity Editor:
 
 ### Import external packages
 
-To properly run and use AWSIM project in Unity it is required to download map package which is not included in the repository.
+To properly run and use PAIRSIM project in Unity it is required to download map package which is not included in the repository.
 
-1. Download and import `Japan_Tokyo_Nishishinjuku.unitypackage`
-
-    [Download Map files (unitypackage)](https://github.com/tier4/AWSIM/releases/download/v1.1.0/Japan_Tokyo_Nishishinjuku.unitypackage){.md-button .md-button--primary}
-
-2. In Unity Editor, from the menu bar at the top, select `Assets -> Import Package -> Custom Package...` and navigate the `Japan_Tokyo_Nishishinjuku.unitypackage` file.
-![](image_10.png)
-![](image_11.png)
-3. `Nishishinjuku` package has been successfully imported under `Assets/AWSIM/Externals/`directory.
-![](image_12.png)
+See instructions [here](../../index.md)
 
 !!! info
 
-    The Externals directory is added to the `.gitignore` because the map has a large file size and should not be directly uploaded to the repository.
+    All external prefabs imported as .unitypackage must be added to the `.gitignore` because the tracks have large file sizes and should not be directly uploaded to the repository.
 
 ## Run the demo in Editor
 
 The following steps describe how to run the demo in Unity Editor:
 
-1. Open the `AutowareSimulation.unity` scene placed under `Assets/AWSIM/Scenes/Main` directory
+1. Open the `MenuScene.unity` scene placed under `Assets/Autonoma/Scenes` directory
 2. Run the simulation by clicking `Play` button placed at the top section of Editor.
 ![](image_13.png)
+3. The rest of the instructions are the same [here](../../index.md)
 <br><br><br><br>

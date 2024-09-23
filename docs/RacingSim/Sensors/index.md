@@ -1,6 +1,6 @@
 # Sensors
 
-The AV-21R is instrumented with various sensors for localization, perception, control, and safety.
+The AV-24 is instrumented with various sensors for localization, perception, control, and safety.
 
 ## Vehicle sensors
 
@@ -51,15 +51,17 @@ With "Hot Start" diabled, the vehicle will start in sys_state = 19, which means 
 
 ## GNSS/INS
 
-The AV-21R has three GNSS/INS units:
+The AV-24 has three GNSS/INS units:
 - 1 VectorNav VN-310
 - 2 Novatel PwrPak7D-E1
 
 ## Lidar
-The AV-21R has three Luminar lidars.
+The AV-24 has four Luminar lidars.
 
 ## Camera
-The AV-21R has six Allied Vision cameras.
+The AV-24 has six Allied Vision cameras.
 
 ## Radar
-The AV-21R has three radars.
+The AV-24 has two radars.
+
+SEE DETAILED SPECIFICATIONS [here](https://www.indyautonomouschallenge.com/racecar)

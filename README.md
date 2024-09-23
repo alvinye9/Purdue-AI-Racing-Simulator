@@ -1,6 +1,6 @@
 # How to Use Racing Simulator
 
-A vehicle simulator for the Dallara AV-24 for the 2023 and 2024 Indy Autonomous Challenge, built off the original AWSIM by Autoware. 
+A vehicle simulator for the Dallara AV-24 for the 2023 and 2024 Indy Autonomous Challenge, built off the original AWSIM developed by Autoware. 
 
 ## PAIRSIM Documentation
 [Access the updated PAIRSIM documentation here!](https://alvinye9.github.io/Purdue-AI-Racing-Simulator/)

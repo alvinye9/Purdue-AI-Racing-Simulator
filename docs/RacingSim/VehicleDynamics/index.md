@@ -1,24 +1,24 @@
 # Vehicle Dynamics
 
-This contains specifications of the Dallara AV-21R vehicle dynamics including actuation, powertrain, and aero.
+This contains specifications of the Dallara AV-24 vehicle dynamics including actuation, powertrain, and aero (parameters currently being validated).
 
 ## Vehicle properties
 
-The AV-21 is built by Dallara and based on the Dallara IL-15 chassis. The engine is built by 4Piston Racing and based on a Honda K20.
+The AV-24 is built by Dallara and based on the Dallara IL-15 chassis. The engine is built by 4Piston Racing and based on a Honda K20.
 
 **General Vehicle Specifications**
 
 | Specification                  | Symbol          | Value | Units                |
 |--------------------------------|-----------------|-------|----------------------|
-| Mass                           | \( m \)        | 815.11   | kg                   |
+| Mass                           | \( m \)        | 790   | kg                   |
 | Moment of Inertia (x,y,z)      | \( I_x, I_y, I_z \) | 265,550,800 | kg·m<sup>2</sup> |
 | Wheelbase                      | \( l \)        | 2.9718   | m                    |
 | Center of Gravity to front axle| \( l_f \)      | 1.6785   | m                    |
-| Center of Gravity to rear axle | \( l_r \)      | 1.2933   | m                    |
-| Half track width front         | \( tw_f \)     | 1.638762 | m                    |
-| Half track width rear          | \( tw_r \)     | 1.523969 | m                    |
+| Center of Gravity to rear axle | \( l_r \)      | 1.3206   | m                    |
+| Front track width         | \( tw_f \)     | 1.638762 | m                    |
+| Rear track width          | \( tw_r \)     | 1.523969 | m                    |
 | Tyre radius front              | \( R_f \)      | 0.3   | m                    |
-| Tyre radius rear               | \( R_r \)      | 0.3   | m                    |
+| Tyre radius rear               | \( R_r \)      | 0.326   | m                    |
 
 ---
 

@@ -1,5 +1,14 @@
 # License
 
+PAIRSIM Licenses
+
+PAIRSIM License Applies to [alvinye9/Purdue-AI-Racing-Simulator repositories](https://github.com/alvinye9/Purdue-AI-Racing-Simulator) (containing a Purdue AI Racing header) and all content contained in the [Releases](https://github.com/alvinye9/Purdue-AI-Racing-Simulator/releases).
+
+- PAIRSIM specific code is distributed under Apache2.0 License.  
+The following extensions are included (`*.cs` `*.compute` `*.xml`)
+- PAIRSiM specific assets are distributed under CC BY-NC License.  
+The following extensions are included (`*.fbx` `*.pcd` `*.osm` `*.png` `*.anim` `*.unitypackage` `*.x86_64`)
+
 AWSIM Licenses
 
 AWSIM License Applies to [tier4/AWSIM repositories](https://github.com/tier4/AWSIM) and all content contained in the [Releases](https://github.com/tier4/AWSIM/releases).

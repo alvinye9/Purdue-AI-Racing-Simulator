@@ -9,7 +9,7 @@ $ pip install mkdocs-material
 ```
 2 Hosting on localhost.
 ```
-$ cd AWSIM
+$ cd Purdue-AI-Racing-Simulator
 $ mkdocs serve
 INFO     -  Building documentation...
 INFO     -  Cleaning site directory
@@ -28,13 +28,13 @@ For further reference see [Material for MkDocs - Getting started](https://squidf
 ## MkDocs files
 Use the following `/docs` directory and `mkdocs.yml` for new documentation files.
 ```
-AWSIM
+Purdue-AI-Racing-Simulator
 ├─ docs/                // markdown and image file for each document.
 └─ mkdocs.yml           // mkdocs config.
 ```
 Create one directory per document. For example, the directory structure of this "Documentation" page might look like this.
 ```
-AWSIM
+Purdue-AI-Racing-Simulator
 └─ docs/                            // Root of all documents
     └─ DeveloperGuide               // Category
         └─ Documentation            // Root of each document
