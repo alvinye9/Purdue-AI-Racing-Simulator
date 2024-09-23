@@ -9,6 +9,10 @@
       
       
       
+        <link rel="prev" href="../../RacingSim/PAIR/">
+      
+      
+        <link rel="next" href="../SetupUnityProject/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -390,8 +394,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -401,11 +407,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -419,12 +425,43 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Getting started
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Quick Start Demo
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
             
               
                 
@@ -584,116 +621,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#demo-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Demo configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prerequisites
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Prerequisites">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#pc-specs" class="md-nav__link">
-    <span class="md-ellipsis">
-      PC specs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#localhost-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Localhost settings
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#start-the-demo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Start the demo
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Start the demo">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#running-the-awsim-simulation-demo" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the AWSIM simulation demo
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#launching-autoware" class="md-nav__link">
-    <span class="md-ellipsis">
-      Launching Autoware
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#5-lets-run-the-self-driving-simulation" class="md-nav__link">
-    <span class="md-ellipsis">
-      5. Let's run the self-Driving simulation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#6-troubleshooting" class="md-nav__link">
-    <span class="md-ellipsis">
-      6. Troubleshooting
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#appendix" class="md-nav__link">
-    <span class="md-ellipsis">
-      Appendix
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -711,81 +638,51 @@
 
 
 <h1 id="quick-start-demo">Quick Start Demo</h1>
-<p>Below you can find instructions on how to setup the self-driving demo of AWSIM simulation controlled by Autoware.
-The instruction assumes using the Ubuntu OS.</p>
-<p><img alt="" src="Image_top.png" /></p>
-<h3 id="demo-configuration">Demo configuration</h3>
-<p>The simulation provided in the AWSIM demo is configured as follows:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">AWSIM Demo Settings</th>
-<th style="text-align: left;"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Vehicle</td>
-<td style="text-align: left;">Lexus RX 450h</td>
-</tr>
-<tr>
-<td style="text-align: left;">Environment</td>
-<td style="text-align: left;">Japan Tokyo Nishishinjuku</td>
-</tr>
-<tr>
-<td style="text-align: left;">Sensors</td>
-<td style="text-align: left;">Gnss * 1<br> IMU * 1<br> LiDAR * 1<br> Traffic camera * 1</td>
-</tr>
-<tr>
-<td style="text-align: left;">Traffic</td>
-<td style="text-align: left;">Randomized traffic</td>
-</tr>
-<tr>
-<td style="text-align: left;">ROS2</td>
-<td style="text-align: left;">humble</td>
-</tr>
-</tbody>
-</table>
-<h2 id="prerequisites">Prerequisites</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>If you use Ubuntu 20.04 and ROS 2 Galactic version, please reffer to <a href="https://github.com/tier4/AWSIM/releases/tag/v1.0.2">v1.0.2</a> <a href="https://github.com/tier4/AWSIM/blob/v1.0.2/docs/GettingStarted/QuickStartDemo/index.md">QuickStartDemo documentation</a>.</p>
-</div>
-<h3 id="pc-specs">PC specs</h3>
-<p>Please make sure that your machine meets the following requirements in order to run the simulation correctly:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Required PC Specs</th>
-<th style="text-align: left;"></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">OS</td>
-<td style="text-align: left;">Ubuntu 22.04</td>
-</tr>
-<tr>
-<td style="text-align: left;">CPU</td>
-<td style="text-align: left;">6cores and 12thread or higher</td>
-</tr>
-<tr>
-<td style="text-align: left;">GPU</td>
-<td style="text-align: left;">RTX2080Ti or higher</td>
-</tr>
-<tr>
-<td style="text-align: left;">Nvidia Driver (Windows)</td>
-<td style="text-align: left;">&gt;=472.50</td>
-</tr>
-<tr>
-<td style="text-align: left;">Nvidia Driver (Ubuntu 22)</td>
-<td style="text-align: left;">&gt;=515.43.04</td>
-</tr>
-</tbody>
-</table>
-<h3 id="localhost-settings">Localhost settings</h3>
-<p>The simulation is based on the appropriate network setting, which allows for trouble-free communication of the AWSIM simulation with the Autoware software.
-To apply required localhost settings please add the following lines to <code>~/.bashrc</code> file.</p>
+<p>Demo instructions will be updated soon. </p>
+<!--
+Below you can find instructions on how to setup the self-driving demo of AWSIM simulation controlled by Autoware.
+The instruction assumes using the Ubuntu OS.
+
+![](Image_top.png)
+
+### Demo configuration
+
+The simulation provided in the AWSIM demo is configured as follows:
+
+|AWSIM Demo Settings||
+|:--|:--|
+|Vehicle|Lexus RX 450h|
+|Environment|Japan Tokyo Nishishinjuku|
+|Sensors|Gnss * 1<br> IMU * 1<br> LiDAR * 1<br> Traffic camera * 1|
+|Traffic|Randomized traffic|
+|ROS2|humble|
+
+
+## Prerequisites
+
+!!! warning
+
+    If you use Ubuntu 20.04 and ROS 2 Galactic version, please reffer to [v1.0.2](https://github.com/tier4/AWSIM/releases/tag/v1.0.2) [QuickStartDemo documentation](https://github.com/tier4/AWSIM/blob/v1.0.2/docs/GettingStarted/QuickStartDemo/index.md).
+
+
+### PC specs
+
+Please make sure that your machine meets the following requirements in order to run the simulation correctly:
+
+|Required PC Specs||
+|:--|:--|
+|OS|Ubuntu 22.04|
+|CPU|6cores and 12thread or higher|
+|GPU|RTX2080Ti or higher|
+|Nvidia Driver (Windows)|>=472.50|
+|Nvidia Driver (Ubuntu 22)|>=515.43.04|
+
+
+### Localhost settings
+
+The simulation is based on the appropriate network setting, which allows for trouble-free communication of the AWSIM simulation with the Autoware software.
+To apply required localhost settings please add the following lines to `~/.bashrc` file.
+
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_LOCALHOST_ONLY</span><span class="o">=</span><span class="m">1</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_cyclonedds_cpp
 
@@ -795,25 +692,26 @@ To apply required localhost settings please add the following lines to <code>~/.
 <span class="w">    </span>touch<span class="w"> </span>/tmp/cycloneDDS_configured
 <span class="k">fi</span>
 </code></pre></div>
-<h2 id="start-the-demo">Start the demo</h2>
-<h3 id="running-the-awsim-simulation-demo">Running the AWSIM simulation demo</h3>
-<p>To run the simulator, please follow the steps below.</p>
-<ol>
-<li>
-<p>Install Nvidia GPU driver (Skip if already installed).</p>
-<ol>
-<li>Add Nvidia driver to apt repository
-<div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:graphics-drivers/ppa
+
+## Start the demo
+
+### Running the AWSIM simulation demo
+
+To run the simulator, please follow the steps below.
+
+1. Install Nvidia GPU driver (Skip if already installed).
+    1. Add Nvidia driver to apt repository
+    <div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:graphics-drivers/ppa
 sudo apt update
-</code></pre></div></li>
-<li>Install the recommended version of the driver.
-<div class="highlight"><pre><span></span><code>sudo ubuntu-drivers autoinstall
-</code></pre></div></li>
-<li>Reboot your machine to make the installed driver detected by the system.
-<div class="highlight"><pre><span></span><code>sudo reboot
-</code></pre></div></li>
-<li>Open terminal and check if <code>nvidia-smi</code> command is available and outputs summary similar to the one presented below.
-<div class="highlight"><pre><span></span><code>$ nvidia-smi 
+</code></pre></div>
+    2. Install the recommended version of the driver.
+    <div class="highlight"><pre><span></span><code>sudo ubuntu-drivers autoinstall
+</code></pre></div>
+    3. Reboot your machine to make the installed driver detected by the system.
+    <div class="highlight"><pre><span></span><code>sudo reboot
+</code></pre></div>
+    4. Open terminal and check if `nvidia-smi` command is available and outputs summary similar to the one presented below.
+    <div class="highlight"><pre><span></span><code>$ nvidia-smi 
 Fri Oct 14 01:41:05 2022       
 +-----------------------------------------------------------------------------+
 | NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
@@ -835,132 +733,121 @@ Fri Oct 14 01:41:05 2022
 |    0   N/A  N/A      1151      G   /usr/lib/xorg/Xorg                133MiB |
 |    0   N/A  N/A      1470      G   /usr/bin/gnome-shell               45MiB |
 +-----------------------------------------------------------------------------+
-</code></pre></div></li>
-</ol>
-</li>
-<li>
-<p>Install Vulkan Graphics Library (Skip if already installed).</p>
-<ol>
-<li>Update the environment.
-<div class="highlight"><pre><span></span><code>sudo apt update
-</code></pre></div></li>
-<li>Install the library.
-<div class="highlight"><pre><span></span><code>sudo apt install libvulkan1
-</code></pre></div></li>
-</ol>
-</li>
-<li>
-<p>Download and Run AWSIM Demo binary.</p>
-<ol>
-<li>
-<p>Download <code>AWSIM_v1.1.0.zip</code>.</p>
-<p><a class="md-button md-button--primary" href="https://github.com/tier4/AWSIM/releases/download/v1.1.0/AWSIM_v1.1.0.zip">Download AWSIM Demo for ubuntu</a></p>
-</li>
-<li>
-<p>Unzip the downloaded file.</p>
-</li>
-<li>
-<p>Make the <code>AWSIM_demo.x86_64</code> file executable.</p>
-<p>Rightclick the <code>AWSIM_demo.x86_64</code> file and check the <code>Execute</code> checkbox</p>
-<p><img alt="" src="Image_1.png" /></p>
-<p>or execute the command below.</p>
-<div class="highlight"><pre><span></span><code>chmod +x &lt;path to AWSIM folder&gt;/AWSIM_demo.x86_64
 </code></pre></div>
-</li>
-<li>
-<p>Launch <code>AWSIM_demo.x86_64</code>.
-    <div class="highlight"><pre><span></span><code>./&lt;path to AWSIM folder&gt;/AWSIM_demo.x86_64
-</code></pre></div></p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>It may take some time for the application to start the so please wait until image similar to the one presented below is visible in your application window.</p>
-</div>
-<p><img alt="" src="Image_0.png" /></p>
-</li>
-</ol>
-</li>
-</ol>
-<h3 id="launching-autoware">Launching Autoware</h3>
-<p>In order to configure and run the Autoware software with the AWSIM demo, please:</p>
-<ol>
-<li>
-<p>Download <code>map files (pcd, osm)</code> and unzip them.</p>
-<p><a class="md-button md-button--primary" href="https://github.com/tier4/AWSIM/releases/download/v1.1.0/nishishinjuku_autoware_map.zip">Download Map files (pcd, osm)</a></p>
-</li>
-<li>
-<p>Clone <a href="https://github.com/autowarefoundation/autoware">Autoware</a> and move to the directory.
+
+2. Install Vulkan Graphics Library (Skip if already installed).
+    1. Update the environment.
+    <div class="highlight"><pre><span></span><code>sudo apt update
+</code></pre></div>
+    2. Install the library.
+    <div class="highlight"><pre><span></span><code>sudo apt install libvulkan1
+</code></pre></div>
+
+3. Download and Run AWSIM Demo binary.
+
+    1. Download `AWSIM_v1.1.0.zip`.
+
+        [Download AWSIM Demo for ubuntu](https://github.com/tier4/AWSIM/releases/download/v1.1.0/AWSIM_v1.1.0.zip){.md-button .md-button--primary}
+
+    2. Unzip the downloaded file.
+
+    3. Make the `AWSIM_demo.x86_64` file executable.
+
+        Rightclick the `AWSIM_demo.x86_64` file and check the `Execute` checkbox
+
+        ![](Image_1.png)
+
+        or execute the command below.
+
+        <div class="highlight"><pre><span></span><code>chmod +x &lt;path to AWSIM folder&gt;/AWSIM_demo.x86_64
+</code></pre></div>
+
+    4. Launch `AWSIM_demo.x86_64`.
+        <div class="highlight"><pre><span></span><code>./&lt;path to AWSIM folder&gt;/AWSIM_demo.x86_64
+</code></pre></div>
+
+        !!! warning
+
+            It may take some time for the application to start the so please wait until image similar to the one presented below is visible in your application window.
+
+        ![](Image_0.png)
+
+### Launching Autoware
+
+In order to configure and run the Autoware software with the AWSIM demo, please:
+
+1. Download `map files (pcd, osm)` and unzip them.
+
+    [Download Map files (pcd, osm)](https://github.com/tier4/AWSIM/releases/download/v1.1.0/nishishinjuku_autoware_map.zip){.md-button .md-button--primary}
+
+2. Clone [Autoware](https://github.com/autowarefoundation/autoware) and move to the directory.
 <div class="highlight"><pre><span></span><code>git clone https://github.com/autowarefoundation/autoware.git
 cd autoware
-</code></pre></div></p>
-</li>
-<li>Switch branche to <code>awsim-stable</code>. <em>NOTE: The latest <code>main</code> branch is for <a href="https://docs.ros.org/en/rolling/Releases/Release-Humble-Hawksbill.html">ROS 2 humble</a>.</em>
+</code></pre></div>
+3. Switch branche to `awsim-stable`. *NOTE: The latest `main` branch is for [ROS 2 humble](https://docs.ros.org/en/rolling/Releases/Release-Humble-Hawksbill.html).*
 <div class="highlight"><pre><span></span><code>git checkout awsim-stable
-</code></pre></div></li>
-<li>Configure the environment. (Skip if Autoware environment has been configured before)
+</code></pre></div>
+4. Configure the environment. (Skip if Autoware environment has been configured before)
 <div class="highlight"><pre><span></span><code>./setup-dev-env.sh
-</code></pre></div></li>
-<li>Create the <code>src</code> directory and clone external dependent repositories into it.
+</code></pre></div>
+5. Create the `src` directory and clone external dependent repositories into it.
 <div class="highlight"><pre><span></span><code>mkdir src
 vcs import src &lt; autoware.repos
-</code></pre></div></li>
-<li>Install dependent ROS packages.
+</code></pre></div>
+6. Install dependent ROS packages.
 <div class="highlight"><pre><span></span><code>source /opt/ros/humble/setup.bash
 rosdep update
 rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
-</code></pre></div></li>
-<li>Build the workspace.
+</code></pre></div>
+7. Build the workspace.
 <div class="highlight"><pre><span></span><code>colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=&quot;-w&quot;
-</code></pre></div></li>
-<li>
-<p>Launch Autoware.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p><code>&lt;your mapfile location&gt;</code> must be changed arbitrarily. When specifying the path the <code>~</code> operator cannot be used - please specify absolute full path.</p>
-</div>
-<p><div class="highlight"><pre><span></span><code>source install/setup.bash
+</code></pre></div>
+8. Launch Autoware.
+
+    !!! warning
+
+        `<your mapfile location>` must be changed arbitrarily. When specifying the path the `~` operator cannot be used - please specify absolute full path.
+<div class="highlight"><pre><span></span><code>source install/setup.bash
 ros2 launch autoware_launch e2e_simulator.launch.xml vehicle_model:=sample_vehicle sensor_model:=awsim_sensor_kit map_path:=&lt;your mapfile location&gt;
 </code></pre></div>
-<img alt="" src="Image_2.png" /></p>
-</li>
-</ol>
-<h2 id="5-lets-run-the-self-driving-simulation">5. Let's run the self-Driving simulation</h2>
-<ol>
-<li>
-<p>Launch AWSIM and Autoware according to the steps described earlier in this document.
-<img alt="" src="Image_top.png" /></p>
-</li>
-<li>
-<p>The Autoware will automatically set its pose estimation as presented below.
-<img alt="" src="Image_Initial.png" /></p>
-</li>
-<li>
-<p>Set the navigation goal for the vehicle.
-<img alt="" src="Image_goal_0.png" />
-<img alt="" src="Image_goal_1.png" /></p>
-</li>
-<li>
-<p>Optionally, you can define an intermediate point through which the vehicle will travel on its way to the destination.
-<img alt="" src="Image_checkpoint_0.png" />
+![](Image_2.png)
+
+## 5. Let's run the self-Driving simulation
+
+1. Launch AWSIM and Autoware according to the steps described earlier in this document.
+![](Image_top.png)
+
+2. The Autoware will automatically set its pose estimation as presented below.
+![](Image_Initial.png)
+
+3. Set the navigation goal for the vehicle.
+![](Image_goal_0.png)
+![](Image_goal_1.png)
+
+4. Optionally, you can define an intermediate point through which the vehicle will travel on its way to the destination.
+![](Image_checkpoint_0.png)
 The generated path can be seen on the image below.
-<img alt="" src="Image_path.png" /></p>
-</li>
-<li>
-<p>Enable self-driving.</p>
-</li>
-</ol>
-<p>To make the vehicle start navigating please engage it's operation using the command below.</p>
+![](Image_path.png)
+
+5. Enable self-driving.
+
+To make the vehicle start navigating please engage it's operation using the command below.
+
 <div class="highlight"><pre><span></span><code>cd autoware
 source install/setup.bash
 ros2 topic pub /autoware/engage autoware_auto_vehicle_msgs/msg/Engage &#39;{engage: True}&#39; -1
 </code></pre></div>
-<p><img alt="" src="Image_running.png" /></p>
-<p>The self-driving simulation demo has been successfully launched!</p>
-<h2 id="6-troubleshooting">6. Troubleshooting</h2>
-<p>In case of any problems with running the sample AWSIM binary with Autoware, start with checking our <a href="https://tier4.github.io/AWSIM/DeveloperGuide/TroubleShooting/">Troubleshooting page</a> with the most common problems.</p>
-<h2 id="appendix">Appendix</h2>
-<ul>
-<li><a href="../../Components/ROS2/ROS2TopicList/">AWSIM ROS2 topic list</a></li>
-</ul>
+
+![](Image_running.png)
+
+The self-driving simulation demo has been successfully launched!
+
+## 6. Troubleshooting
+
+In case of any problems with running the sample AWSIM binary with Autoware, start with checking our [Troubleshooting page](https://tier4.github.io/AWSIM/DeveloperGuide/TroubleShooting/) with the most common problems.
+
+## Appendix
+- [AWSIM ROS2 topic list](../../Components/ROS2/ROS2TopicList/index.md) -->
 
 
 
@@ -987,6 +874,44 @@ ros2 topic pub /autoware/engage autoware_auto_vehicle_msgs/msg/Engage &#39;{enga
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../RacingSim/PAIR/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Purdue AI Racing Gallery">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Purdue AI Racing Gallery
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../SetupUnityProject/" class="md-footer__link md-footer__link--next" aria-label="Next: Setup Unity Project">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Setup Unity Project
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

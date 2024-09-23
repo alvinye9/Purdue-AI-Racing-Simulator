@@ -81,16 +81,16 @@ You can disable sensors or actuators to simulate faults.
 
 ![](RacingSim/Overview/Image_sensor_setup.png)
 
-# Further Vehicle/Tire Parameter configuration
+## Further Vehicle/Tire Parameter configuration (via config files)
 
-## PART I. Loading Setup Configuration Files via GUI
+### PART I. Loading Setup Configuration Files via GUI
 Previously discussed was how to use the dropdowns on the left side of the PAIRSIM GUI to access configuration files (by default saved in ~/PAIRSIM_config)
 
 ![](RacingSim/Overview/Image_scenario_menu_1.png)
 
 Note: Configuration files are saved seperately for Scenario/Vehicle/Sensor setups
 
-## PART II. Editing Configuration Files Directly
+### PART II. Editing Configuration Files Directly
 
 Configuration file structure is created by default everytime PAIRSIM is run in `~/PAIRSIM_config`
 The default file structure (recommended) is created as follows:
@@ -126,10 +126,13 @@ Ensure that the "Name": section is the name of the configuration you want to see
 Return to the main menu and then go back to Scenario Setup. This will appear in the PAIRSIM GUI as:
 ![](RacingSim/Overview/config_update.png)
 
-#### Note: If you edit config files externally, you may need to restart PAIRSIM executable or go back to main menu from the Drive scene to see the changes reflect.
-Also, the setup configuration parameters that cannot be changed directly via the GUI are still yet to be implemented; leave those in their default values.
+!!! warning
 
-## PART III: Additional Aero/Suspension/Brake/Geometric Parameter Configuration 
+    - If you edit config files externally, you may need to restart PAIRSIM executable or go back to main menu from the Drive scene to see the changes reflect.
+    
+    - Also, the setup configuration parameters that cannot be changed directly via the GUI are still yet to be implemented; leave those in their default values.
+
+### PART III: Additional Aero/Suspension/Brake/Geometric Parameter Configuration 
 
 The main vehicle parameters can be changed under "Vehicle Setup".
 Due to the large number of vehicle/tire parameters, they are not accessible through the PAIRSIM GUI. Instead they need to be directly changed via their configuration files. The default vehicle parameter file structure is as follows: 
@@ -146,9 +149,13 @@ Due to the large number of vehicle/tire parameters, they are not accessible thro
 │   └── SuspensionParams.json
 ```
 
-#### Note 1: You may add additional json files but PAIRSIM will only read from the default file names listed above. You must directly change those files to see changes update. To update the simulation with new parameters either return to the main menu or hit Pause -> Restart
-#### Note 2: Ensure that you do not use decimal numbers for parameters that were originally integers or vice-versa
-#### Note 3: See `VehicleParameters.cs` and `TyreParameters.cs` in the source code of PAIRSIM for parameter units and default values in case you forget.
+!!! warning
+
+    - You may add additional json files but PAIRSIM will only read from the default file names listed above. You must directly change those files to see changes update. To update the simulation with new parameters either return to the main menu or hit Pause -> Restart
+    
+    - Ensure that you do not use decimal numbers for parameters that were originally integers or vice-versa
+    
+    - See `VehicleParameters.cs` and `TyreParameters.cs` in the source code of PAIRSIM for parameter units and default values in case you forget.
 
 
 
