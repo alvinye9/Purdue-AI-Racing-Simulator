@@ -1,6 +1,6 @@
-site_name: AWSIM racing document
+site_name: PAIRSIM racing document
 
-repo_url: https://github.com/autonomalabs/AWSIM
+repo_url: https://github.com/alvinye9/Purdue-AI-Racing-Simulator
 
 theme:
   name: material
