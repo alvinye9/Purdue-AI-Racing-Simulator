@@ -181,6 +181,10 @@ To start a simulation, click 'Drive' from the 'Scenario Setup' menu.
     - If you did not, vehicle requires an orange flag and a ct_state = 5, followed by removing the orange flag to begin driving.
     - Low-level state machine is described in more detail in the [Sensors - Raptor](RacingSim/Sensors/index.md) section.
 
+### Running with NPC Vehicle
+
+PAIRSIM supports multi-vehicle simulation, with the adversarial vehicle controlled either via the high-level ROS2 interface (`/npc/vehicle_data`, `/npc/powertrain_data`, `/npc/race_control`, `/npc/vehicle_inputs`, `/npc/to_raptor`)OR `/planning/ghost_veh_position`, which is a `autoware_auto_perception_msgs/BoundingBoxArray` msg type containing the current centroid position (x,y) of the desired "ghost" vehicle in the ego vehicle's center_of_gravity frame using conventional vehicle dynamics CRS (+x forward, +y left). Adversarial vehicle's +z direction will match the ego vehicle's by default.
+ 
 ## Copyright and License
 
 Copyright 2024 Purdue AI Racing
