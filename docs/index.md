@@ -42,16 +42,33 @@ There are two options to run racing simulations:
 ## Scenario Setup (via GUI)
 ![](RacingSim/Overview/Image_main_menu.png)
 In the main menu, click the 'Scenario Setup' button.
-![](RacingSim/Overview/Image_scenario_menu.png)
-- Select a saved scenario from the dropdown or create a new one (scenario and vehicle setups are saved by default in your ~/PAIRSIM_config folder (Further Vehicle/Tire Parameter Configuration))
-- Select a saved vehicle setup
-- Select a racetrack
+![](RacingSim/Overview/Image_scenario_menu_highlighted.png)
+
+- <span style="color:pink;">PINK</span> Select a saved scenario from the dropdown or create a new one (scenario and vehicle setups are saved by default in your ~/PAIRSIM_config folder (Further Vehicle/Tire Parameter Configuration))
+
+- <span style="color:pink;">PINK</span> Select a saved vehicle setup
+
 - In the scenario setup, you can select number of cars and their colors (check out the custom Purdue Pete skin)
     - You can name your scenario and save it to use the same scenario settings later
     - When you have multiple scenarios saved, you can pick one from the left dropdown menu
     - The most recently saved scenario will be at the top of the dropdown for convenient testing
     - You can overwrite an existing configuration file of the same name
-- The option to "Hot start raptor" will start the low level ECU in sys_state = 9 (as explained in [Sensors - Raptor](../Sensors/index.md))
+
+- <span style="color:purple;">PURPLE</span> The option to "Hot start raptor" will start the low level ECU in sys_state = 9 (as explained in [Sensors - Raptor](../Sensors/index.md))
+
+- <span style="color:blue;">BLUE</span> Click "Select a track" dropdown to select a racetrack 
+
+!!! info
+
+    - To run other racelines that PAIRSIM currently does not have a track for, select the "GiantSkidpad" option
+
+    - <span style="color:red;">RED</span> If using GiantSkidpad, enter the Latitude, Longitude, height [m], and yaw [deg] (NED) of the ego-vehicle origin regardless if that origin is in or out of the pitlane.
+
+- <span style="color:orange;">ORANGE</span> If not spawning in pitlane, uncheck "Pitlane" (Skidpad and Monza do not currently support pitlane)
+
+- <span style="color:green;">GREEN</span> Click "Drive" to start simulation with all configurations
+
+- <span style="color:white;">WHITE</span> Select "ROS" for standard operation with autonomy stack, select "TELEOP" to allow control via keyboard. See [ Simulation Operation](#simulation-operation)
 
 ## Vehicle Setup (via GUI)
 To view or create a setup, click the 'Vehicle Setup' button.
