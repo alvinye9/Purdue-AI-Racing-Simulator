@@ -62,7 +62,10 @@ public class VehicleInputSubscriber : MonoBehaviour
             canThrottleCommandSubscriber = new CanSubscriber("accelerator_cmd", qosSettings, data_values => {
                 carController.throttleCmd = (float)data_values[1] / 100f;
                 carController.throttleCmd = Mathf.Clamp(carController.throttleCmd,0f,1f); 
-                Debug.Log("accelerator_cmd from CAN (#1): " + carController.throttleCmd);
+                // if(data_values[1] == null){
+                //     Debug.Log("No accelerator_cmd: "+ data_values[1]);
+                // }
+                // Debug.Log("accelerator_cmd from CAN (#1): " + carController.throttleCmd);
             });
 
             canBrakeCommandSubscriber = new CanSubscriber("brake_pressure_cmd", qosSettings, data_values => {

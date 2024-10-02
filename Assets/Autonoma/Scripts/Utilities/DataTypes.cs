@@ -288,9 +288,11 @@ public enum BodyColor
 
 public enum ControlType
 {
-    HUMAN = 0,
-    ROS = 1,
-    AI = 2,
+    // HUMAN = 0,
+    // ROS = 1,
+    // AI = 2,
+    ROS = 0,
+    TELEOP = 1,
 }
 
 public enum SensorType

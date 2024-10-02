@@ -1,5 +1,5 @@
 /* 
-Copyright 2023 Autonoma, Inc.
+Copyright 2024 Purdue AI Racing
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -157,16 +157,14 @@ public class SpawnManager : MonoBehaviour
         // Handle the enabling/disabling of Inputs based on ControlType
         Autonoma.VehicleInputSubscriber[] vehicleSubscribers = vehicleInstance.GetComponentsInChildren<Autonoma.VehicleInputSubscriber>();
         KeyboardInputs[] keyboardInputs = vehicleInstance.GetComponentsInChildren<KeyboardInputs>();
-        // foreach (KeyboardInputs ki in keyboardInputs)
-        // {
-        //     //ki.gameObject.SetActive(!isROS);
-        //     // ki.gameObject.SetActive(true);
-        // }
-        // foreach (Autonoma.VehicleInputSubscriber vi in vehicleSubscribers)
-        // {
-        //     //vi.gameObject.SetActive(isROS);
-        //     // vi.gameObject.SetActive(true);
-        // }
+        foreach (KeyboardInputs ki in keyboardInputs)
+        {
+            ki.gameObject.SetActive(!isROS);
+        }
+        foreach (Autonoma.VehicleInputSubscriber vi in vehicleSubscribers)
+        {
+            vi.gameObject.SetActive(isROS);
+        }
 
         // Disable Sensor Publishers in instantiated Vehicle
         Transform novatelTopTransform = vehicleInstance.transform.Find("URDF/base_link/Novatel PWRPAK7 Top");
@@ -385,11 +383,11 @@ public class SpawnManager : MonoBehaviour
         KeyboardInputs[] keyboardInputs = vehicleInstance.GetComponentsInChildren<KeyboardInputs>();
         foreach (KeyboardInputs ki in keyboardInputs)
         {
-            ki.gameObject.SetActive(true);
+            ki.gameObject.SetActive(!isROS);
         }
         foreach (Autonoma.VehicleInputSubscriber vi in vehicleSubscribers)
         {
-            vi.gameObject.SetActive(true);
+            vi.gameObject.SetActive(!isROS);
         }
 
     }
@@ -460,11 +458,11 @@ public class SpawnManager : MonoBehaviour
         KeyboardInputs[] keyboardInputs = vehicleInstance.GetComponentsInChildren<KeyboardInputs>();
         foreach (KeyboardInputs ki in keyboardInputs)
         {
-            ki.gameObject.SetActive(true);
+            ki.gameObject.SetActive(!isROS);
         }
         foreach (Autonoma.VehicleInputSubscriber vi in vehicleSubscribers)
         {
-            vi.gameObject.SetActive(true);
+            vi.gameObject.SetActive(!isROS);
         }
     }
     public void SpawnEnvironment()
@@ -559,7 +557,6 @@ public class SpawnManager : MonoBehaviour
                     instantiatedTrack.transform.localScale = scale;
                 }
                 else{
-                    // Vector3 position = new Vector3(262f, 9f, 368f); //(Car Rotation 107 deg) (based on the PAIR vegas2.csv raceline)
                     Vector3 position = new Vector3(205f, 9.2f, -257f);  //(Car Rotation 230 deg NED) to start at starting line
                     Quaternion rotation = Quaternion.Euler(0, 180f, 0);  
                     Vector3 scale = new Vector3(0.8025f, 0.8025f, 0.8025f); 
