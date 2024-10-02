@@ -4803,10 +4803,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vehicleInputsTopic: /vehicle_inputs
   qosSettings:
-    ReliabilityPolicy: 0
-    DurabilityPolicy: 0
-    HistoryPolicy: 0
-    Depth: 10
+    ReliabilityPolicy: 1
+    DurabilityPolicy: 2
+    HistoryPolicy: 1
+    Depth: 20
   carController: {fileID: 264682144810106634}
 --- !u!114 &2698108564109349669
 MonoBehaviour:

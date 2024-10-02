@@ -385,6 +385,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#running-with-npc-vehicle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running with NPC Vehicle
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -611,6 +620,15 @@
   <a href="#when-running-external-autonomy-stack-in-ros-environment" class="md-nav__link">
     <span class="md-ellipsis">
       When running external autonomy stack in ROS environment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-with-npc-vehicle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running with NPC Vehicle
     </span>
   </a>
   
@@ -1070,6 +1088,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#running-with-npc-vehicle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Running with NPC Vehicle
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1280,6 +1307,8 @@ Due to the large number of vehicle/tire parameters, they are not accessible thro
 </ul>
 </li>
 </ul>
+<h3 id="running-with-npc-vehicle">Running with NPC Vehicle</h3>
+<p>PAIRSIM supports multi-vehicle simulation, with the adversarial vehicle controlled either via the high-level ROS2 interface (<code>/npc/vehicle_data</code>, <code>/npc/powertrain_data</code>, <code>/npc/race_control</code>, <code>/npc/vehicle_inputs</code>, <code>/npc/to_raptor</code>)OR <code>/planning/ghost_veh_position</code>, which is a <code>autoware_auto_perception_msgs/BoundingBoxArray</code> msg type containing the current centroid position (x,y) of the desired "ghost" vehicle in the ego vehicle's center_of_gravity frame using conventional vehicle dynamics CRS (+x forward, +y left). Adversarial vehicle's +z direction will match the ego vehicle's by default.</p>
 <h2 id="copyright-and-license">Copyright and License</h2>
 <p>Copyright 2024 Purdue AI Racing</p>
 <p>All code is licensed under the Apache 2.0 License. All assets are distributed under the CC BY-NC License.</p>

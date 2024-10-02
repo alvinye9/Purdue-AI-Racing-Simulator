@@ -41,6 +41,7 @@ public class VehicleInputSubscriber : MonoBehaviour
         carController = HelperFunctions.GetParentComponent<CarController>(transform);
         var qos = qosSettings.GetQoSProfile();
 
+
         vehicleInputsSubscriber = SimulatorROS2Node.CreateSubscription<VehicleInputs>(vehicleInputsTopic, msg =>
             {
                 UpdateVehicleInputs(msg);
@@ -60,7 +61,8 @@ public class VehicleInputSubscriber : MonoBehaviour
 
             canThrottleCommandSubscriber = new CanSubscriber("accelerator_cmd", qosSettings, data_values => {
                 carController.throttleCmd = (float)data_values[1] / 100f;
-                carController.throttleCmd = Mathf.Clamp(carController.throttleCmd,0f,1f);
+                carController.throttleCmd = Mathf.Clamp(carController.throttleCmd,0f,1f); 
+                Debug.Log("accelerator_cmd from CAN (#1): " + carController.throttleCmd);
             });
 
             canBrakeCommandSubscriber = new CanSubscriber("brake_pressure_cmd", qosSettings, data_values => {

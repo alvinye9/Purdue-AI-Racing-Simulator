@@ -54,6 +54,10 @@ public class CarController : MonoBehaviour
     private float[] steeringInputHistory = new float[2];  // [n-1, n-2]
     private float[] steeringOutputHistory = new float[2]; // [n-1, n-2]
 
+    private float prevThrottleCmd = 0.0f;
+    private float zeroTime = -1.0f;
+    private float zeroThresholdTime = 0.20f; // Time threshold (in seconds) before accepting a zero value, experimentally determined 
+
     void getState()
     {
         // take values from unity system and transform into VD coords
@@ -171,7 +175,37 @@ public class CarController : MonoBehaviour
     {        
         //TEngine = throttleCmd * HelperFunctions.lut1D(VehParams.engineMapLen,VehParams.engineMapRevs,VehParams.engineMapTorque,rpmEngine);
         float saturatedRpmEngine = Mathf.Clamp(rpmEngine,vehicleParams.minEngineMapRpm,vehicleParams.maxEngineRpm);
-        thrApplied = HelperFunctions.lowPassFirstOrder(throttleCmd,thrAplliedPrev, vehicleParams.throttleBandwidth);
+
+        //filter out unwanted 0s from autonomy stack, must be a better way to do this...
+        if (throttleCmd == 0)
+        {
+            // If zero, start or continue timing
+            if (zeroTime < 0)
+            {
+                zeroTime = Time.time; // Start timing
+            }
+
+            // If the accel pedal input has been zero for longer than the threshold, accept the zero value 
+            if (Time.time - zeroTime >= zeroThresholdTime)
+            {
+                throttleCmd = 0f; // Accept the zero value
+                prevThrottleCmd = 0f; // Update previous input
+            }
+            else
+            {
+                // If within the threshold time, keep the last valid 
+                throttleCmd = prevThrottleCmd;
+            }
+        }
+        else
+        {
+            // If the accel pedal input is non-zero, reset the timing and update normally
+            throttleCmd = Mathf.Clamp(throttleCmd, 0f, 100f);
+            zeroTime = -1.0f; 
+            prevThrottleCmd = throttleCmd; 
+        }
+
+        thrApplied = HelperFunctions.lowPassFirstOrder(throttleCmd,thrAplliedPrev, vehicleParams.throttleBandwidth); 
         thrApplied = HelperFunctions.rateLimit(thrApplied, thrAplliedPrev , vehicleParams.throttleRate);
 
         // Add Gaussian noise
@@ -196,6 +230,8 @@ public class CarController : MonoBehaviour
         TAxle = TEngine * vehicleParams.gearRatio[gear-1];
         TEnginePrev= TEngine;
     }
+
+
     void applyAeroForces()
     {
         float aeroForce = -0.6f*vehicleParams.Af*V.x*V.x;

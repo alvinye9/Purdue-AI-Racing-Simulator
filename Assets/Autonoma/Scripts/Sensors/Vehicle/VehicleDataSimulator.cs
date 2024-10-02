@@ -83,12 +83,6 @@ public class VehicleDataSimulator : MonoBehaviour
     public float brake_bias;
     public float brake_bias_aim_switch;
 
-    // Add variables to track time and previous command for accel_pedal_input, to prevent it jumping to 0 abruptly
-    private float accelPedalZeroTimestamp = -1.0f; // To track the time when accel pedal input is zero
-    private float accelZeroThresholdTime = 0.15f; // Time threshold (in seconds) before accepting a zero value, experimentally determined 
-    private float previousAccelPedalInput = 0.0f; // Store the last non-zero accel pedal input
-
-
     void Start()
     {
         carController = HelperFunctions.GetParentComponent<CarController>(transform);
@@ -130,47 +124,15 @@ public class VehicleDataSimulator : MonoBehaviour
         rr_brake_temp = 50.0f;
 
         battery_voltage = 13.0f;
-        // safety_switch_state = 0; //FIXME
+        // safety_switch_state = 0; //FIXME, should be toggle-able
         safety_switch_state = 4;
-        //mode_switch_state = true; //FIXME
+        //mode_switch_state = true; //FIXME, should be toggle-able
         mode_switch_state = false;
 
-        // Update accel_pedal_input with the timeout mechanism
-        float newAccelPedalInput = carController.throttleCmd * 100;
-
-        // Check if the new accel pedal input is zero
-        if (newAccelPedalInput == 0)
-        {
-            // If zero, start or continue timing
-            if (accelPedalZeroTimestamp < 0)
-            {
-                accelPedalZeroTimestamp = Time.time; // Start timing
-            }
-
-            // If the accel pedal input has been zero for longer than the threshold, accept the zero value
-            if (Time.time - accelPedalZeroTimestamp >= accelZeroThresholdTime)
-            {
-                accel_pedal_input = 0f; // Accept the zero value
-                previousAccelPedalInput = 0f; // Update previous input
-            }
-            else
-            {
-                // If within the threshold time, keep the last valid non-zero accel pedal input
-                accel_pedal_input = previousAccelPedalInput;
-            }
-        }
-        else
-        {
-            // If the accel pedal input is non-zero, reset the timing and update normally
-            accel_pedal_input = Mathf.Clamp(newAccelPedalInput, 0f, 100f);
-            accelPedalZeroTimestamp = -1.0f; // Reset timestamp
-            previousAccelPedalInput = accel_pedal_input; // Update previous input
-        }
-
-
-        // accel_pedal_input = carController.throttleCmd * 100;
+        accel_pedal_input = carController.throttleCmd * 100; //original
 
         accel_pedal_output = carController.thrApplied *100;
+
         front_brake_pressure = 2.0f * carController.brakeApplied *   carController.vehicleParams.brakeBias;  //FIXME
         rear_brake_pressure = 2.0f * carController.brakeApplied * (1-  carController.vehicleParams.brakeBias);
         steering_wheel_angle = carController.steerAngleApplied*  carController.vehicleParams.steeringRatio;
