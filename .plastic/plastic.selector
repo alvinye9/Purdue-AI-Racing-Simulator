@@ -1,4 +1,0 @@
-repository "Purdue-AI-Racing-Simulator@alvinye9@cloud"
-  path "/"
-    br "/main"
-    co "/main"
