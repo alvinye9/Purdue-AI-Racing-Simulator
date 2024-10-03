@@ -5,6 +5,7 @@ A vehicle simulator for the Dallara AV-24 for the 2023 and 2024 Indy Autonomous 
 ## PAIRSIM Documentation
 [Access the updated PAIRSIM documentation here!](https://alvinye9.github.io/Purdue-AI-Racing-Simulator/)
 
+
 <!-- ## Original AWSIM Documentation
 [Access the original AWSIM documentation here!](https://autonomalabs.github.io/AWSIM/) -->
 
