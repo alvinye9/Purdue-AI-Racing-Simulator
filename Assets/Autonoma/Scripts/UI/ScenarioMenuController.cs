@@ -50,6 +50,7 @@ public class ScenarioMenuController : MonoBehaviour
     
     public Toggle hotStartToggle;
     public Toggle pitToggle;
+    public Toggle modeToggle;
     public TMP_InputField scenarioNameInput;
     public Slider numCarsInput;
     public TMP_Dropdown[] controlTypeDropdowns = new TMP_Dropdown[3]; 
@@ -64,8 +65,6 @@ public class ScenarioMenuController : MonoBehaviour
     private float lon_input; 
     private float height_input;
     private float yaw_input;
-
-    private bool isPit;
     
     private void Awake()
     {  
@@ -125,6 +124,7 @@ public class ScenarioMenuController : MonoBehaviour
 
         hotStartToggle.isOn = tmpScenarioObj.HotStart;
         pitToggle.isOn = tmpScenarioObj.IsPit;
+        modeToggle.isOn = tmpScenarioObj.ModeSwitchState;
 
         saveScenarioButtonPressed();
 
@@ -328,6 +328,7 @@ public class ScenarioMenuController : MonoBehaviour
             trackDropdown.value = 0;
             hotStartToggle.isOn = true;
             pitToggle.isOn = true;
+            modeToggle.isOn = false;
             carSpawnPosInput[0].text = "0";
             carNumInput[0].text = "1";
             rosDomainInput[0].text = "0";
@@ -555,6 +556,7 @@ public class ScenarioMenuController : MonoBehaviour
         tmpScenarioObj.SelectedTrack = trackDropdown.value;
         tmpScenarioObj.HotStart = hotStartToggle.isOn;
         tmpScenarioObj.IsPit = pitToggle.isOn;
+        tmpScenarioObj.ModeSwitchState = modeToggle.isOn; //true = test mode, false = race mode
         tmpScenarioObj.Cars = new List<Car>()
         {
             new Car()
