@@ -531,10 +531,9 @@ public class SpawnManager : MonoBehaviour
             {
                 if(GameManager.Instance.Settings.myTrackParams.TrackName == "Kentucky Speedway")
                 {
-                    // Vector3 position = new Vector3(438f, -1.9f, -346f);
-                    // Vector3 scale = new Vector3(0.97f, 1.08f, 0.96f);
-                    Vector3 position = new Vector3(431f, -2.1f, -343f);
-                    Vector3 scale = new Vector3(0.97f, 1.08f, 0.95f); 
+                    Vector3 position = new Vector3(432.5f, -2.1f, -342.9f);
+                    Vector3 scale = new Vector3(0.9765f, 1.08f, 0.955f);  //best for outside
+
                     Quaternion rotation = Quaternion.Euler(0f, 129f, 0f); 
                     GameObject instantiatedTrack = Instantiate(kentuckyPrefab, position, rotation); //for new prefabs
                     instantiatedTrack.transform.localScale = scale;
