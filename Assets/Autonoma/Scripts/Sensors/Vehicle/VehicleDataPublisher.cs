@@ -169,6 +169,7 @@ public class VehicleDataPublisher : Publisher<VehicleData>
             canMiscReportPublisher.GetCounterNext()// rolling counter missing here?
         });
 
+        // Debug.Log($"mode switch state {vehSim.mode_switch_state}");
 
         canAccelReportPublisher.Publish(new List<double>{
             canAccelReportPublisher.GetCounterNext(), // counter
@@ -195,8 +196,6 @@ public class VehicleDataPublisher : Publisher<VehicleData>
             0.0f, //sbw_error_code
             0.0f //sbw_motor_torque_estimate
         }); 
-
-        //Debug.Log($"publishing steer angle {vehSim.steering_wheel_angle}");
 
         canBrakePressureReportPublisher.Publish(new List<double>{
             canBrakePressureReportPublisher.GetCounterNext(), // counter
