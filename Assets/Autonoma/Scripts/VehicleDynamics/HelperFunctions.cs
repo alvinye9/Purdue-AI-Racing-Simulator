@@ -221,5 +221,27 @@ public class HelperFunctions
         // Return the ENU Euler angles as a new Vector3, converting back to degrees if necessary
         return new Vector3(rollENU, pitchENU, yawENU);
     }
+    
+    public static Quaternion EulerToQuaternion(float roll, float pitch, float yaw)
+    {
+        // Convert degrees to radians if needed
+        roll = roll * Mathf.Deg2Rad;
+        pitch = pitch * Mathf.Deg2Rad;
+        yaw = yaw * Mathf.Deg2Rad;
+
+        float cy = Mathf.Cos(yaw * 0.5f);
+        float sy = Mathf.Sin(yaw * 0.5f);
+        float cp = Mathf.Cos(pitch * 0.5f);
+        float sp = Mathf.Sin(pitch * 0.5f);
+        float cr = Mathf.Cos(roll * 0.5f);
+        float sr = Mathf.Sin(roll * 0.5f);
+
+        float w = cr * cp * cy + sr * sp * sy;
+        float x = sr * cp * cy - cr * sp * sy;
+        float y = cr * sp * cy + sr * cp * sy;
+        float z = cr * cp * sy - sr * sp * cy;
+
+        return new Quaternion(x, y, z, w);
+    }
 }
 }
