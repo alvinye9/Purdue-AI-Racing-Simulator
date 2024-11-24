@@ -15,6 +15,7 @@ out of or in connection with the software or the use of the software.
 */
 using UnityEngine;
 using sensor_msgs.msg;
+using VehicleDynamics;
 
 namespace Autonoma
 {
@@ -117,15 +118,50 @@ public class ImuPublisher : Publisher<Imu>
         imuAngleX += headingNoiseX;
         imuAngleY += headingNoiseY;
         imuAngleZ += headingNoiseZ;
+        
+        // UnityEngine.Quaternion quat = UnityEngine.Quaternion.Euler(imuAngleY, imuAngleX, imuAngleZ);
+        // msg.Orientation.X = quat.x;
+        // msg.Orientation.Y  = quat.y;
+        // msg.Orientation.Z = quat.z;
+        // msg.Orientation.W = quat.w;
+        // msg.Orientation_covariance[0] = orientation_covariance;
+        // msg.Orientation_covariance[4] = orientation_covariance;
+        // msg.Orientation_covariance[8] = orientation_covariance;
 
-        UnityEngine.Quaternion quat = UnityEngine.Quaternion.Euler(imuAngleY, imuAngleX, imuAngleZ);
-        msg.Orientation.X = quat.x;
-        msg.Orientation.Y  = quat.y;
-        msg.Orientation.Z = quat.z;
-        msg.Orientation.W = quat.w;
-        msg.Orientation_covariance[0] = orientation_covariance;
-        msg.Orientation_covariance[4] = orientation_covariance;
-        msg.Orientation_covariance[8] = orientation_covariance;
+       // //orientation is in ego frame
+        GameObject egoCarObject = GameObject.Find("DallaraAV24(Clone)");
+        if (egoCarObject != null)
+        { 
+            Transform egoTransform = egoCarObject.transform;
+            float rollAngle = egoTransform.eulerAngles.z;//roll angle in local frame
+            float pitchAngle = egoTransform.eulerAngles.x; 
+            float yawAngle = egoTransform.eulerAngles.y;   
+
+            // Convert yaw to a range of -180 to 180 degrees
+            if (yawAngle > 180)
+            {
+                yawAngle -= 360;
+            }
+
+            yawAngle = -1 * yawAngle + 90.0f; //Unity CRS -> ENU
+
+            // rpy -> quat
+            Quaternion finalOrientation = HelperFunctions.EulerToQuaternion(-1 * rollAngle, pitchAngle, yawAngle); 
+
+            msg.Orientation.X = finalOrientation.x;
+            msg.Orientation.Y = finalOrientation.y;
+            msg.Orientation.Z = finalOrientation.z;
+            msg.Orientation.W = finalOrientation.w;
+
+            msg.Orientation_covariance[0] = orientation_covariance;
+            msg.Orientation_covariance[4] = orientation_covariance;
+            msg.Orientation_covariance[8] = orientation_covariance;
+        }
+        else{ 
+            Debug.LogError("EGO VEHICLe NOT FOUND");
+        }
+
+
 
     }
 }
