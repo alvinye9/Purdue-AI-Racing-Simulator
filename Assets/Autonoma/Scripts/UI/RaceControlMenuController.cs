@@ -1,5 +1,5 @@
 /* 
-Copyright 2023 Autonoma, Inc.
+Copyright 2024 Purdue AI Racing
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -26,8 +26,10 @@ public class RaceControlMenuController : MonoBehaviour
     public List<GameObject> rosCars;
     public TMP_Dropdown trackFlagDropdown;     
     public TMP_Dropdown vehFlagDropdown;
-    public int[] track_flag_vec = {3,9,1};
-    public int[] veh_flag_vec = {0,25,7,34,4,33};
+    public TMP_Dropdown roundTargetSpeedDropdown;
+    public int[] track_flag_vec = {3,9,1,37}; //red, full_course_yellow, green, waving_green (Marelli)
+    public int[] veh_flag_vec = {0,25,7,34,4,33,36,35}; //none, orange, yellow, stop, black, engine_kill, attacker, defender
+    public int[] round_target_speed_vec = {80,60,70,90,100,110,120,130,140,150,160,170,180}; //for use with waving green flag
     bool initialized = false;
     void Start()
     {
@@ -38,6 +40,10 @@ public class RaceControlMenuController : MonoBehaviour
         vehFlagDropdown.onValueChanged.AddListener(delegate { vehFlagChanged(); } );
 
         vehFlagChanged();
+
+        roundTargetSpeedDropdown.onValueChanged.AddListener(delegate { roundTargetSpeedChanged(); } );
+
+        roundTargetSpeedChanged();
     }
 
     void Update()
@@ -46,6 +52,7 @@ public class RaceControlMenuController : MonoBehaviour
         {
             vehFlagChanged();
             trackFlagChanged();
+            roundTargetSpeedChanged();
 
             if(GameManager.Instance.Settings.shouldStartWithGreenFlag &&
                 GameManager.Instance.Settings.greenFlagDelay == 0.0f)
@@ -90,6 +97,13 @@ public class RaceControlMenuController : MonoBehaviour
     void trackFlagChanged()
     {
         int idx = trackFlagDropdown.value;
+
+        if (trackFlagDropdown.options.Count != track_flag_vec.Length)
+        {
+            Debug.LogError($"Mismatch! Dropdown options: {trackFlagDropdown.options.Count}, track_flag_vec length: {track_flag_vec.Length}");
+            return;
+        }
+
         foreach(GameObject car in rosCars)
         {
             RaceControlData raceControl = car.transform.Find("URDF").Find("base_link").Find("Vehicle Sensors").Find("Race Control").GetComponent<RaceControlData>();
@@ -111,6 +125,16 @@ public class RaceControlMenuController : MonoBehaviour
         {
             RaceControlData raceControl = car.transform.Find("URDF").Find("base_link").Find("Vehicle Sensors").Find("Race Control").GetComponent<RaceControlData>();
             raceControl.rc.VehicleFlag = (byte)veh_flag_vec[idx];
+        }    
+    }
+
+    void roundTargetSpeedChanged()
+    {
+        int idx = roundTargetSpeedDropdown.value;
+        foreach(GameObject car in rosCars)
+        {
+            RaceControlData raceControl = car.transform.Find("URDF").Find("base_link").Find("Vehicle Sensors").Find("Race Control").GetComponent<RaceControlData>();
+            raceControl.rc.RoundTargetSpeed = (byte)round_target_speed_vec[idx];
         }    
     }
 }

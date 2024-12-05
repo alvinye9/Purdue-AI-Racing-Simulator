@@ -326,8 +326,8 @@ public class ScenarioMenuController : MonoBehaviour
             scenarioNameInput.text = "Default";
             numCarsInput.value =  1;
             trackDropdown.value = 0;
-            hotStartToggle.isOn = true;
-            pitToggle.isOn = true;
+            hotStartToggle.isOn = false;
+            pitToggle.isOn = false;
             modeToggle.isOn = false;
             carSpawnPosInput[0].text = "0";
             carNumInput[0].text = "1";
