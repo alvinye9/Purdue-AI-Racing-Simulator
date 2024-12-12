@@ -557,9 +557,12 @@ public class SpawnManager : MonoBehaviour
                     instantiatedTrack.transform.localScale = scale;
                 }
                 else{
-                    Vector3 position = new Vector3(205f, 9.2f, -257f);  //(Car Rotation 230 deg NED) to start at starting line
+                    // Vector3 position = new Vector3(205f, 9.2f, -257f);  //(Car Rotation 230 deg NED) to start at starting line
                     Quaternion rotation = Quaternion.Euler(0, 180f, 0);  
-                    Vector3 scale = new Vector3(0.8025f, 0.8025f, 0.8025f); 
+                    // Vector3 scale = new Vector3(0.8025f, 0.8025f, 0.8025f);
+                    Vector3 position = new Vector3(209f, 9.2f, -253f); //scaled for updated right bounds
+                    Vector3 scale = new Vector3(0.805f, 0.8025f, 0.805f);
+
                     GameObject instantiatedTrack = Instantiate(track, position, rotation);
                     instantiatedTrack.transform.localScale = scale;
                 }

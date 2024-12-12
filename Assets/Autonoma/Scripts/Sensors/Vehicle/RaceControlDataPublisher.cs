@@ -1,5 +1,5 @@
 /* 
-Copyright 2023 Autonoma, Inc.
+Copyright 2024 Purdue AI Racing
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -28,6 +28,7 @@ public class RaceControlDataPublisher : Publisher<autonoma_msgs.msg.RaceControl>
     public string modifiedFrameId = "";
 
     public CanPublisher canRaceControlPublisher;
+    public CanPublisher canBaseToCarSummaryPublisher; 
 
     public void getPublisherParams()
     {
@@ -43,6 +44,8 @@ public class RaceControlDataPublisher : Publisher<autonoma_msgs.msg.RaceControl>
         base.Start();
 
         canRaceControlPublisher = new CanPublisher("marelli_report_1", rosNamespace, qosSettings);
+
+        canBaseToCarSummaryPublisher = new CanPublisher("base_to_car_summary", rosNamespace, qosSettings);
     }
 
     protected override void OnPublishMessage()
@@ -54,6 +57,17 @@ public class RaceControlDataPublisher : Publisher<autonoma_msgs.msg.RaceControl>
            0,
            0
         });
+
+        canBaseToCarSummaryPublisher.Publish(new List<double>{
+            0,
+            raceControlData.rc.TrackFlag,
+            raceControlData.rc.VehicleFlag,
+            0,
+            0,
+            0,
+            raceControlData.rc.RoundTargetSpeed
+        });  
+
     }
 
     public RaceControlData raceControlData;
@@ -61,6 +75,7 @@ public class RaceControlDataPublisher : Publisher<autonoma_msgs.msg.RaceControl>
     {
         msg.Track_flag = raceControlData.rc.TrackFlag;
         msg.Veh_flag = raceControlData.rc.VehicleFlag;
+        msg.Round_target_speed = raceControlData.rc.RoundTargetSpeed;
     }
 } // end of class
 } // end of autonoma namespace

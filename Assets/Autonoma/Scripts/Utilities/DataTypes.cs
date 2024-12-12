@@ -247,7 +247,8 @@ public class RaceControl
     public int VehicleRank; 
     public int LapCount; 
     public float LapDistance; 
-    public int RoundTargetSpeed;
+    public byte RoundTargetSpeed;
+    // public int RoundTargetSpeed;
     public int Laps;
     public float LapTime;
     public float TimeStamp;
