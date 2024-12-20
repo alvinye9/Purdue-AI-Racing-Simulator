@@ -27,7 +27,7 @@ public class RaceControlMenuController : MonoBehaviour
     public TMP_Dropdown trackFlagDropdown;     
     public TMP_Dropdown vehFlagDropdown;
     // public TMP_Dropdown roundTargetSpeedDropdown; //DEPRECATED
-    public int[] track_flag_vec = {3, 9, 1, 37, 80, 100, 120, 130, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190}; //red, full_course_yellow, green, waving_green (Marelli), GSpeed flags...
+    public int[] track_flag_vec = {3, 9, 1, 37, 40, 60, 80, 100, 120, 130, 140, 145, 150, 155, 160, 165, 170, 175, 180, 185, 190}; //red, full_course_yellow, green, waving_green (Marelli), GSpeed flags...
     public int[] veh_flag_vec = {0,25,7,34,4,33,36,35}; //none, orange, yellow, stop, black, engine_kill, attacker, defender
     // public int[] round_target_speed_vec = {80,60,70,90,100,110,120,130,140,150,160,170,180}; //DEPRECATED
     bool initialized = false;
