@@ -440,15 +440,15 @@ public static class Enu2LatLonHeight
         var y = UTMNorthing;
         var ZoneNumber = UTMZoneNumber;
         var ZoneLetter = UTMZoneLetter;
-        int NorthernHemisphere;
+        // int NorthernHemisphere;
 
         if ("N" == ZoneLetter)
         {
-            NorthernHemisphere = 1;
+            // NorthernHemisphere = 1;
         }
         else
         {
-            NorthernHemisphere = 0;
+            // NorthernHemisphere = 0;
             y -= 10000000.0;
         }
 

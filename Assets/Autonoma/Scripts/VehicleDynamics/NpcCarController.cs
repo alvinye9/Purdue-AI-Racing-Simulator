@@ -33,7 +33,6 @@ public class NpcCarController : MonoBehaviour
     private Vector3 targetPosition;  // Current target position for the car
     private float targetHeading;
     private bool isMoving = false; 
-    private float currentSpeed = 0f;  // Current speed of the car
 
     void Start()
     {

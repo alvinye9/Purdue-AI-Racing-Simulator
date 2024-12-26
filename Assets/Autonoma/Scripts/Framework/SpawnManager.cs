@@ -29,6 +29,7 @@ public class SpawnManager : MonoBehaviour
     public GameObject kentuckyPrefab;
     public GameObject imsPrefab;
     public GameObject imsBankedPrefab;
+    public GameObject waypointPrefab;
     public Material[] materials;
     public RaceControlMenuController raceControlMenu;
     private TrackParams trackParams;
@@ -70,6 +71,8 @@ public class SpawnManager : MonoBehaviour
             SpawnNPCVehicle(1, isPit);
             SpawnNPC2Vehicle(2, isPit); 
         }      
+
+        SpawnWaypoints();
         
     }
 
@@ -574,6 +577,22 @@ public class SpawnManager : MonoBehaviour
 
 
         }
+    }
+
+    public void SpawnWaypoints()
+    {
+        // Debug.Log("Spawning Ego Vehicle: " + idx);
+
+            Vector3 spawnPosition = new Vector3(99,99,99); //initial spawn location irrelevant
+
+            GameObject waypoint;
+            int numWaypoints = 10; //should match vlaue in frontpathsubscriber
+            for (var i = 0; i < numWaypoints; i++)
+            {
+                waypoint = Instantiate(waypointPrefab, spawnPosition, Quaternion.identity);
+                waypoint.name = "waypoint" + i;
+            }
+ 
     }
 
 }
