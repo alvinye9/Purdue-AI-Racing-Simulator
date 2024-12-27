@@ -17,7 +17,7 @@ There are two options to run racing simulations:
 
 1. Download binary (recommended)
 
-    Download the most recent racing simulator [here](https://purdue0-my.sharepoint.com/my?id=%2Fpersonal%2Fye372%5Fpurdue%5Fedu%2FDocuments%2FResearch%2Fcustom%5Fsimulator&ga=1)
+    Download the latest PAIRSIM racing simulator [here](https://github.com/alvinye9/Purdue-AI-Racing-Simulator/releases)
     
 - Currently only compatible with Linux:
 
