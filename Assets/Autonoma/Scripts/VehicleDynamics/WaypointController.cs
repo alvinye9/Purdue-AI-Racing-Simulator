@@ -20,7 +20,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System;
-
+using UnityEngine.UI;
 
 public class WaypointController : MonoBehaviour
 {
@@ -29,9 +29,23 @@ public class WaypointController : MonoBehaviour
     public Rigidbody egoCarBody; 
     private Vector3 targetPosition;  // Current target position for the waypoint
     public string waypointName;
+    public Toggle racelineToggle;
 
     void Start()
     {
+        racelineToggle = GameObject.Find("RacelineToggle").GetComponent<Toggle>();
+        if (racelineToggle != null)
+        {
+            gameObject.SetActive(racelineToggle.isOn); 
+            Debug.Log("Toggle isOn: " + racelineToggle.isOn);
+        }
+        else
+        {
+            Debug.Log("Toggle not found!");
+        }
+
+        racelineToggle.onValueChanged.AddListener(OnToggleChanged);
+
         waypoint = GetComponent<Rigidbody>();
         waypointName = waypoint.name;
 
@@ -75,6 +89,12 @@ public class WaypointController : MonoBehaviour
     public void SetTargetPosition(Vector3 position)
     {
         targetPosition = position; //in veh dynamics frame (RH)
+    }
+
+    // Toggle visibility of waypoints
+    void OnToggleChanged(bool isOn)
+    {
+        gameObject.SetActive(isOn); 
     }
 
 }
