@@ -21,9 +21,9 @@ There are two options to run racing simulations:
     
 - Currently only compatible with Linux:
 
-    - Double-click the downloaded executable (.so)
+    - Double-click the downloaded executable (.x86_64)
 
-    - The first time you may need to set the executable permissions with ```chmod +x PAIRSIM_vX.X.X.so```
+    - The first time you may need to set the executable permissions with ```chmod +x PAIRSIM_vX.X.X.x86_64```
 
 2. From the Unity Editor
 

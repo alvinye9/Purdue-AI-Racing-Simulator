@@ -43,7 +43,6 @@ nav:
 
 
   - Developer guide:
-    # - How to Contribute: DeveloperGuide/HowToContribute/index.md
     # - Trouble shooting: DeveloperGuide/TroubleShooting/index.md
     - Documentation: DeveloperGuide/Documentation/index.md
     - License : DeveloperGuide/License/index.md
