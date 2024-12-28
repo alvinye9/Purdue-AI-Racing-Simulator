@@ -16,7 +16,7 @@
     
     
       
-        <title>AWSIM Vehicle - Purdue-AI-Racing Simulator Documentation</title>
+        <title>Index - Purdue-AI-Racing Simulator Documentation</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#awsim-vehicle" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AWSIM Vehicle
+              Index
             
           </span>
         </div>
@@ -602,94 +597,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#sample-vehicle-lexus-rx450h" class="md-nav__link">
-    <span class="md-ellipsis">
-      Sample Vehicle - Lexus RX450h
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vehicle-dynamics-concept" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vehicle Dynamics Concept
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#required-vehicle-parameters" class="md-nav__link">
-    <span class="md-ellipsis">
-      Required vehicle parameters
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vehicle-control-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vehicle control scripts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#vehicle-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Vehicle API
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Vehicle API">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#input-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Input API
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#output-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      Output API
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ros2-control-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      ROS2 Control Topics
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -707,250 +614,104 @@
   
 
 
-<h1 id="awsim-vehicle">AWSIM Vehicle</h1>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>AWSIM Vehicle Dynamics is mostly functional, but still under development.</p>
-</div>
-<h2 id="sample-vehicle-lexus-rx450h">Sample Vehicle - Lexus RX450h</h2>
-<p><img src=image_0.png width=500px></p>
-<p>AWSIM project includes a Lexus RX450h vehicle model. Prefab path is
+  <h1>Index</h1>
+
+<!-- # AWSIM Vehicle
+
+!!! info
+
+    AWSIM Vehicle Dynamics is mostly functional, but still under development.
+
+## Sample Vehicle - Lexus RX450h
+
+<img src=image_0.png width=500px>
+
+AWSIM project includes a Lexus RX450h vehicle model. Prefab path is
 <div class="highlight"><pre><span></span><code>AWSIM\Assets\AWSIM\Prefabs\VehiclesWithSensor\Lexus RX450h 2015 Sample Sensor.prefab
-</code></pre></div></p>
-<h2 id="vehicle-dynamics-concept">Vehicle Dynamics Concept</h2>
-<p>The concept for VehicleDynamics is suitable for Autoware's <code>autoware_auto_control_msgs/AckermannControlCommand</code> and <code>autoware_auto_vehicle_msgs/GearCommand</code> message interface usage.</p>
-<p>Supported features:</p>
-<ul>
-<li>Longitudinal control by acceleration (m/s^2)</li>
-<li>Lateral control by two-wheel model</li>
-<li>Yaw, roll and pitch controlled by physics engine</li>
-<li>Mass-spring-damper suspension model</li>
-<li>Logical, not mechanical, automatic gears change</li>
-</ul>
-<h2 id="required-vehicle-parameters">Required vehicle parameters</h2>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>In general, measuring the moment of inertia is not easy, and past papers published by NHTSA are helpful. <br> <a href="https://www.researchgate.net/publication/228945609_Measured_Vehicle_Inertial_Parameters-NHTSA">Measured Vehicle Inertial Parameters - NHTSA 1998</a></p>
-</div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: left;">Value</th>
-<th style="text-align: left;">unit</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">mass</td>
-<td style="text-align: left;">1500</td>
-<td style="text-align: left;">kg</td>
-</tr>
-<tr>
-<td style="text-align: left;">wheel base</td>
-<td style="text-align: left;">2.5</td>
-<td style="text-align: left;">m</td>
-</tr>
-<tr>
-<td style="text-align: left;">tread width</td>
-<td style="text-align: left;">Ft : 1.8, Rr : 1.8</td>
-<td style="text-align: left;">m</td>
-</tr>
-<tr>
-<td style="text-align: left;">center of mass position</td>
-<td style="text-align: left;">x : 0, y : 0.5, z : 0</td>
-<td style="text-align: left;">m</td>
-</tr>
-<tr>
-<td style="text-align: left;">moment of inertia</td>
-<td style="text-align: left;">yaw : 2000, roll : 2000, pitch : 700</td>
-<td style="text-align: left;">kgm^2</td>
-</tr>
-<tr>
-<td style="text-align: left;">spring rate</td>
-<td style="text-align: left;">Ft : 55000, Rr : 48000</td>
-<td style="text-align: left;">N</td>
-</tr>
-<tr>
-<td style="text-align: left;">damper rate</td>
-<td style="text-align: left;">Ft : 3000, Rr : 2500</td>
-<td style="text-align: left;">N/s</td>
-</tr>
-<tr>
-<td style="text-align: left;">suspension stroke</td>
-<td style="text-align: left;">Ft : 0.2, Rr 0.2</td>
-<td style="text-align: left;">m</td>
-</tr>
-<tr>
-<td style="text-align: left;">wheel radius</td>
-<td style="text-align: left;">0.365</td>
-<td style="text-align: left;">m</td>
-</tr>
-</tbody>
-</table>
-<h2 id="vehicle-control-scripts">Vehicle control scripts</h2>
-<p>Scripts that simulate and support the car's behavior are placed under <code>AWSIM/Assets/AWSIM/Scripts/Vehicles</code> directory.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">script</th>
-<th style="text-align: left;">feature</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Vehicle.cs</td>
-<td style="text-align: left;">Vehicle dynamics core class</td>
-</tr>
-<tr>
-<td style="text-align: left;">VehicleKeyboardInput.cs</td>
-<td style="text-align: left;">Input control by keyboard</td>
-</tr>
-<tr>
-<td style="text-align: left;">VehicleRosInput.cs</td>
-<td style="text-align: left;">Input control by ROS</td>
-</tr>
-<tr>
-<td style="text-align: left;">VehicleVisualEffect.cs`</td>
-<td style="text-align: left;">Visual effects (e.g. brake and turn signals)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="vehicle-api">Vehicle API</h2>
-<p>The following section describes the API of <code>Vehicle.cs</code> script.</p>
-<h3 id="input-api">Input API</h3>
-<div class="admonition check">
-<p class="admonition-title">Check</p>
-<p>See also <code>VehicleKeyboardInput.cs</code>, <code>VehicleRosInput.cs</code>.</p>
-</div>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">input API</th>
-<th style="text-align: left;">type</th>
-<th style="text-align: left;">feature</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Vehicle.AccelerationInput</td>
-<td style="text-align: left;">float</td>
-<td style="text-align: left;">Acceleration input (m/s^2). On the plane, output the force that will result in this acceleration.<br> On a slope, it is affected by the slope resistance, so it does not match the input.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Vehicle.SteerAngleInput</td>
-<td style="text-align: left;">float</td>
-<td style="text-align: left;">Vehicle steering input (degree). Negative steers left, positive right</td>
-</tr>
-<tr>
-<td style="text-align: left;">Vehicle.AutomaticShiftInput</td>
-<td style="text-align: left;">enumeration</td>
-<td style="text-align: left;">Vehicle gear shift input (AT).<br>Values: PARKING, REVERSE, NEUTRAL, DRIVE.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Vehicle.SignalInput</td>
-<td style="text-align: left;">enumeration</td>
-<td style="text-align: left;">Vehicle turn signal input. <br>Values: NONE, LEFT, RIGHT, HAZARD.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="output-api">Output API</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">output API</th>
-<th style="text-align: left;">type</th>
-<th style="text-align: left;">feature</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Vehicle.LocalAcceleration</td>
-<td style="text-align: left;">Vector3</td>
-<td style="text-align: left;">Acceleration(m/s^2) in the local coordinate system of the vehicle.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Vehicle.Speed</td>
-<td style="text-align: left;">float</td>
-<td style="text-align: left;">Vehicle speed (m/s).</td>
-</tr>
-<tr>
-<td style="text-align: left;">Vehicle.SteerAngle</td>
-<td style="text-align: left;">float</td>
-<td style="text-align: left;">Vehicle steering angle (degree).</td>
-</tr>
-<tr>
-<td style="text-align: left;">Vehicle.Signal</td>
-<td style="text-align: left;">enumeration</td>
-<td style="text-align: left;">Vehicle turn signal.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Vehicle.Velocity</td>
-<td style="text-align: left;">Vector3</td>
-<td style="text-align: left;">Vehicle velocity (m/s)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Vehicle.LocalVelcoity</td>
-<td style="text-align: left;">Vector3</td>
-<td style="text-align: left;">Vehicle local velocity (m/s)</td>
-</tr>
-<tr>
-<td style="text-align: left;">Vehicle.AngularVelocity</td>
-<td style="text-align: left;">Vector3</td>
-<td style="text-align: left;">Vehicle angular velocity (rad/s)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="ros2-control-topics">ROS2 Control Topics</h2>
-<p><code>VehicleRosInput</code> subscribes to these topics and applies them to the Vehicle</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">topic</th>
-<th style="text-align: left;">msg</th>
-<th style="text-align: left;">frame_id</th>
-<th style="text-align: left;">hz</th>
-<th style="text-align: left;">QoS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>/control/command/turn_indicators_cmd</code></td>
-<td style="text-align: left;"><code>autoware_auto_vehicle_msgs/TurnIndicatorsCommand</code></td>
-<td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>10</code></td>
-<td style="text-align: left;"><code>Reliable</code>,<br> <code>TransientLocal</code>,<br> <code>KeepLast/1</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>/control/command/hazard_lights_cmd</code></td>
-<td style="text-align: left;"><code>autoware_auto_vehicle_msgs/HazardLightsCommand</code></td>
-<td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>10</code></td>
-<td style="text-align: left;"><code>Reliable</code>,<br> <code>TransientLocal</code>,<br> <code>KeepLast/1</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>/control/command/control_cmd</code></td>
-<td style="text-align: left;"><code>autoware_auto_control_msgs/AckermannControlCommand</code></td>
-<td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>60</code></td>
-<td style="text-align: left;"><code>Reliable</code>,<br> <code>TransientLocal</code>,<br> <code>KeepLast/1</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>/control/command/gear_cmd</code></td>
-<td style="text-align: left;"><code>autoware_auto_vehicle_msgs/GearCommand</code></td>
-<td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>10</code></td>
-<td style="text-align: left;"><code>Reliable</code>,<br> <code>TransientLocal</code>,<br> <code>KeepLast/1</code></td>
-</tr>
-<tr>
-<td style="text-align: left;"><code>/control/command/emergency_cmd</code></td>
-<td style="text-align: left;"><code>tier4_vehicle_msgs/msg/VehicleEmergencyStamped</code></td>
-<td style="text-align: left;">none</td>
-<td style="text-align: left;"><code>60</code></td>
-<td style="text-align: left;"><code>Reliable</code>,<br> <code>TransientLocal</code>,<br> <code>KeepLast/1</code></td>
-</tr>
-</tbody>
-</table>
+</code></pre></div>
+
+## Vehicle Dynamics Concept
+
+The concept for VehicleDynamics is suitable for Autoware's `autoware_auto_control_msgs/AckermannControlCommand` and `autoware_auto_vehicle_msgs/GearCommand` message interface usage.
+
+Supported features:
+
+- Longitudinal control by acceleration (m/s^2)
+- Lateral control by two-wheel model
+- Yaw, roll and pitch controlled by physics engine
+- Mass-spring-damper suspension model
+- Logical, not mechanical, automatic gears change
+
+## Required vehicle parameters
+
+!!! info
+
+    In general, measuring the moment of inertia is not easy, and past papers published by NHTSA are helpful. <br> [Measured Vehicle Inertial Parameters - NHTSA 1998](https://www.researchgate.net/publication/228945609_Measured_Vehicle_Inertial_Parameters-NHTSA)
+
+|Parameter|Value|unit|
+|:--|:--|:--|
+|mass|1500|kg|
+|wheel base|2.5|m|
+|tread width|Ft : 1.8, Rr : 1.8|m|
+|center of mass position|x : 0, y : 0.5, z : 0|m|
+|moment of inertia|yaw : 2000, roll : 2000, pitch : 700|kgm^2|
+|spring rate|Ft : 55000, Rr : 48000|N|
+|damper rate|Ft : 3000, Rr : 2500|N/s|
+|suspension stroke|Ft : 0.2, Rr 0.2|m|
+|wheel radius|0.365|m|
+
+## Vehicle control scripts
+
+Scripts that simulate and support the car's behavior are placed under `AWSIM/Assets/AWSIM/Scripts/Vehicles` directory.
+
+
+|script|feature|
+|:--|:--|
+|Vehicle.cs|Vehicle dynamics core class|
+|VehicleKeyboardInput.cs|Input control by keyboard|
+|VehicleRosInput.cs|Input control by ROS|
+|VehicleVisualEffect.cs`|Visual effects (e.g. brake and turn signals)|
+
+## Vehicle API
+
+The following section describes the API of `Vehicle.cs` script.
+
+### Input API
+
+!!! check
+
+    See also `VehicleKeyboardInput.cs`, `VehicleRosInput.cs`.
+
+|input API|type|feature|
+|:--|:--|:--|
+|Vehicle.AccelerationInput|float|Acceleration input (m/s^2). On the plane, output the force that will result in this acceleration.<br> On a slope, it is affected by the slope resistance, so it does not match the input.|
+|Vehicle.SteerAngleInput|float|Vehicle steering input (degree). Negative steers left, positive right|
+|Vehicle.AutomaticShiftInput|enumeration|Vehicle gear shift input (AT).<br>Values: PARKING, REVERSE, NEUTRAL, DRIVE.|
+|Vehicle.SignalInput|enumeration|Vehicle turn signal input. <br>Values: NONE, LEFT, RIGHT, HAZARD.|
+
+### Output API
+
+|output API|type|feature|
+|:--|:--|:--|
+|Vehicle.LocalAcceleration|Vector3|Acceleration(m/s^2) in the local coordinate system of the vehicle.|
+|Vehicle.Speed|float|Vehicle speed (m/s).|
+|Vehicle.SteerAngle|float|Vehicle steering angle (degree).|
+|Vehicle.Signal|enumeration|Vehicle turn signal.|
+|Vehicle.Velocity|Vector3|Vehicle velocity (m/s)|
+|Vehicle.LocalVelcoity|Vector3|Vehicle local velocity (m/s)|
+|Vehicle.AngularVelocity|Vector3|Vehicle angular velocity (rad/s)|
+
+## ROS2 Control Topics
+
+`VehicleRosInput` subscribes to these topics and applies them to the Vehicle
+
+|topic|msg|frame_id|hz|QoS|
+|:--|:--|:--|:--|:--|
+|`/control/command/turn_indicators_cmd`|`autoware_auto_vehicle_msgs/TurnIndicatorsCommand`|none|`10`|`Reliable`,<br> `TransientLocal`,<br> `KeepLast/1`|
+|`/control/command/hazard_lights_cmd`|`autoware_auto_vehicle_msgs/HazardLightsCommand`|none|`10`|`Reliable`,<br> `TransientLocal`,<br> `KeepLast/1`|
+|`/control/command/control_cmd`|`autoware_auto_control_msgs/AckermannControlCommand`|none|`60`|`Reliable`,<br> `TransientLocal`,<br> `KeepLast/1`|
+|`/control/command/gear_cmd`|`autoware_auto_vehicle_msgs/GearCommand`|none|`10`|`Reliable`,<br> `TransientLocal`,<br> `KeepLast/1`|
+|`/control/command/emergency_cmd`|`tier4_vehicle_msgs/msg/VehicleEmergencyStamped`|none|`60`|`Reliable`,<br> `TransientLocal`,<br> `KeepLast/1`| -->
 
 
 

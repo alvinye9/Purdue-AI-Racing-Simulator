@@ -16,7 +16,7 @@
     
     
       
-        <title>Random Traffic Simulator - Purdue-AI-Racing Simulator Documentation</title>
+        <title>Index - Purdue-AI-Racing Simulator Documentation</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#random-traffic-simulator" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Random Traffic Simulator
+              Index
             
           </span>
         </div>
@@ -602,73 +597,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    <span class="md-ellipsis">
-      Getting Started
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Getting Started">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#components-settings" class="md-nav__link">
-    <span class="md-ellipsis">
-      Components Settings
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Components Settings">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#random-traffic-simulator_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      Random Traffic Simulator
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#gizmos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Gizmos
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -686,92 +614,53 @@
   
 
 
-<h1 id="random-traffic-simulator">Random Traffic Simulator</h1>
-<p>The <code>RandomTrafficSimulator</code> simulates city traffic with respect to all traffic rules. The system allows for random selection of car models and the paths they follow. It also allows adding static vehicles in the simulation.</p>
-<p><img alt="random_traffic" src="random_traffic.png" /></p>
-<h2 id="getting-started">Getting Started</h2>
-<h3 id="overview">Overview</h3>
-<p>The random traffic system consists of the following components:</p>
-<ul>
-<li><code>RandomTrafficSimulator</code>:  manages lifecycle of NPCs and simulates NPC behaviours.</li>
-<li><code>TrafficLane</code>, <code>TrafficIntersection</code> and <code>StopLine</code>: represent traffic entities</li>
-<li><code>NPCVehicle</code>: vehicle models (NPCs) controlled by <code>RandomTrafficSimulator</code></li>
-</ul>
-<p><img alt="" src="overview.png" /></p>
-<h2 id="components-settings">Components Settings</h2>
-<p>The following section describes Unity Editor components settings.</p>
-<h3 id="random-traffic-simulator_1">Random Traffic Simulator</h3>
-<p><img alt="inspector" src="inspector.png" /></p>
-<table>
-<thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>General Settings</strong></td>
-<td></td>
-</tr>
-<tr>
-<td>Seed</td>
-<td>Seed value for random generator</td>
-</tr>
-<tr>
-<td>Ego Vehicle</td>
-<td>Transform of ego vehicle</td>
-</tr>
-<tr>
-<td>Vehicle Layer Mask</td>
-<td>LayerMask that masks only vehicle(NPC and ego) colliders</td>
-</tr>
-<tr>
-<td>Ground Layer Mask</td>
-<td>LayerMask that masks only ground colliders of the map</td>
-</tr>
-<tr>
-<td>Culling Distance</td>
-<td>Distance at which NPCs are culled relative to EgoVehicle</td>
-</tr>
-<tr>
-<td>Culling Hz</td>
-<td>Culling operation cycle</td>
-</tr>
-<tr>
-<td><strong>NPC Vehicle Settings</strong></td>
-<td></td>
-</tr>
-<tr>
-<td>Max Vehicle Count</td>
-<td>Maximum number of NPC vehicles to be spawned in simulation</td>
-</tr>
-<tr>
-<td>NPC Prefabs</td>
-<td>Prefabs representing controlled vehicles.<br/> They must have <code>NPCVehicle</code> component attached.</td>
-</tr>
-<tr>
-<td>Spawnable Lanes</td>
-<td><code>TrafficLane</code> components where NPC vehicles can be spawned during traffic simulation</td>
-</tr>
-<tr>
-<td>Vehicle Config</td>
-<td>Parameters for NPC vehicle control<br/><code>Sudden Deceleration</code> is a deceleration related to emergency braking</td>
-</tr>
-<tr>
-<td><strong>Debug</strong></td>
-<td></td>
-</tr>
-<tr>
-<td>Show Gizmos</td>
-<td>Enable the checkbox to show editor gizmos that visualize behaviours of NPCs</td>
-</tr>
-</tbody>
-</table>
-<h2 id="gizmos">Gizmos</h2>
-<p>Gizmos are useful for checking current behavior of NPCs and its causes.
+  <h1>Index</h1>
+
+<!-- # Random Traffic Simulator
+The `RandomTrafficSimulator` simulates city traffic with respect to all traffic rules. The system allows for random selection of car models and the paths they follow. It also allows adding static vehicles in the simulation.
+
+![random_traffic](random_traffic.png)
+
+## Getting Started
+### Overview
+
+The random traffic system consists of the following components:
+
+- `RandomTrafficSimulator`:  manages lifecycle of NPCs and simulates NPC behaviours.
+- `TrafficLane`, `TrafficIntersection` and `StopLine`: represent traffic entities
+- `NPCVehicle`: vehicle models (NPCs) controlled by `RandomTrafficSimulator`
+
+![](overview.png)
+
+## Components Settings
+
+The following section describes Unity Editor components settings.
+
+### Random Traffic Simulator
+
+![inspector](inspector.png)
+
+| Parameter | Description |
+|---|---|
+| **General Settings** | |
+| Seed | Seed value for random generator |
+| Ego Vehicle | Transform of ego vehicle |
+| Vehicle Layer Mask | LayerMask that masks only vehicle(NPC and ego) colliders |
+| Ground Layer Mask | LayerMask that masks only ground colliders of the map |
+| Culling Distance | Distance at which NPCs are culled relative to EgoVehicle |
+| Culling Hz | Culling operation cycle |
+| **NPC Vehicle Settings** | |
+| Max Vehicle Count | Maximum number of NPC vehicles to be spawned in simulation|
+| NPC Prefabs | Prefabs representing controlled vehicles.<br/> They must have `NPCVehicle` component attached. |
+| Spawnable Lanes | `TrafficLane` components where NPC vehicles can be spawned during traffic simulation|
+| Vehicle Config | Parameters for NPC vehicle control<br/>`Sudden Deceleration` is a deceleration related to emergency braking |
+| **Debug** | |
+| Show Gizmos | Enable the checkbox to show editor gizmos that visualize behaviours of NPCs |
+
+## Gizmos
+Gizmos are useful for checking current behavior of NPCs and its causes.
 Gizmos have a high computational load so please disable them if the simulation is laggy.
-<img alt="gizmos" src="gizmos.png" /></p>
+![gizmos](gizmos.png) -->
 
 
 

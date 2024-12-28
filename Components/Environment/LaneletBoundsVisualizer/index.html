@@ -16,7 +16,7 @@
     
     
       
-        <title>Lanelet Bounds Visualizer - Purdue-AI-Racing Simulator Documentation</title>
+        <title>Index - Purdue-AI-Racing Simulator Documentation</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#lanelet-bounds-visualizer" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lanelet Bounds Visualizer
+              Index
             
           </span>
         </div>
@@ -602,34 +597,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    <span class="md-ellipsis">
-      Usage
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#important-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Important Notes
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -647,44 +614,51 @@
   
 
 
-<h1 id="lanelet-bounds-visualizer">Lanelet Bounds Visualizer</h1>
-<p>Lanelet Bounds Visualizer is an Unity Editor extension allowing the user to load the left and right bounds of Lanelet to the Unity scene.</p>
-<h2 id="usage">Usage</h2>
-<p>The lanelet bounds load process can be performed by opening <code>AWSIM -&gt; Visualize -&gt; Load Lanelet Bounds</code> at the top toolbar of Unity Editor.</p>
-<p><img src=image_0.png></p>
-<p>A window shown below will pop up. Select your <code>Osm Data Container</code> to specify which OSM data to load the Lanelet from.</p>
-<p><img src=image_1.png></p>
-<p>The user can select whether to load the raw Lanelet or to adjust the resolution of the Lanelet by specifying the waypoint settings.</p>
-<p>To load the raw Lanelet, simply click the <code>Load Raw Lanelet</code> button.</p>
-<p>If the user wishes to change the resolution of the Lanelet, adjust the parameters of the <code>Waypoint Settings</code> as described below, and click the <code>Load with Waypoint Settings</code> button.</p>
-<ul>
-<li><code>Resolution</code> : resolution of resampling. Lower values provide better accuracy at the cost of processing time.</li>
-<li><code>Min Delta Length</code> : minimum length(m) between adjacent points.</li>
-<li><code>Min Delta Angle</code> : minimum angle(deg) between adjacent edges. Lowering this value produces a smoother curve.</li>
-</ul>
-<p>Once the Lanelet is successfully loaded, Lanelet bounds will be generated as a new GameObject named <code>LaneletBounds</code>.</p>
-<p>To visualize the <code>LaneletBounds</code>, make sure Gizmos is turned on and select the <code>LaneletBounds</code> GameObject.
-<img src=image_2.png></p>
-<h2 id="important-notes">Important Notes</h2>
-<p>Generally speaking, visualizing Lanelet Bounds will result in a very laggy simulation. Therefore, it is recommended to hide the <code>LaneletBounds</code> GameObject when not used. The lag of the simulation becomes worse as you set the resolution of the Lanelet Bounds higher, so it is also recommended to set the resolution within a reasonable range.</p>
-<p>It is also important to note that no matter how high you set the resolution to be, it will not be any better than the original Lanelet (i.e. the raw data). Rather, the computational load will increase and the simulation will become more laggy. If the user wishes to get the highest quality of Lanelet Bounds, it is recommended to use the <code>Load Raw Lanelet</code> button.</p>
-<p>In short, <code>Waypoint Setting</code> parameters should be thought of as parameters to decrease the resolution from the original Lanelet to decrease the computational load and thus, reducing the lag of the simulation.</p>
-<table>
-<thead>
-<tr>
-<th>Higher Resolution</th>
-<th>Raw Lanelet</th>
-<th>Lower Resolution</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><img src=image_3.png width=250px></td>
-<td><img src=image_4.png width=250px></td>
-<td><img src=image_5.png width=250px></td>
-</tr>
-</tbody>
-</table>
+  <h1>Index</h1>
+
+<!-- # Lanelet Bounds Visualizer
+
+Lanelet Bounds Visualizer is an Unity Editor extension allowing the user to load the left and right bounds of Lanelet to the Unity scene.
+
+## Usage
+
+The lanelet bounds load process can be performed by opening `AWSIM -> Visualize -> Load Lanelet Bounds` at the top toolbar of Unity Editor.
+
+<img src=image_0.png>
+
+A window shown below will pop up. Select your `Osm Data Container` to specify which OSM data to load the Lanelet from.
+
+<img src=image_1.png>
+
+The user can select whether to load the raw Lanelet or to adjust the resolution of the Lanelet by specifying the waypoint settings.
+
+To load the raw Lanelet, simply click the `Load Raw Lanelet` button.
+
+If the user wishes to change the resolution of the Lanelet, adjust the parameters of the `Waypoint Settings` as described below, and click the `Load with Waypoint Settings` button.
+
+- `Resolution` : resolution of resampling. Lower values provide better accuracy at the cost of processing time.
+- `Min Delta Length` : minimum length(m) between adjacent points.
+- `Min Delta Angle` : minimum angle(deg) between adjacent edges. Lowering this value produces a smoother curve.
+
+
+Once the Lanelet is successfully loaded, Lanelet bounds will be generated as a new GameObject named `LaneletBounds`.
+
+To visualize the `LaneletBounds`, make sure Gizmos is turned on and select the `LaneletBounds` GameObject.
+<img src=image_2.png>
+
+
+## Important Notes
+
+Generally speaking, visualizing Lanelet Bounds will result in a very laggy simulation. Therefore, it is recommended to hide the `LaneletBounds` GameObject when not used. The lag of the simulation becomes worse as you set the resolution of the Lanelet Bounds higher, so it is also recommended to set the resolution within a reasonable range.
+
+It is also important to note that no matter how high you set the resolution to be, it will not be any better than the original Lanelet (i.e. the raw data). Rather, the computational load will increase and the simulation will become more laggy. If the user wishes to get the highest quality of Lanelet Bounds, it is recommended to use the `Load Raw Lanelet` button.
+
+In short, `Waypoint Setting` parameters should be thought of as parameters to decrease the resolution from the original Lanelet to decrease the computational load and thus, reducing the lag of the simulation.
+
+
+| Higher Resolution                | Raw Lanelet                      | Lower Resolution                 |
+| -------------------------------- | -------------------------------- | -------------------------------- |
+|<img src=image_3.png width=250px> |<img src=image_4.png width=250px> |<img src=image_5.png width=250px> | -->
 
 
 

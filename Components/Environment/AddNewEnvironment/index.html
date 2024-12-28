@@ -16,7 +16,7 @@
     
     
       
-        <title>Add new environment - Purdue-AI-Racing Simulator Documentation</title>
+        <title>Index - Purdue-AI-Racing Simulator Documentation</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#add-new-environment" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Add new environment
+              Index
             
           </span>
         </div>
@@ -602,43 +597,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#1-create-lanelet2" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Create Lanelet2
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2-create-3d-models" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Create 3D models
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3-output-pcd-from-mesh" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. Output PCD from Mesh
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -656,22 +614,32 @@
   
 
 
-<h1 id="add-new-environment">Add new environment</h1>
-<p>The document describes how to add custom, simulated environment to AWSIM project.</p>
-<h2 id="1-create-lanelet2">1. Create Lanelet2</h2>
-<p>Create a Lanelet2 using <a href="https://tools.tier4.jp/feature/vector_map_builder/">VectorMapBuilder</a> from the PCD obtained from real-life LiDAR sensor.</p>
-<p><img src=image_0.png width=700px></p>
-<h2 id="2-create-3d-models">2. Create 3D models</h2>
-<p><img src=image_1.png width=700px></p>
-<p>To properly create 3D models of the environment please keep in mind the following notes:</p>
-<ul>
-<li>Creating a 3D model based on actual point cloud data makes it more realistic.</li>
-<li>AWSIM is created using HDRP (High Definition Rendering Pipeline) which performs better when object meshes are merged.</li>
-<li>Occlusion culling and flutter culling cannot be used because the sensors detection target will disappear.</li>
-<li>Each traffic light should have a separate GameObject. Also, each light in the traffic light should be split into separate materials.</li>
-</ul>
-<h2 id="3-output-pcd-from-mesh">3. Output PCD from Mesh</h2>
-<p>It may not be easy to make Environment's 3D model as accurate as from the real sensor. However, it is possible to create a PCD map from object meshes in AWSIM. Please refer to <a href="../PointCloudMapper/">PointCloudMapper</a> document to see how to create a PCD map using a previously existent digital twin of the environment.</p>
+  <h1>Index</h1>
+
+<!-- # Add new environment
+
+The document describes how to add custom, simulated environment to AWSIM project.
+
+## 1. Create Lanelet2
+
+Create a Lanelet2 using [VectorMapBuilder](https://tools.tier4.jp/feature/vector_map_builder/) from the PCD obtained from real-life LiDAR sensor.
+
+<img src=image_0.png width=700px>
+
+## 2. Create 3D models
+
+<img src=image_1.png width=700px>
+
+To properly create 3D models of the environment please keep in mind the following notes:
+
+- Creating a 3D model based on actual point cloud data makes it more realistic.
+- AWSIM is created using HDRP (High Definition Rendering Pipeline) which performs better when object meshes are merged.
+- Occlusion culling and flutter culling cannot be used because the sensors detection target will disappear.
+- Each traffic light should have a separate GameObject. Also, each light in the traffic light should be split into separate materials.
+
+## 3. Output PCD from Mesh
+
+It may not be easy to make Environment's 3D model as accurate as from the real sensor. However, it is possible to create a PCD map from object meshes in AWSIM. Please refer to [PointCloudMapper](../../Environment/PointCloudMapper/index.md) document to see how to create a PCD map using a previously existent digital twin of the environment. -->
 
 
 

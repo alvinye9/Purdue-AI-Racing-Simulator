@@ -16,7 +16,7 @@
     
     
       
-        <title>Smoke Simulator - Purdue-AI-Racing Simulator Documentation</title>
+        <title>Index - Purdue-AI-Racing Simulator Documentation</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#smoke-simulator" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Smoke Simulator
+              Index
             
           </span>
         </div>
@@ -602,58 +597,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#setting-smoke-simulator" class="md-nav__link">
-    <span class="md-ellipsis">
-      Setting Smoke Simulator
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#example-of-different-smokes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Example of Different Smokes
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Example of Different Smokes">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#thin-smoke" class="md-nav__link">
-    <span class="md-ellipsis">
-      Thin Smoke
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#heavy-smoke" class="md-nav__link">
-    <span class="md-ellipsis">
-      Heavy Smoke
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -671,47 +614,58 @@
   
 
 
-<h1 id="smoke-simulator">Smoke Simulator</h1>
-<p><img src=image_0.png>
-Simulating smoke in AWSIM may be useful when one wants to simulate exhaust gases from vehicles, smoke from emergency flare, etc.</p>
-<p>In Unity, it is common to use Particle System to simulate smokes.
-However, smoke simulated by Particle System cannot be sensed by RGL in AWSIM although in reality, smokes are detected by LiDAR.</p>
-<p><code>Smoke Simulator</code> was developed to simulate smokes that can be detected by RGL in Unity.
-<code>Smoke Simulator</code> works by instantiating many small cubic GameObjects called <code>Smoke Particles</code> and allows each particle to be detected by RGL.</p>
-<p>This document describes how to use the <code>Smoke Simulator</code>.</p>
-<h2 id="setting-smoke-simulator">Setting Smoke Simulator</h2>
-<p>1.Create an empty GameObject</p>
-<p>2.Attach <code>SmokeGenerator.cs</code> to the previously created GameObject.</p>
-<p><img src=image_1.png></p>
-<p>3.Adjust the parameters of the <code>SmokeGenerator</code> as described below:</p>
-<ul>
-<li><code>Max Particle</code>: Specifies the maximum number of particles created by the <code>Smoke Generator</code></li>
-<li><code>Particle Range Radius</code>: Specifies the radius of a circle, centered at the GameObject, which defines the region in which <code>Smoke Particles</code> are generated in</li>
-<li><code>Particle Size</code>: Specifies the edge of a <code>Smoke Particle</code></li>
-<li><code>Average Lifetime</code>: Specifies the average lifetime of a <code>Smoke Particle</code></li>
-<li>
-<p><code>Variation Lifetime</code>: Specifies the variation of lifetime of <code>Smoke Particles</code>.</p>
-<p>The lifetime of a <code>Smoke Particle</code> is calculated as follows:</p>
-<pre><code>`lifetime` = `Average Lifetime` + Random.Range(-`Variation Lifetime`, `Variation Lifetime`)
-</code></pre>
-</li>
-<li>
-<p><code>Physics</code>: These parameters can be adjusted to specify the behavior of the smoke particles.</p>
-<ul>
-<li><code>Initial Plane Velocity</code>: Specifies the velocity of a <code>SmokeParticle</code> in the x-z plane</li>
-<li><code>Initial Vertical Velocity</code>: Specifies the velocity of a <code>SmokeParticle</code> in the vertical direction</li>
-<li><code>Plane Acceleration</code>: Specifies the acceleration of a <code>SmokeParticle</code> in the x-z plane</li>
-<li><code>Vertical Acceleration</code>: Specifies the acceleration of a <code>SmokeParticle</code> in the vertical direction</li>
-</ul>
-</li>
-</ul>
-<p>4.(Optional): You may also specify the <code>Material</code> of <code>Smoke Particles</code>. If this field is unspecified, a default material is used</p>
-<p><img src=image_2.png></p>
-<h2 id="example-of-different-smokes">Example of Different Smokes</h2>
-<h4 id="thin-smoke">Thin Smoke</h4>
-<p><img src=image_3.png></p>
-<h4 id="heavy-smoke">Heavy Smoke</h4>
-<p><img src=image_4.png></p>
+  <h1>Index</h1>
+
+<!-- # Smoke Simulator
+<img src=image_0.png>
+Simulating smoke in AWSIM may be useful when one wants to simulate exhaust gases from vehicles, smoke from emergency flare, etc.
+
+In Unity, it is common to use Particle System to simulate smokes.
+However, smoke simulated by Particle System cannot be sensed by RGL in AWSIM although in reality, smokes are detected by LiDAR.
+
+`Smoke Simulator` was developed to simulate smokes that can be detected by RGL in Unity.
+`Smoke Simulator` works by instantiating many small cubic GameObjects called `Smoke Particles` and allows each particle to be detected by RGL.
+
+This document describes how to use the `Smoke Simulator`.
+
+## Setting Smoke Simulator
+
+1.Create an empty GameObject
+
+2.Attach `SmokeGenerator.cs` to the previously created GameObject.
+
+<img src=image_1.png>
+
+3.Adjust the parameters of the `SmokeGenerator` as described below:
+
+- `Max Particle`: Specifies the maximum number of particles created by the `Smoke Generator`
+- `Particle Range Radius`: Specifies the radius of a circle, centered at the GameObject, which defines the region in which `Smoke Particles` are generated in
+- `Particle Size`: Specifies the edge of a `Smoke Particle`
+- `Average Lifetime`: Specifies the average lifetime of a `Smoke Particle`
+- `Variation Lifetime`: Specifies the variation of lifetime of `Smoke Particles`.
+
+    The lifetime of a `Smoke Particle` is calculated as follows:
+
+        `lifetime` = `Average Lifetime` + Random.Range(-`Variation Lifetime`, `Variation Lifetime`)
+
+- `Physics`: These parameters can be adjusted to specify the behavior of the smoke particles.
+    - `Initial Plane Velocity`: Specifies the velocity of a `SmokeParticle` in the x-z plane
+    - `Initial Vertical Velocity`: Specifies the velocity of a `SmokeParticle` in the vertical direction
+    - `Plane Acceleration`: Specifies the acceleration of a `SmokeParticle` in the x-z plane
+    - `Vertical Acceleration`: Specifies the acceleration of a `SmokeParticle` in the vertical direction
+
+
+4.(Optional): You may also specify the `Material` of `Smoke Particles`. If this field is unspecified, a default material is used
+
+<img src=image_2.png>
+
+## Example of Different Smokes
+#### Thin Smoke
+<img src=image_3.png>
+
+#### Heavy Smoke
+<img src=image_4.png>
+ -->
 
 
 

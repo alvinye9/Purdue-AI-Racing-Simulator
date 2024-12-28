@@ -16,7 +16,7 @@
     
     
       
-        <title>Add Environment for Random Traffic - Purdue-AI-Racing Simulator Documentation</title>
+        <title>Index - Purdue-AI-Racing Simulator Documentation</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#add-environment-for-random-traffic" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Add Environment for Random Traffic
+              Index
             
           </span>
         </div>
@@ -602,79 +597,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#map-preparation" class="md-nav__link">
-    <span class="md-ellipsis">
-      Map preparation
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-traffic-lights" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate Traffic Lights
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#load-lanelet" class="md-nav__link">
-    <span class="md-ellipsis">
-      Load Lanelet
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-traffic-intersections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate Traffic Intersections
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-right-of-ways-on-uncontrolled-intersections" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate right of ways on uncontrolled intersections
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#annotate-stop-lines" class="md-nav__link">
-    <span class="md-ellipsis">
-      Annotate stop lines
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#check-final-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Check final configuration
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -692,57 +614,80 @@
   
 
 
-<h1 id="add-environment-for-random-traffic">Add Environment for Random Traffic</h1>
-<p>This document describes the steps to properly configuer <code>RandomTrafficSimulator</code> in your environment.</p>
-<h2 id="map-preparation">Map preparation</h2>
-<p>The 3D map model should be added to the scene. Please make sure that the <code>Environment</code> component with appropriate <code>mgrsOffsetPosition</code> is attached to the root GameObject.
-<img alt="" src="map.png" /></p>
-<h2 id="annotate-traffic-lights">Annotate Traffic Lights</h2>
-<p>Please attach <code>TrafficLight</code> component to all traffic light GameObjects placed on scene.
-<img alt="" src="traffic_light.png" />  </p>
-<h2 id="load-lanelet">Load Lanelet</h2>
-<p>The lanelet load process can be performed by opening <code>AWSIM -&gt; Random Traffic -&gt; Load Lanelet</code> at the top toolbar of Unity Editor.
-<img alt="" src="load_lanelet.png" /></p>
-<p>You should be prompted with a similar window to the one presented below. Please adjust the parameters for the loading process if needed.</p>
-<p><img alt="" src="lanelet_loader_window.png" /></p>
-<p>Waypoint settings affect the density and accuracy of the generated waypoints. The parameters are described below:</p>
-<ul>
-<li>Resolution: resolution of resampling. Lower values provide better accuracy at the cost of processing time.</li>
-<li>Min Delta Length: minimum length(m) between adjacent points.</li>
-<li>Min Delta Angle: minimum angle(deg) between adjacent edges. Lowering this value produces a smoother curve.</li>
-</ul>
-<p>To generate the Lanelet2 map representation in your simulation, please click the <code>Load</code> button. Environment components should be generated and placed as child objects of the <code>Environment</code> GameObject. You can check their visual representation by clicking consecutive elements in the scene hierarchy.</p>
-<p><img alt="" src="environment_components.png" /></p>
-<h2 id="annotate-traffic-intersections">Annotate Traffic Intersections</h2>
-<p><img alt="" src="traffic_intersection.png" /></p>
-<p>To annotate intersection please, add an empty GameObject named <code>TrafficIntersections</code> at the same level as the <code>TrafficLanes</code> GameObject.</p>
-<p>For each intersection repeat the following steps:</p>
-<ol>
-<li>Add an GameObject named <code>TrafficIntersection</code> as a child object of the <code>TrafficIntersections</code> object.</li>
-<li>Attach a <code>TrafficIntersection</code> component to it.</li>
-<li>Add a  <code>BoxCollider</code> as a component of GameObject. It's size and position should cover the whole intersection. This is used for detecting vehicles in the intersection.</li>
-<li>Set <code>TrafficLightGroups</code>. Each group is controlled to have different signals, so facing traffic lights should be added to the same group. These groupings are used in traffic signal control.</li>
-<li>Specify the signal control pattern.</li>
-</ol>
-<h2 id="annotate-right-of-ways-on-uncontrolled-intersections">Annotate right of ways on uncontrolled intersections</h2>
-<p>For the vehicles to operate properly it is needed to annotate the right of way of <code>TrafficLane</code> manually on intersections without traffic lights.</p>
-<p><img alt="" src="select_traffic_light.png" /></p>
-<p>To set the right of way, please:</p>
-<ul>
-<li>Select a straight lane that is not right of way in the intersection. The selected lane should be highlighted as presented below.</li>
-<li>Click the <code>Set RightOfWays</code> button to give the lane priority over other lanes.
-<img alt="" src="set_right_of_way.png" /></li>
-<li>Please check if all lanes that intersect with the selected lane are highlighted yellow. This means that the right of way was applied correctly.
-<img alt="" src="right_of_ways.png" /></li>
-</ul>
-<h2 id="annotate-stop-lines">Annotate stop lines</h2>
-<p>For each right turn lane that yields to the opposite straight or left turn lane, a stop line needs to be defined near the center of the intersection.
-<img alt="" src="stop_lines.png" />
-If there is no visible stop line, a <code>StopLine</code> component should be added to the scene, near the center of the intersection and associated with <code>TrafficLane</code>.</p>
-<h2 id="check-final-configuration">Check final configuration</h2>
-<p>Once all the components are ready, the simulation can be run.
+  <h1>Index</h1>
+
+<!-- # Add Environment for Random Traffic
+
+This document describes the steps to properly configuer `RandomTrafficSimulator` in your environment.
+
+## Map preparation
+
+The 3D map model should be added to the scene. Please make sure that the `Environment` component with appropriate `mgrsOffsetPosition` is attached to the root GameObject.
+![](map.png)
+
+## Annotate Traffic Lights
+
+Please attach `TrafficLight` component to all traffic light GameObjects placed on scene.
+![](traffic_light.png)  
+
+## Load Lanelet
+
+The lanelet load process can be performed by opening `AWSIM -> Random Traffic -> Load Lanelet` at the top toolbar of Unity Editor.
+![](load_lanelet.png)
+
+You should be prompted with a similar window to the one presented below. Please adjust the parameters for the loading process if needed.
+
+![](lanelet_loader_window.png)
+
+Waypoint settings affect the density and accuracy of the generated waypoints. The parameters are described below:
+
+- Resolution: resolution of resampling. Lower values provide better accuracy at the cost of processing time.
+- Min Delta Length: minimum length(m) between adjacent points.
+- Min Delta Angle: minimum angle(deg) between adjacent edges. Lowering this value produces a smoother curve.
+
+To generate the Lanelet2 map representation in your simulation, please click the `Load` button. Environment components should be generated and placed as child objects of the `Environment` GameObject. You can check their visual representation by clicking consecutive elements in the scene hierarchy.
+
+![](environment_components.png)
+
+## Annotate Traffic Intersections
+![](traffic_intersection.png)
+
+To annotate intersection please, add an empty GameObject named `TrafficIntersections` at the same level as the `TrafficLanes` GameObject.
+
+For each intersection repeat the following steps:
+
+1. Add an GameObject named `TrafficIntersection` as a child object of the `TrafficIntersections` object.
+2. Attach a `TrafficIntersection` component to it.
+3. Add a  `BoxCollider` as a component of GameObject. It's size and position should cover the whole intersection. This is used for detecting vehicles in the intersection.
+4. Set `TrafficLightGroups`. Each group is controlled to have different signals, so facing traffic lights should be added to the same group. These groupings are used in traffic signal control.
+5. Specify the signal control pattern.
+
+## Annotate right of ways on uncontrolled intersections
+
+For the vehicles to operate properly it is needed to annotate the right of way of `TrafficLane` manually on intersections without traffic lights.
+
+
+![](select_traffic_light.png)
+
+To set the right of way, please:
+
+- Select a straight lane that is not right of way in the intersection. The selected lane should be highlighted as presented below.
+- Click the `Set RightOfWays` button to give the lane priority over other lanes.
+![](set_right_of_way.png)
+- Please check if all lanes that intersect with the selected lane are highlighted yellow. This means that the right of way was applied correctly.
+![](right_of_ways.png)
+
+## Annotate stop lines
+
+For each right turn lane that yields to the opposite straight or left turn lane, a stop line needs to be defined near the center of the intersection.
+![](stop_lines.png)
+If there is no visible stop line, a `StopLine` component should be added to the scene, near the center of the intersection and associated with `TrafficLane`.
+
+## Check final configuration
+
+Once all the components are ready, the simulation can be run.
 Check carefully if the vehicles are moving around the map correctly.
-For each intersection, review the settings of the relevant components if vehicles are unable to proceed.</p>
+For each intersection, review the settings of the relevant components if vehicles are unable to proceed. -->
 
 
 

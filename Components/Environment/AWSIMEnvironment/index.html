@@ -16,7 +16,7 @@
     
     
       
-        <title>AWSIM Environment - Purdue-AI-Racing Simulator Documentation</title>
+        <title>Index - Purdue-AI-Racing Simulator Documentation</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#awsim-environment" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AWSIM Environment
+              Index
             
           </span>
         </div>
@@ -602,76 +597,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#required-environment-files" class="md-nav__link">
-    <span class="md-ellipsis">
-      Required Environment files
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tokyo-west-shinjuku-japan" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tokyo West Shinjuku, Japan
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tokyo West Shinjuku, Japan">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#buildings-and-roads" class="md-nav__link">
-    <span class="md-ellipsis">
-      Buildings and roads
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#traffic-lights-control" class="md-nav__link">
-    <span class="md-ellipsis">
-      Traffic lights control
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#npc-traffic" class="md-nav__link">
-    <span class="md-ellipsis">
-      NPC traffic
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -689,60 +614,52 @@
   
 
 
-<h1 id="awsim-environment">AWSIM Environment</h1>
-<p>The following document describes the environment simulated in AWSIM.</p>
-<h2 id="required-environment-files">Required Environment files</h2>
-<p>AWSIM and Autoware requires the following three Environment files to work properly.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">file</th>
-<th style="text-align: left;">use</th>
-<th style="text-align: left;">purpose</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">lanelet2 (.osm)</td>
-<td style="text-align: left;">Autoware</td>
-<td style="text-align: left;">Lane information defining traffic rules.</td>
-</tr>
-<tr>
-<td style="text-align: left;">pointcloud (.pcd)</td>
-<td style="text-align: left;">Autoware</td>
-<td style="text-align: left;">Point cloud information used for Autoware's localization.</td>
-</tr>
-<tr>
-<td style="text-align: left;">3D model (.fbx)</td>
-<td style="text-align: left;">AWSIM</td>
-<td style="text-align: left;">3D model of the simulated environment within AWSIM.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="overview">Overview</h2>
-<p>AWSIM's Environment contains the following elements.</p>
-<ul>
-<li>Buildings, Roads</li>
-<li>Traffic lights</li>
-<li>NPC traffic<ul>
-<li>Vehicle</li>
-<li>Pedestrian</li>
-</ul>
-</li>
-</ul>
-<h2 id="tokyo-west-shinjuku-japan">Tokyo West Shinjuku, Japan</h2>
-<p><img src=image_0.png width=600px></p>
-<p>The sample 3D map of Tokyo West Shinjuku, Japan set up as a sample is available for distribution.
-See <a href="../../../GettingStarted/SetupUnityProject/#5-import-environment-custom-package">SetupUnityProject</a>, where you can download the unitypackage.</p>
-<h3 id="buildings-and-roads">Buildings and roads</h3>
-<p>Buildings have the greatest impact on Autoware's self-position estimation. Accurate environment object placement is crucial for correct point cloud data generation, which directly affects localization capabilities.
-Additionally, the road surface affects vehicle dynamics.</p>
-<h3 id="traffic-lights-control">Traffic lights control</h3>
-<p>To simulate signal recognition, the modeled traffic lights must be strictly aligned with the Lanelet2 location.
+  <h1>Index</h1>
+
+<!-- # AWSIM Environment
+
+The following document describes the environment simulated in AWSIM.
+
+## Required Environment files
+
+AWSIM and Autoware requires the following three Environment files to work properly.
+
+|file|use|purpose|
+|:--|:--|:--|
+|lanelet2 (.osm)|Autoware|Lane information defining traffic rules.|
+|pointcloud (.pcd)|Autoware|Point cloud information used for Autoware's localization. |
+|3D model (.fbx)|AWSIM|3D model of the simulated environment within AWSIM.|
+
+## Overview
+
+AWSIM's Environment contains the following elements.
+
+- Buildings, Roads
+- Traffic lights
+- NPC traffic
+    - Vehicle
+    - Pedestrian
+
+## Tokyo West Shinjuku, Japan
+<img src=image_0.png width=600px>
+
+The sample 3D map of Tokyo West Shinjuku, Japan set up as a sample is available for distribution.
+See [SetupUnityProject](../../../GettingStarted/SetupUnityProject/#5-import-environment-custom-package), where you can download the unitypackage.
+
+### Buildings and roads
+
+Buildings have the greatest impact on Autoware's self-position estimation. Accurate environment object placement is crucial for correct point cloud data generation, which directly affects localization capabilities.
+Additionally, the road surface affects vehicle dynamics.
+
+### Traffic lights control
+
+To simulate signal recognition, the modeled traffic lights must be strictly aligned with the Lanelet2 location.
 NPCVehicle runs based on traffic light control, which defines traffic flow at intersections, preventing the NPCs from colliding.
-Additionally, ego vehicle performs signal recognition from camera sensor images containing traffic lights.</p>
-<h2 id="npc-traffic">NPC traffic</h2>
-<p>The use of NPCs adds realism to self-driving simulations, especially in urban environments. NPC Vehicle, NPC Pedestrian to simulate traffic.</p>
+Additionally, ego vehicle performs signal recognition from camera sensor images containing traffic lights.
+
+## NPC traffic
+
+The use of NPCs adds realism to self-driving simulations, especially in urban environments. NPC Vehicle, NPC Pedestrian to simulate traffic. -->
 
 
 

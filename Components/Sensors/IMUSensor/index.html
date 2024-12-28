@@ -16,7 +16,7 @@
     
     
       
-        <title>IMU Sensor - Purdue-AI-Racing Simulator Documentation</title>
+        <title>Index - Purdue-AI-Racing Simulator Documentation</title>
       
     
     
@@ -67,11 +67,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#imu-sensor" class="md-skip">
-          Skip to content
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              IMU Sensor
+              Index
             
           </span>
         </div>
@@ -602,52 +597,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#prefabs" class="md-nav__link">
-    <span class="md-ellipsis">
-      Prefabs
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Scripts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#output-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Output Data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#published-topics" class="md-nav__link">
-    <span class="md-ellipsis">
-      Published Topics
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -665,76 +614,42 @@
   
 
 
-<h1 id="imu-sensor">IMU Sensor</h1>
-<p>The document describes inertial measurement unit sensor simulation component.</p>
-<h2 id="prefabs">Prefabs</h2>
-<p>Path : <code>Assets\AWSIM\Prefabs\Sensors\IMUSensor.prefab</code></p>
-<h2 id="scripts">Scripts</h2>
-<p>All the most important scripts can be found under the <code>Assets\AWSIM\Scripts\Sensors\Imu\*</code></p>
-<p>The table below describes features contained in each provided script:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">script</th>
-<th style="text-align: left;">feature</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">ImuSensor.cs</td>
-<td style="text-align: left;">Core Inertial Measurement Unit Sensor.<br>Measures the Acceleration(m/s^2) and AngularVelocity(rad/s) based on the Transform of the GameObject to which this component is attached to.</td>
-</tr>
-<tr>
-<td style="text-align: left;">ImuRos2Publisher.cs</td>
-<td style="text-align: left;">Converts the data output from ImuSensor-specific struct to ROS2 message and publishes it.</td>
-</tr>
-</tbody>
-</table>
-<h2 id="output-data">Output Data</h2>
-<p>The following table describes <code>ImuSensor.OutputData</code> properties:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">field</th>
-<th style="text-align: left;">type</th>
-<th style="text-align: left;">feature</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">LinearAcceleration</td>
-<td style="text-align: left;">Vector3</td>
-<td style="text-align: left;">Measured acceleration (m/s^2)</td>
-</tr>
-<tr>
-<td style="text-align: left;">AungularVelocity</td>
-<td style="text-align: left;">Vector3</td>
-<td style="text-align: left;">Measured angular velocity (rad/s)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="published-topics">Published Topics</h2>
-<p>The data output is published to the following topics:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">topic</th>
-<th style="text-align: left;">msg</th>
-<th style="text-align: left;">frame_id</th>
-<th style="text-align: left;">hz</th>
-<th style="text-align: left;">QoS</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><code>/sensing/imu/tamagawa/imu_raw</code></td>
-<td style="text-align: left;"><code>sensor_msgs/Imu</code></td>
-<td style="text-align: left;"><code>tamagawa/imu_link</code></td>
-<td style="text-align: left;"><code>30</code></td>
-<td style="text-align: left;"><code>Reliable</code>, <code>Volatile</code>, <code>Keep last/1000</code></td>
-</tr>
-</tbody>
-</table>
+  <h1>Index</h1>
+
+<!-- # IMU Sensor
+
+The document describes inertial measurement unit sensor simulation component.
+
+## Prefabs
+Path : `Assets\AWSIM\Prefabs\Sensors\IMUSensor.prefab`
+
+## Scripts
+
+All the most important scripts can be found under the `Assets\AWSIM\Scripts\Sensors\Imu\*`
+
+The table below describes features contained in each provided script:
+
+|script|feature|
+|:--|:--|
+|ImuSensor.cs|Core Inertial Measurement Unit Sensor.<br>Measures the Acceleration(m/s^2) and AngularVelocity(rad/s) based on the Transform of the GameObject to which this component is attached to.|
+|ImuRos2Publisher.cs|Converts the data output from ImuSensor-specific struct to ROS2 message and publishes it.|
+
+## Output Data
+
+The following table describes `ImuSensor.OutputData` properties:
+
+|field|type|feature|
+|:--|:--|:--|
+|LinearAcceleration|Vector3|Measured acceleration (m/s^2)|
+|AungularVelocity|Vector3|Measured angular velocity (rad/s)|
+
+## Published Topics
+
+The data output is published to the following topics:
+
+|topic|msg|frame_id|hz|QoS|
+|:--|:--|:--|:--|:--|
+|`/sensing/imu/tamagawa/imu_raw`|`sensor_msgs/Imu`|`tamagawa/imu_link`|`30`|`Reliable`, `Volatile`, `Keep last/1000`| -->
 
 
 
