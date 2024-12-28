@@ -700,9 +700,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#install-custom_msgs-to-awsim" class="md-nav__link">
+  <a href="#install-custom_msgs-to-pairsim" class="md-nav__link">
     <span class="md-ellipsis">
-      Install custom_msgs to AWSIM
+      Install custom_msgs to PAIRSIM
     </span>
   </a>
   
@@ -733,7 +733,7 @@
 
 <h1 id="add-custom-ros2-message-type">Add custom ROS2 message type</h1>
 <h2 id="ros2-for-unity">ROS2 For Unity</h2>
-<p>AWSIM uses <a href="https://github.com/RobotecAI/ros2-for-unity">Ros2ForUnity</a> module for ROS2 communication. <code>ROS2 For Unity</code> is a high-performance communication solution to connect Unity3D and ROS2 ecosystem in a ROS2 "native" way.</p>
+<p>PAIRSIM uses <a href="https://github.com/RobotecAI/ros2-for-unity">Ros2ForUnity</a> module for ROS2 communication. <code>ROS2 For Unity</code> is a high-performance communication solution to connect Unity3D and ROS2 ecosystem in a ROS2 "native" way.</p>
 <p>This document briefly guides you on how to add your custom messages to the simulation. For a detailed description, please see <a href="https://github.com/RobotecAI/ros2-for-unity/blob/master/README.md">ROS2 For Unity Readme</a>.</p>
 <h2 id="prerequisites">Prerequisites</h2>
 <p><code>ROS2 For Unity</code> depends on a <a href="https://github.com/RobotecAI/ros2cs">ros2cs</a> - a C# .NET library for ROS2. You don't have to install it manually, but there are a few prerequisites that must be resolved first.</p>
@@ -795,7 +795,7 @@
 </div>
 </div>
 <ul>
-<li>ROS2 version is <code>humble</code> (<code>foxy</code> and <code>galactic</code> are also supported, please check the current AWSIM version for more information about its ROS2 version) and is located in</li>
+<li>ROS2 version is <code>humble</code> (<code>foxy</code> and <code>galactic</code> are also supported, please check the current PAIRSIM version for more information about its ROS2 version) and is located in</li>
 </ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Ubuntu</label><label for="__tabbed_5_2">Windows</label></div>
 <div class="tabbed-content">
@@ -898,8 +898,8 @@ repositories:
 </div>
 </div>
 </div>
-<h3 id="install-custom_msgs-to-awsim">Install <code>custom_msgs</code> to AWSIM</h3>
-<p>New <code>ROS2 For Unity</code> build, which you just made, contains multiple libraries that already exist in the AWSIM. To install <code>custom_msgs</code> and not copy all other unnecessary files, you should get the <code>custom_msgs</code> related libraries only and copy them to the analogous directories in <code>AWSIM/Assets/Ros2ForUnity</code>.</p>
+<h3 id="install-custom_msgs-to-pairsim">Install <code>custom_msgs</code> to PAIRSIM</h3>
+<p>New <code>ROS2 For Unity</code> build, which you just made, contains multiple libraries that already exist in the PAIRSIM. To install <code>custom_msgs</code> and not copy all other unnecessary files, you should get the <code>custom_msgs</code> related libraries only and copy them to the analogous directories in <code>PAIRSIM/Assets/Ros2ForUnity</code>.</p>
 <p>You can find them in following directories:</p>
 <ul>
 <li><code>ros2-for-unity/install/asset/Ros2ForUnity/Plugins</code> which names matches <code>custom_msgs_*</code></li>
@@ -916,17 +916,17 @@ repositories:
 </div>
 </div>
 </div>
-<p>To automate the process, you can use these commands (change <code>&lt;AWSIM_DIR&gt;</code> to your E2Simulator path and <code>&lt;CUSTOM_MSGS_PACKAGE_NAME&gt;</code> to a custom messages package):</p>
+<p>To automate the process, you can use these commands (change <code>&lt;PAIRSIM_DIR&gt;</code> to your E2Simulator path and <code>&lt;CUSTOM_MSGS_PACKAGE_NAME&gt;</code> to a custom messages package):</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="11:2"><input checked="checked" id="__tabbed_11_1" name="__tabbed_11" type="radio" /><input id="__tabbed_11_2" name="__tabbed_11" type="radio" /><div class="tabbed-labels"><label for="__tabbed_11_1">Ubuntu</label><label for="__tabbed_11_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>find ~/ros2-for-unity/install/asset/Ros2ForUnity/Plugins -maxdepth 1 -name &quot;&lt;CUSTOM_MSGS_PACKAGE_NAME&gt;*&quot;    -type f -exec cp {} &lt;AWSIM_DIR&gt;/Assets/Ros2ForUnity/Plugins \;
-find ~/ros2-for-unity/install/asset/Ros2ForUnity/Plugins/Linux/x86_64 -maxdepth 1 -name     &quot;lib&lt;CUSTOM_MSGS_PACKAGE_NAME&gt;*&quot; -type f -exec cp {} &lt;AWSIM_DIR&gt;/Assets/Ros2ForUnity/Plugins/Linux/x86_64 \;
+<div class="highlight"><pre><span></span><code>find ~/ros2-for-unity/install/asset/Ros2ForUnity/Plugins -maxdepth 1 -name &quot;&lt;CUSTOM_MSGS_PACKAGE_NAME&gt;*&quot;    -type f -exec cp {} &lt;PAIRSIM_DIR&gt;/Assets/Ros2ForUnity/Plugins \;
+find ~/ros2-for-unity/install/asset/Ros2ForUnity/Plugins/Linux/x86_64 -maxdepth 1 -name     &quot;lib&lt;CUSTOM_MSGS_PACKAGE_NAME&gt;*&quot; -type f -exec cp {} &lt;PAIRSIM_DIR&gt;/Assets/Ros2ForUnity/Plugins/Linux/x86_64 \;
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>Get-ChildItem C:\ros2-for-unity\install\asset\Ros2ForUnity\Plugins\* -Include @(&#39;&lt;CUSTOM_MSGS_PACKAGE_NAME&gt;*&#39;) | Copy-Item -Destination &lt;AWSIM_DIR&gt;\Assets\Ros2ForUnity\Plugins
-Get-ChildItem C:\ros2-for-unity\install\asset\Ros2ForUnity\Plugins\Windows\x86_64\* -Include @(&#39;&lt;CUSTOM_MSGS_PACKAGE_NAME&gt;*&#39;) | Copy-Item -Destination &lt;AWSIM_DIR&gt;\Assets\Ros2ForUnity\Plugins\Windows\x86_64
+<div class="highlight"><pre><span></span><code>Get-ChildItem C:\ros2-for-unity\install\asset\Ros2ForUnity\Plugins\* -Include @(&#39;&lt;CUSTOM_MSGS_PACKAGE_NAME&gt;*&#39;) | Copy-Item -Destination &lt;PAIRSIM_DIR&gt;\Assets\Ros2ForUnity\Plugins
+Get-ChildItem C:\ros2-for-unity\install\asset\Ros2ForUnity\Plugins\Windows\x86_64\* -Include @(&#39;&lt;CUSTOM_MSGS_PACKAGE_NAME&gt;*&#39;) | Copy-Item -Destination &lt;PAIRSIM_DIR&gt;\Assets\Ros2ForUnity\Plugins\Windows\x86_64
 </code></pre></div>
 </div>
 </div>
