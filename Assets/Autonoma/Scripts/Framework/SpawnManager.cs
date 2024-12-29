@@ -534,7 +534,7 @@ public class SpawnManager : MonoBehaviour
             {
                 if(GameManager.Instance.Settings.myTrackParams.TrackName == "Kentucky Speedway")
                 {
-                    Vector3 position = new Vector3(432.5f, -2.1f, -342.9f);
+                    Vector3 position = new Vector3(432.5f, -2.0f, -342.9f);
                     Vector3 scale = new Vector3(0.9765f, 1.08f, 0.955f);  //best for outside
 
                     Quaternion rotation = Quaternion.Euler(0f, 129f, 0f); 
@@ -559,7 +559,7 @@ public class SpawnManager : MonoBehaviour
                     GameObject instantiatedTrack = Instantiate(imsBankedPrefab, position, rotation); //for new prefabs
                     instantiatedTrack.transform.localScale = scale;
                 }
-                else{
+                else{ //Actual LVSM prefab
                     Quaternion rotation = Quaternion.Euler(0, 180f, 0);  
                     Vector3 position = new Vector3(209f, 9.2f, -253f); 
                     Vector3 scale = new Vector3(0.8025f, 0.8025f, 0.8025f); 
@@ -568,7 +568,14 @@ public class SpawnManager : MonoBehaviour
                     instantiatedTrack.transform.localScale = scale;
                 }
             }
-
+            else if(trackName.Equals("Monza-LowPoly.prefab"))
+            {
+                Quaternion rotation = Quaternion.Euler(0f, -90f, 0f);  
+                Vector3 position = new Vector3(0f, 6.0f, 0f); 
+                Vector3 scale = new Vector3(1f, 1f, 1f); 
+                GameObject instantiatedTrack = Instantiate(track, position, rotation);
+                instantiatedTrack.transform.localScale = scale;
+            }
             else
             {
                 Debug.Log("INSTANTIATING TRACK: "+ trackName);

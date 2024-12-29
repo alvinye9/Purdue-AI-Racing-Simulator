@@ -19,7 +19,8 @@ MonoBehaviour:
   trackRotation: {x: 0, y: -90, z: 0}
   carRotation: {x: 0, y: 0, z: 0}
   trackScaling: {x: 1, y: 1, z: 1}
-  spawnDeltaPos: {x: 0, y: 0, z: -10}
+  spawnDeltaPos: {x: 4, y: 0, z: 0}
   carSpawnPositions:
   - {x: 0, y: -6, z: 0}
+  - {x: 4, y: -6, z: 0}
   trackInfo: {fileID: 11400000, guid: f39c9be160acf440fbe9f2fd474076f8, type: 2}

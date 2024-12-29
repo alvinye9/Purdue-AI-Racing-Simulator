@@ -19,7 +19,7 @@ using ROS2;
 using AWSIM;
 using System;
 using VehicleDynamics;
-using nav_msgs.msg;  // Include Autonoma Perception msg type for Path.msg
+using nav_msgs.msg;  // Include for Path.msg
 using geometry_msgs.msg;
 
 namespace Autonoma
