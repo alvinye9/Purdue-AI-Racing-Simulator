@@ -1,5 +1,5 @@
 /* 
-Copyright 2023 Autonoma, Inc.
+Copyright 2024 Purdue AI Racing.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -22,11 +22,34 @@ using UnityEngine.InputSystem;
 using TMPro;
 public class DriveMenuController : MonoBehaviour
 {
+    public TextMeshProUGUI FpsText;
+	private float pollingTime = 0.25f;
+	private float time;
+	private int frameCount;
+
     public Button PauseButton;
     void Start()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         PauseButton.onClick.AddListener( GameManager.Instance.UIManager.OnPauseMenuPressed );
+    }
+    void Update()
+    {
+    		// Update time.
+		time += Time.deltaTime;
+
+		// Count this frame.
+		frameCount++;
+
+		if (time >= pollingTime) {
+			// Update frame rate.
+			int frameRate = Mathf.RoundToInt((float)frameCount / time);
+			FpsText.text = frameRate.ToString() + " fps";
+
+			// Reset time and frame count.
+			time -= pollingTime;
+			frameCount = 0;
+		}
     }
 }
