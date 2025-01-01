@@ -64,6 +64,8 @@ public class WaypointController : MonoBehaviour
     {
         if (recievedFrontPath)
         {
+            recievedFrontPath = false;  // Reset flag after processing to reduce lag
+
             targetPosition = HelperFunctions.vehDynCoord2Unity(targetPosition); //convert ghost_frame CRS (conventional veh dyn CRS) -> Unity CRS
 
             // Calculate the relative target position in the ego car's local frame

@@ -97,6 +97,7 @@ public class NpcCarController : MonoBehaviour
             }
 
             DirectSetStates(targetPosition, targetRotation);
+            recievedGhostPosition = false;
 
 
         }

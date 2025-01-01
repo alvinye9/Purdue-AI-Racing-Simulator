@@ -57,14 +57,14 @@ namespace Autonoma
                 return;
             }
             
-            int numWaypoints = 10; //should match value in spawnmanager
+            int numWaypoints = 5; //should match value in spawnmanager
             
             PoseStamped frontPathPoses; 
             //Set Waypoint positions to be equally spaced based on number and position of poses in path msg
             for (var i = 0; i < numWaypoints; i++){
                 if (waypointController.waypointName == "waypoint" + i){
                     waypointController.recievedFrontPath = true;
-                    frontPathPoses = msg.Poses[numPoses/numWaypoints * i];
+                    frontPathPoses = msg.Poses[numPoses/numWaypoints/2 * i];
                     float x = (float)frontPathPoses.Pose.Position.X;
                     float y = (float)frontPathPoses.Pose.Position.Y;
                     float z = 0.0f;  // Assuming Z is 0 for 2D positioning in ENU frame

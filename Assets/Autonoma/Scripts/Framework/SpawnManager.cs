@@ -593,7 +593,7 @@ public class SpawnManager : MonoBehaviour
             Vector3 spawnPosition = new Vector3(99,99,99); //initial spawn location irrelevant
 
             GameObject waypoint;
-            int numWaypoints = 10; //should match vlaue in frontpathsubscriber
+            int numWaypoints = 5; //should match vlaue in frontpathsubscriber
             for (var i = 0; i < numWaypoints; i++)
             {
                 waypoint = Instantiate(waypointPrefab, spawnPosition, Quaternion.identity);
