@@ -24,7 +24,7 @@ using UnityEngine.UI;
 
 public class WaypointController : MonoBehaviour
 {
-    public Rigidbody waypoint;
+    // public Rigidbody waypoint;
     public bool recievedFrontPath = false;
     public Rigidbody egoCarBody; 
     private Vector3 targetPosition;  // Current target position for the waypoint
@@ -46,8 +46,9 @@ public class WaypointController : MonoBehaviour
 
         racelineToggle.onValueChanged.AddListener(OnToggleChanged);
 
-        waypoint = GetComponent<Rigidbody>();
-        waypointName = waypoint.name;
+        // waypoint = GetComponent<Rigidbody>();
+        // waypointName = waypoint.name;
+        waypointName = gameObject.name;
 
         GameObject egoCarObject = GameObject.Find("DallaraAV24(Clone)");
         if (egoCarObject != null)
@@ -62,7 +63,7 @@ public class WaypointController : MonoBehaviour
     }
     void Update()
     {
-        if (recievedFrontPath)
+        if (recievedFrontPath && racelineToggle.isOn)
         {
             recievedFrontPath = false;  // Reset flag after processing to reduce lag
 
@@ -82,9 +83,9 @@ public class WaypointController : MonoBehaviour
     // Directly set the waypoint position
     public void DirectSetStates(Vector3 newPosition)
     {
-        waypoint.position = newPosition;  // Directly set Rigidbody's position
-        waypoint.velocity = Vector3.zero;  // Reset velocity
-        transform.position = newPosition;  // Update transform position as well
+        // waypoint.position = newPosition;  // Directly set Rigidbody's position
+        // waypoint.velocity = Vector3.zero;  // Reset velocity
+        transform.position = newPosition;  // Update transform position 
     }
 
     // Set the target position for the car to move towards, called from FrontPathSubscriber.cs
@@ -96,7 +97,8 @@ public class WaypointController : MonoBehaviour
     // Toggle visibility of waypoints
     void OnToggleChanged(bool isOn)
     {
-        gameObject.SetActive(isOn); 
+        enabled = isOn; //enavles/disables the script itself
+        gameObject.SetActive(isOn); //enables/disables visibility of waypoints
     }
 
 }
