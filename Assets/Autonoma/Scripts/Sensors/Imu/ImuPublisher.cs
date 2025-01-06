@@ -133,7 +133,7 @@ public class ImuPublisher : Publisher<Imu>
         if (egoCarObject != null)
         { 
             Transform egoTransform = egoCarObject.transform;
-            float rollAngle = egoTransform.eulerAngles.z;//roll angle in local frame
+            float rollAngle = egoTransform.eulerAngles.z;//quaternion -> euler roll angle in world space 
             float pitchAngle = egoTransform.eulerAngles.x; 
             float yawAngle = egoTransform.eulerAngles.y;   
 

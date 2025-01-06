@@ -24,7 +24,6 @@ using UnityEngine.UI;
 
 public class WaypointController : MonoBehaviour
 {
-    // public Rigidbody waypoint;
     public bool recievedFrontPath = false;
     public Rigidbody egoCarBody; 
     private Vector3 targetPosition;  // Current target position for the waypoint
@@ -46,8 +45,6 @@ public class WaypointController : MonoBehaviour
 
         racelineToggle.onValueChanged.AddListener(OnToggleChanged);
 
-        // waypoint = GetComponent<Rigidbody>();
-        // waypointName = waypoint.name;
         waypointName = gameObject.name;
 
         GameObject egoCarObject = GameObject.Find("DallaraAV24(Clone)");
@@ -83,8 +80,6 @@ public class WaypointController : MonoBehaviour
     // Directly set the waypoint position
     public void DirectSetStates(Vector3 newPosition)
     {
-        // waypoint.position = newPosition;  // Directly set Rigidbody's position
-        // waypoint.velocity = Vector3.zero;  // Reset velocity
         transform.position = newPosition;  // Update transform position 
     }
 
