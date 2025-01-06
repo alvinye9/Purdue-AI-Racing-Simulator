@@ -126,25 +126,17 @@ namespace Autonoma
             imuAngleY += headingNoiseY;
             imuAngleZ += headingNoiseZ;
 
-            // float gammaDeg = latLngUtmConverter.computeMeridianConvergence(utmResult.ZoneNumber, latitude, longitude);
-            // // Debug.LogWarning("Meridian Convergence (Deg): " + gammaDeg);
-            // UnityEngine.Quaternion gammaQuat = UnityEngine.Quaternion.Euler(0, 0, gammaDeg); // Negative gamma for ENU -> UTM
-            // UnityEngine.Quaternion imuEnuQuat = UnityEngine.Quaternion.Euler(imuAngleY, imuAngleX, imuAngleZ); //The Euler input is in ENU
-            // UnityEngine.Quaternion finalQuat = imuEnuQuat * gammaQuat; // Combine IMU ENU orientation with gamma
-            // finalQuat = UnityEngine.Quaternion.Normalize(finalQuat); // Normalize to prevent drift
+            float gammaDeg = latLngUtmConverter.computeMeridianConvergence(utmResult.ZoneNumber, latitude, longitude);
+            // Debug.LogWarning("Meridian Convergence (Deg): " + gammaDeg);
+            UnityEngine.Quaternion gammaQuat = UnityEngine.Quaternion.Euler(0, 0, gammaDeg); // Negative gamma for ENU -> UTM
+            UnityEngine.Quaternion imuEnuQuat = UnityEngine.Quaternion.Euler(imuAngleY, imuAngleX, imuAngleZ); //The Euler input is in ENU
+            UnityEngine.Quaternion finalQuat = imuEnuQuat * gammaQuat; // Combine IMU ENU orientation with gamma
+            finalQuat = UnityEngine.Quaternion.Normalize(finalQuat); // Normalize to prevent drift
 
-            // msg.Pose.Pose.Orientation.X = finalQuat.x;
-            // msg.Pose.Pose.Orientation.Y = finalQuat.y;
-            // msg.Pose.Pose.Orientation.Z = finalQuat.z;
-            // msg.Pose.Pose.Orientation.W = finalQuat.w;
-
-            //The Euler input is in ENU
-            UnityEngine.Quaternion quat = UnityEngine.Quaternion.Euler(imuAngleY, imuAngleX, imuAngleZ);
-            msg.Pose.Pose.Orientation.X = quat.x;
-            msg.Pose.Pose.Orientation.Y  = quat.y;
-            msg.Pose.Pose.Orientation.Z = quat.z;
-            msg.Pose.Pose.Orientation.W = quat.w;
-
+            msg.Pose.Pose.Orientation.X = finalQuat.x;
+            msg.Pose.Pose.Orientation.Y = finalQuat.y;
+            msg.Pose.Pose.Orientation.Z = finalQuat.z;
+            msg.Pose.Pose.Orientation.W = finalQuat.w;
 
             //====== Twist =========
             float velNoiseX = (float)velNoiseGenerator.NextGaussian();
