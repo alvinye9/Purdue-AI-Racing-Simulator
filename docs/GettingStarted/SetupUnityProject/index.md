@@ -27,13 +27,13 @@ This page is a tutorial for setting up a PAIRSIM Unity project.
 
 !!! info
 
-    PAIRSIM's Unity version is currently **2021.1.7f1**
+    PAIRSIM's Unity version is currently **2021.3.45f1 LTS**
 
 Follow the steps below to install Unity on your machine:
 
 1. Install UnityHub to manage Unity projects. Please go to [Unity download page](https://unity3d.com/get-unity/download) and download latest `UnityHub.AppImage`.
 ![](image_1.png)
-2. Install Unity 2021.1.7f1 via UnityHub.
+2. Install Unity 2021.3.45f1 LTS via UnityHub.
     - Open new terminal, navigate to directory where `UnityHub.AppImage` is download and execute the following command:
 ```
 ./UnityHub.AppImage
@@ -41,7 +41,6 @@ Follow the steps below to install Unity on your machine:
     - To install Unity Editor please proceed as shown on the images below
 ![](image_2.png)
 ![](image_3.png)
-![](image_4.png)
     - At this point, your Unity installation process should have started.
 
         === "Ubuntu 22"
