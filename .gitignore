@@ -72,9 +72,10 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 
-# Large Track Prefabs (better to import)
-# Add any imported track assets to this to avoid overloading Git
-/Assets/IMSBankedPrefab/
-/Assets/IMSPrefab/
-/Assets/KentuckyPrefab/
+# Large Track Prefabs (better to import directly using Unity Editor), this should be default location for new track prefabs
+# /Assets/IMSBankedPrefab/
+# /Assets/IMSPrefab/
+# /Assets/KentuckyPrefab/
+/Assets/Autonoma/Prefabs/Tracks/PrefabInstance
+
 

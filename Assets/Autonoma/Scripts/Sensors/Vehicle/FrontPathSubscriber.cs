@@ -21,7 +21,7 @@ using System;
 using VehicleDynamics;
 using nav_msgs.msg;  // Include for Path.msg
 using geometry_msgs.msg;
-using System.Threading.Tasks;
+// using System.Diagnostics;  // Add this namespace for Stopwatch
 
 namespace Autonoma
 {
@@ -53,15 +53,13 @@ namespace Autonoma
 
         void UpdateWaypointStates(Path msg)
         {
-            Task.Run(() => ProcessPath(msg));
-        }
+            // Stopwatch stopwatch = new Stopwatch();
+            // stopwatch.Start();
 
-        void ProcessPath(Path msg)
-        {
             int numPoses = msg.Poses.Length;
             if (numPoses <= 10)
             {
-                Debug.LogWarning("Not enough poses to be visually seen ");
+                UnityEngine.Debug.LogWarning("Not enough poses to be visually seen ");
                 return;
             }
             
@@ -83,6 +81,9 @@ namespace Autonoma
                 }
             }
 
+            // stopwatch.Stop();
+    
+            // UnityEngine.Debug.Log($"For loop execution time: {stopwatch.ElapsedMilliseconds} ms");
 
         }
     }
