@@ -23,12 +23,13 @@ MonoBehaviour:
   w2pos: {x: 0.838, y: 0.62600005, z: 1.7}
   w3pos: {x: -0.79, y: 0.62600005, z: -1.3}
   w4pos: {x: 0.79, y: 0.62600005, z: -1.3}
-  maxSteeringAngle: 240
-  steeringRatio: -15
-  steeringDelay: 5
-  steeringDelaySec: 0.01
-  steeringBandwidth: 5
-  steeringRate: 500
+  maxSteeringAngle: 200
+  steeringRatio: -15.015
+  steeringDelay: 32
+  steeringDelaySec: 0.065
+  steeringBandwidth: 1.3
+  steeringRate: 360
+  steeringBias: -1
   numGears: 6
   gearRatio:
   - 8.75
@@ -65,12 +66,12 @@ MonoBehaviour:
   brakeDelay: 20
   brakeDelaySec: 0.04
   maxBrakeKpa: 6000
-  brakeKpaToNm: 1
-  brakeBias: 0.54
+  brakeKpaToNm: 0.55
+  brakeBias: 0.5
   brakeBandwidth: 5
   brakeRate: 360000
   kArbFront: 463593
-  kArbRear: 358225
+  kArbRear: 0
   kSpring: 200000
   cDamper: 8000
   lSpring: 0.3

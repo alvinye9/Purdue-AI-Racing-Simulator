@@ -372,6 +372,7 @@ public class ScenarioMenuController : MonoBehaviour
             tmpVehSetup.IsThermalTyre = true;
             tmpVehSetup.AmbientTemp = 20f;
             tmpVehSetup.TrackTemp = 25f;
+            tmpVehSetup.SteeringBias = 0.0f;
          
             saveVehicleSetup(tmpVehSetup);
 

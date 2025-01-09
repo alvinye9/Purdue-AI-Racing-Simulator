@@ -238,6 +238,8 @@ public class VehSetup
     public float AmbientTemp;
     public float TrackTemp;
 
+    public float SteeringBias;
+
 }
 
 public class RaceControl

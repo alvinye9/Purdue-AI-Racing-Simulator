@@ -61,7 +61,7 @@ public class WheelController : MonoBehaviour
     {
         if (wheelFL || wheelFR)
         {
-            wheelStAngle = carController.steerAngleApplied;
+            wheelStAngle = carController.steerAngleApplied - carController.vehicleParams.steeringBias; 
         }
         else
         {
