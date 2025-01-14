@@ -17,13 +17,13 @@ There are two options to run racing simulations:
 
 1. Download binary (recommended)
 
-    Download the most recent racing simulator [here](https://purdue0-my.sharepoint.com/my?id=%2Fpersonal%2Fye372%5Fpurdue%5Fedu%2FDocuments%2FResearch%2Fcustom%5Fsimulator&ga=1)
+    Download the latest PAIRSIM racing simulator [here](https://github.com/alvinye9/Purdue-AI-Racing-Simulator/releases)
     
 - Currently only compatible with Linux:
 
-    - Double-click the downloaded executable (.so)
+    - Double-click the downloaded executable (.x86_64)
 
-    - The first time you may need to set the executable permissions with ```chmod +x PAIRSIM_vX.X.X.so```
+    - The first time you may need to set the executable permissions with ```chmod +x PAIRSIM_vX.X.X.x86_64```
 
 2. From the Unity Editor
 
@@ -200,7 +200,13 @@ To start a simulation, click 'Drive' from the 'Scenario Setup' menu.
 
 ### Running with NPC Vehicle
 
-PAIRSIM supports multi-vehicle simulation, with the adversarial vehicle controlled either via the high-level ROS2 interface (`/npc/vehicle_data`, `/npc/powertrain_data`, `/npc/race_control`, `/npc/vehicle_inputs`, `/npc/to_raptor`)OR `/planning/ghost_veh_position`, which is a `autoware_auto_perception_msgs/BoundingBoxArray` msg type containing the current centroid position (x,y) of the desired "ghost" vehicle in the ego vehicle's center_of_gravity frame using conventional vehicle dynamics CRS (+x forward, +y left). Adversarial vehicle's +z direction will match the ego vehicle's by default.
+PAIRSIM supports multi-vehicle simulation, with the adversarial vehicle controlled either via the high-level ROS2 interface (`/npc/vehicle_data`, `/npc/powertrain_data`, `/npc/race_control`, `/npc/vehicle_inputs`, `/npc/to_raptor`)OR `/planning/ghost_veh_position`, which is a `autoware_auto_perception_msgs/BoundingBoxArray` msg type containing the current centroid position (x,y) of the desired "ghost" vehicle in the ego vehicle's local frame using conventional vehicle dynamics CRS (+x forward, +y left). Adversarial vehicle's +z direction will match the ego vehicle's by default.
+
+### Visualizing Raceline
+
+PAIRSIM supports raceline visualization, where the raceline being sent by the autonomy stack will appear as a series of green dots. Toggle on/off on the top left side of the screen (see below). The raceline must be sent with the topic name `/planning/front_path/offset_path`, which is a `nav_msgs/Path` msg type containing a raceline represented as a series of `geometry_msgs/Pose` msgs in the ego vehicle's local frame using conventional vehicle dynamics CRS. To reduce lag, it is best to pass a local portion of the raceline rather than the entire raceline (no more than 100 poses, and the number of green dots will NOT necessarily match the number of poses).
+
+![](RacingSim/Overview/Image_waypoints.png)
  
 ## Copyright and License
 

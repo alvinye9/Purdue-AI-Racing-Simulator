@@ -2,7 +2,7 @@
 
 ## ROS2 For Unity
 
-AWSIM uses [Ros2ForUnity](https://github.com/RobotecAI/ros2-for-unity) module for ROS2 communication. `ROS2 For Unity` is a high-performance communication solution to connect Unity3D and ROS2 ecosystem in a ROS2 "native" way.
+PAIRSIM uses [Ros2ForUnity](https://github.com/RobotecAI/ros2-for-unity) module for ROS2 communication. `ROS2 For Unity` is a high-performance communication solution to connect Unity3D and ROS2 ecosystem in a ROS2 "native" way.
 
 This document briefly guides you on how to add your custom messages to the simulation. For a detailed description, please see [ROS2 For Unity Readme](https://github.com/RobotecAI/ros2-for-unity/blob/master/README.md).
 
@@ -50,7 +50,7 @@ To include a custom ROS2 message, you have to build `ROS2 For Unity` with your c
 
     === "Windows"
         `C:\custom_msgs`
-- ROS2 version is `humble` (`foxy` and `galactic` are also supported, please check the current AWSIM version for more information about its ROS2 version) and is located in
+- ROS2 version is `humble` (`foxy` and `galactic` are also supported, please check the current PAIRSIM version for more information about its ROS2 version) and is located in
 
     === "Ubuntu"
         `/opt/ros/humble`
@@ -139,9 +139,9 @@ Build `ROS2 For Unity` using the foolowing command:
     .\build.ps1 -standalone
     ```
 
-### Install `custom_msgs` to AWSIM
+### Install `custom_msgs` to PAIRSIM
 
-New `ROS2 For Unity` build, which you just made, contains multiple libraries that already exist in the AWSIM. To install `custom_msgs` and not copy all other unnecessary files, you should get the `custom_msgs` related libraries only and copy them to the analogous directories in `AWSIM/Assets/Ros2ForUnity`.
+New `ROS2 For Unity` build, which you just made, contains multiple libraries that already exist in the PAIRSIM. To install `custom_msgs` and not copy all other unnecessary files, you should get the `custom_msgs` related libraries only and copy them to the analogous directories in `PAIRSIM/Assets/Ros2ForUnity`.
 
 You can find them in following directories:
 
@@ -157,16 +157,16 @@ You can find them in following directories:
     `ros2-for-unity/install/asset/Ros2ForUnity/Plugins/Windows/x86_64/` which names matches `custom_msgs_*`
     ```
 
-To automate the process, you can use these commands (change `<AWSIM_DIR>` to your E2Simulator path and `<CUSTOM_MSGS_PACKAGE_NAME>` to a custom messages package):
+To automate the process, you can use these commands (change `<PAIRSIM_DIR>` to your E2Simulator path and `<CUSTOM_MSGS_PACKAGE_NAME>` to a custom messages package):
 
 === "Ubuntu"
     ```
-    find ~/ros2-for-unity/install/asset/Ros2ForUnity/Plugins -maxdepth 1 -name "<CUSTOM_MSGS_PACKAGE_NAME>*"    -type f -exec cp {} <AWSIM_DIR>/Assets/Ros2ForUnity/Plugins \;
-    find ~/ros2-for-unity/install/asset/Ros2ForUnity/Plugins/Linux/x86_64 -maxdepth 1 -name     "lib<CUSTOM_MSGS_PACKAGE_NAME>*" -type f -exec cp {} <AWSIM_DIR>/Assets/Ros2ForUnity/Plugins/Linux/x86_64 \;
+    find ~/ros2-for-unity/install/asset/Ros2ForUnity/Plugins -maxdepth 1 -name "<CUSTOM_MSGS_PACKAGE_NAME>*"    -type f -exec cp {} <PAIRSIM_DIR>/Assets/Ros2ForUnity/Plugins \;
+    find ~/ros2-for-unity/install/asset/Ros2ForUnity/Plugins/Linux/x86_64 -maxdepth 1 -name     "lib<CUSTOM_MSGS_PACKAGE_NAME>*" -type f -exec cp {} <PAIRSIM_DIR>/Assets/Ros2ForUnity/Plugins/Linux/x86_64 \;
     ```
 
 === "Windows"
     ```
-    Get-ChildItem C:\ros2-for-unity\install\asset\Ros2ForUnity\Plugins\* -Include @('<CUSTOM_MSGS_PACKAGE_NAME>*') | Copy-Item -Destination <AWSIM_DIR>\Assets\Ros2ForUnity\Plugins
-    Get-ChildItem C:\ros2-for-unity\install\asset\Ros2ForUnity\Plugins\Windows\x86_64\* -Include @('<CUSTOM_MSGS_PACKAGE_NAME>*') | Copy-Item -Destination <AWSIM_DIR>\Assets\Ros2ForUnity\Plugins\Windows\x86_64
+    Get-ChildItem C:\ros2-for-unity\install\asset\Ros2ForUnity\Plugins\* -Include @('<CUSTOM_MSGS_PACKAGE_NAME>*') | Copy-Item -Destination <PAIRSIM_DIR>\Assets\Ros2ForUnity\Plugins
+    Get-ChildItem C:\ros2-for-unity\install\asset\Ros2ForUnity\Plugins\Windows\x86_64\* -Include @('<CUSTOM_MSGS_PACKAGE_NAME>*') | Copy-Item -Destination <PAIRSIM_DIR>\Assets\Ros2ForUnity\Plugins\Windows\x86_64
     ```

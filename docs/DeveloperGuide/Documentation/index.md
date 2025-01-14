@@ -44,3 +44,11 @@ Purdue-AI-Racing-Simulator
 
 ## Deploy & Hosting
 When docs are pushed to the main branch, they are deployed to GitHub Pages using GitHub Actions. See also [Material for MkDocs - Publishing your site](https://squidfunk.github.io/mkdocs-material/publishing-your-site/)
+
+# External Libraries
+
+List of external libraries used in PAIRSIM.
+
+|Library|Usage|URL|
+|:--|:--|:--|
+|ros2-for-unity|ROS2 communication|[https://github.com/RobotecAI/ros2-for-unity](https://github.com/RobotecAI/ros2-for-unity)|

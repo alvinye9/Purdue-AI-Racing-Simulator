@@ -2753,7 +2753,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9214ce3fc5f155a43860b1e91586f1b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ghostVehiclePositionTopic: /planning/ghost_veh_position
+  ghostVehiclePositionTopic: /planning/ghost_vehicle/measurement
+  ghostVehiclePathTopic: /planning/ghost_vehicle/path
+  targetHeading: 0
   qosSettings:
     ReliabilityPolicy: 0
     DurabilityPolicy: 0
@@ -2982,6 +2984,7 @@ MonoBehaviour:
   modifiedFrameId: gps_top_imu
   linear_acceleration_covariance: 0.0009
   angular_velocity_covariance: 0.00035
+  orientation_covariance: 0.0001
   imuSim: {fileID: 1852630012265285698}
 --- !u!114 &4171430399703020747
 MonoBehaviour:
@@ -4354,7 +4357,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carBody: {fileID: 355629541803049267}
-  egoCarBody: {fileID: 0}
+  egoCarBody: {fileID: 355629541803049267, guid: 014b6bc1310046d5a84df9f497308ac3, type: 3}
   recievedGhostPosition: 0
 --- !u!1 &7293124350473359422
 GameObject:
@@ -5040,6 +5043,7 @@ MonoBehaviour:
   modifiedFrameId: gps_com_imu
   linear_acceleration_covariance: 0.0009
   angular_velocity_covariance: 0.00035
+  orientation_covariance: 0.0001
   imuSim: {fileID: 2962087100063474679}
 --- !u!114 &7339964936975895096
 MonoBehaviour:
@@ -5411,6 +5415,7 @@ MonoBehaviour:
   modifiedFrameId: gps_bottom_imu
   linear_acceleration_covariance: 0.0009
   angular_velocity_covariance: 0.00035
+  orientation_covariance: 0.0001
   imuSim: {fileID: 9165012713855377893}
 --- !u!114 &4234152528529850545
 MonoBehaviour:

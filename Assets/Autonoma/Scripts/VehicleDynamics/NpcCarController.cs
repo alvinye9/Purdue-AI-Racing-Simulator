@@ -33,7 +33,6 @@ public class NpcCarController : MonoBehaviour
     private Vector3 targetPosition;  // Current target position for the car
     private float targetHeading;
     private bool isMoving = false; 
-    private float currentSpeed = 0f;  // Current speed of the car
 
     void Start()
     {
@@ -68,13 +67,13 @@ public class NpcCarController : MonoBehaviour
             
             
 
-            float targetHeadingDegrees = Mathf.Rad2Deg * targetHeading;
-            float unityHeading = -targetHeadingDegrees + 90.0f;  // Transform heading from ENU to Unity (LHS)
+            // float targetHeadingDegrees = Mathf.Rad2Deg * targetHeading;
+            // float unityHeading = -targetHeadingDegrees + 90.0f;  // Transform heading from ENU to Unity (LHS)
+            float unityHeading = -targetHeading + 90.0f;  // Transform heading from ENU to Unity (LHS)
             Quaternion targetRotation = Quaternion.Euler(0, unityHeading, 0);
 
             if(recievedGhostPosition & !hasUpdatedGhostParameters){
                 
-                //make rigidbody behave kinematically
                 carBody.isKinematic = true; 
 
                 string targetLayerName = "Default";
@@ -98,6 +97,7 @@ public class NpcCarController : MonoBehaviour
             }
 
             DirectSetStates(targetPosition, targetRotation);
+            recievedGhostPosition = false;
 
 
         }

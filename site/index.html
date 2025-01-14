@@ -394,6 +394,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#visualizing-raceline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizing Raceline
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -629,6 +638,15 @@
   <a href="#running-with-npc-vehicle" class="md-nav__link">
     <span class="md-ellipsis">
       Running with NPC Vehicle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizing-raceline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizing Raceline
     </span>
   </a>
   
@@ -1097,6 +1115,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#visualizing-raceline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizing Raceline
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1151,16 +1178,16 @@
 <ol>
 <li>
 <p>Download binary (recommended)</p>
-<p>Download the most recent racing simulator <a href="https://purdue0-my.sharepoint.com/my?id=%2Fpersonal%2Fye372%5Fpurdue%5Fedu%2FDocuments%2FResearch%2Fcustom%5Fsimulator&amp;ga=1">here</a></p>
+<p>Download the latest PAIRSIM racing simulator <a href="https://github.com/alvinye9/Purdue-AI-Racing-Simulator/releases">here</a></p>
 </li>
 <li>
 <p>Currently only compatible with Linux:</p>
 <ul>
 <li>
-<p>Double-click the downloaded executable (.so)</p>
+<p>Double-click the downloaded executable (.x86_64)</p>
 </li>
 <li>
-<p>The first time you may need to set the executable permissions with <code>chmod +x PAIRSIM_vX.X.X.so</code></p>
+<p>The first time you may need to set the executable permissions with <code>chmod +x PAIRSIM_vX.X.X.x86_64</code></p>
 </li>
 </ul>
 </li>
@@ -1344,7 +1371,10 @@ Due to the large number of vehicle/tire parameters, they are not accessible thro
 </li>
 </ul>
 <h3 id="running-with-npc-vehicle">Running with NPC Vehicle</h3>
-<p>PAIRSIM supports multi-vehicle simulation, with the adversarial vehicle controlled either via the high-level ROS2 interface (<code>/npc/vehicle_data</code>, <code>/npc/powertrain_data</code>, <code>/npc/race_control</code>, <code>/npc/vehicle_inputs</code>, <code>/npc/to_raptor</code>)OR <code>/planning/ghost_veh_position</code>, which is a <code>autoware_auto_perception_msgs/BoundingBoxArray</code> msg type containing the current centroid position (x,y) of the desired "ghost" vehicle in the ego vehicle's center_of_gravity frame using conventional vehicle dynamics CRS (+x forward, +y left). Adversarial vehicle's +z direction will match the ego vehicle's by default.</p>
+<p>PAIRSIM supports multi-vehicle simulation, with the adversarial vehicle controlled either via the high-level ROS2 interface (<code>/npc/vehicle_data</code>, <code>/npc/powertrain_data</code>, <code>/npc/race_control</code>, <code>/npc/vehicle_inputs</code>, <code>/npc/to_raptor</code>)OR <code>/planning/ghost_veh_position</code>, which is a <code>autoware_auto_perception_msgs/BoundingBoxArray</code> msg type containing the current centroid position (x,y) of the desired "ghost" vehicle in the ego vehicle's local frame using conventional vehicle dynamics CRS (+x forward, +y left). Adversarial vehicle's +z direction will match the ego vehicle's by default.</p>
+<h3 id="visualizing-raceline">Visualizing Raceline</h3>
+<p>PAIRSIM supports raceline visualization, where the raceline being sent by the autonomy stack will appear as a series of green dots. Toggle on/off on the top left side of the screen (see below). The raceline must be sent with the topic name <code>/planning/front_path/offset_path</code>, which is a <code>nav_msgs/Path</code> msg type containing a raceline represented as a series of <code>geometry_msgs/Pose</code> msgs in the ego vehicle's local frame using conventional vehicle dynamics CRS. To reduce lag, it is best to pass a local portion of the raceline rather than the entire raceline (no more than 100 poses, and the number of green dots will NOT necessarily match the number of poses).</p>
+<p><img alt="" src="RacingSim/Overview/Image_waypoints.png" /></p>
 <h2 id="copyright-and-license">Copyright and License</h2>
 <p>Copyright 2024 Purdue AI Racing</p>
 <p>All code is licensed under the Apache 2.0 License. All assets are distributed under the CC BY-NC License.</p>
