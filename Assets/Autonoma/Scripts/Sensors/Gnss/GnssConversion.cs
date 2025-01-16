@@ -325,6 +325,26 @@ public static class Enu2LatLonHeight
         return new UTMResult { Easting= UTMEasting, Northing= UTMNorthing, ZoneNumber= ZoneNumber, ZoneLetter= UTMZone};
     }
 
+    public float computeMeridianConvergence(int zoneNumber, double latitude, double longitude)
+    {
+        // Step 1: Calculate Central Meridian (λ0) in degrees
+        double lambda0 = (zoneNumber - 1) * 6 - 180 + 3; // Degrees
+
+        // Step 2: Convert to Radians
+        double latRad = latitude * Mathf.Deg2Rad;
+        double lonRad = longitude * Mathf.Deg2Rad;
+        double lambda0Rad = lambda0 * Mathf.Deg2Rad;
+
+        // Step 3: Compute Meridian Convergence Angle (γ) in Radians
+        double gammaRad = Mathf.Atan(Mathf.Tan((float)(lonRad - lambda0Rad)) * Mathf.Sin((float)latRad));
+
+        // Step 4: Convert γ to Degrees
+        float gammaDeg = (float)(gammaRad * Mathf.Rad2Deg);
+
+        return gammaDeg;
+
+    }
+
     private void setEllipsoid(String name)
     {
         switch (name)

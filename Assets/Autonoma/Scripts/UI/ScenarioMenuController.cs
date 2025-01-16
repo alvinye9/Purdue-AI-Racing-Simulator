@@ -1,5 +1,6 @@
 /* 
 Copyright 2024 Purdue AI Racing
+Copyright 2023 Autonoma Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -371,6 +372,7 @@ public class ScenarioMenuController : MonoBehaviour
             tmpVehSetup.IsThermalTyre = true;
             tmpVehSetup.AmbientTemp = 20f;
             tmpVehSetup.TrackTemp = 25f;
+            tmpVehSetup.SteeringBias = 0.0f;
          
             saveVehicleSetup(tmpVehSetup);
 

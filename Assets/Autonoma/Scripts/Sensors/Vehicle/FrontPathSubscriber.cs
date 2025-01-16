@@ -21,6 +21,7 @@ using System;
 using VehicleDynamics;
 using nav_msgs.msg;  // Include for Path.msg
 using geometry_msgs.msg;
+// using System.Diagnostics;  // Add this namespace for Stopwatch
 
 namespace Autonoma
 {
@@ -29,6 +30,8 @@ namespace Autonoma
         public string frontPathPositionTopic = "/planning/front_path/offset_path";
         public QoSSettings qosSettings = new QoSSettings();
         public WaypointController waypointController;  
+        private UnityEngine.Vector3 newTargetPosition = UnityEngine.Vector3.zero;
+
         ISubscription<Path> frontPathSubscriber;
 
         void Start()
@@ -50,10 +53,13 @@ namespace Autonoma
 
         void UpdateWaypointStates(Path msg)
         {
+            // Stopwatch stopwatch = new Stopwatch();
+            // stopwatch.Start();
+
             int numPoses = msg.Poses.Length;
             if (numPoses <= 10)
             {
-                Debug.LogWarning("Not enough poses to be visually seen ");
+                UnityEngine.Debug.LogWarning("Not enough poses to be visually seen ");
                 return;
             }
             
@@ -69,12 +75,15 @@ namespace Autonoma
                     float y = (float)frontPathPoses.Pose.Position.Y;
                     float z = 0.0f;  // Assuming Z is 0 for 2D positioning in ENU frame
 
-                    UnityEngine.Vector3 newTargetPosition = new UnityEngine.Vector3(x, y, z);
+                    newTargetPosition.Set(x, y, z);
 
                     waypointController.SetTargetPosition(newTargetPosition);  
                 }
             }
 
+            // stopwatch.Stop();
+    
+            // UnityEngine.Debug.Log($"For loop execution time: {stopwatch.ElapsedMilliseconds} ms");
 
         }
     }

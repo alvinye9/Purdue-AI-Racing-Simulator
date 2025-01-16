@@ -1,5 +1,6 @@
 /* 
 Copyright 2024 Purdue AI Racing
+Copyright 2023 Autonoma Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -303,6 +304,7 @@ public class CarController : MonoBehaviour
         vehicleParams.steeringRatio = -1f*Mathf.Abs(GameManager.Instance.Settings.myVehSetup.SteeringRatio);
         vehicleParams.tAmb = GameManager.Instance.Settings.myVehSetup.AmbientTemp;
         vehicleParams.tTrack = GameManager.Instance.Settings.myVehSetup.TrackTemp;
+        vehicleParams.steeringBias = GameManager.Instance.Settings.myVehSetup.SteeringBias;
         physicalActuator = !GameManager.Instance.Settings.myVehSetup.IsIdealSteering;
         vehicleParams.calcDepVars();
     }
@@ -512,6 +514,7 @@ public class CarController : MonoBehaviour
         brakeBias = 0.50, //AV21 default was 0.54
         brakeBandwidth = 5.0, 
         // brakeRate = 180000.0  //dependent variable
+        
     };
 
     void ApplyBrakeParameters(BrakeParametersConfig config)

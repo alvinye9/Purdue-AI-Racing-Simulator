@@ -1,5 +1,6 @@
 /* 
 Copyright 2024 Purdue AI Racing
+Copyright 2023 Autonoma Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -29,7 +30,7 @@ public class HUDManager : MonoBehaviour
     public VehicleDataSimulator vehDataSim;
     public Image brakeBar, throttleBar, tachBar, FLImage, FRImage, RLImage, RRImage;
     public TMP_Text gearText, tachometerText, wheelText, speedometerText,
-        ctText, sysText, FLText, FRText, RLText, RRText, TTempText, ATempText;
+        ctText, sysText, FLText, FRText, RLText, RRText, TTempText, ATempText, steeringBiasText;
     public Transform wheelTransform;
     public float WheelStart, WheelProgress, rpmPrev, hudRpm;
     public Button resetButton;
@@ -125,7 +126,7 @@ public class HUDManager : MonoBehaviour
 
         wheelTransform.localRotation = Quaternion.Euler(Vector3.forward * (WheelStart - carController.steerAngleApplied*carController.vehicleParams.steeringRatio * -1f  ) );
         wheelText.text =  ((int)(carController.steerAngleApplied*carController.vehicleParams.steeringRatio)).ToString();
-
+        steeringBiasText.text = "Steering bias: " + ((double)(carController.vehicleParams.steeringBias)).ToString() + " deg";
         gearText.text = carController.gear.ToString();
 
         brakeBar.fillAmount = carController.brakeApplied/100.0f;

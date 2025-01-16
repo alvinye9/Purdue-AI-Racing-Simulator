@@ -1,5 +1,6 @@
 /* 
 Copyright 2024 Purdue AI Racing
+Copyright 2023 Autonoma Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -30,6 +31,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject imsPrefab;
     public GameObject imsBankedPrefab;
     public GameObject waypointPrefab;
+    public GameObject monzaPrefab;
+    public GameObject lvmsPrefab;
     public Material[] materials;
     public RaceControlMenuController raceControlMenu;
     private TrackParams trackParams;
@@ -564,7 +567,7 @@ public class SpawnManager : MonoBehaviour
                     Vector3 position = new Vector3(209f, 9.2f, -253f); 
                     Vector3 scale = new Vector3(0.8025f, 0.8025f, 0.8025f); 
 
-                    GameObject instantiatedTrack = Instantiate(track, position, rotation);
+                    GameObject instantiatedTrack = Instantiate(lvmsPrefab, position, rotation);
                     instantiatedTrack.transform.localScale = scale;
                 }
             }
@@ -575,6 +578,15 @@ public class SpawnManager : MonoBehaviour
                 Vector3 scale = new Vector3(1f, 1f, 1f); 
                 GameObject instantiatedTrack = Instantiate(track, position, rotation);
                 instantiatedTrack.transform.localScale = scale;
+            }
+            else if(trackName.Equals("Monza.prefab"))
+            {
+                Vector3 position = new Vector3(0f, 0f, 0f);
+                Quaternion rotation = Quaternion.Euler(0f, -90f, 0f); 
+
+                Vector3 scale = new Vector3(1f, 1f, 1f); 
+                GameObject instantiatedTrack = Instantiate(monzaPrefab, position, rotation); //for new prefabs
+                instantiatedTrack.transform.localScale = scale;                
             }
             else
             {

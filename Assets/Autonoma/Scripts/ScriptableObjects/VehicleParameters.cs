@@ -39,6 +39,7 @@ public class VehicleParameters : ScriptableObject
     public float steeringDelaySec;// = 0.04f; // s
     public float steeringBandwidth;// = 1.0f; // lpf freq
     public float steeringRate;// = 60.0f; // deg/s at the wheel
+    public float steeringBias; //-1.0f at LVMS 2025
     //----------- Engine and wheel rotation Dynamics -----------------
     // 0 4000 8000 , 0 0.5 1
     //public float[,]  engineMap= {{0,200,400},{0,200,400},{0,0,0}};

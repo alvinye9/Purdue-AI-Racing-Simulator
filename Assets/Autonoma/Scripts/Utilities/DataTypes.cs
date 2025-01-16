@@ -1,5 +1,6 @@
 /* 
-Copyright 2024 Purdue AI Racing, Inc.
+Copyright 2024 Purdue AI Racing
+Copyright 2023 Autonoma Inc., Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -236,6 +237,8 @@ public class VehSetup
     public bool IsThermalTyre;
     public float AmbientTemp;
     public float TrackTemp;
+
+    public float SteeringBias;
 
 }
 

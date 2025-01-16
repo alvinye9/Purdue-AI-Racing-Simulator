@@ -1,5 +1,6 @@
 /* 
 Copyright 2024 Purdue AI Racing
+Copyright 2023 Autonoma Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -60,7 +61,7 @@ public class WheelController : MonoBehaviour
     {
         if (wheelFL || wheelFR)
         {
-            wheelStAngle = carController.steerAngleApplied;
+            wheelStAngle = carController.steerAngleApplied - carController.vehicleParams.steeringBias; 
         }
         else
         {

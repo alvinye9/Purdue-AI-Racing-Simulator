@@ -24,12 +24,12 @@ using UnityEngine.UI;
 
 public class WaypointController : MonoBehaviour
 {
-    // public Rigidbody waypoint;
     public bool recievedFrontPath = false;
     public Rigidbody egoCarBody; 
     private Vector3 targetPosition;  // Current target position for the waypoint
     public string waypointName;
     public Toggle racelineToggle;
+    private int frameCounter = 0; 
 
     void Start()
     {
@@ -46,8 +46,6 @@ public class WaypointController : MonoBehaviour
 
         racelineToggle.onValueChanged.AddListener(OnToggleChanged);
 
-        // waypoint = GetComponent<Rigidbody>();
-        // waypointName = waypoint.name;
         waypointName = gameObject.name;
 
         GameObject egoCarObject = GameObject.Find("DallaraAV24(Clone)");
@@ -63,28 +61,30 @@ public class WaypointController : MonoBehaviour
     }
     void Update()
     {
-        if (recievedFrontPath && racelineToggle.isOn)
+        frameCounter ++;
+        if (frameCounter % 2 == 0)  
         {
-            recievedFrontPath = false;  // Reset flag after processing to reduce lag
+            if (recievedFrontPath && racelineToggle.isOn)
+            {
+                recievedFrontPath = false;  // Reset flag after processing to reduce lag
 
-            targetPosition = HelperFunctions.vehDynCoord2Unity(targetPosition); //convert ghost_frame CRS (conventional veh dyn CRS) -> Unity CRS
+                targetPosition = HelperFunctions.vehDynCoord2Unity(targetPosition); //convert ghost_frame CRS (conventional veh dyn CRS) -> Unity CRS
 
-            // Calculate the relative target position in the ego car's local frame
-            Vector3 relativeTargetPosition = egoCarBody.transform.TransformPoint(targetPosition);
-            relativeTargetPosition.y = egoCarBody.position.y;
-            targetPosition = relativeTargetPosition;
+                // Calculate the relative target position in the ego car's local frame
+                Vector3 relativeTargetPosition = egoCarBody.transform.TransformPoint(targetPosition);
+                relativeTargetPosition.y = egoCarBody.position.y;
+                targetPosition = relativeTargetPosition;
 
-            DirectSetStates(targetPosition);
+                DirectSetStates(targetPosition);
 
 
+            }
         }
     }
 
     // Directly set the waypoint position
     public void DirectSetStates(Vector3 newPosition)
     {
-        // waypoint.position = newPosition;  // Directly set Rigidbody's position
-        // waypoint.velocity = Vector3.zero;  // Reset velocity
         transform.position = newPosition;  // Update transform position 
     }
 
