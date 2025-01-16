@@ -136,7 +136,7 @@ public class CarController : MonoBehaviour
     {   
         if (physicalActuator)
         {
-            brakeCmdBufPrev = brakeCmdBuf;
+            brakeCmdBufPrev = brakeCmdBuf; //brakeCmd in Kpa
             brakeCmdBuf = HelperFunctions.pureDelay(brakeCmd,brakeCmdBufPrev, vehicleParams.brakeDelay); // buffer the incoming commands
             brakeApplied = brakeCmdBuf[vehicleParams.brakeDelay-1]; // select the latest of the buffer for the delay
             brakeApplied = HelperFunctions.lowPassFirstOrder(brakeApplied,brakeAppliedPrev, vehicleParams.brakeBandwidth);
