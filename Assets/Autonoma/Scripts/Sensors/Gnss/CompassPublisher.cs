@@ -15,18 +15,17 @@ out of or in connection with the software or the use of the software.
 */
 using UnityEngine;
 using VehicleDynamics;
-using std_msgs.msg;
-using geometry_msgs.msg;
+using sensor_msgs.msg;
 
 namespace Autonoma
 {
-public class CompassPublisher : Publisher<PoseWithCovarianceStamped>
+public class CompassPublisher : Publisher<Imu>
 {
     public string modifiedRosNamespace = "/novatel_bottom";
     public string modifiedTopicName = "/Compass";
     public float modifiedFrequency = 100f;
     public string modifiedFrameId = "";
-    public float pose_covariance = 0.0f;
+    public float orientation_covariance = 0.0f;
     public bool isBottom = true;
 
     public void getPublisherParams()
@@ -44,18 +43,23 @@ public class CompassPublisher : Publisher<PoseWithCovarianceStamped>
     }
     public Heading2Simulator heading2Sim;
     public ImuSimulator imuSim;
+    public OdomSimulator odomSim;
 
     public override void fillMsg()
     {
         msg.Header.Frame_id = modifiedFrameId;
 
-        //// in the future see if we can get Compass to be simulated similarly to heading2
-        // // Convert heading2 yaw from NED to ENU and then to quaternion
-        // UnityEngine.Quaternion compassOrientation = UnityEngine.Quaternion.Euler(0f, heading2Sim.heading, 0f); //heading in degrees
-        // msg.Pose.Pose.Orientation.X = compassOrientation.x;
-        // msg.Pose.Pose.Orientation.Y  = compassOrientation.y;
-        // msg.Pose.Pose.Orientation.Z = compassOrientation.z;
-        // msg.Pose.Pose.Orientation.W = compassOrientation.w;
+        float vehicleSpeed = odomSim.odomVelWorld.magnitude;  // Speed in m/s
+
+        // Adjust covariance based on speed 
+        if (vehicleSpeed <= 5f)
+        {
+            orientation_covariance = 0.5f;
+        }
+        else // speed > 5m/s
+        {
+            orientation_covariance = 2.0f;
+        }
 
         //functionally should be the same as imu/data
         float imuAngleX = (float)(imuSim.imuAngle.x);
@@ -63,19 +67,15 @@ public class CompassPublisher : Publisher<PoseWithCovarianceStamped>
         float imuAngleZ = (float)(imuSim.imuAngle.z + 90.0);
         
         UnityEngine.Quaternion quat = UnityEngine.Quaternion.Euler(imuAngleY, imuAngleX, imuAngleZ);
-        msg.Pose.Pose.Orientation.X = quat.x;
-        msg.Pose.Pose.Orientation.Y  = quat.y;
-        msg.Pose.Pose.Orientation.Z = quat.z;
-        msg.Pose.Pose.Orientation.W = quat.w;
+        msg.Orientation.X = quat.x;
+        msg.Orientation.Y  = quat.y;
+        msg.Orientation.Z = quat.z;
+        msg.Orientation.W = quat.w;
 
-        // Set covariance diagonals to 6e-5
-        msg.Pose.Covariance[0] = pose_covariance;
-        msg.Pose.Covariance[7] = pose_covariance;
-        msg.Pose.Covariance[14] = pose_covariance;
-        msg.Pose.Covariance[21] = pose_covariance;
-        msg.Pose.Covariance[28] = pose_covariance;
-        msg.Pose.Covariance[35] = pose_covariance;
+        msg.Orientation_covariance[0] = orientation_covariance;
+        msg.Orientation_covariance[4] = orientation_covariance;
+        msg.Orientation_covariance[8] = orientation_covariance;
 
     }
-} // end of class
-} // end of autonoma namespace
+} 
+} 

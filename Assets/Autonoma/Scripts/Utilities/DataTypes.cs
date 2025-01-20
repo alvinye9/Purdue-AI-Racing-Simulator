@@ -169,8 +169,6 @@ public class SensorSet
     
     public float linearAccelCovariance;
     public float angularVelocityCovariance;
-    public float poseCovariance;
-    public float twistCovariance;
     public float orientationCovariance;
     public float positionCovariance;
 

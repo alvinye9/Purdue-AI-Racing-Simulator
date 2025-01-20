@@ -23,10 +23,9 @@ namespace Autonoma
 public class OdomSimulator : MonoBehaviour
 {
 
-    // public Vector3 position; // Stores easting, northing (UTM), and height
-    // public Quaternion orientation; // Stores the quaternion orientation
-    // public Vector3 linearVelocity; // Linear velocity in the vehicle's frame
-    // public Vector3 angularVelocity; // Angular velocity (roll, pitch, yaw rates)
+    public Vector3 odomAngle; // [deg]
+    public Vector3 odomVelWorld;
+
     public Rigidbody rb;
     void Start()
     {
@@ -35,8 +34,17 @@ public class OdomSimulator : MonoBehaviour
     
     void FixedUpdate()
     {   
-        
-        
+        odomVelWorld = rb.velocity; //World Frame
+
+        float yawAngle = Mathf.Atan2(odomVelWorld.x, odomVelWorld.z) * Mathf.Rad2Deg;
+        float pitchAngle = 0f; // FIXME Can be computed from vertical velocity if needed
+        float rollAngle = 0f;  // FIXME
+
+        // Store the computed angles
+        odomAngle = new Vector3(rollAngle, yawAngle, pitchAngle);
+
+        // RPY, RHS +, [deg], NORTH = 0 for yaw, EAST = -90, [-180,180]
+        odomAngle = HelperFunctions.unity2vehDynCoord(-odomAngle);         
 
     }
 
