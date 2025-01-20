@@ -119,18 +119,18 @@ namespace Autonoma
             float headingNoiseX = (float)headingNoiseGenerator.NextGaussian();
             float headingNoiseY = (float)headingNoiseGenerator.NextGaussian();
             float headingNoiseZ = (float)headingNoiseGenerator.NextGaussian();
-            float imuAngleX = (float)(imuSim.imuAngle.x);
-            float imuAngleY = (float)(imuSim.imuAngle.y);
-            float imuAngleZ = (float)(imuSim.imuAngle.z + 90.0);
-            imuAngleX += headingNoiseX;
-            imuAngleY += headingNoiseY;
-            imuAngleZ += headingNoiseZ;
+            float odomAngleX = (float)(odomSim.odomAngle.x);
+            float odomAngleY = (float)(odomSim.odomAngle.y);
+            float odomAngleZ = (float)(odomSim.odomAngle.z + 90.0);
+            odomAngleX += headingNoiseX;
+            odomAngleY += headingNoiseY;
+            odomAngleZ += headingNoiseZ;
 
             float gammaDeg = latLngUtmConverter.computeMeridianConvergence(utmResult.ZoneNumber, latitude, longitude);
             // Debug.LogWarning("Meridian Convergence (Deg): " + gammaDeg);
             UnityEngine.Quaternion gammaQuat = UnityEngine.Quaternion.Euler(0, 0, gammaDeg); // Negative gamma for ENU -> UTM
-            UnityEngine.Quaternion imuEnuQuat = UnityEngine.Quaternion.Euler(imuAngleY, imuAngleX, imuAngleZ); //The Euler input is in ENU
-            UnityEngine.Quaternion finalQuat = imuEnuQuat * gammaQuat; // Combine IMU ENU orientation with gamma
+            UnityEngine.Quaternion imuEnuQuat = UnityEngine.Quaternion.Euler(odomAngleY, odomAngleX, odomAngleZ); //The Euler input is in ENU
+            UnityEngine.Quaternion finalQuat = imuEnuQuat * gammaQuat; // Adjust quat with meridian convergence
             finalQuat = UnityEngine.Quaternion.Normalize(finalQuat); // Normalize to prevent drift
 
             msg.Pose.Pose.Orientation.X = finalQuat.x;
