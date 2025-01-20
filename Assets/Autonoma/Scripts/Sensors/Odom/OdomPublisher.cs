@@ -34,8 +34,9 @@ namespace Autonoma
         private double longitude;
         private double utmX;
         private double utmY;
-        public float pose_covariance = 0.0f;
-        public float twist_covariance = 0.0f;
+        public float position_covariance = 0.0f;
+        public float twist_orientation_covariance = 0.0f;
+        public float orientation_covariance = 0.0f;
         
         public void getPublisherParams()
         {
@@ -49,8 +50,8 @@ namespace Autonoma
 
         protected override void Start()
         {
-            pose_covariance = GameManager.Instance.Settings.mySensorSet.poseCovariance;
-            twist_covariance = GameManager.Instance.Settings.mySensorSet.twistCovariance;
+            position_covariance = GameManager.Instance.Settings.mySensorSet.positionCovariance;
+            twist_orientation_covariance = GameManager.Instance.Settings.mySensorSet.orientationCovariance;
 
             getPublisherParams();
             this.rosNamespace = modifiedRosNamespace;
@@ -142,9 +143,6 @@ namespace Autonoma
             float velNoiseX = (float)velNoiseGenerator.NextGaussian();
             float velNoiseY = (float)velNoiseGenerator.NextGaussian();
             float velNoiseZ = (float)velNoiseGenerator.NextGaussian();
-            // msg.Twist.Twist.Linear.X = imuSim.imuVelLocal.x; // Forward   //change this to be using GPS twist
-            // msg.Twist.Twist.Linear.Y = imuSim.imuVelLocal.y; // Left
-            // msg.Twist.Twist.Linear.Z = imuSim.imuVelLocal.z; // Up
             msg.Twist.Twist.Linear.X = imuSim.imuVelLocal.x + velNoiseX; // Forward   //change this to be using GPS twist
             msg.Twist.Twist.Linear.Y = imuSim.imuVelLocal.y + velNoiseY; // Left
             msg.Twist.Twist.Linear.Z = imuSim.imuVelLocal.z + velNoiseZ; // Up
@@ -152,27 +150,28 @@ namespace Autonoma
             float gyroNoiseX = (float)gyroNoiseGenerator.NextGaussian();
             float gyroNoiseY = (float)gyroNoiseGenerator.NextGaussian();
             float gyroNoiseZ = (float)gyroNoiseGenerator.NextGaussian();
-            // msg.Twist.Twist.Angular.X = imuSim.imuGyro.x; 
-            // msg.Twist.Twist.Angular.Y = imuSim.imuGyro.y; 
-            // msg.Twist.Twist.Angular.Z = imuSim.imuGyro.z; 
             msg.Twist.Twist.Angular.X = imuSim.imuGyro.x + gyroNoiseX; 
             msg.Twist.Twist.Angular.Y = imuSim.imuGyro.y + gyroNoiseY; 
             msg.Twist.Twist.Angular.Z = imuSim.imuGyro.z + gyroNoiseZ; 
 
             //Covariance
-            msg.Pose.Covariance[0] = pose_covariance;
-            msg.Pose.Covariance[7] = pose_covariance;
-            msg.Pose.Covariance[14] = pose_covariance;
-            msg.Pose.Covariance[21] = pose_covariance;
-            msg.Pose.Covariance[28] = pose_covariance;
-            msg.Pose.Covariance[35] = pose_covariance;
+            msg.Pose.Covariance[0] = position_covariance;
+            msg.Pose.Covariance[7] = position_covariance;
+            msg.Pose.Covariance[14] = position_covariance;
 
-            msg.Twist.Covariance[0] = twist_covariance;
-            msg.Twist.Covariance[7] = twist_covariance;
-            msg.Twist.Covariance[14] = twist_covariance;
-            msg.Twist.Covariance[21] = twist_covariance;
-            msg.Twist.Covariance[28] = twist_covariance;
-            msg.Twist.Covariance[35] = twist_covariance;
+            float vehicleSpeed = odomSim.odomVelWorld.magnitude;
+            orientation_covariance = Mathf.Pow(Mathf.Atan2(0.3f, vehicleSpeed), 2);
+
+            msg.Pose.Covariance[21] = orientation_covariance;
+            msg.Pose.Covariance[28] = orientation_covariance;
+            msg.Pose.Covariance[35] = orientation_covariance;
+
+            msg.Twist.Covariance[0] = position_covariance;
+            msg.Twist.Covariance[7] = position_covariance;
+            msg.Twist.Covariance[14] = position_covariance;
+            msg.Twist.Covariance[21] = twist_orientation_covariance;
+            msg.Twist.Covariance[28] = twist_orientation_covariance;
+            msg.Twist.Covariance[35] = twist_orientation_covariance;
         }
 
     }

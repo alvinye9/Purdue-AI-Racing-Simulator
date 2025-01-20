@@ -15,8 +15,6 @@ out of or in connection with the software or the use of the software.
 */
 using UnityEngine;
 using VehicleDynamics;
-// using std_msgs.msg;
-// using geometry_msgs.msg;
 using sensor_msgs.msg;
 
 namespace Autonoma
@@ -45,10 +43,23 @@ public class CompassPublisher : Publisher<Imu>
     }
     public Heading2Simulator heading2Sim;
     public ImuSimulator imuSim;
+    public OdomSimulator odomSim;
 
     public override void fillMsg()
     {
         msg.Header.Frame_id = modifiedFrameId;
+
+        float vehicleSpeed = odomSim.odomVelWorld.magnitude;  // Speed in m/s
+
+        // Adjust covariance based on speed 
+        if (vehicleSpeed <= 5f)
+        {
+            orientation_covariance = 0.5f;
+        }
+        else // speed > 5m/s
+        {
+            orientation_covariance = 2.0f;
+        }
 
         //functionally should be the same as imu/data
         float imuAngleX = (float)(imuSim.imuAngle.x);

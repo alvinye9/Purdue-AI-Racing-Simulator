@@ -3719,6 +3719,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22a76fb1bd8532d7a1b3c70e827c644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  odomAngle: {x: 0, y: 0, z: 0}
+  odomVelWorld: {x: 0, y: 0, z: 0}
   rb: {fileID: 355629541803049267}
 --- !u!114 &2650351264543764666
 MonoBehaviour:
@@ -8477,6 +8479,7 @@ MonoBehaviour:
   isBottom: 0
   heading2Sim: {fileID: 786613502490750100}
   imuSim: {fileID: 1852630012265285698}
+  odomSim: {fileID: 2367501995259105064}
 --- !u!1 &5097809510578183039
 GameObject:
   m_ObjectHideFlags: 0
@@ -9546,6 +9549,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22a76fb1bd8532d7a1b3c70e827c644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  odomAngle: {x: 0, y: 0, z: 0}
+  odomVelWorld: {x: 0, y: 0, z: 0}
   rb: {fileID: 355629541803049267}
 --- !u!1 &5987247521658758598
 GameObject:
@@ -12753,6 +12758,7 @@ MonoBehaviour:
   isBottom: 0
   heading2Sim: {fileID: 3550243041375486607}
   imuSim: {fileID: 2962087100063474679}
+  odomSim: {fileID: 8559567190625736841}
 --- !u!1 &8368226889100640804
 GameObject:
   m_ObjectHideFlags: 0
@@ -13153,6 +13159,7 @@ MonoBehaviour:
   isBottom: 1
   heading2Sim: {fileID: 8200978788070277805}
   imuSim: {fileID: 9165012713855377893}
+  odomSim: {fileID: 2271686355297019082}
 --- !u!1 &8535690614254718050
 GameObject:
   m_ObjectHideFlags: 0
@@ -13644,6 +13651,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c22a76fb1bd8532d7a1b3c70e827c644, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  odomAngle: {x: 0, y: 0, z: 0}
+  odomVelWorld: {x: 0, y: 0, z: 0}
   rb: {fileID: 355629541803049267}
 --- !u!114 &3095526362630610121
 MonoBehaviour:

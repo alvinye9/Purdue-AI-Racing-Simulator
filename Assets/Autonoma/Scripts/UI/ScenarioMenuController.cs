@@ -500,8 +500,6 @@ public class ScenarioMenuController : MonoBehaviour
 
             tmpSensorSet.linearAccelCovariance = 0.0009f;
             tmpSensorSet.angularVelocityCovariance = 0.00035f;
-            tmpSensorSet.poseCovariance = 0.0001f;
-            tmpSensorSet.twistCovariance = 0.0001f;
             tmpSensorSet.orientationCovariance = 0.0001f;
             tmpSensorSet.positionCovariance = 0.0001f;
 
