@@ -96,7 +96,7 @@ public class CarController : MonoBehaviour
 
             // steerAngleApplied = HelperFunctions.lowPassFirstOrder(steerAngleApplied,steerAngleAppliedPrev,vehicleParams.steeringBandwidth); //dynamics approximated as LPF, not super accurate
 
-            steerAngleApplied = CalculateSteeringActuator(steerAngleApplied);
+            steerAngleApplied = CalculateSteeringOutput(steerAngleApplied);
 
             steerAngleApplied = HelperFunctions.rateLimit(steerAngleApplied, steerAngleAppliedPrev , Mathf.Abs(vehicleParams.steeringRate/vehicleParams.steeringRatio)); // Rate Limiter
             
@@ -114,7 +114,7 @@ public class CarController : MonoBehaviour
     }
 
     // New method for calculating steering actuator output based on Ethan's derived tf
-    private float CalculateSteeringActuator(float steeringInput)
+    private float CalculateSteeringOutput(float steeringInput)
     {
         // Calculate the new steering output using the transfer function
         float newSteeringOutput = 1.9394f * steeringOutputHistory[0] - 0.9402f * steeringOutputHistory[1]
