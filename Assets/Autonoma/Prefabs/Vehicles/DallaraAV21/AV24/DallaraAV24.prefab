@@ -3722,6 +3722,7 @@ MonoBehaviour:
   odomAngle: {x: 0, y: 0, z: 0}
   odomVelWorld: {x: 0, y: 0, z: 0}
   rb: {fileID: 355629541803049267}
+  gnssSim: {fileID: 1276364910490411621}
 --- !u!114 &2650351264543764666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8377,8 +8378,9 @@ MonoBehaviour:
   modifiedFrequency: 150
   modifiedFrameId: utm
   modifiedChildFrameId: gps_top_ant1
-  pose_covariance: 0
-  twist_covariance: 0
+  position_covariance: 0
+  twist_orientation_covariance: 0
+  orientation_covariance: 0
   odomSim: {fileID: 2367501995259105064}
   gnssSim: {fileID: 1276364910490411621}
   imuSim: {fileID: 1852630012265285698}
@@ -8428,7 +8430,8 @@ MonoBehaviour:
   modifiedTopicName: /ins_twist
   modifiedFrequency: 150
   modifiedFrameId: gps_top
-  twist_covariance: 0
+  position_covariance: 0
+  orientation_covariance: 0
   imuSim: {fileID: 1852630012265285698}
   insSim: {fileID: 2650351264543764666}
 --- !u!114 &4254014722073836701
@@ -9552,6 +9555,7 @@ MonoBehaviour:
   odomAngle: {x: 0, y: 0, z: 0}
   odomVelWorld: {x: 0, y: 0, z: 0}
   rb: {fileID: 355629541803049267}
+  gnssSim: {fileID: 7476927796417096252}
 --- !u!1 &5987247521658758598
 GameObject:
   m_ObjectHideFlags: 0
@@ -12656,8 +12660,9 @@ MonoBehaviour:
   modifiedFrequency: 150
   modifiedFrameId: utm
   modifiedChildFrameId: gps_com_ant1
-  pose_covariance: 0
-  twist_covariance: 0
+  position_covariance: 0
+  twist_orientation_covariance: 0
+  orientation_covariance: 0
   odomSim: {fileID: 8559567190625736841}
   gnssSim: {fileID: 7476927796417096252}
   imuSim: {fileID: 2962087100063474679}
@@ -12707,7 +12712,8 @@ MonoBehaviour:
   modifiedTopicName: /ins_twist
   modifiedFrequency: 150
   modifiedFrameId: gps_com
-  twist_covariance: 0
+  position_covariance: 0
+  orientation_covariance: 0
   imuSim: {fileID: 2962087100063474679}
   insSim: {fileID: 7971734390841681366}
 --- !u!114 &6623326602739002005
@@ -13057,8 +13063,9 @@ MonoBehaviour:
   modifiedFrequency: 150
   modifiedFrameId: utm
   modifiedChildFrameId: gps_bottom_ant1
-  pose_covariance: 0
-  twist_covariance: 0
+  position_covariance: 0
+  twist_orientation_covariance: 0
+  orientation_covariance: 0
   odomSim: {fileID: 2271686355297019082}
   gnssSim: {fileID: 937264494116879081}
   imuSim: {fileID: 9165012713855377893}
@@ -13108,7 +13115,8 @@ MonoBehaviour:
   modifiedTopicName: /ins_twist
   modifiedFrequency: 150
   modifiedFrameId: gps_bottom
-  twist_covariance: 0
+  position_covariance: 0
+  orientation_covariance: 0
   imuSim: {fileID: 9165012713855377893}
   insSim: {fileID: 3095526362630610121}
 --- !u!114 &8887205032323456383
@@ -13654,6 +13662,7 @@ MonoBehaviour:
   odomAngle: {x: 0, y: 0, z: 0}
   odomVelWorld: {x: 0, y: 0, z: 0}
   rb: {fileID: 355629541803049267}
+  gnssSim: {fileID: 937264494116879081}
 --- !u!114 &3095526362630610121
 MonoBehaviour:
   m_ObjectHideFlags: 0
