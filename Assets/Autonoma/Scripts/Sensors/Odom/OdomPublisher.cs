@@ -140,12 +140,14 @@ namespace Autonoma
             msg.Pose.Pose.Orientation.W = finalQuat.w;
 
             //====== Twist =========
+            float vehicleSpeed = odomSim.odomVelWorld.magnitude;
+
             float velNoiseX = (float)velNoiseGenerator.NextGaussian();
             float velNoiseY = (float)velNoiseGenerator.NextGaussian();
             float velNoiseZ = (float)velNoiseGenerator.NextGaussian();
-            msg.Twist.Twist.Linear.X = imuSim.imuVelLocal.x + velNoiseX; // Forward   //change this to be using GPS twist
-            msg.Twist.Twist.Linear.Y = imuSim.imuVelLocal.y + velNoiseY; // Left
-            msg.Twist.Twist.Linear.Z = imuSim.imuVelLocal.z + velNoiseZ; // Up
+            msg.Twist.Twist.Linear.X = vehicleSpeed + velNoiseX; // Forward   //change this to be using GPS twist
+            msg.Twist.Twist.Linear.Y = 0.0f + velNoiseY; // Left
+            msg.Twist.Twist.Linear.Z = 0.0f + velNoiseZ; // Up
 
             float gyroNoiseX = (float)gyroNoiseGenerator.NextGaussian();
             float gyroNoiseY = (float)gyroNoiseGenerator.NextGaussian();
@@ -159,7 +161,6 @@ namespace Autonoma
             msg.Pose.Covariance[7] = position_covariance;
             msg.Pose.Covariance[14] = position_covariance;
 
-            float vehicleSpeed = odomSim.odomVelWorld.magnitude;
             orientation_covariance = Mathf.Pow(Mathf.Atan2(0.3f, vehicleSpeed), 2);
 
             msg.Pose.Covariance[21] = orientation_covariance;
