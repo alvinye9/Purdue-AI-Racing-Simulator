@@ -37,7 +37,6 @@ public class WaypointController : MonoBehaviour
         if (racelineToggle != null)
         {
             gameObject.SetActive(racelineToggle.isOn); 
-            Debug.Log("Toggle isOn: " + racelineToggle.isOn);
         }
         else
         {
