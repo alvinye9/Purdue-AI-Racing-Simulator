@@ -53,14 +53,23 @@ namespace Autonoma
             [Range(-0.5f, 0.5f)] public float p1;
             [Range(-0.5f, 0.5f)] public float p2;
             [Range(-1f, 1f)] public float k3;
+            [Range(-1f, 1f)] public float k4; // NEW: Add k4 for fisheye distortion
 
-            /// <summary>
-            /// Get distortion parameters for "plumb bob" model.
-            /// </summary>
+            // <summary>
+            // Get distortion parameters for "plumb bob" model.
+            // </summary>
             public double[] getDistortionParameters()
             {
-                return new double[] { k1, k2, p1, p2, k3 };
+                return new double[] { k1, k2, p1, p2, k3, k4 };
             }
+
+            // // / <summary>
+            // // / Get distortion parameters for fisheye lens.
+            // // / </summary>
+            // public double[] getDistortionParameters()
+            // {
+            //     return new double[] { k1, k2, k3, k4 };
+            // }
 
             /// <summary>
             /// Get intrinsic camera matrix.
@@ -196,8 +205,12 @@ namespace Autonoma
             rosShaderKernelIdx = rosImageShader.FindKernel("RosImageShaderKernel");
 
             // Set camera parameters
+
+            // cameraObject.fieldOfView = 180f;
             cameraObject.usePhysicalProperties = true;
             UpdateCameraParameters();
+
+
             UpdateRenderTexture();
             ConfigureDistortionShaderBuffers();
             distortionShader.GetKernelThreadGroupSizes(shaderKernelIdx,
@@ -282,6 +295,12 @@ namespace Autonoma
             //         distortedRenderTexture.width / imageOnGui.scale, distortedRenderTexture.height / imageOnGui.scale),
             //         distortedRenderTexture);
             // }
+
+            // draw top left
+            // if (outputData.imageDataBuffer != null)
+            // {
+            //     GUI.DrawTexture(new Rect(0, 0, 512, 256), distortedRenderTexture);
+            // }
         }
 
         private bool FloatEqual(float value1, float value2, float epsilon = 0.001f)
@@ -343,6 +362,7 @@ namespace Autonoma
             distortionShader.SetFloat("_p1", cameraParameters.p1);
             distortionShader.SetFloat("_p2", -cameraParameters.p2); // TODO: Find out why 'minus' is needed for proper distortion
             distortionShader.SetFloat("_k3", -cameraParameters.k3); // TODO: Find out why 'minus' is needed for proper distortion
+            distortionShader.SetFloat("_k4", cameraParameters.k4); // FIXME: added k4 for fisheye
 
             rosImageShader.SetInt("_width", cameraParameters.width);
             rosImageShader.SetInt("_height", cameraParameters.height);
@@ -354,6 +374,19 @@ namespace Autonoma
             VerifyFocalLengthInPixels(ref cameraParameters.fy, cameraParameters.height, cameraObject.sensorSize.y, FocalLengthName.Fy);
             cameraParameters.cx = ((cameraParameters.width + 1) / 2.0f);
             cameraParameters.cy = ((cameraParameters.height + 1) / 2.0f);
+
+            // Apply extracted camera parameters from AV24
+            cameraParameters.fx = 1007.495f;
+            cameraParameters.fy = 1010.049f;
+            cameraParameters.cx = 1067.657f;
+            cameraParameters.cy = 746.317f;
+
+            // Apply distortion coefficients from AV24
+            cameraParameters.k1 = -0.167576f;
+            cameraParameters.k2 = 0.047559f;
+            cameraParameters.p1 = -0.000515f;
+            cameraParameters.p2 = 0.003160f;
+            cameraParameters.k3 = 0.000000f; // Not used in fisheye
         }
     }
 }
