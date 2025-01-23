@@ -310,35 +310,42 @@ namespace Autonoma
 
         void OnGUI()
         {   
-            // if (imageOnGui.show)
-            // {
-            //     GUI.DrawTexture(new Rect(imageOnGui.xAxis, imageOnGui.yAxis,
-            //         distortedRenderTexture.width / imageOnGui.scale, distortedRenderTexture.height / imageOnGui.scale),
-            //         distortedRenderTexture);
-            // }
-            // if (outputData.imageDataBuffer != null)
-            // {
-            //     GUI.DrawTexture(new Rect(0, 0, 512, 256), distortedRenderTexture);
-            // }
-            // if((cameraId == 0 && GameManager.Instance.Settings.mySensorSet.EnableCameraFrontLeft) ){
-            
-                if (!showGUI || distortedRenderTexture == null) return;
+            if (!showGUI || distortedRenderTexture == null) return;
 
-                int columns = 3; // Number of columns
-                int rows = 2;    // Number of rows
-                float spacing = 10f; // Space between textures
+            string[] cameraLabels = {
+                "Front Left", 
+                "Front Right", 
+                "Stereo Left", 
+                "Stereo Right", 
+                "Rear Roll Hoop", 
+                "Front Roll Hoop"
+            };
 
-                float guiWidth = 512 / 2;  // Panel width
-                float guiHeight = 256 / 2; // Panel height
+            int columns = 3; // Number of columns
+            int rows = 2;    // Number of rows
+            float textureSpacing = 10f; // Increased spacing between textures
+            float labelSpacing = 25f;  // Increased spacing for labels
 
-                int row = cameraId / columns; // Compute row index (0 or 1)
-                int col = cameraId % columns; // Compute column index (0, 1, 2)
+            float guiWidth = 512 / 2;  // Panel width
+            float guiHeight = 256 / 2; // Panel height
 
-                float posX = 50 + col * (guiWidth + spacing);
-                float posY = (Screen.height / 2) - (rows * guiHeight / 2) + row * (guiHeight + spacing);
+            int row = cameraId / columns; // Compute row index (0 or 1)
+            int col = cameraId % columns; // Compute column index (0, 1, 2)
 
-                GUI.DrawTexture(new Rect(posX, posY, guiWidth, guiHeight), distortedRenderTexture);
-            // }
+            float posX = 50 + col * (guiWidth + textureSpacing);
+            float posY = (Screen.height / 2) - (rows * guiHeight / 2) + row * (guiHeight + textureSpacing);
+
+            // Draw the texture
+            GUI.DrawTexture(new Rect(posX, posY, guiWidth, guiHeight), distortedRenderTexture);
+
+            // Label each camera (placed slightly higher to prevent overlap)
+            GUIStyle labelStyle = new GUIStyle(GUI.skin.label);
+            labelStyle.fontSize = 16;
+            labelStyle.normal.textColor = Color.white;
+            labelStyle.alignment = TextAnchor.UpperCenter;
+
+            string cameraLabel = (cameraId >= 0 && cameraId < cameraLabels.Length) ? cameraLabels[cameraId] : "Unknown Camera";
+            GUI.Label(new Rect(posX, posY - labelSpacing, guiWidth, 20), cameraLabel, labelStyle);
 
         }
 

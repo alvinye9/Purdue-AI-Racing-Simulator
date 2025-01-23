@@ -375,18 +375,6 @@ public class CarController : MonoBehaviour
                 Debug.Log("CameraFrontRollHoop has been disabled.");
             }
         }
-        // Debug.LogWarning("CameraSensorFrontLeft not found in hierarchy!");
-
-        // Transform cameraSensor = transform.Find("CameraSensorFrontLeft");
-        // if (cameraSensor != null && GameManager.Instance.Settings.mySensorSet.EnableCameraFrontLeft)
-        // {
-        //     cameraSensor.gameObject.SetActive(false);
-        //     Debug.Log("CameraSensorFrontLeft has been disabled.");
-        // }
-        // else
-        // {
-        //     Debug.LogWarning("CameraSensorFrontLeft not found!");
-        // }
     }
 
     public float GetSpeed()
