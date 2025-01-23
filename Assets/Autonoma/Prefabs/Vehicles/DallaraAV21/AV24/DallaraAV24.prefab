@@ -4454,9 +4454,9 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /perception
-  modifiedTopicName: /camera_front_stereo_right/image_raw
+  modifiedTopicName: /camera_rear_roll_hoop/image_raw
   modifiedFrequency: 30
-  modifiedFrameId: camera_front_stereo_right
+  modifiedFrameId: camera_rear_roll_hoop
 --- !u!114 &5547708620216235756
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4475,9 +4475,9 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /perception
-  modifiedTopicName: /camera_front_stereo_right/info
+  modifiedTopicName: /camera_rear_roll_hoop/info
   modifiedFrequency: 30
-  modifiedFrameId: camera_front_stereo_right
+  modifiedFrameId: camera_rear_roll_hoop
 --- !u!1 &2817194242488363469
 GameObject:
   m_ObjectHideFlags: 0
@@ -8049,9 +8049,9 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /perception
-  modifiedTopicName: /camera_front_stereo_right/image_raw
+  modifiedTopicName: /camera_front_roll_hoop/image_raw
   modifiedFrequency: 30
-  modifiedFrameId: camera_front_stereo_right
+  modifiedFrameId: camera_front_roll_hoop
 --- !u!114 &3515880966656627074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8070,9 +8070,9 @@ MonoBehaviour:
     HistoryPolicy: 1
     Depth: 10
   modifiedRosNamespace: /perception
-  modifiedTopicName: /camera_front_stereo_right/info
+  modifiedTopicName: /camera_front_roll_hoop/info
   modifiedFrequency: 30
-  modifiedFrameId: camera_front_stereo_right
+  modifiedFrameId: camera_front_roll_hoop
 --- !u!1 &4088617111096745929
 GameObject:
   m_ObjectHideFlags: 0

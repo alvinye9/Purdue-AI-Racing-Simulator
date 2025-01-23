@@ -323,7 +323,7 @@ namespace Autonoma
 
             int columns = 3; // Number of columns
             int rows = 2;    // Number of rows
-            float textureSpacing = 10f; // Increased spacing between textures
+            float textureSpacing = 20f; // Increased spacing between textures
             float labelSpacing = 25f;  // Increased spacing for labels
 
             float guiWidth = 512 / 2;  // Panel width
