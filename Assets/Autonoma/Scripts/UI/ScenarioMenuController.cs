@@ -470,6 +470,12 @@ public class ScenarioMenuController : MonoBehaviour
             tmpSensorSet.EnableRRWheel = true;
             tmpSensorSet.EnableFrontDiff = true;
             tmpSensorSet.EnableRearDiff = true;
+            tmpSensorSet.EnableCameraFrontLeft = true;
+            tmpSensorSet.EnableCameraFrontRight = true;
+            tmpSensorSet.EnableCameraFrontRollHoop = true;
+            tmpSensorSet.EnableCameraRearRollHoop = true;
+            tmpSensorSet.EnableCameraStereoLeft = true;
+            tmpSensorSet.EnableCameraStereoRight = true;
 
             // Gaussian Noise values
             tmpSensorSet.steerMean = 0f;
@@ -502,6 +508,9 @@ public class ScenarioMenuController : MonoBehaviour
             tmpSensorSet.angularVelocityCovariance = 0.00035f;
             tmpSensorSet.orientationCovariance = 0.0001f;
             tmpSensorSet.positionCovariance = 0.0001f;
+
+            tmpSensorSet.FocalLength = 50;
+            
 
             saveSensorSet(tmpSensorSet);
         }

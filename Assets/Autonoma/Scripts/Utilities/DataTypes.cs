@@ -142,6 +142,14 @@ public class SensorSet
     public bool EnableRRWheel;
     public bool EnableFrontDiff;
     public bool EnableRearDiff;
+
+    public bool EnableCameraFrontRight;
+    public bool EnableCameraFrontLeft;
+    public bool EnableCameraStereoRight;
+    public bool EnableCameraStereoLeft;
+    public bool EnableCameraFrontRollHoop;
+    public bool EnableCameraRearRollHoop;
+
     public float steerMean;
     public float steerVariance;
     public int steerSeed;
@@ -166,6 +174,8 @@ public class SensorSet
     public float gyroMean;
     public float gyroVariance;
     public int gyroSeed;
+
+    public int FocalLength;
     
     public float linearAccelCovariance;
     public float angularVelocityCovariance;

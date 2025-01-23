@@ -1,4 +1,5 @@
 /* 
+Copyright 2025 Purdue AI Racing.
 Copyright 2023 Autonoma, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -45,6 +46,13 @@ public class SensorMenuController : MonoBehaviour
     public Toggle enableRRWheelToggle;
     public Toggle enableFrontDiffToggle;
     public Toggle enableRearDiffToggle;
+    public Toggle enableCameraFrontLeftToggle;
+    public Toggle enableCameraFrontRightToggle;
+    public Toggle enableCameraStereoLeftToggle;
+    public Toggle enableCameraStereoRightToggle;
+    public Toggle enableCameraFrontRollHoopToggle;
+    public Toggle enableCameraRearRollHoopToggle;
+
     public TMP_Dropdown sensorSetDropdown;
     
     public TMP_InputField sensorSetNameInput;
@@ -79,6 +87,8 @@ public class SensorMenuController : MonoBehaviour
     public TMP_InputField gyroMeanInput;
     public TMP_InputField gyroVarianceInput;
     public TMP_InputField gyroSeedInput;
+
+    public TMP_InputField focalLengthInput;
     
     private void Awake() {}
 
@@ -95,6 +105,12 @@ public class SensorMenuController : MonoBehaviour
         enableRRWheelToggle.isOn = scenarioMenu.tmpSensorSet.EnableRRWheel;
         enableFrontDiffToggle.isOn = scenarioMenu.tmpSensorSet.EnableFrontDiff;
         enableRearDiffToggle.isOn = scenarioMenu.tmpSensorSet.EnableRearDiff;
+        enableCameraFrontLeftToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraFrontLeft;
+        enableCameraFrontRightToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraFrontRight;
+        enableCameraStereoLeftToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraStereoLeft;
+        enableCameraStereoRightToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraStereoRight;
+        enableCameraFrontRollHoopToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraFrontRollHoop;
+        enableCameraRearRollHoopToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraRearRollHoop;
 
         // Update the GUI Input Fields based on gaussian noise values if at least one values is not zero (default)
         if (scenarioMenu.tmpSensorSet.steerMean != 0f ||
@@ -117,6 +133,8 @@ public class SensorMenuController : MonoBehaviour
                 throttleVarianceInput.text = scenarioMenu.tmpSensorSet.throttleVariance.ToString();
                 throttleSeedInput.text = scenarioMenu.tmpSensorSet.throttleSeed.ToString();
             }
+
+        focalLengthInput.text = scenarioMenu.tmpSensorSet.FocalLength.ToString();
 
         mainMenuButton.onClick.AddListener( GameManager.Instance.UIManager.OnMainMenuPressed );
         saveSensorSetButton.onClick.AddListener( saveSensorSetButtonPressed );

@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Rendering;
+using UnityEngine.Rendering.HighDefinition; // Required for HDRP
 
 namespace Autonoma
 {
@@ -150,13 +152,16 @@ namespace Autonoma
         /// </summary>
         public OnOutputDataDelegate OnOutputData;
 
-        /// <summary>
-        /// Unity camera object.
-        /// </summary>
+        [SerializeField] private Toggle showGuiToggle; // UI Toggle
+        private bool showGUI; 
+
+        [SerializeField] int cameraId;
         [SerializeField] Camera cameraObject;
+        private HDAdditionalCameraData hdCameraData;
 
         RenderTexture targetRenderTexture;
         RenderTexture distortedRenderTexture;
+
 
         [SerializeField] ComputeShader distortionShader;
         [SerializeField] ComputeShader rosImageShader;
@@ -204,12 +209,19 @@ namespace Autonoma
             shaderKernelIdx = distortionShader.FindKernel("DistortTexture");
             rosShaderKernelIdx = rosImageShader.FindKernel("RosImageShaderKernel");
 
-            // Set camera parameters
-
-            // cameraObject.fieldOfView = 180f;
             cameraObject.usePhysicalProperties = true;
-            UpdateCameraParameters();
+            cameraObject.focalLength = 50f;
+            
+            // Get HDRP camera properties
+            hdCameraData = cameraObject.GetComponent<HDAdditionalCameraData>();
+            if (hdCameraData == null)
+            {
+                hdCameraData = cameraObject.gameObject.AddComponent<HDAdditionalCameraData>();
+            }
 
+            hdCameraData.physicalParameters.aperture = 11f; // Set aperture to F/11
+            
+            UpdateCameraParameters();
 
             UpdateRenderTexture();
             ConfigureDistortionShaderBuffers();
@@ -221,6 +233,12 @@ namespace Autonoma
             distortionShaderGroupSizeX = ((distortedRenderTexture.width + (int)distortionShaderThreadsPerGroupX - 1) / (int)distortionShaderThreadsPerGroupX);
             distortionShaderGroupSizeY = ((distortedRenderTexture.height + (int)distortionShaderthreadsPerGroupY - 1) / (int)distortionShaderthreadsPerGroupY);
             rosImageShaderGroupSizeX = (((cameraParameters.width * cameraParameters.height) * sizeof(uint)) / ((int)rosImageShaderThreadsPerGroupX * sizeof(uint)));
+            
+            //toggle listener
+            if (showGuiToggle != null)
+            {
+                showGuiToggle.onValueChanged.AddListener(delegate { ToggleGUI(showGuiToggle.isOn); });
+            }
         }
 
         void Update()
@@ -232,6 +250,11 @@ namespace Autonoma
             }
 
             DoRender();
+        }
+
+        public void ToggleGUI(bool isToggled)
+        {
+            showGUI = isToggled;
         }
 
         public void DoRender()
@@ -286,21 +309,37 @@ namespace Autonoma
         }
 
         void OnGUI()
-        {
-            //// This draws the camera render to GUI, could be useful in future...
-            
+        {   
             // if (imageOnGui.show)
             // {
             //     GUI.DrawTexture(new Rect(imageOnGui.xAxis, imageOnGui.yAxis,
             //         distortedRenderTexture.width / imageOnGui.scale, distortedRenderTexture.height / imageOnGui.scale),
             //         distortedRenderTexture);
             // }
-
-            // draw top left
             // if (outputData.imageDataBuffer != null)
             // {
             //     GUI.DrawTexture(new Rect(0, 0, 512, 256), distortedRenderTexture);
             // }
+            if((cameraId == 0 && GameManager.Instance.Settings.mySensorSet.EnableCameraFrontLeft) ){
+            
+                if (!showGUI || distortedRenderTexture == null) return;
+
+                int columns = 3; // Number of columns
+                int rows = 2;    // Number of rows
+                float spacing = 10f; // Space between textures
+
+                float guiWidth = 512 / 2;  // Panel width
+                float guiHeight = 256 / 2; // Panel height
+
+                int row = cameraId / columns; // Compute row index (0 or 1)
+                int col = cameraId % columns; // Compute column index (0, 1, 2)
+
+                float posX = 50 + col * (guiWidth + spacing);
+                float posY = (Screen.height / 2) - (rows * guiHeight / 2) + row * (guiHeight + spacing);
+
+                GUI.DrawTexture(new Rect(posX, posY, guiWidth, guiHeight), distortedRenderTexture);
+            }
+
         }
 
         private bool FloatEqual(float value1, float value2, float epsilon = 0.001f)
@@ -370,12 +409,15 @@ namespace Autonoma
 
         private void UpdateCameraParameters()
         {
+            cameraParameters.width = 1920; //2064;
+            cameraParameters.height = 1080; //1544;
+
             VerifyFocalLengthInPixels(ref cameraParameters.fx, cameraParameters.width, cameraObject.sensorSize.x, FocalLengthName.Fx);
             VerifyFocalLengthInPixels(ref cameraParameters.fy, cameraParameters.height, cameraObject.sensorSize.y, FocalLengthName.Fy);
             cameraParameters.cx = ((cameraParameters.width + 1) / 2.0f);
             cameraParameters.cy = ((cameraParameters.height + 1) / 2.0f);
 
-            // Apply extracted camera parameters from AV24
+            // Extracted parameters from AV24 camera matrix
             cameraParameters.fx = 1007.495f;
             cameraParameters.fy = 1010.049f;
             cameraParameters.cx = 1067.657f;
@@ -386,7 +428,9 @@ namespace Autonoma
             cameraParameters.k2 = 0.047559f;
             cameraParameters.p1 = -0.000515f;
             cameraParameters.p2 = 0.003160f;
-            cameraParameters.k3 = 0.000000f; // Not used in fisheye
+            cameraParameters.k3 = 0.000000f; 
+
+            Debug.Log("Camera Width: " + cameraParameters.width);
         }
     }
 }
