@@ -1,206 +1,184 @@
 <robot name="AV24">
-  <!-- Rear axle center point -->
-  <!-- <link name="base_link" /> -->
-  <link name="rear_axle_middle" />
-  <link name="front_axle_middle" />
-  <link name="rear_axle_middle_ground" />
   <link name="center_of_gravity" />
 
-  <!--The base link is the center point of the rear axle-->
-  <link name="base_link">
-    <visual>
-      <!-- <origin xyz="1.73 0.0 -0.31"/> -->
-      <origin xyz="1.73 0.0 -0.31"/>
-      <geometry>
-        <mesh filename="package://av21_description/models/av21.dae"/>
-      </geometry>
-    </visual>
-  </link>
-    
+  <!-- Using x-forward, y-left, z-up convention -->
 
-  <!-- <link name="novatel_a" />
-  <link name="novatel_b" />
-  <link name="vn_310" /> -->
-  <!-- <link name="top_antenna" />
-  <link name="front_antenna" />
-  <link name="right_antenna" />
-  <link name="left_antenna" /> -->
+  <link name="rear_axle_middle" />
 
   <link name="gps_top" />
-  <link name="gps_top_ant1" />
-  <!--IMU navigation origin of this unit -->
-  <link name="gps_top_imu" />
-  <!--GPS bottom unit (connected to right(1)/left(2) antenna set). This frame uses front/left/up orientation.-->
+  <link name="gps_top_primary_antenna" />
+  <link name="gps_top_secondary_antenna" />
+
   <link name="gps_bottom" />
-  <link name="gps_bottom_ant1" />
-  <!--IMU navigation origin of this unit -->
-  <link name="gps_bottom_imu" />
-  <!--GPS third (top/front) VectorNav spare unit.-->
-  <link name="gps_spare" />
-  <!--IMU navigation origin of this unit -->
-  <link name="gps_spare_imu" />
+  <link name="gps_bottom_primary_antenna" />
+  <link name="gps_bottom_secondary_antenna" />
+
+  <link name="vectornav" />
+  <link name="vectornav_primary_antenna" />
+  <link name="vectornav_secondary_antenna" />
 
   <link name="luminar_front" />
   <link name="luminar_left" />
   <link name="luminar_right" />
-  <!-- <link name="luminar_rear" /> -->
-  <link name="radar_front" />
-  <link name="radar_rear" />
-  <link name="camera_front_stereo_right" />
-  <link name="camera_front_stereo_left" />
-  <link name="camera_front_right" />
+
   <link name="camera_front_left" />
-  <link name="camera_rear_roll_hoop" />
-  <link name="camera_front_roll_hoop" />
+  <link name="camera_front_right" />
+  <link name="camera_rear_left" />
+  <link name="camera_rear_right" />
+  <link name="camera_front_1" />
+  <link name="camera_front_2" />
 
-  <joint name="base_link_to_rear_axle_middle" type="fixed">
-    <parent link="base_link"/>
+  <link name="radar_front" />
+  <link name="radar_port" />
+  <link name="radar_starboard" />
+  <link name="radar_rear" />
+
+  <joint name="rear_axle_middle_joint" type="fixed">
+    <parent link="center_of_gravity"/>
     <child link="rear_axle_middle" />
-    <!--The same frame-->
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    <origin xyz="-1.3206 0.030188 -0.23598" />
   </joint>
 
 
-  <joint name="rear_axle_middle_to_front_axle_middle" type="fixed">
-    <parent link="rear_axle_middle"/>
-    <child link="front_axle_middle" />
-    <origin xyz="2.9718 0.0 -0.0055" rpy="0.0 0.0 0.0"/>
-  </joint>
-
-  <joint name="rear_axle_middle_proj_to_ground" type="fixed">
-    <parent link="rear_axle_middle"/>
-    <child link="rear_axle_middle_ground" />
-    <origin xyz="0.0 0.0 -0.306" rpy="0.0 0.0 0.0"/>
-  </joint>
-
-  <joint name="rear_axle_middle_to_cog" type="fixed">
-    <parent link="rear_axle_middle"/>
-    <child link="center_of_gravity" />
-    <origin xyz="1.248156 0.0 -0.025" rpy="0.0 0.0 0.0"/>
-  </joint>
-
-  <!--GPS: -->
-  <joint name="rear_axle_ground_to_gps_top" type="fixed">
-    <!-- TOP/BOTTOM are codenames only that represents the antenna pair they are connected to -->
-    <parent link="rear_axle_middle"/>
+  <joint name="gps_top_joint" type="fixed">
+    <parent link="rear_axle_middle" />
     <child link="gps_top" />
-    <origin xyz="1.636 -0.075 -0.101" rpy="0.0 0.0 0.0" />
+	<origin xyz="1.636 -0.075 -0.07427" />
   </joint>
 
-  <joint name="gps_top_to_imu_top" type="fixed">
-    <parent link="gps_top"/>
-    <child link="gps_top_imu" />
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -1.5707963267949" />
+  <joint name="gps_top_primary_antenna_joint" type="fixed">
+    <parent link="gps_top" />
+    <child link="gps_top_primary_antenna" />
+	<origin xyz="1.54 0.075 0.45940" />
   </joint>
 
-  <joint name="rear_axle_ground_to_gps_top_ant1" type="fixed">
-    <parent link="rear_axle_middle"/>
-    <child link="gps_top_ant1" />
-    <origin xyz="3.176 0 0.372" rpy="0.0 0.0 0.0" /><!--main is the top antenna-->
-  </joint> 
-  
-  <joint name="rear_axle_ground_to_gps_bottom" type="fixed">
-    <parent link="rear_axle_middle"/>
+  <joint name="gps_top_secondary_antenna_joint" type="fixed">
+    <parent link="gps_top" />
+    <child link="gps_top_secondary_antenna" />
+	<origin xyz="0.41919 0.42225 0.45940" />
+  </joint>
+
+  <joint name="gps_bottom_joint" type="fixed">
+    <parent link="rear_axle_middle" />
     <child link="gps_bottom" />
-    <origin xyz="1.636 0.075 -0.101" rpy="0.0 0.0 0.0" />
+	<origin xyz="1.636 0.075 -0.07427" />
   </joint>
 
-  <joint name="gps_bottom_to_imu_bottom" type="fixed">
-    <parent link="gps_bottom"/>
-    <child link="gps_bottom_imu" />
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 -1.5707963267949" />
+  <joint name="gps_bottom_primary_antenna_joint" type="fixed">
+    <parent link="gps_bottom" />
+    <child link="gps_bottom_primary_antenna" />
+	<origin xyz="0.419 -0.572 0.47876" />
   </joint>
 
-  <joint name="rear_axle_ground_to_gps_bottom_ant1" type="fixed">
-    <parent link="rear_axle_middle"/>
-    <child link="gps_bottom_ant1" />
-    <origin xyz="2.055 -0.497 0.353" rpy="0.0 0.0 0.0" /><!--main is the right antenna-->
+  <joint name="gps_bottom_secondary_antenna_joint" type="fixed">
+    <parent link="gps_bottom" />
+    <child link="gps_bottom_secondary_antenna" />
+	<origin xyz="-0.36449 0.07525 1.02668" />
   </joint>
 
-  <joint name="rear_axle_ground_to_gps_spare" type="fixed">
-    <parent link="rear_axle_middle"/>
-    <child link="gps_spare" />
-    <origin xyz="1.754 0.0 -0.118" rpy="0.0 0.0 0.0" />
+  <joint name="vectornav_joint" type="fixed">
+    <parent link="rear_axle_middle" />
+    <child link="vectornav" />
+	<origin xyz="2.04486 0.118 0.49449" />
   </joint>
 
-  <joint name="gps_spare_to_imu_spare" type="fixed">
-    <parent link="gps_spare"/>
-    <child link="gps_spare_imu" />
-    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+  <joint name="vectornav_primary_antenna_joint" type="fixed">
+    <parent link="vectornav" />
+    <child link="vectornav_primary_antenna" />
+	<origin xyz="1.1 -0.118 -0.09" />
   </joint>
 
+  <joint name="vectornav_secondary_antenna_joint" type="fixed">
+    <parent link="vectornav" />
+    <child link="vectornav_secondary_antenna" />
+	<origin xyz="-0.80431 -0.118 0.45792" />
+  </joint>
 
-
-  <joint name="rear_axle_ground_to_luminar_front" type="fixed">
+  <joint name="luminar_front_joint" type="fixed">
     <parent link="rear_axle_middle" />
     <child link="luminar_front" />
-    <origin xyz="2.222 0.005 0.448" rpy="0.0 0.0 0.0"/>
+    <!-- y pointing up-->
+    <!-- <origin xyz="2.242 0 0.448" rpy="1.57079633 0.0 1.57079633"/> -->
+    <!-- y pointing down -->
+    <!-- <origin xyz="2.242 0 0.448" rpy="-1.57079633 0.0 -1.57079633"/> -->
+    <!-- original x-forward convention -->
+    <origin xyz="2.242 0 0.448" />
   </joint>
 
-  <joint name="rear_axle_ground_to_luminar_left" type="fixed">
+  <joint name="luminar_left_joint" type="fixed">
     <parent link="rear_axle_middle" />
     <child link="luminar_left" />
-    <origin xyz="1.564 0.149 0.535" rpy="0 0 1.96349375" />
+    <!-- y pointing up-->
+    <!-- <origin xyz="1.549 0.267 0.543" rpy="1.57079633 0.0 -2.61801928" /> -->
+    <!-- y pointing down-->
+    <!-- <origin xyz="1.549 0.267 0.543" rpy="-1.57079633 0.0 .523573371" /> -->
+    <!-- original x-forward convention -->
+    <origin xyz="1.549 0.267 0.543" rpy="0 0 2.0943951024" />
   </joint>
 
-  <joint name="rear_axle_ground_to_luminar_right" type="fixed">
+  <joint name="luminar_right_joint" type="fixed">
     <parent link="rear_axle_middle" />
     <child link="luminar_right" />
-    <origin xyz="1.564 -0.153 0.535" rpy="0 0 -1.96349375" />
+    <!-- y pointing up-->
+    <!-- <origin xyz="1.549 -0.267 0.543" rpy="1.57079633 0.0 -0.52357337" /> -->
+    <!-- y pointing down-->
+    <!-- <origin xyz="1.549 -0.267 0.543" rpy="-1.57079633 0.0 2.61801928" /> -->
+    <!-- original x-forward convention -->
+    <origin xyz="1.549 -0.267 0.543" rpy="0 0 -2.0943951024" />
   </joint>
 
-
-
-  <joint name="rear_axle_ground_to_camera_front_left" type="fixed">
+  <joint name="camera_front_left_joint" type="fixed">
     <parent link="rear_axle_middle" />
     <child link="camera_front_left" />
-    <origin xyz="2.020 0.172 0.418" rpy="0 0 1.745327778" />
+    <origin xyz="2.184 0.171 0.422" rpy="0 0 0.9599310886" />
   </joint>
 
-  <joint name="rear_axle_ground_to_camera_front_right" type="fixed">
+  <joint name="camera_front_right_joint" type="fixed">
     <parent link="rear_axle_middle" />
     <child link="camera_front_right" />
-    <origin xyz="2.020 -0.172 0.418" rpy="0 0 -1.745327778" />
+    <origin xyz="2.184 -0.171 0.422" rpy="0 0 -0.9599310886" />
   </joint>
 
-  <joint name="rear_axle_ground_to_camera_rear_roll_hoop" type="fixed"> <!--New camera-->
+  <joint name="camera_rear_left_joint" type="fixed">
     <parent link="rear_axle_middle" />
-    <child link="camera_rear_roll_hoop" />
-    <origin xyz="1.215 0.0 0.723" rpy="0 0 3.14159" />
+    <child link="camera_rear_left" />
+    <origin xyz="1.473 0.140 0.543" rpy="0 0 2.2689280276" />
   </joint>
 
-  <joint name="rear_axle_ground_to_camera_front_roll_hoop" type="fixed"> <!--New camera-->
+  <joint name="camera_rear_right_joint" type="fixed">
     <parent link="rear_axle_middle" />
-    <child link="camera_front_roll_hoop" />
-    <origin xyz="1.365 0.0 0.723" rpy="0 0 0" />
+    <child link="camera_rear_right" />
+    <origin xyz="1.473 -0.140 0.543" rpy="0 0 -2.2689280276" />
   </joint>
 
-  <joint name="rear_axle_ground_to_camera_stereo_left" type="fixed">
+  <joint name="camera_front_1_joint" type="fixed">
     <parent link="rear_axle_middle" />
-    <child link="camera_front_stereo_left" />
-    <origin xyz="2.232 0.180 0.442" rpy="0.0 0.0 0.0" />
+    <child link="camera_front_1" />
+    <origin xyz="2.235 0.121 0.422" />
   </joint>
 
-  <joint name="rear_axle_ground_to_camera_stereo_right" type="fixed">
+<joint name="camera_front_2_joint" type="fixed">
     <parent link="rear_axle_middle" />
-    <child link="camera_front_stereo_right" />
-    <origin xyz="2.232 -0.180 0.442" rpy="0.0 0.0 0.0" />
+    <child link="camera_front_2" />
+    <origin xyz="2.235 -0.121 0.422" />
   </joint>
 
-  <!--RADARS: -->
-
-  <joint name="rear_axle_ground_to_radar_front" type="fixed">
+  <joint name="radar_front_joint" type="fixed">
     <parent link="rear_axle_middle" />
     <child link="radar_front" />
-    <origin xyz="1.789 0.0 0.578" rpy="0.0 0.0 0.0"/>
+    <origin xyz="1.784 0.0 0.594" />
   </joint>
 
-  <joint name="rear_axle_ground_to_radar_rear" type="fixed">
+  <joint name="radar_port_joint" type="fixed">
     <parent link="rear_axle_middle" />
-    <child link="radar_rear" />
-    <origin xyz="-0.752 0.0 0.107" rpy="0.0 0.0 3.14159"/>
+    <child link="radar_port" />
+    <origin xyz="2.032 0.213 0.406" rpy="0 0 1.5707963267949" />
   </joint>
 
-
+  <joint name="radar_starboard_joint" type="fixed">
+    <parent link="rear_axle_middle" />
+    <child link="radar_starboard" />
+    <origin xyz="2.032 -0.213 0.406" rpy="0 0 -1.5707963267949" />
+  </joint>
 
 </robot>
