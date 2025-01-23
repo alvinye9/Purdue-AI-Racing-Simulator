@@ -158,6 +158,13 @@ public class SensorMenuController : MonoBehaviour
         enableFrontDiffToggle.onValueChanged.AddListener(delegate { enableFrontDiffToggleChanged(enableFrontDiffToggle); } );
         enableRearDiffToggle.onValueChanged.AddListener(delegate { enableRearDiffToggleChanged(enableRearDiffToggle); } );
 
+        enableCameraFrontLeftToggle.onValueChanged.AddListener(delegate { enableCameraFrontLeftToggleChanged(enableCameraFrontLeftToggle); } );
+        enableCameraFrontRightToggle.onValueChanged.AddListener(delegate { enableCameraFrontRightToggleChanged(enableCameraFrontRightToggle); } );
+        enableCameraStereoLeftToggle.onValueChanged.AddListener(delegate { enableCameraStereoLeftToggleChanged(enableCameraStereoLeftToggle); } );
+        enableCameraStereoRightToggle.onValueChanged.AddListener(delegate { enableCameraStereoRightToggleChanged(enableCameraStereoRightToggle); } );
+        enableCameraRearRollHoopToggle.onValueChanged.AddListener(delegate { enableCameraRearRollHoopToggleChanged(enableCameraRearRollHoopToggle); } );
+        enableCameraFrontRollHoopToggle.onValueChanged.AddListener(delegate { enableCameraFrontRollHoopToggleChanged(enableCameraFrontRollHoopToggle); } );
+
         steerMeanInput.onEndEdit.AddListener(delegate { steerMeanInputChanged(steerMeanInput); } );
         steerVarianceInput.onEndEdit.AddListener(delegate { steerVarianceInputChanged(steerVarianceInput); } );
         steerSeedInput.onEndEdit.AddListener(delegate { steerSeedInputChanged(steerSeedInput); } );
@@ -290,6 +297,39 @@ public class SensorMenuController : MonoBehaviour
         updateTmpSensorSet();
         scenarioMenu.tmpSensorSet.EnableRearDiff = enableRearDiffToggle.isOn;
     }
+
+    //CAMERA CALLBACKS
+    private void enableCameraFrontLeftToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraFrontLeft = toggle.isOn;
+    }
+    private void enableCameraFrontRightToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraFrontRight = toggle.isOn;
+    }
+    private void enableCameraStereoLeftToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraStereoLeft = toggle.isOn;
+    }
+    private void enableCameraStereoRightToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraStereoRight = toggle.isOn;
+    }
+    private void enableCameraFrontRollHoopToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraFrontRollHoop = toggle.isOn;
+    }
+    private void enableCameraRearRollHoopToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraRearRollHoop = toggle.isOn;
+    }
+
     private void steerMeanInputChanged(TMP_InputField input)
     {
         updateTmpSensorSet();

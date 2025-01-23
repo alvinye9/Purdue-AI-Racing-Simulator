@@ -288,6 +288,8 @@ public class CarController : MonoBehaviour
         steeringInputHistory[1] = 0f;
         steeringOutputHistory[0] = 0f;
         steeringOutputHistory[1] = 0f;
+
+        enableDisableCameras();
     }
 
 
@@ -336,6 +338,35 @@ public class CarController : MonoBehaviour
         calcEngineTorque();
         applyAeroForces();
         // applyBankingForces();
+    }
+
+    void enableDisableCameras(){
+        Transform mainTransform = HelperFunctions.GetParentTransform(transform);
+        foreach (Transform child in mainTransform.GetComponentsInChildren<Transform>(true))
+        {
+            if (child.name == "CameraSensorFrontLeft" && !GameManager.Instance.Settings.mySensorSet.EnableCameraFrontLeft)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("CameraSensorFrontLeft has been disabled.");
+            }
+            if (child.name == "CameraSensorFrontRight" && !GameManager.Instance.Settings.mySensorSet.EnableCameraFrontRight)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("CameraSensorFrontRight has been disabled.");
+            }
+        }
+        // Debug.LogWarning("CameraSensorFrontLeft not found in hierarchy!");
+
+        // Transform cameraSensor = transform.Find("CameraSensorFrontLeft");
+        // if (cameraSensor != null && GameManager.Instance.Settings.mySensorSet.EnableCameraFrontLeft)
+        // {
+        //     cameraSensor.gameObject.SetActive(false);
+        //     Debug.Log("CameraSensorFrontLeft has been disabled.");
+        // }
+        // else
+        // {
+        //     Debug.LogWarning("CameraSensorFrontLeft not found!");
+        // }
     }
 
     public float GetSpeed()

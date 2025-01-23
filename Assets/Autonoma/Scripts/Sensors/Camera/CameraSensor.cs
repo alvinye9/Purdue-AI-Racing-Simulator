@@ -320,7 +320,7 @@ namespace Autonoma
             // {
             //     GUI.DrawTexture(new Rect(0, 0, 512, 256), distortedRenderTexture);
             // }
-            if((cameraId == 0 && GameManager.Instance.Settings.mySensorSet.EnableCameraFrontLeft) ){
+            // if((cameraId == 0 && GameManager.Instance.Settings.mySensorSet.EnableCameraFrontLeft) ){
             
                 if (!showGUI || distortedRenderTexture == null) return;
 
@@ -338,7 +338,7 @@ namespace Autonoma
                 float posY = (Screen.height / 2) - (rows * guiHeight / 2) + row * (guiHeight + spacing);
 
                 GUI.DrawTexture(new Rect(posX, posY, guiWidth, guiHeight), distortedRenderTexture);
-            }
+            // }
 
         }
 
