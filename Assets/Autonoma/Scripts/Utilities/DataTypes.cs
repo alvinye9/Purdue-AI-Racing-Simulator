@@ -175,7 +175,7 @@ public class SensorSet
     public float gyroVariance;
     public int gyroSeed;
 
-    public int FocalLength;
+    public int focalLength;
     
     public float linearAccelCovariance;
     public float angularVelocityCovariance;

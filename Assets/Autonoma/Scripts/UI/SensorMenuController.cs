@@ -134,7 +134,7 @@ public class SensorMenuController : MonoBehaviour
                 throttleSeedInput.text = scenarioMenu.tmpSensorSet.throttleSeed.ToString();
             }
 
-        focalLengthInput.text = scenarioMenu.tmpSensorSet.FocalLength.ToString();
+        focalLengthInput.text = scenarioMenu.tmpSensorSet.focalLength.ToString();
 
         mainMenuButton.onClick.AddListener( GameManager.Instance.UIManager.OnMainMenuPressed );
         saveSensorSetButton.onClick.AddListener( saveSensorSetButtonPressed );
@@ -196,6 +196,8 @@ public class SensorMenuController : MonoBehaviour
         gyroMeanInput.onEndEdit.AddListener(delegate { gyroMeanInputChanged(gyroMeanInput); } );
         gyroVarianceInput.onEndEdit.AddListener(delegate { gyroVarianceInputChanged(gyroVarianceInput); } );
         gyroSeedInput.onEndEdit.AddListener(delegate { gyroSeedInputChanged(gyroSeedInput); } );
+
+        focalLengthInput.onEndEdit.AddListener(delegate { focalLengthInputChanged(focalLengthInput); } );
 
     }
 
@@ -545,6 +547,26 @@ public class SensorMenuController : MonoBehaviour
         {
             scenarioMenu.tmpSensorSet.gyroSeed = value;
             Debug.Log(value);
+        }
+    }
+    private void focalLengthInputChanged(TMP_InputField input)
+    {
+        updateTmpSensorSet();
+        if (int.TryParse(input.text, out int value))
+        {
+            int minFocalLength = 10;
+            int maxFocalLength = 200;
+            if (value >= minFocalLength && value <= maxFocalLength)
+            {
+                scenarioMenu.tmpSensorSet.focalLength = value;
+                Debug.Log(value);
+            }
+            else{
+                Debug.LogWarning("Focal Length Out of Range");
+            }
+        }
+        else{
+            Debug.LogWarning("Focal Length Invalid Entry");
         }
     }
 

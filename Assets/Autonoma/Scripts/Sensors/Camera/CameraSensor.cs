@@ -210,7 +210,13 @@ namespace Autonoma
             rosShaderKernelIdx = rosImageShader.FindKernel("RosImageShaderKernel");
 
             cameraObject.usePhysicalProperties = true;
-            cameraObject.focalLength = 50f;
+
+            float focalLength = (float)GameManager.Instance.Settings.mySensorSet.focalLength;
+            if (float.IsNaN(focalLength))
+            {
+                focalLength = 50f; // Default focal length
+            }
+            cameraObject.focalLength = focalLength;
             
             // Get HDRP camera properties
             hdCameraData = cameraObject.GetComponent<HDAdditionalCameraData>();
@@ -294,7 +300,7 @@ namespace Autonoma
 
         private void OnDestroy()
         {
-            computeBuffer.Release();
+            // computeBuffer.Release();
         }
 
         private void ConfigureDistortionShaderBuffers()
@@ -313,12 +319,12 @@ namespace Autonoma
             if (!showGUI || distortedRenderTexture == null) return;
 
             string[] cameraLabels = {
-                "Front Left", 
-                "Front Right", 
-                "Stereo Left", 
-                "Stereo Right", 
-                "Rear Roll Hoop", 
-                "Front Roll Hoop"
+                "Left Side", //Front Left
+                "Right Side", //Front Right
+                "Front Left", //stereo left
+                "Front Right", //stereo right
+                "Rear Center", 
+                "Front Center"
             };
 
             int columns = 3; // Number of columns

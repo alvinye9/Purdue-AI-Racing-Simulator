@@ -509,7 +509,7 @@ public class ScenarioMenuController : MonoBehaviour
             tmpSensorSet.orientationCovariance = 0.0001f;
             tmpSensorSet.positionCovariance = 0.0001f;
 
-            tmpSensorSet.FocalLength = 50;
+            tmpSensorSet.focalLength = 50;
             
 
             saveSensorSet(tmpSensorSet);
