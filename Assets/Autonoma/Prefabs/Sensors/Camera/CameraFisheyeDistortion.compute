@@ -1,0 +1,69 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#include "UnityCG.cginc"
+#pragma kernel DistortTexture
+
+Texture2D<float4> _InputTexture;
+SamplerState sampler_InputTexture;
+RWTexture2D<float4> _DistortedTexture;
+
+RWStructuredBuffer<uint> _dstBGR8Buffer;
+
+uint _width;
+uint _height;
+float _fx;
+float _fy;
+float _cx;
+float _cy;
+float _k1;
+float _k2;
+float _k3;
+float _k4; // Additional fisheye distortion coefficient
+
+float2 GetFisheyeDistortionUV(float2 uv)
+{
+    float2 centerNormalized = float2(_cx / _width, _cy / _height);
+    float2 rVec = (uv - centerNormalized);
+    float r = length(rVec);
+    
+    // Default to no distortion
+    float2 distortedUV = uv;
+
+    if (r > 0.001) // Avoid division by zero
+    {
+        float theta = atan2(rVec.y, rVec.x);
+        
+        // Fisheye distortion model (K1-K4 radial terms)
+        float rDistorted = r * (1.0 + _k1 * r * r + _k2 * r * r * r * r + _k3 * r * r * r * r * r * r + _k4 * r * r * r * r * r * r * r * r);
+        
+        // Map back to UV space with corrected scaling
+        distortedUV = centerNormalized + float2(cos(theta), sin(theta)) * rDistorted;
+    }
+
+    // Ensure UV coordinates stay within bounds
+    return clamp(distortedUV, 0.0, 1.0);
+}
+
+
+
+[numthreads(8, 4, 1)]
+void DistortTexture(uint3 id : SV_DispatchThreadID)
+{
+    if (_width <= id.x || _height <= id.y)
+    {
+        return;
+    }
+
+    float2 normalizedUv = id.xy / float2(_width, _height);
+    float2 distortedUV = GetFisheyeDistortionUV(normalizedUv);
+    
+    // Sample the distorted texture
+    float3 color = _InputTexture.SampleLevel(sampler_InputTexture, distortedUV, 0).rgb;
+
+    // Since _DistortedTexture is bound to RWTexture2D,
+    // the value written into it is always linear.
+    // But the texture is created as sRGB, so we need to do gamma correction here.
+    color = LinearToGammaSpace(color);
+
+    // Output distorted texture
+    _DistortedTexture[id.xy] = float4(color, 1);
+}

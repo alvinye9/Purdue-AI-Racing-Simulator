@@ -288,6 +288,8 @@ public class CarController : MonoBehaviour
         steeringInputHistory[1] = 0f;
         steeringOutputHistory[0] = 0f;
         steeringOutputHistory[1] = 0f;
+
+        enableDisableCameras();
     }
 
 
@@ -336,6 +338,43 @@ public class CarController : MonoBehaviour
         calcEngineTorque();
         applyAeroForces();
         // applyBankingForces();
+    }
+
+    void enableDisableCameras(){
+        Transform mainTransform = HelperFunctions.GetParentTransform(transform);
+        foreach (Transform child in mainTransform.GetComponentsInChildren<Transform>(true))
+        {
+            if (child.name == "CameraSensorFrontLeft" && !GameManager.Instance.Settings.mySensorSet.EnableCameraFrontLeft)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("CameraSensorFrontLeft has been disabled.");
+            }
+            if (child.name == "CameraSensorFrontRight" && !GameManager.Instance.Settings.mySensorSet.EnableCameraFrontRight)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("CameraSensorFrontRight has been disabled.");
+            }
+            if (child.name == "CameraFrontStereoRight" && !GameManager.Instance.Settings.mySensorSet.EnableCameraStereoRight)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("CameraFrontStereoRight has been disabled.");
+            }
+            if (child.name == "CameraFrontStereoLeft" && !GameManager.Instance.Settings.mySensorSet.EnableCameraStereoLeft)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("CameraFrontStereoLeft has been disabled.");
+            }
+            if (child.name == "CameraRearRollHoop" && !GameManager.Instance.Settings.mySensorSet.EnableCameraRearRollHoop)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("CameraRearRollHoop has been disabled.");
+            }
+            if (child.name == "CameraFrontRollHoop" && !GameManager.Instance.Settings.mySensorSet.EnableCameraFrontRollHoop)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("CameraFrontRollHoop has been disabled.");
+            }
+        }
     }
 
     public float GetSpeed()

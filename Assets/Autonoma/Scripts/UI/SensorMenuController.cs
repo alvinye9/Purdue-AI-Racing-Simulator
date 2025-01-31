@@ -1,4 +1,5 @@
 /* 
+Copyright 2025 Purdue AI Racing.
 Copyright 2023 Autonoma, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -45,6 +46,13 @@ public class SensorMenuController : MonoBehaviour
     public Toggle enableRRWheelToggle;
     public Toggle enableFrontDiffToggle;
     public Toggle enableRearDiffToggle;
+    public Toggle enableCameraFrontLeftToggle;
+    public Toggle enableCameraFrontRightToggle;
+    public Toggle enableCameraStereoLeftToggle;
+    public Toggle enableCameraStereoRightToggle;
+    public Toggle enableCameraFrontRollHoopToggle;
+    public Toggle enableCameraRearRollHoopToggle;
+
     public TMP_Dropdown sensorSetDropdown;
     
     public TMP_InputField sensorSetNameInput;
@@ -79,6 +87,8 @@ public class SensorMenuController : MonoBehaviour
     public TMP_InputField gyroMeanInput;
     public TMP_InputField gyroVarianceInput;
     public TMP_InputField gyroSeedInput;
+
+    public TMP_InputField focalLengthInput;
     
     private void Awake() {}
 
@@ -95,6 +105,12 @@ public class SensorMenuController : MonoBehaviour
         enableRRWheelToggle.isOn = scenarioMenu.tmpSensorSet.EnableRRWheel;
         enableFrontDiffToggle.isOn = scenarioMenu.tmpSensorSet.EnableFrontDiff;
         enableRearDiffToggle.isOn = scenarioMenu.tmpSensorSet.EnableRearDiff;
+        enableCameraFrontLeftToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraFrontLeft;
+        enableCameraFrontRightToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraFrontRight;
+        enableCameraStereoLeftToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraStereoLeft;
+        enableCameraStereoRightToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraStereoRight;
+        enableCameraFrontRollHoopToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraFrontRollHoop;
+        enableCameraRearRollHoopToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraRearRollHoop;
 
         // Update the GUI Input Fields based on gaussian noise values if at least one values is not zero (default)
         if (scenarioMenu.tmpSensorSet.steerMean != 0f ||
@@ -118,6 +134,8 @@ public class SensorMenuController : MonoBehaviour
                 throttleSeedInput.text = scenarioMenu.tmpSensorSet.throttleSeed.ToString();
             }
 
+        focalLengthInput.text = scenarioMenu.tmpSensorSet.focalLength.ToString();
+
         mainMenuButton.onClick.AddListener( GameManager.Instance.UIManager.OnMainMenuPressed );
         saveSensorSetButton.onClick.AddListener( saveSensorSetButtonPressed );
         deleteSensorSetButton.onClick.AddListener ( deleteSensorSetButtonPressed );
@@ -139,6 +157,13 @@ public class SensorMenuController : MonoBehaviour
 
         enableFrontDiffToggle.onValueChanged.AddListener(delegate { enableFrontDiffToggleChanged(enableFrontDiffToggle); } );
         enableRearDiffToggle.onValueChanged.AddListener(delegate { enableRearDiffToggleChanged(enableRearDiffToggle); } );
+
+        enableCameraFrontLeftToggle.onValueChanged.AddListener(delegate { enableCameraFrontLeftToggleChanged(enableCameraFrontLeftToggle); } );
+        enableCameraFrontRightToggle.onValueChanged.AddListener(delegate { enableCameraFrontRightToggleChanged(enableCameraFrontRightToggle); } );
+        enableCameraStereoLeftToggle.onValueChanged.AddListener(delegate { enableCameraStereoLeftToggleChanged(enableCameraStereoLeftToggle); } );
+        enableCameraStereoRightToggle.onValueChanged.AddListener(delegate { enableCameraStereoRightToggleChanged(enableCameraStereoRightToggle); } );
+        enableCameraRearRollHoopToggle.onValueChanged.AddListener(delegate { enableCameraRearRollHoopToggleChanged(enableCameraRearRollHoopToggle); } );
+        enableCameraFrontRollHoopToggle.onValueChanged.AddListener(delegate { enableCameraFrontRollHoopToggleChanged(enableCameraFrontRollHoopToggle); } );
 
         steerMeanInput.onEndEdit.AddListener(delegate { steerMeanInputChanged(steerMeanInput); } );
         steerVarianceInput.onEndEdit.AddListener(delegate { steerVarianceInputChanged(steerVarianceInput); } );
@@ -171,6 +196,8 @@ public class SensorMenuController : MonoBehaviour
         gyroMeanInput.onEndEdit.AddListener(delegate { gyroMeanInputChanged(gyroMeanInput); } );
         gyroVarianceInput.onEndEdit.AddListener(delegate { gyroVarianceInputChanged(gyroVarianceInput); } );
         gyroSeedInput.onEndEdit.AddListener(delegate { gyroSeedInputChanged(gyroSeedInput); } );
+
+        focalLengthInput.onEndEdit.AddListener(delegate { focalLengthInputChanged(focalLengthInput); } );
 
     }
 
@@ -272,6 +299,39 @@ public class SensorMenuController : MonoBehaviour
         updateTmpSensorSet();
         scenarioMenu.tmpSensorSet.EnableRearDiff = enableRearDiffToggle.isOn;
     }
+
+    //CAMERA CALLBACKS
+    private void enableCameraFrontLeftToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraFrontLeft = toggle.isOn;
+    }
+    private void enableCameraFrontRightToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraFrontRight = toggle.isOn;
+    }
+    private void enableCameraStereoLeftToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraStereoLeft = toggle.isOn;
+    }
+    private void enableCameraStereoRightToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraStereoRight = toggle.isOn;
+    }
+    private void enableCameraFrontRollHoopToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraFrontRollHoop = toggle.isOn;
+    }
+    private void enableCameraRearRollHoopToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableCameraRearRollHoop = toggle.isOn;
+    }
+
     private void steerMeanInputChanged(TMP_InputField input)
     {
         updateTmpSensorSet();
@@ -487,6 +547,26 @@ public class SensorMenuController : MonoBehaviour
         {
             scenarioMenu.tmpSensorSet.gyroSeed = value;
             Debug.Log(value);
+        }
+    }
+    private void focalLengthInputChanged(TMP_InputField input)
+    {
+        updateTmpSensorSet();
+        if (int.TryParse(input.text, out int value))
+        {
+            int minFocalLength = 10;
+            int maxFocalLength = 200;
+            if (value >= minFocalLength && value <= maxFocalLength)
+            {
+                scenarioMenu.tmpSensorSet.focalLength = value;
+                Debug.Log(value);
+            }
+            else{
+                Debug.LogWarning("Focal Length Out of Range");
+            }
+        }
+        else{
+            Debug.LogWarning("Focal Length Invalid Entry");
         }
     }
 
