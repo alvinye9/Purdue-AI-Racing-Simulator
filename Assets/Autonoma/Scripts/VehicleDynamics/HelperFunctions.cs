@@ -138,6 +138,63 @@ public class HelperFunctions
         }
         return float.NaN;
     }
+    
+        public static float lut1DNonlinear(int numPoints, float[] tableX, float[] tableY, float inputX)
+        {
+            if (inputX <= tableX[0])
+                return tableY[0];
+            else if (inputX >= tableX[numPoints - 1])
+                return tableY[numPoints - 1];
+
+            //  Compute coefficients for cubic splines
+            int n = numPoints - 1;
+            float[] h = new float[n];
+            float[] alpha = new float[n];
+            float[] l = new float[numPoints];
+            float[] mu = new float[numPoints];
+            float[] z = new float[numPoints];
+            float[] c = new float[numPoints];
+            float[] b = new float[n];
+            float[] d = new float[n];
+
+            for (int i = 0; i < n; i++)
+                h[i] = tableX[i + 1] - tableX[i];
+
+            for (int i = 1; i < n; i++)
+                alpha[i] = (3 / h[i]) * (tableY[i + 1] - tableY[i]) - (3 / h[i - 1]) * (tableY[i] - tableY[i - 1]);
+
+            l[0] = 1;
+            mu[0] = 0;
+            z[0] = 0;
+
+            for (int i = 1; i < n; i++)
+            {
+                l[i] = 2 * (tableX[i + 1] - tableX[i - 1]) - h[i - 1] * mu[i - 1];
+                mu[i] = h[i] / l[i];
+                z[i] = (alpha[i] - h[i - 1] * z[i - 1]) / l[i];
+            }
+
+            l[n] = 1;
+            z[n] = 0;
+            c[n] = 0;
+
+            for (int j = n - 1; j >= 0; j--)
+            {
+                c[j] = z[j] - mu[j] * c[j + 1];
+                b[j] = (tableY[j + 1] - tableY[j]) / h[j] - h[j] * (c[j + 1] + 2 * c[j]) / 3;
+                d[j] = (c[j + 1] - c[j]) / (3 * h[j]);
+            }
+
+            // find the interval containing inputX
+            int idx = 0;
+            while (idx < n && tableX[idx + 1] < inputX)
+                idx++;
+
+            float dx = inputX - tableX[idx];
+
+            // evaluate the cubic polynomial
+            return tableY[idx] + b[idx] * dx + c[idx] * dx * dx + d[idx] * dx * dx * dx;
+        }
 
     public static int findCurrIdx(float input, float[] inputVec, int numPoints)
     {
