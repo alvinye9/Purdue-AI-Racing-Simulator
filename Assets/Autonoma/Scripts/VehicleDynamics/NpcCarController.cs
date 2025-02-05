@@ -34,6 +34,11 @@ public class NpcCarController : MonoBehaviour
     private float targetHeading;
     private bool isMoving = false; 
 
+    private WheelCollider frontLeftCollider;
+    private WheelCollider frontRightCollider;
+    private WheelCollider rearLeftCollider;
+    private WheelCollider rearRightCollider;
+
     void Start()
     {
         carBody = GetComponent<Rigidbody>();
@@ -46,7 +51,9 @@ public class NpcCarController : MonoBehaviour
         {
             Debug.LogError("EgoCar object not found in the scene!");
         }
-
+        
+        carBody.constraints = RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
+        AssignWheelColliders();
     }
 
     void Update()
@@ -74,24 +81,14 @@ public class NpcCarController : MonoBehaviour
 
             if(recievedGhostPosition & !hasUpdatedGhostParameters){
                 
-                carBody.isKinematic = true; 
+                carBody.isKinematic = false;
+                carBody.constraints = RigidbodyConstraints.FreezeRotation | RigidbodyConstraints.FreezePositionX | RigidbodyConstraints.FreezePositionZ;
 
-                string targetLayerName = "Default";
-                int currentLayer = gameObject.layer;
-                int targetLayer = LayerMask.NameToLayer(targetLayerName);
-                if (currentLayer >= 0 && targetLayer >= 0)
-                {
-                    // Disable collision between the current object's layer and the target layer
-                    Physics.IgnoreLayerCollision(currentLayer, targetLayer, true);
-                    Debug.Log($"Disabled collision between layer {LayerMask.LayerToName(currentLayer)} and layer {targetLayerName}");
-                }
-                else
-                {
-                    Debug.LogError("Invalid layer names or indices.");
-                }
+                
 
                 // Disable Wheel scripts
-                disableWheels();
+                //disableWheels();
+                EnableWheelColliders();
 
                 hasUpdatedGhostParameters = true;
             }
@@ -118,44 +115,75 @@ public class NpcCarController : MonoBehaviour
     // Directly set the car's position
     public void DirectSetStates(Vector3 newPosition, Quaternion newHeading)
     {
-        // if (recievedGhostPosition & !hasInitializedPosition){
-        //     Debug.Log("Shifting vertical position of Npc car and adjusting kinematic values");
-        //     newPosition.y = egoCarBody.position.y;
-        //     // Debug.Log("is kinematics?: " + isKinematicBool);
-        //     carBody.isKinematic = isKinematicBool;
-        //     hasInitializedPosition = true;
-        // }
+        Vector3 adjustedPosition = new Vector3(newPosition.x, carBody.position.y, newPosition.z);
+        carBody.MovePosition(adjustedPosition);
+        carBody.velocity = Vector3.zero;
+        transform.position = adjustedPosition;
 
-        // newPosition.y = egoCarBody.position.y;
-        carBody.position = newPosition;  // Directly set Rigidbody's position
-        carBody.velocity = Vector3.zero;  // Reset velocity
-        transform.position = newPosition;  // Update transform position as well
+        carBody.transform.rotation = GetAdjustedRotation(newHeading);
 
-        carBody.transform.rotation = newHeading;
-
-        ConformToTerrain(); //only works with enabled collision
+        //ConformToTerrain(); //only works with enabled collision
 
         isMoving = false;  // Stop any movement
     }
 
     // Function to adjust the car's rotation to match the terrain's slope and conform to the terrain vertically
+    private Quaternion GetAdjustedRotation(Quaternion targetRotation)
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 10f))
+        {
+            Vector3 terrainNormal = hit.normal;
+            Quaternion surfaceRotation = Quaternion.FromToRotation(Vector3.up, terrainNormal);
+            Quaternion adjustedRotation = Quaternion.LookRotation(targetRotation * Vector3.forward, terrainNormal);
+
+            return Quaternion.Slerp(transform.rotation, adjustedRotation, Time.deltaTime * 5f);
+        }
+        return targetRotation;
+    }
+
+    private void AssignWheelColliders()
+    {
+
+        frontLeftCollider = transform.Find("Wheels/FrontLeft").GetComponent<WheelCollider>();
+        frontRightCollider = transform.Find("Wheels/FrontRight").GetComponent<WheelCollider>();
+        rearLeftCollider = transform.Find("Wheels/RearLeft").GetComponent<WheelCollider>();
+        rearRightCollider = transform.Find("Wheels/RearRight").GetComponent<WheelCollider>();
+
+        if (frontLeftCollider == null || frontRightCollider == null || rearLeftCollider == null || rearRightCollider == null)
+        {
+            Debug.LogError("No WheelColliders");
+        }
+    }
+
+    private void EnableWheelColliders()
+    {
+        if (frontLeftCollider != null) frontLeftCollider.enabled = true;
+        if (frontRightCollider != null) frontRightCollider.enabled = true;
+        if (rearLeftCollider != null) rearLeftCollider.enabled = true;
+        if (rearRightCollider != null) rearRightCollider.enabled = true;
+    }
+
+    /*
     private void ConformToTerrain()
     {
         RaycastHit hit;
         // Perform a raycast downwards to detect the terrain and adjust rotation
-        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit))
+        if (Physics.Raycast(transform.position + Vector3.up, Vector3.down, out hit, 10f))
         {
             // Align the car's rotation with the terrain's normal
-            Quaternion targetRotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
-            carBody.MoveRotation(Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 5f));
+            Quaternion surfaceRotation = Quaternion.FromToRotation(transform.up, hit.normal) * transform.rotation;
+            carBody.MoveRotation(Quaternion.Slerp(transform.rotation, surfaceRotation, Time.deltaTime * 5f));
 
             // Adjust the car's position to be on the terrain surface
             Vector3 adjustedPosition = transform.position;
             adjustedPosition.y = hit.point.y;  // Set the vertical position to match the terrain height
-            carBody.position = adjustedPosition;
+            carBody.MovePosition(adjustedPosition);
         }
     }
+    */
 
+    /*
     public void disableWheels()
     {
         Transform frontLeftWheel = transform.Find("Wheels/FrontLeft");
@@ -197,5 +225,6 @@ public class NpcCarController : MonoBehaviour
         //     Debug.LogWarning("FrontLeft wheel not found under Wheels.");
         // }
     }
-
+    */
 }
+
