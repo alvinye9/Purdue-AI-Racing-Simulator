@@ -3878,7 +3878,7 @@ MonoBehaviour:
   odomVelWorld: {x: 0, y: 0, z: 0}
   odomVelENU: {x: 0, y: 0, z: 0}
   rb: {fileID: 355629541803049267}
-  gnssSim: {fileID: 0}
+  gnssSim: {fileID: 7476927796417096252}
 --- !u!1 &6292440857712477888
 GameObject:
   m_ObjectHideFlags: 0
