@@ -183,7 +183,9 @@ public class WheelController : MonoBehaviour
     {
         if (GameManager.Instance.Settings.myVehSetup.IsThermalTyre)
         {
-            thermalScaling = HelperFunctions.lut1D(axleTyreParams.numPointsFrictionMap,
+            // thermalScaling = HelperFunctions.lut1D(axleTyreParams.numPointsFrictionMap,
+            //                     axleTyreParams.thermalFrictionMapInput, axleTyreParams.thermalFrictionMapOutput, currTyreTemp);
+            thermalScaling = HelperFunctions.lut1DNonlinear(axleTyreParams.numPointsFrictionMap,
                                 axleTyreParams.thermalFrictionMapInput, axleTyreParams.thermalFrictionMapOutput, currTyreTemp);
         }
         else
