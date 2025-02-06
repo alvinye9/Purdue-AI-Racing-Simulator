@@ -94,7 +94,9 @@ To view or create a setup, click the 'Vehicle Setup' button.
 
 PAIRSIM has input fields under sensor setup to configure the gaussian noise values of the corresponding actuator/sensor values. (Default values are 0.0)
 
-You can disable sensors or actuators to simulate faults.
+You can disable high-level or low-level sensors to simulate faults.
+
+You can also configure the perception sensors.
 
 ![](RacingSim/Overview/Image_sensor_setup.png)
 
@@ -200,13 +202,23 @@ To start a simulation, click 'Drive' from the 'Scenario Setup' menu.
 
 ### Running with NPC Vehicle
 
-PAIRSIM supports multi-vehicle simulation, with the adversarial vehicle controlled either via the high-level ROS2 interface (`/npc/vehicle_data`, `/npc/powertrain_data`, `/npc/race_control`, `/npc/vehicle_inputs`, `/npc/to_raptor`)OR `/planning/ghost_veh_position`, which is a `autoware_auto_perception_msgs/BoundingBoxArray` msg type containing the current centroid position (x,y) of the desired "ghost" vehicle in the ego vehicle's local frame using conventional vehicle dynamics CRS (+x forward, +y left). Adversarial vehicle's +z direction will match the ego vehicle's by default.
+PAIRSIM supports multi-vehicle simulation, with the adversarial vehicle controlled either via the high-level ROS2 interface (`/npc/vehicle_data`, `/npc/powertrain_data`, `/npc/race_control`, `/npc/vehicle_inputs`, `/npc/to_raptor`) OR (`/planning/ghost_vehicle/heading`, `/planning/ghost_vehicle/measurement`).
+
+ `/planning/ghost_vehicle/heading` is a `std_msgs/Float32.msg` msg type containing the current ENU heading [deg] of the desired "ghost" vehicle.
+ 
+ `/planning/ghost_vehicle/measurement` is a `std_msgs/Point32.msg` msg type containing the centroid position (x,y) of the desired "ghost" vehicle in the ego vehicle's local frame using conventional vehicle dynamics CRS (+x forward, +y left). The adversarial vehicle's +z direction will match the ego vehicle's by default and will be automatically rotated about the longitudinal axis in order to conform to the banked surface.
 
 ### Visualizing Raceline
 
 PAIRSIM supports raceline visualization, where the raceline being sent by the autonomy stack will appear as a series of green dots. Toggle on/off on the top left side of the screen (see below). The raceline must be sent with the topic name `/planning/front_path/offset_path`, which is a `nav_msgs/Path` msg type containing a raceline represented as a series of `geometry_msgs/Pose` msgs in the ego vehicle's local frame using conventional vehicle dynamics CRS. To reduce lag, it is best to pass a local portion of the raceline rather than the entire raceline (no more than 100 poses, and the number of green dots will NOT necessarily match the number of poses).
 
 ![](RacingSim/Overview/Image_waypoints.png)
+
+### Camera Sensors
+
+The publishers for each of the 6 on-board camera sensors will publish a `sensor_msgs/Image.msg` if previously enabled in the Sensor Setup menu. All 6 cameras may consume a lot of resources so it is recommended you enable only a few at a time.
+
+![](RacingSim/Overview/Image_cameras.png)
  
 ## Copyright and License
 

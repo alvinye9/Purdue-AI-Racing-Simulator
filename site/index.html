@@ -403,6 +403,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#camera-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Sensors
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -647,6 +656,15 @@
   <a href="#visualizing-raceline" class="md-nav__link">
     <span class="md-ellipsis">
       Visualizing Raceline
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Sensors
     </span>
   </a>
   
@@ -1124,6 +1142,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#camera-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Camera Sensors
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1273,7 +1300,8 @@ In the main menu, click the 'Scenario Setup' button.
     - Set ambient and track temperatures (Celsius)</p>
 <h2 id="sensor-setup-via-gui">Sensor Setup (via GUI)</h2>
 <p>PAIRSIM has input fields under sensor setup to configure the gaussian noise values of the corresponding actuator/sensor values. (Default values are 0.0)</p>
-<p>You can disable sensors or actuators to simulate faults.</p>
+<p>You can disable high-level or low-level sensors to simulate faults.</p>
+<p>You can also configure the perception sensors.</p>
 <p><img alt="" src="RacingSim/Overview/Image_sensor_setup.png" /></p>
 <h2 id="further-vehicletire-parameter-configuration-via-config-files">Further Vehicle/Tire Parameter configuration (via config files)</h2>
 <h3 id="part-i-loading-setup-configuration-files-via-gui">PART I. Loading Setup Configuration Files via GUI</h3>
@@ -1371,10 +1399,15 @@ Due to the large number of vehicle/tire parameters, they are not accessible thro
 </li>
 </ul>
 <h3 id="running-with-npc-vehicle">Running with NPC Vehicle</h3>
-<p>PAIRSIM supports multi-vehicle simulation, with the adversarial vehicle controlled either via the high-level ROS2 interface (<code>/npc/vehicle_data</code>, <code>/npc/powertrain_data</code>, <code>/npc/race_control</code>, <code>/npc/vehicle_inputs</code>, <code>/npc/to_raptor</code>)OR <code>/planning/ghost_veh_position</code>, which is a <code>autoware_auto_perception_msgs/BoundingBoxArray</code> msg type containing the current centroid position (x,y) of the desired "ghost" vehicle in the ego vehicle's local frame using conventional vehicle dynamics CRS (+x forward, +y left). Adversarial vehicle's +z direction will match the ego vehicle's by default.</p>
+<p>PAIRSIM supports multi-vehicle simulation, with the adversarial vehicle controlled either via the high-level ROS2 interface (<code>/npc/vehicle_data</code>, <code>/npc/powertrain_data</code>, <code>/npc/race_control</code>, <code>/npc/vehicle_inputs</code>, <code>/npc/to_raptor</code>) OR (<code>/planning/ghost_vehicle/heading</code>, <code>/planning/ghost_vehicle/measurement</code>).</p>
+<p><code>/planning/ghost_vehicle/heading</code> is a <code>std_msgs/Float32.msg</code> msg type containing the current ENU heading [deg] of the desired "ghost" vehicle.</p>
+<p><code>/planning/ghost_vehicle/measurement</code> is a <code>std_msgs/Point32.msg</code> msg type containing the centroid position (x,y) of the desired "ghost" vehicle in the ego vehicle's local frame using conventional vehicle dynamics CRS (+x forward, +y left). The adversarial vehicle's +z direction will match the ego vehicle's by default and will be automatically rotated about the longitudinal axis in order to conform to the banked surface.</p>
 <h3 id="visualizing-raceline">Visualizing Raceline</h3>
 <p>PAIRSIM supports raceline visualization, where the raceline being sent by the autonomy stack will appear as a series of green dots. Toggle on/off on the top left side of the screen (see below). The raceline must be sent with the topic name <code>/planning/front_path/offset_path</code>, which is a <code>nav_msgs/Path</code> msg type containing a raceline represented as a series of <code>geometry_msgs/Pose</code> msgs in the ego vehicle's local frame using conventional vehicle dynamics CRS. To reduce lag, it is best to pass a local portion of the raceline rather than the entire raceline (no more than 100 poses, and the number of green dots will NOT necessarily match the number of poses).</p>
 <p><img alt="" src="RacingSim/Overview/Image_waypoints.png" /></p>
+<h3 id="camera-sensors">Camera Sensors</h3>
+<p>The publishers for each of the 6 on-board camera sensors will publish a <code>sensor_msgs/Image.msg</code> if previously enabled in the Sensor Setup menu. All 6 cameras may consume a lot of resources so it is recommended you enable only a few at a time.</p>
+<p><img alt="" src="RacingSim/Overview/Image_cameras.png" /></p>
 <h2 id="copyright-and-license">Copyright and License</h2>
 <p>Copyright 2024 Purdue AI Racing</p>
 <p>All code is licensed under the Apache 2.0 License. All assets are distributed under the CC BY-NC License.</p>
