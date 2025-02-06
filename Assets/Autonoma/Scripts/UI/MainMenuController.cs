@@ -1,4 +1,5 @@
 /* 
+Copyright 2025 Purdue AI Racing
 Copyright 2023 Autonoma, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -38,10 +39,13 @@ public class MainMenuController : MonoBehaviour
         BackButton.onClick.AddListener( OnBackPressed );
         QuitButton.onClick.AddListener( GameManager.Instance.UIManager.OnQuitPressed );
 
-        if(GameManager.Instance.Settings.shouldBypassMenu)
+        // GameManager.Instance.Settings.shouldBypassMenu = true; //for debugging
+
+        if(GameManager.Instance.Settings.shouldBypassMenu || Application.isBatchMode) 
         {
-            //GameManager.Instance.UIManager.OnScenarioMenuPressed();
-            //FindObjectOfType<MenuUIManager>().OnScenarioMenuPressed();
+            Debug.Log("Batch mode detected or menu bypass enabled. Skipping main menu...");
+            GameManager.Instance.UIManager.OnScenarioMenuPressed();
+            FindObjectOfType<MenuUIManager>().OnScenarioMenuPressed();
         }
     }
 
