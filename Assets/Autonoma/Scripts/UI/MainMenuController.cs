@@ -39,9 +39,15 @@ public class MainMenuController : MonoBehaviour
         BackButton.onClick.AddListener( OnBackPressed );
         QuitButton.onClick.AddListener( GameManager.Instance.UIManager.OnQuitPressed );
 
-        // GameManager.Instance.Settings.shouldBypassMenu = true; //for debugging
 
-        if(GameManager.Instance.Settings.shouldBypassMenu || Application.isBatchMode) 
+        if(Application.isBatchMode){
+            GameManager.Instance.Settings.shouldBypassMenu = true; 
+        }
+        else{
+            GameManager.Instance.Settings.shouldBypassMenu = false;
+        }
+
+        if(GameManager.Instance.Settings.shouldBypassMenu) 
         {
             Debug.Log("Batch mode detected or menu bypass enabled. Skipping main menu...");
             GameManager.Instance.UIManager.OnScenarioMenuPressed();

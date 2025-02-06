@@ -75,4 +75,8 @@ crashlytics-build.properties
 # Large Track Prefabs (better to import directly using Unity Editor), this should be default location for new track prefabs
 /Assets/Autonoma/Prefabs/Tracks/PrefabInstance
 
+# Batch Mode build logs
+
+*build.log
+
 

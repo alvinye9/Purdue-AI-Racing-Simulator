@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Set environment variables (modify as needed)
+# Set environment variables 
 export ROS_DOMAIN_ID=0
 export RMW_FASTRTPS_TRANSPORT=udp
 
