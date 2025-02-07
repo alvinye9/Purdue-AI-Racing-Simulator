@@ -5558,6 +5558,7 @@ GameObject:
   - component: {fileID: 121783973230755657}
   - component: {fileID: 6034879887106396305}
   - component: {fileID: 2698108564109349669}
+  - component: {fileID: 8278038575555999333}
   m_Layer: 6
   m_Name: Raptor Inputs
   m_TagString: Untagged
@@ -5618,6 +5619,27 @@ MonoBehaviour:
     HistoryPolicy: 0
     Depth: 10
   sm: {fileID: 3512497580210409985}
+--- !u!114 &8278038575555999333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2994663450053762097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10231972359ca8185bed82358cd8d57a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flagTopic: /flag_spoofer/vehicle_flag
+  trackFlagTopic: /flag_spoofer/track_flag
+  sm: {fileID: 3512497580210409985}
+  racecontrol: {fileID: 5423055168861571885}
+  qosSettings:
+    ReliabilityPolicy: 0
+    DurabilityPolicy: 0
+    HistoryPolicy: 0
+    Depth: 10
 --- !u!1 &3118262160525836361
 GameObject:
   m_ObjectHideFlags: 0

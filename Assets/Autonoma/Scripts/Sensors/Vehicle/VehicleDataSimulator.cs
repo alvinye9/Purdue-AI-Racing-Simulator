@@ -127,7 +127,6 @@ public class VehicleDataSimulator : MonoBehaviour
         battery_voltage = 13.0f;
         // safety_switch_state = 0; //FIXME, should be toggle-able
         safety_switch_state = 4;
-        // mode_switch_state = false; //default is false (race mode), should be toggle-able
         mode_switch_state = GameManager.Instance.Settings.myScenarioObj.ModeSwitchState;
 
         accel_pedal_input = carController.throttleCmd * 100; //original

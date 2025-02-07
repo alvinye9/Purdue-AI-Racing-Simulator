@@ -1,4 +1,5 @@
 /* 
+Copyright 2025 Purdue AI Racing
 Copyright 2023 Autonoma, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,7 +28,7 @@ public class RaptorSM : MonoBehaviour
 	void Start()
 	{
 		hot_start = GameManager.Instance.Settings.myScenarioObj.HotStart;
-		// Debug.Log("Hot Start: " + hot_start);
+		Debug.Log("Raptor Hot Started: " + hot_start);
 	}
 	void Update()
 	{

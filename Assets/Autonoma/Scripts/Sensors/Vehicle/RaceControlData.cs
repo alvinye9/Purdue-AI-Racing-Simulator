@@ -1,4 +1,5 @@
 /* 
+Copyright 2025 Purdue AI Racing
 Copyright 2023 Autonoma, Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
@@ -27,7 +28,10 @@ public class RaceControlData : MonoBehaviour
     void Start(){}
     void Update()
     {
-        sm.current_flag = (int)rc.VehicleFlag;
+        //do not use race control GUI in test mode
+        if(!(GameManager.Instance.Settings.myScenarioObj.ModeSwitchState)){
+            sm.current_flag = (int)rc.VehicleFlag;
+        }
     }
 }
 }
