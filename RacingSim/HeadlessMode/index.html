@@ -651,6 +651,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Headless Race Control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#track-flag-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Track Flag List
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vehicle-flag-list" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vehicle Flag List
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -695,13 +719,17 @@
 <p>Download binary (recommended)</p>
 <p>Download the latest PAIRSIM headless build <a href="https://github.com/alvinye9/Purdue-AI-Racing-Simulator/releases">here</a></p>
 </li>
-<li>
-<p>Currently only compatible with Linux:</p>
-<p>a. Navigate to the directory containing the <code>.x86_64</code> executable file</p>
-<p>b. The first time you may need to set the executable permissions with <code>chmod +x PAIRSIM_batch.x86_64</code></p>
-<p>c. Configure your desired parameters in the configuration files <code>~PAIRSIM_config/</code>, as discussed <a href="index#important-configuration-parameters">below</a></p>
-<p>d. Run <code>./PAIRSIM_batch.x86_64 -batchmode -nographics</code> </p>
-</li>
+</ol>
+<p>(Currently only compatible with Linux)</p>
+<pre><code>a. Navigate to the directory containing the `.x86_64` executable file
+
+b. The first time you may need to set the executable permissions with ```chmod +x PAIRSIM_batch.x86_64```
+
+c. Configure your desired parameters in the configuration files `~PAIRSIM_config/`, as discussed [below](index#important-configuration-parameters)
+
+d. Run ```./PAIRSIM_batch.x86_64 -batchmode -nographics```
+</code></pre>
+<ol>
 <li>
 <p>Build and Run From the Unity Project</p>
 <p>a. Finish setting up the project as detailed in <a href="../../index#downloading-simulator">Step 2</a></p>
@@ -723,7 +751,7 @@
 </code></pre></div>
 <p>This ensures that PAIRSIM uses an external race control source, as described <a href="index#headless-race-control">here</a></p>
 <h3 id="map-list">Map List</h3>
-<p>To select your racetrack, ensure that the following value is set:</p>
+<p>To select your racetrack, ensure that the following value is set to your desird track:</p>
 <div class="highlight"><pre><span></span><code>&quot;SelectedTrack&quot;: 0,
 </code></pre></div>
 <p>The following is the list of racetrack enumerations:</p>
@@ -773,6 +801,7 @@
 </code></pre></div>
 <h2 id="headless-race-control">Headless Race Control</h2>
 <p>When running headless, the PAIRSIM GUI can no longer be used to issue race control flags, and instead needs to take race control commands from an external flag spoofer via the following ROS2 topics: <code>/flag_spoofer/vehicle_flag</code> and <code>/flag_spoofer/track_flag</code>. Both of these topics are <a href="http://docs.ros.org/en/melodic/api/std_msgs/html/msg/UInt8.html">std_msgs/UInt8.msg</a>. To enumerate flags, PAIRSIM uses Marelli race control by default.</p>
+<h3 id="track-flag-list">Track Flag List</h3>
 <p>The following are the track flag enumerations:</p>
 <table>
 <thead>
@@ -868,6 +897,7 @@
 </tr>
 </tbody>
 </table>
+<h3 id="vehicle-flag-list">Vehicle Flag List</h3>
 <p>The following are the vehicle flag enumerations:</p>
 <table>
 <thead>
