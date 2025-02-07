@@ -12842,6 +12842,7 @@ GameObject:
   - component: {fileID: 1709914767340450853}
   - component: {fileID: 355629541803049267}
   - component: {fileID: 264682144810106634}
+  - component: {fileID: 1301291119573174646}
   m_Layer: 6
   m_Name: DallaraAV24
   m_TagString: Untagged
@@ -12959,6 +12960,26 @@ MonoBehaviour:
     TEngine: 0
     TAxle: 0
     rpmEngine: 0
+--- !u!114 &1301291119573174646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209270688275563199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a23b04e29823092179cf0f09bf7e8a78, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sm: {fileID: 3512497580210409985}
+  racecontrol: {fileID: 5423055168861571885}
+  hud: {fileID: 4981533970606821229}
+  qosSettings:
+    ReliabilityPolicy: 0
+    DurabilityPolicy: 0
+    HistoryPolicy: 0
+    Depth: 0
 --- !u!1 &7260992073836360314
 GameObject:
   m_ObjectHideFlags: 0

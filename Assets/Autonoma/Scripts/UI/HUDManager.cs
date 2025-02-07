@@ -36,6 +36,7 @@ public class HUDManager : MonoBehaviour
     public Button resetButton;
     public int FLTemp, FRTemp, RLTemp, RRTemp;
     public LapTimer lapTimer;
+    public float hudMPH;
     
     public TMP_InputField throttleMean;
     public TMP_InputField throttleVariance;
@@ -120,6 +121,7 @@ public class HUDManager : MonoBehaviour
         float hudSpeed = avgRearOmega*carController.vehicleParams.rearTyreParams.tyreRadius;
  
         hudSpeed = Mathf.Clamp(hudSpeed,0f,hudSpeed);
+        hudMPH = hudSpeed;
         speedometerText.text =  ((int)(hudSpeed*3.6f*0.621371192f)).ToString();
 
         tachometerText.text =  ((int)hudRpm).ToString();

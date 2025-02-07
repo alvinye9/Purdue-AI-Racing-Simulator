@@ -59,6 +59,7 @@ namespace Autonoma
             if(GameManager.Instance.Settings.myScenarioObj.ModeSwitchState){
                 is_test_mode = true;
                 Debug.Log("Currently in test mode, use flag spoofer to send vehicle flags to: " + flagTopic );
+                Debug.Log("Currently in test mode, use flag spoofer to send track flags to: " + trackFlagTopic );
             }
 
         }
@@ -75,7 +76,7 @@ namespace Autonoma
             if(GameManager.Instance.Settings.myScenarioObj.ModeSwitchState){
                 // sm.current_flag = msg.Vehicle_flag;
                 sm.current_flag = msg.Data;
-                Debug.Log("Raptor SM Current Veh Flag and CT state: " + sm.current_flag + " " + sm.current_ct);
+                // Debug.Log("Raptor SM Current Veh Flag and CT state: " + sm.current_flag + " " + sm.current_ct);
             }
         }
 
@@ -83,7 +84,7 @@ namespace Autonoma
         {
             if(GameManager.Instance.Settings.myScenarioObj.ModeSwitchState){
                 racecontrol.rc.TrackFlag = msg.Data;
-                Debug.Log("Current Track Flag: " + racecontrol.rc.TrackFlag);
+                // Debug.Log("Current Track Flag: " + racecontrol.rc.TrackFlag);
             }
         }
 

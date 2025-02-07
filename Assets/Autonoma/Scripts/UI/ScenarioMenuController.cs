@@ -417,7 +417,6 @@ public class ScenarioMenuController : MonoBehaviour
 
     private void checkForDefaultSensorSets()
     {
-        Debug.Log("Number of Sensor Sets: " + LoadedSensorSets.Count );
         if (LoadedSensorSets.Count < 1)
         {
             tmpSensorSet.Name = "Default IAC";
