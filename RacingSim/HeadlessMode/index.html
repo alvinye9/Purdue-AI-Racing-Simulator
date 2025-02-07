@@ -734,10 +734,11 @@
 </ol>
 <h2 id="important-configuration-parameters">Important Configuration Parameters</h2>
 <p>For an overview on how PAIRSIM configuration files work, see <a href="../../index#part-ii-editing-configuration-files-directly">here</a>.</p>
-<p>The following configuration parameters must be set for the headless simulation to work properly:</p>
+<p>Create a new configuration file (any name) for the headless simulation to work properly:</p>
 <div class="highlight"><pre><span></span><code>~/PAIRSIM_config
 └── Scenarios
-    └── Default.data
+    ├── Default.dat
+    └── Headless_default.dat
 </code></pre></div>
 <p>In the Scenarios configuration file ensure that the following value is set:</p>
 <div class="highlight"><pre><span></span><code>&quot;ModeSwitchState&quot;: true,
