@@ -39,12 +39,13 @@ There are two options to run a headless simulation:
 
 For an overview on how PAIRSIM configuration files work, see [here](../../index#part-ii-editing-configuration-files-directly).
 
-The following configuration parameters must be set for the headless simulation to work properly:
+Create a new configuration file (any name) for the headless simulation to work properly:
 
 ```
 ~/PAIRSIM_config
 └── Scenarios
-    └── Default.data
+    ├── Default.dat
+    └── Headless_default.dat
 ```
 
 In the Scenarios configuration file ensure that the following value is set:
