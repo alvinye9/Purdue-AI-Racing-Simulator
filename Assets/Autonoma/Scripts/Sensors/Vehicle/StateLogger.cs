@@ -29,7 +29,7 @@ namespace Autonoma
         public QoSSettings qosSettings = new QoSSettings();
 
         private int updateCounter = 0;
-        private int logFrequency = 3; // Log every 3 update cycles
+        private int logFrequency = 500; // Log every n update cycles
 
         void Start()
         {
@@ -46,7 +46,7 @@ namespace Autonoma
         }
 
         void LogStates(){
-            
+
             string logMessage = $"[StateLogger] " +
                 $"Track & Vehicle Flags: {racecontrol.rc.TrackFlag}, {sm.current_flag} | " +
                 $"CT & Sys States: {sm.current_ct}, {sm.current_sys} | " +
