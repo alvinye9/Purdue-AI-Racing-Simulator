@@ -1,29 +1,29 @@
-# How to Use Racing Simulator
+# How to Use PAIRSIM
 
 A vehicle simulator for the Dallara AV-24. This simulator improves upon the original AWSIM developed by Autoware, and provides a high-fidelity testbed validated against real-world data. Purdue-AI-Racing-Simulator (PAIRSIM) interfaces with an autonomy stack to allow for testing of autonomous racing software with similar dynamics, sensors, and interface to the real car.
 
 ## Documentation
-1. How to use racing simulator (this page)
+1. How to use PAIRSIM(this page)
 
-2. [ROS2 Interface](RacingSim/ROS2Interface/index.md)
+2. [How to Run PAIRSIM in Headless Mode (Batch Mode)](RacingSim/HeadlessMode/index.md)
 
-2. [Vehicle dynamics details](RacingSim/VehicleDynamics/index.md)
+3. [ROS2 Interface](RacingSim/ROS2Interface/index.md)
 
-3. [Sensor details](RacingSim/Sensors/index.md)
+4. [Vehicle dynamics details](RacingSim/VehicleDynamics/index.md)
+
+5. [Sensor details](RacingSim/Sensors/index.md)
 
 ## Downloading Simulator
 
 There are two options to run racing simulations:
 
-1. Download binary (recommended)
+1. Download binary (only compatible with Linux) (recommended)
 
-    Download the latest PAIRSIM racing simulator [here](https://github.com/alvinye9/Purdue-AI-Racing-Simulator/releases)
-    
-- Currently only compatible with Linux:
+    a. Download the latest PAIRSIM racing simulator [here](https://github.com/alvinye9/Purdue-AI-Racing-Simulator/releases)
 
-    - Double-click the downloaded executable (.x86_64)
+    b. Double-click the downloaded executable (.x86_64)
 
-    - The first time you may need to set the executable permissions with ```chmod +x PAIRSIM_vX.X.X.x86_64```
+    c. The first time you may need to set the executable permissions with ```chmod +x PAIRSIM_vX.X.X.x86_64```
 
 2. From the Unity Editor
 
