@@ -40,6 +40,7 @@ public class SensorMenuController : MonoBehaviour
     public Toggle enableBottomToggle;
     public Toggle enableVectorNavToggle;
     public Toggle enableCanToggle;
+
     public Toggle enableFLWheelToggle;
     public Toggle enableFRWheelToggle;
     public Toggle enableRLWheelToggle;
@@ -52,6 +53,10 @@ public class SensorMenuController : MonoBehaviour
     public Toggle enableCameraStereoRightToggle;
     public Toggle enableCameraFrontRollHoopToggle;
     public Toggle enableCameraRearRollHoopToggle;
+
+    public Toggle enableLuminarFrontToggle;
+    public Toggle enableLuminarLeftToggle;
+    public Toggle enableLuminarRightToggle;
 
     public TMP_Dropdown sensorSetDropdown;
     
@@ -89,6 +94,8 @@ public class SensorMenuController : MonoBehaviour
     public TMP_InputField gyroSeedInput;
 
     public TMP_InputField focalLengthInput;
+
+    public TMP_InputField numLasersInput;
     
     private void Awake() {}
 
@@ -111,6 +118,10 @@ public class SensorMenuController : MonoBehaviour
         enableCameraStereoRightToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraStereoRight;
         enableCameraFrontRollHoopToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraFrontRollHoop;
         enableCameraRearRollHoopToggle.isOn = scenarioMenu.tmpSensorSet.EnableCameraRearRollHoop;
+
+        enableLuminarFrontToggle.isOn = scenarioMenu.tmpSensorSet.EnableLuminarFront;
+        enableLuminarLeftToggle.isOn = scenarioMenu.tmpSensorSet.EnableLuminarLeft;
+        enableLuminarRightToggle.isOn = scenarioMenu.tmpSensorSet.EnableLuminarRight;
 
         // Update the GUI Input Fields based on gaussian noise values if at least one values is not zero (default)
         if (scenarioMenu.tmpSensorSet.steerMean != 0f ||
@@ -164,6 +175,10 @@ public class SensorMenuController : MonoBehaviour
         enableCameraStereoRightToggle.onValueChanged.AddListener(delegate { enableCameraStereoRightToggleChanged(enableCameraStereoRightToggle); } );
         enableCameraRearRollHoopToggle.onValueChanged.AddListener(delegate { enableCameraRearRollHoopToggleChanged(enableCameraRearRollHoopToggle); } );
         enableCameraFrontRollHoopToggle.onValueChanged.AddListener(delegate { enableCameraFrontRollHoopToggleChanged(enableCameraFrontRollHoopToggle); } );
+
+        enableLuminarFrontToggle.onValueChanged.AddListener(delegate { enableLuminarFrontToggleChanged(enableLuminarFrontToggle); } );
+        enableLuminarLeftToggle.onValueChanged.AddListener(delegate { enableLuminarLeftToggleChanged(enableLuminarLeftToggle); } );
+        enableLuminarRightToggle.onValueChanged.AddListener(delegate { enableLuminarRightToggleChanged(enableLuminarRightToggle); } );
 
         steerMeanInput.onEndEdit.AddListener(delegate { steerMeanInputChanged(steerMeanInput); } );
         steerVarianceInput.onEndEdit.AddListener(delegate { steerVarianceInputChanged(steerVarianceInput); } );
@@ -330,6 +345,22 @@ public class SensorMenuController : MonoBehaviour
     {
         updateTmpSensorSet();
         scenarioMenu.tmpSensorSet.EnableCameraRearRollHoop = toggle.isOn;
+    }
+
+    private void enableLuminarFrontToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableLuminarFront = toggle.isOn;
+    }
+    private void enableLuminarLeftToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableLuminarLeft = toggle.isOn;
+    }
+    private void enableLuminarRightToggleChanged(Toggle toggle)
+    {
+        updateTmpSensorSet();
+        scenarioMenu.tmpSensorSet.EnableLuminarRight = toggle.isOn;
     }
 
     private void steerMeanInputChanged(TMP_InputField input)

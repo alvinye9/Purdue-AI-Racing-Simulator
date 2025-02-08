@@ -290,6 +290,7 @@ public class CarController : MonoBehaviour
         steeringOutputHistory[1] = 0f;
 
         enableDisableCameras();
+        enableDisableLidars();
     }
 
 
@@ -373,6 +374,27 @@ public class CarController : MonoBehaviour
             {
                 child.gameObject.SetActive(false);
                 Debug.Log("CameraFrontRollHoop has been disabled.");
+            }
+        }
+    }
+    void enableDisableLidars(){
+        Transform mainTransform = HelperFunctions.GetParentTransform(transform);
+        foreach (Transform child in mainTransform.GetComponentsInChildren<Transform>(true))
+        {
+            if (child.name == "Luminar Front" && !GameManager.Instance.Settings.mySensorSet.EnableLuminarFront)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("Luminar Front has been disabled.");
+            }
+            if (child.name == "Luminar Left" && !GameManager.Instance.Settings.mySensorSet.EnableLuminarLeft)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("Luminar Front has been disabled.");
+            }
+            if (child.name == "Luminar Right" && !GameManager.Instance.Settings.mySensorSet.EnableLuminarRight)
+            {
+                child.gameObject.SetActive(false);
+                Debug.Log("Luminar Right has been disabled.");
             }
         }
     }

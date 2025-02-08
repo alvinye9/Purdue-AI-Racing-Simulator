@@ -150,6 +150,10 @@ public class SensorSet
     public bool EnableCameraFrontRollHoop;
     public bool EnableCameraRearRollHoop;
 
+    public bool EnableLuminarFront;
+    public bool EnableLuminarLeft;
+    public bool EnableLuminarRight;
+
     public float steerMean;
     public float steerVariance;
     public int steerSeed;

@@ -450,7 +450,7 @@ namespace RGLUnityPlugin
         {
             List<Laser> lasers = new List<Laser>();
             
-            float verticalFOV = 26.0f;  // Dynamic vertical field of view ±13°
+            // float verticalFOV = 26.0f;  // Dynamic vertical field of view ±13°
             int verticalLines = 300;    // Approx. >300 points per square degree (translating to high resolution)
             float minVerticalAngle = -13.0f;
             float maxVerticalAngle = 13.0f;
