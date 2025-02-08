@@ -31,6 +31,7 @@ namespace RGLUnityPlugin
                 {LidarModel.HesaiPandar40P, HesaiPandar40P},
                 {LidarModel.OusterOS1_64, OusterOS1_64},
                 {LidarModel.Luminar, Luminar},
+                {LidarModel.LuminarLeft, LuminarLeft},
             };
 
         public static LidarConfiguration RangeMeter => new LidarConfiguration
@@ -132,6 +133,22 @@ namespace RGLUnityPlugin
                 distanceNoiseStDevRisePerMeter = 0.0f,        // No additional noise with distance
             }
         };
+
+        // 112 deg ccw
+        public static LidarConfiguration LuminarLeft => new LidarConfiguration
+        {
+            laserArray = LaserArrayLibrary.Luminar,
+            horizontalResolution = 0.12f,                     // 0.12° horizontal resolution
+            minHAngle = -172f,                                // Shifted by -112° (original -60° becomes -172°)
+            maxHAngle = -52f,                                 // Shifted by -112° (original +60° becomes -52°)
+            maxRange = 275.0f,                                // Max range > 275 meters
+            noiseParams = new LidarNoiseParams
+            {
+                distanceNoiseStDevBase = 0.02f,               // 2 cm base noise standard deviation
+                distanceNoiseStDevRisePerMeter = 0.0f,        // No additional noise with distance
+            }
+        };
+
 
 
     }

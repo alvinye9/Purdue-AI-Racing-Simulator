@@ -2048,6 +2048,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5833796383510351629}
+  - {fileID: 8814402833468522835}
   m_Father: {fileID: 1709914767340450853}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13436,6 +13437,2776 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3715354620269230977, guid: 323bc71d5b6cdfb508b74dfcbc800449, type: 3}
   m_PrefabInstance: {fileID: 200221233736304765}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1085756951688181077
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2732395765598195874}
+    m_Modifications:
+    - target: {fileID: 1059420193133347283, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: frameID
+      value: luminar_left
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059420193133347283, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: pcl24Topic
+      value: /perception/luminar_left/points_ex
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059420193133347283, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: pcl48Topic
+      value: /perception/luminar_left/points
+      objectReference: {fileID: 0}
+    - target: {fileID: 1059420193133347283, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: publishPCL24
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1291529891333524383, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6259378440818281384, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: modelPreset
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.maxRange
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.maxHAngle
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.minHAngle
+      value: -60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.horizontalResolution
+      value: 0.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.size
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.noiseParams.angularNoiseStDev
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[1].ringId
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[2].ringId
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[3].ringId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[4].ringId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[5].ringId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[6].ringId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[7].ringId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[8].ringId
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[9].ringId
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[10].ringId
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[11].ringId
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[12].ringId
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[13].ringId
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[14].ringId
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[16].ringId
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[17].ringId
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[18].ringId
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[19].ringId
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[20].ringId
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[21].ringId
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[22].ringId
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[23].ringId
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[24].ringId
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[25].ringId
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[26].ringId
+      value: 27
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[27].ringId
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[28].ringId
+      value: 29
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[29].ringId
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[30].ringId
+      value: 31
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[31].ringId
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[32].ringId
+      value: 33
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[33].ringId
+      value: 34
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[34].ringId
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[35].ringId
+      value: 36
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[36].ringId
+      value: 37
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[37].ringId
+      value: 38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[38].ringId
+      value: 39
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[39].ringId
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[40].ringId
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[41].ringId
+      value: 42
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[42].ringId
+      value: 43
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[43].ringId
+      value: 44
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[44].ringId
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[45].ringId
+      value: 46
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[46].ringId
+      value: 47
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[47].ringId
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[48].ringId
+      value: 49
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[49].ringId
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[50].ringId
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[51].ringId
+      value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[52].ringId
+      value: 53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[53].ringId
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[54].ringId
+      value: 55
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[55].ringId
+      value: 56
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[56].ringId
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[57].ringId
+      value: 58
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[58].ringId
+      value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[59].ringId
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[60].ringId
+      value: 61
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[61].ringId
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[62].ringId
+      value: 63
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[63].ringId
+      value: 64
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[64].ringId
+      value: 65
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[65].ringId
+      value: 66
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[66].ringId
+      value: 67
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[67].ringId
+      value: 68
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[68].ringId
+      value: 69
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[69].ringId
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[70].ringId
+      value: 71
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[71].ringId
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[72].ringId
+      value: 73
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[73].ringId
+      value: 74
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[74].ringId
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[75].ringId
+      value: 76
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[76].ringId
+      value: 77
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[77].ringId
+      value: 78
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[78].ringId
+      value: 79
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[79].ringId
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[80].ringId
+      value: 81
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[81].ringId
+      value: 82
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[82].ringId
+      value: 83
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[83].ringId
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[84].ringId
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[85].ringId
+      value: 86
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[86].ringId
+      value: 87
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[87].ringId
+      value: 88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[88].ringId
+      value: 89
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[89].ringId
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[90].ringId
+      value: 91
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[91].ringId
+      value: 92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[92].ringId
+      value: 93
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[93].ringId
+      value: 94
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[94].ringId
+      value: 95
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[95].ringId
+      value: 96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[96].ringId
+      value: 97
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[97].ringId
+      value: 98
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[98].ringId
+      value: 99
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[99].ringId
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[100].ringId
+      value: 101
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[101].ringId
+      value: 102
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[102].ringId
+      value: 103
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[103].ringId
+      value: 104
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[104].ringId
+      value: 105
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[105].ringId
+      value: 106
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[106].ringId
+      value: 107
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[107].ringId
+      value: 108
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[108].ringId
+      value: 109
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[109].ringId
+      value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[110].ringId
+      value: 111
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[111].ringId
+      value: 112
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[112].ringId
+      value: 113
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[113].ringId
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[114].ringId
+      value: 115
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[115].ringId
+      value: 116
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[116].ringId
+      value: 117
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[117].ringId
+      value: 118
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[118].ringId
+      value: 119
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[119].ringId
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[120].ringId
+      value: 121
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[121].ringId
+      value: 122
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[122].ringId
+      value: 123
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[123].ringId
+      value: 124
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[124].ringId
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[125].ringId
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[126].ringId
+      value: 127
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[127].ringId
+      value: 128
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[128].ringId
+      value: 129
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[129].ringId
+      value: 130
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[130].ringId
+      value: 131
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[131].ringId
+      value: 132
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[132].ringId
+      value: 133
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[133].ringId
+      value: 134
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[134].ringId
+      value: 135
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[135].ringId
+      value: 136
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[136].ringId
+      value: 137
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[137].ringId
+      value: 138
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[138].ringId
+      value: 139
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[139].ringId
+      value: 140
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[140].ringId
+      value: 141
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[141].ringId
+      value: 142
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[142].ringId
+      value: 143
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[143].ringId
+      value: 144
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[144].ringId
+      value: 145
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[145].ringId
+      value: 146
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[146].ringId
+      value: 147
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[147].ringId
+      value: 148
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[148].ringId
+      value: 149
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[149].ringId
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[150].ringId
+      value: 151
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[151].ringId
+      value: 152
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[152].ringId
+      value: 153
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[153].ringId
+      value: 154
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[154].ringId
+      value: 155
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[155].ringId
+      value: 156
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[156].ringId
+      value: 157
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[157].ringId
+      value: 158
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[158].ringId
+      value: 159
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[159].ringId
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[160].ringId
+      value: 161
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[161].ringId
+      value: 162
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[162].ringId
+      value: 163
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[163].ringId
+      value: 164
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[164].ringId
+      value: 165
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[165].ringId
+      value: 166
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[166].ringId
+      value: 167
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[167].ringId
+      value: 168
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[168].ringId
+      value: 169
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[169].ringId
+      value: 170
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[170].ringId
+      value: 171
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[171].ringId
+      value: 172
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[172].ringId
+      value: 173
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[173].ringId
+      value: 174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[174].ringId
+      value: 175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[175].ringId
+      value: 176
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[176].ringId
+      value: 177
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[177].ringId
+      value: 178
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[178].ringId
+      value: 179
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[179].ringId
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[180].ringId
+      value: 181
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[181].ringId
+      value: 182
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[182].ringId
+      value: 183
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[183].ringId
+      value: 184
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[184].ringId
+      value: 185
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[185].ringId
+      value: 186
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[186].ringId
+      value: 187
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[187].ringId
+      value: 188
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[188].ringId
+      value: 189
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[189].ringId
+      value: 190
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[190].ringId
+      value: 191
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[191].ringId
+      value: 192
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[192].ringId
+      value: 193
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[193].ringId
+      value: 194
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[194].ringId
+      value: 195
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[195].ringId
+      value: 196
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[196].ringId
+      value: 197
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[197].ringId
+      value: 198
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[198].ringId
+      value: 199
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[199].ringId
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[200].ringId
+      value: 201
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[201].ringId
+      value: 202
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[202].ringId
+      value: 203
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[203].ringId
+      value: 204
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[204].ringId
+      value: 205
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[205].ringId
+      value: 206
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[206].ringId
+      value: 207
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[207].ringId
+      value: 208
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[208].ringId
+      value: 209
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[209].ringId
+      value: 210
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[210].ringId
+      value: 211
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[211].ringId
+      value: 212
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[212].ringId
+      value: 213
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[213].ringId
+      value: 214
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[214].ringId
+      value: 215
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[215].ringId
+      value: 216
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[216].ringId
+      value: 217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[217].ringId
+      value: 218
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[218].ringId
+      value: 219
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[219].ringId
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[220].ringId
+      value: 221
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[221].ringId
+      value: 222
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[222].ringId
+      value: 223
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[223].ringId
+      value: 224
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[224].ringId
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[225].ringId
+      value: 226
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[226].ringId
+      value: 227
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[227].ringId
+      value: 228
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[228].ringId
+      value: 229
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[229].ringId
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[230].ringId
+      value: 231
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[231].ringId
+      value: 232
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[232].ringId
+      value: 233
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[233].ringId
+      value: 234
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[234].ringId
+      value: 235
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[235].ringId
+      value: 236
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[236].ringId
+      value: 237
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[237].ringId
+      value: 238
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[238].ringId
+      value: 239
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[239].ringId
+      value: 240
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[240].ringId
+      value: 241
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[241].ringId
+      value: 242
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[242].ringId
+      value: 243
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[243].ringId
+      value: 244
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[244].ringId
+      value: 245
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[245].ringId
+      value: 246
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[246].ringId
+      value: 247
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[247].ringId
+      value: 248
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[248].ringId
+      value: 249
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[249].ringId
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[250].ringId
+      value: 251
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[251].ringId
+      value: 252
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[252].ringId
+      value: 253
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[253].ringId
+      value: 254
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[254].ringId
+      value: 255
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[255].ringId
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[256].ringId
+      value: 257
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[257].ringId
+      value: 258
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[258].ringId
+      value: 259
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[259].ringId
+      value: 260
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[260].ringId
+      value: 261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[261].ringId
+      value: 262
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[262].ringId
+      value: 263
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[263].ringId
+      value: 264
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[264].ringId
+      value: 265
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[265].ringId
+      value: 266
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[266].ringId
+      value: 267
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[267].ringId
+      value: 268
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[268].ringId
+      value: 269
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[269].ringId
+      value: 270
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[270].ringId
+      value: 271
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[271].ringId
+      value: 272
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[272].ringId
+      value: 273
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[273].ringId
+      value: 274
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[274].ringId
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[275].ringId
+      value: 276
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[276].ringId
+      value: 277
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[277].ringId
+      value: 278
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[278].ringId
+      value: 279
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[279].ringId
+      value: 280
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[280].ringId
+      value: 281
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[281].ringId
+      value: 282
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[282].ringId
+      value: 283
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[283].ringId
+      value: 284
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[284].ringId
+      value: 285
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[285].ringId
+      value: 286
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[286].ringId
+      value: 287
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[287].ringId
+      value: 288
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[288].ringId
+      value: 289
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[289].ringId
+      value: 290
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[290].ringId
+      value: 291
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[291].ringId
+      value: 292
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[292].ringId
+      value: 293
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[293].ringId
+      value: 294
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[294].ringId
+      value: 295
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[295].ringId
+      value: 296
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[296].ringId
+      value: 297
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[297].ringId
+      value: 298
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[298].ringId
+      value: 299
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[299].ringId
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.centerOfMeasurementVerticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[0].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[1].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[2].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[3].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[4].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[5].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[6].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[7].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[8].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[9].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[10].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[11].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[12].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[13].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[14].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[15].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[16].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[17].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[18].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[19].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[20].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[21].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[22].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[23].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[24].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[25].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[26].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[27].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[28].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[29].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[30].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[31].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[32].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[33].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[34].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[35].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[36].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[37].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[38].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[39].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[40].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[41].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[42].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[43].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[44].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[45].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[46].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[47].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[48].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[49].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[50].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[51].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[52].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[53].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[54].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[55].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[56].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[57].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[58].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[59].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[60].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[61].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[62].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[63].verticalLinearOffsetMm
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[0].verticalAngularOffsetDeg
+      value: -13
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[1].verticalAngularOffsetDeg
+      value: -12.913043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[2].verticalAngularOffsetDeg
+      value: -12.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[3].verticalAngularOffsetDeg
+      value: -12.73913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[4].verticalAngularOffsetDeg
+      value: -12.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[5].verticalAngularOffsetDeg
+      value: -12.565217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[6].verticalAngularOffsetDeg
+      value: -12.478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[7].verticalAngularOffsetDeg
+      value: -12.391304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[8].verticalAngularOffsetDeg
+      value: -12.304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[9].verticalAngularOffsetDeg
+      value: -12.217391
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[10].verticalAngularOffsetDeg
+      value: -12.130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[11].verticalAngularOffsetDeg
+      value: -12.043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[12].verticalAngularOffsetDeg
+      value: -11.956522
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[13].verticalAngularOffsetDeg
+      value: -11.869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[14].verticalAngularOffsetDeg
+      value: -11.782609
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[15].verticalAngularOffsetDeg
+      value: -11.695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[16].verticalAngularOffsetDeg
+      value: -11.608696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[17].verticalAngularOffsetDeg
+      value: -11.521739
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[18].verticalAngularOffsetDeg
+      value: -11.434783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[19].verticalAngularOffsetDeg
+      value: -11.347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[20].verticalAngularOffsetDeg
+      value: -11.26087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[21].verticalAngularOffsetDeg
+      value: -11.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[22].verticalAngularOffsetDeg
+      value: -11.086957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[23].verticalAngularOffsetDeg
+      value: -11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[24].verticalAngularOffsetDeg
+      value: -10.913043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[25].verticalAngularOffsetDeg
+      value: -10.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[26].verticalAngularOffsetDeg
+      value: -10.73913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[27].verticalAngularOffsetDeg
+      value: -10.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[28].verticalAngularOffsetDeg
+      value: -10.565217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[29].verticalAngularOffsetDeg
+      value: -10.478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[30].verticalAngularOffsetDeg
+      value: -10.391304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[31].verticalAngularOffsetDeg
+      value: -10.304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[32].verticalAngularOffsetDeg
+      value: -10.217391
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[33].verticalAngularOffsetDeg
+      value: -10.130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[34].verticalAngularOffsetDeg
+      value: -10.043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[35].verticalAngularOffsetDeg
+      value: -9.956522
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[36].verticalAngularOffsetDeg
+      value: -9.869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[37].verticalAngularOffsetDeg
+      value: -9.782609
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[38].verticalAngularOffsetDeg
+      value: -9.695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[39].verticalAngularOffsetDeg
+      value: -9.608696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[40].verticalAngularOffsetDeg
+      value: -9.521739
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[41].verticalAngularOffsetDeg
+      value: -9.434783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[42].verticalAngularOffsetDeg
+      value: -9.347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[43].verticalAngularOffsetDeg
+      value: -9.26087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[44].verticalAngularOffsetDeg
+      value: -9.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[45].verticalAngularOffsetDeg
+      value: -9.086957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[46].verticalAngularOffsetDeg
+      value: -9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[47].verticalAngularOffsetDeg
+      value: -8.913043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[48].verticalAngularOffsetDeg
+      value: -8.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[49].verticalAngularOffsetDeg
+      value: -8.73913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[50].verticalAngularOffsetDeg
+      value: -8.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[51].verticalAngularOffsetDeg
+      value: -8.565217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[52].verticalAngularOffsetDeg
+      value: -8.478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[53].verticalAngularOffsetDeg
+      value: -8.391304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[54].verticalAngularOffsetDeg
+      value: -8.304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[55].verticalAngularOffsetDeg
+      value: -8.217391
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[56].verticalAngularOffsetDeg
+      value: -8.130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[57].verticalAngularOffsetDeg
+      value: -8.043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[58].verticalAngularOffsetDeg
+      value: -7.9565215
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[59].verticalAngularOffsetDeg
+      value: -7.869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[60].verticalAngularOffsetDeg
+      value: -7.7826085
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[61].verticalAngularOffsetDeg
+      value: -7.695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[62].verticalAngularOffsetDeg
+      value: -7.6086955
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[63].verticalAngularOffsetDeg
+      value: -7.521739
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[64].verticalAngularOffsetDeg
+      value: -7.4347825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[65].verticalAngularOffsetDeg
+      value: -7.347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[66].verticalAngularOffsetDeg
+      value: -7.2608695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[67].verticalAngularOffsetDeg
+      value: -7.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[68].verticalAngularOffsetDeg
+      value: -7.0869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[69].verticalAngularOffsetDeg
+      value: -7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[70].verticalAngularOffsetDeg
+      value: -6.9130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[71].verticalAngularOffsetDeg
+      value: -6.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[72].verticalAngularOffsetDeg
+      value: -6.7391305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[73].verticalAngularOffsetDeg
+      value: -6.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[74].verticalAngularOffsetDeg
+      value: -6.5652175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[75].verticalAngularOffsetDeg
+      value: -6.478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[76].verticalAngularOffsetDeg
+      value: -6.3913045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[77].verticalAngularOffsetDeg
+      value: -6.304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[78].verticalAngularOffsetDeg
+      value: -6.2173915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[79].verticalAngularOffsetDeg
+      value: -6.130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[80].verticalAngularOffsetDeg
+      value: -6.0434785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[81].verticalAngularOffsetDeg
+      value: -5.9565215
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[82].verticalAngularOffsetDeg
+      value: -5.869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[83].verticalAngularOffsetDeg
+      value: -5.7826085
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[84].verticalAngularOffsetDeg
+      value: -5.695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[85].verticalAngularOffsetDeg
+      value: -5.6086955
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[86].verticalAngularOffsetDeg
+      value: -5.521739
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[87].verticalAngularOffsetDeg
+      value: -5.4347825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[88].verticalAngularOffsetDeg
+      value: -5.347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[89].verticalAngularOffsetDeg
+      value: -5.2608695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[90].verticalAngularOffsetDeg
+      value: -5.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[91].verticalAngularOffsetDeg
+      value: -5.0869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[92].verticalAngularOffsetDeg
+      value: -5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[93].verticalAngularOffsetDeg
+      value: -4.9130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[94].verticalAngularOffsetDeg
+      value: -4.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[95].verticalAngularOffsetDeg
+      value: -4.7391305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[96].verticalAngularOffsetDeg
+      value: -4.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[97].verticalAngularOffsetDeg
+      value: -4.5652175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[98].verticalAngularOffsetDeg
+      value: -4.478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[99].verticalAngularOffsetDeg
+      value: -4.3913045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[100].verticalAngularOffsetDeg
+      value: -4.304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[101].verticalAngularOffsetDeg
+      value: -4.2173915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[102].verticalAngularOffsetDeg
+      value: -4.130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[103].verticalAngularOffsetDeg
+      value: -4.0434785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[104].verticalAngularOffsetDeg
+      value: -3.9565217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[105].verticalAngularOffsetDeg
+      value: -3.8695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[106].verticalAngularOffsetDeg
+      value: -3.7826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[107].verticalAngularOffsetDeg
+      value: -3.6956522
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[108].verticalAngularOffsetDeg
+      value: -3.6086957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[109].verticalAngularOffsetDeg
+      value: -3.5217392
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[110].verticalAngularOffsetDeg
+      value: -3.4347825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[111].verticalAngularOffsetDeg
+      value: -3.347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[112].verticalAngularOffsetDeg
+      value: -3.2608695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[113].verticalAngularOffsetDeg
+      value: -3.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[114].verticalAngularOffsetDeg
+      value: -3.0869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[115].verticalAngularOffsetDeg
+      value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[116].verticalAngularOffsetDeg
+      value: -2.9130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[117].verticalAngularOffsetDeg
+      value: -2.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[118].verticalAngularOffsetDeg
+      value: -2.7391305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[119].verticalAngularOffsetDeg
+      value: -2.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[120].verticalAngularOffsetDeg
+      value: -2.5652175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[121].verticalAngularOffsetDeg
+      value: -2.4782608
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[122].verticalAngularOffsetDeg
+      value: -2.3913043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[123].verticalAngularOffsetDeg
+      value: -2.3043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[124].verticalAngularOffsetDeg
+      value: -2.2173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[125].verticalAngularOffsetDeg
+      value: -2.1304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[126].verticalAngularOffsetDeg
+      value: -2.0434783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[127].verticalAngularOffsetDeg
+      value: -1.9565217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[128].verticalAngularOffsetDeg
+      value: -1.8695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[129].verticalAngularOffsetDeg
+      value: -1.7826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[130].verticalAngularOffsetDeg
+      value: -1.6956521
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[131].verticalAngularOffsetDeg
+      value: -1.6086956
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[132].verticalAngularOffsetDeg
+      value: -1.5217391
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[133].verticalAngularOffsetDeg
+      value: -1.4347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[134].verticalAngularOffsetDeg
+      value: -1.3478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[135].verticalAngularOffsetDeg
+      value: -1.2608696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[136].verticalAngularOffsetDeg
+      value: -1.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[137].verticalAngularOffsetDeg
+      value: -1.0869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[138].verticalAngularOffsetDeg
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[139].verticalAngularOffsetDeg
+      value: -0.9130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[140].verticalAngularOffsetDeg
+      value: -0.82608694
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[141].verticalAngularOffsetDeg
+      value: -0.73913044
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[142].verticalAngularOffsetDeg
+      value: -0.65217394
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[143].verticalAngularOffsetDeg
+      value: -0.5652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[144].verticalAngularOffsetDeg
+      value: -0.47826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[145].verticalAngularOffsetDeg
+      value: -0.39130434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[146].verticalAngularOffsetDeg
+      value: -0.3043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[147].verticalAngularOffsetDeg
+      value: -0.2173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[148].verticalAngularOffsetDeg
+      value: -0.13043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[149].verticalAngularOffsetDeg
+      value: -0.04347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[150].verticalAngularOffsetDeg
+      value: 0.04347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[151].verticalAngularOffsetDeg
+      value: 0.13043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[152].verticalAngularOffsetDeg
+      value: 0.2173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[153].verticalAngularOffsetDeg
+      value: 0.3043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[154].verticalAngularOffsetDeg
+      value: 0.39130434
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[155].verticalAngularOffsetDeg
+      value: 0.47826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[156].verticalAngularOffsetDeg
+      value: 0.5652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[157].verticalAngularOffsetDeg
+      value: 0.65217394
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[158].verticalAngularOffsetDeg
+      value: 0.73913044
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[159].verticalAngularOffsetDeg
+      value: 0.82608694
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[160].verticalAngularOffsetDeg
+      value: 0.9130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[161].verticalAngularOffsetDeg
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[162].verticalAngularOffsetDeg
+      value: 1.0869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[163].verticalAngularOffsetDeg
+      value: 1.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[164].verticalAngularOffsetDeg
+      value: 1.2608696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[165].verticalAngularOffsetDeg
+      value: 1.3478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[166].verticalAngularOffsetDeg
+      value: 1.4347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[167].verticalAngularOffsetDeg
+      value: 1.5217391
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[168].verticalAngularOffsetDeg
+      value: 1.6086956
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[169].verticalAngularOffsetDeg
+      value: 1.6956521
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[170].verticalAngularOffsetDeg
+      value: 1.7826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[171].verticalAngularOffsetDeg
+      value: 1.8695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[172].verticalAngularOffsetDeg
+      value: 1.9565217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[173].verticalAngularOffsetDeg
+      value: 2.0434783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[174].verticalAngularOffsetDeg
+      value: 2.1304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[175].verticalAngularOffsetDeg
+      value: 2.2173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[176].verticalAngularOffsetDeg
+      value: 2.3043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[177].verticalAngularOffsetDeg
+      value: 2.3913043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[178].verticalAngularOffsetDeg
+      value: 2.4782608
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[179].verticalAngularOffsetDeg
+      value: 2.5652175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[180].verticalAngularOffsetDeg
+      value: 2.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[181].verticalAngularOffsetDeg
+      value: 2.7391305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[182].verticalAngularOffsetDeg
+      value: 2.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[183].verticalAngularOffsetDeg
+      value: 2.9130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[184].verticalAngularOffsetDeg
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[185].verticalAngularOffsetDeg
+      value: 3.0869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[186].verticalAngularOffsetDeg
+      value: 3.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[187].verticalAngularOffsetDeg
+      value: 3.2608695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[188].verticalAngularOffsetDeg
+      value: 3.347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[189].verticalAngularOffsetDeg
+      value: 3.4347825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[190].verticalAngularOffsetDeg
+      value: 3.5217392
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[191].verticalAngularOffsetDeg
+      value: 3.6086957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[192].verticalAngularOffsetDeg
+      value: 3.6956522
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[193].verticalAngularOffsetDeg
+      value: 3.7826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[194].verticalAngularOffsetDeg
+      value: 3.8695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[195].verticalAngularOffsetDeg
+      value: 3.9565217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[196].verticalAngularOffsetDeg
+      value: 4.0434785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[197].verticalAngularOffsetDeg
+      value: 4.130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[198].verticalAngularOffsetDeg
+      value: 4.2173915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[199].verticalAngularOffsetDeg
+      value: 4.304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[200].verticalAngularOffsetDeg
+      value: 4.3913045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[201].verticalAngularOffsetDeg
+      value: 4.478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[202].verticalAngularOffsetDeg
+      value: 4.5652175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[203].verticalAngularOffsetDeg
+      value: 4.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[204].verticalAngularOffsetDeg
+      value: 4.7391305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[205].verticalAngularOffsetDeg
+      value: 4.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[206].verticalAngularOffsetDeg
+      value: 4.9130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[207].verticalAngularOffsetDeg
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[208].verticalAngularOffsetDeg
+      value: 5.0869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[209].verticalAngularOffsetDeg
+      value: 5.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[210].verticalAngularOffsetDeg
+      value: 5.2608695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[211].verticalAngularOffsetDeg
+      value: 5.347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[212].verticalAngularOffsetDeg
+      value: 5.4347825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[213].verticalAngularOffsetDeg
+      value: 5.521739
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[214].verticalAngularOffsetDeg
+      value: 5.6086955
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[215].verticalAngularOffsetDeg
+      value: 5.695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[216].verticalAngularOffsetDeg
+      value: 5.7826085
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[217].verticalAngularOffsetDeg
+      value: 5.869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[218].verticalAngularOffsetDeg
+      value: 5.9565215
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[219].verticalAngularOffsetDeg
+      value: 6.0434785
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[220].verticalAngularOffsetDeg
+      value: 6.130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[221].verticalAngularOffsetDeg
+      value: 6.2173915
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[222].verticalAngularOffsetDeg
+      value: 6.304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[223].verticalAngularOffsetDeg
+      value: 6.3913045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[224].verticalAngularOffsetDeg
+      value: 6.478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[225].verticalAngularOffsetDeg
+      value: 6.5652175
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[226].verticalAngularOffsetDeg
+      value: 6.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[227].verticalAngularOffsetDeg
+      value: 6.7391305
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[228].verticalAngularOffsetDeg
+      value: 6.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[229].verticalAngularOffsetDeg
+      value: 6.9130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[230].verticalAngularOffsetDeg
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[231].verticalAngularOffsetDeg
+      value: 7.0869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[232].verticalAngularOffsetDeg
+      value: 7.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[233].verticalAngularOffsetDeg
+      value: 7.2608695
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[234].verticalAngularOffsetDeg
+      value: 7.347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[235].verticalAngularOffsetDeg
+      value: 7.4347825
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[236].verticalAngularOffsetDeg
+      value: 7.521739
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[237].verticalAngularOffsetDeg
+      value: 7.6086955
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[238].verticalAngularOffsetDeg
+      value: 7.695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[239].verticalAngularOffsetDeg
+      value: 7.7826085
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[240].verticalAngularOffsetDeg
+      value: 7.869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[241].verticalAngularOffsetDeg
+      value: 7.9565215
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[242].verticalAngularOffsetDeg
+      value: 8.043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[243].verticalAngularOffsetDeg
+      value: 8.130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[244].verticalAngularOffsetDeg
+      value: 8.217391
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[245].verticalAngularOffsetDeg
+      value: 8.304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[246].verticalAngularOffsetDeg
+      value: 8.391304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[247].verticalAngularOffsetDeg
+      value: 8.478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[248].verticalAngularOffsetDeg
+      value: 8.565217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[249].verticalAngularOffsetDeg
+      value: 8.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[250].verticalAngularOffsetDeg
+      value: 8.73913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[251].verticalAngularOffsetDeg
+      value: 8.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[252].verticalAngularOffsetDeg
+      value: 8.913043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[253].verticalAngularOffsetDeg
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[254].verticalAngularOffsetDeg
+      value: 9.086957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[255].verticalAngularOffsetDeg
+      value: 9.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[256].verticalAngularOffsetDeg
+      value: 9.26087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[257].verticalAngularOffsetDeg
+      value: 9.347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[258].verticalAngularOffsetDeg
+      value: 9.434783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[259].verticalAngularOffsetDeg
+      value: 9.521739
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[260].verticalAngularOffsetDeg
+      value: 9.608696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[261].verticalAngularOffsetDeg
+      value: 9.695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[262].verticalAngularOffsetDeg
+      value: 9.782609
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[263].verticalAngularOffsetDeg
+      value: 9.869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[264].verticalAngularOffsetDeg
+      value: 9.956522
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[265].verticalAngularOffsetDeg
+      value: 10.043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[266].verticalAngularOffsetDeg
+      value: 10.130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[267].verticalAngularOffsetDeg
+      value: 10.217391
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[268].verticalAngularOffsetDeg
+      value: 10.304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[269].verticalAngularOffsetDeg
+      value: 10.391304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[270].verticalAngularOffsetDeg
+      value: 10.478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[271].verticalAngularOffsetDeg
+      value: 10.565217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[272].verticalAngularOffsetDeg
+      value: 10.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[273].verticalAngularOffsetDeg
+      value: 10.73913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[274].verticalAngularOffsetDeg
+      value: 10.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[275].verticalAngularOffsetDeg
+      value: 10.913043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[276].verticalAngularOffsetDeg
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[277].verticalAngularOffsetDeg
+      value: 11.086957
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[278].verticalAngularOffsetDeg
+      value: 11.173913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[279].verticalAngularOffsetDeg
+      value: 11.26087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[280].verticalAngularOffsetDeg
+      value: 11.347826
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[281].verticalAngularOffsetDeg
+      value: 11.434783
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[282].verticalAngularOffsetDeg
+      value: 11.521739
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[283].verticalAngularOffsetDeg
+      value: 11.608696
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[284].verticalAngularOffsetDeg
+      value: 11.695652
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[285].verticalAngularOffsetDeg
+      value: 11.782609
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[286].verticalAngularOffsetDeg
+      value: 11.869565
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[287].verticalAngularOffsetDeg
+      value: 11.956522
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[288].verticalAngularOffsetDeg
+      value: 12.043478
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[289].verticalAngularOffsetDeg
+      value: 12.130435
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[290].verticalAngularOffsetDeg
+      value: 12.217391
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[291].verticalAngularOffsetDeg
+      value: 12.304348
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[292].verticalAngularOffsetDeg
+      value: 12.391304
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[293].verticalAngularOffsetDeg
+      value: 12.478261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[294].verticalAngularOffsetDeg
+      value: 12.565217
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[295].verticalAngularOffsetDeg
+      value: 12.652174
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[296].verticalAngularOffsetDeg
+      value: 12.73913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[297].verticalAngularOffsetDeg
+      value: 12.826087
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[298].verticalAngularOffsetDeg
+      value: 12.913043
+      objectReference: {fileID: 0}
+    - target: {fileID: 6783141852894029529, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: configuration.laserArray.lasers.Array.data[299].verticalAngularOffsetDeg
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.535
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.316
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.559193
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.82903755
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -112
+      objectReference: {fileID: 0}
+    - target: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081999238403862204, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_Name
+      value: Luminar Left
+      objectReference: {fileID: 0}
+    - target: {fileID: 9081999238403862204, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+--- !u!4 &8814402833468522835 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8449437470648333318, guid: 4bf5cb63e00e0fce988f173ceca57356, type: 3}
+  m_PrefabInstance: {fileID: 1085756951688181077}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2206508819189350298
 PrefabInstance:

@@ -26,5 +26,6 @@ namespace RGLUnityPlugin
         HesaiPandar40P,
         OusterOS1_64,
         Luminar,
+        LuminarLeft,
     }
 }
