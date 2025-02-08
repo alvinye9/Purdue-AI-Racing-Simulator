@@ -1,3 +1,4 @@
+// Copyright 2025 Purdue AI Racing
 // Copyright 2022 Robotec.ai.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,6 +30,7 @@ namespace RGLUnityPlugin
                 {LidarModel.HesaiPandarQT, HesaiPandarQT},
                 {LidarModel.HesaiPandar40P, HesaiPandar40P},
                 {LidarModel.OusterOS1_64, OusterOS1_64},
+                {LidarModel.Luminar, Luminar},
             };
 
         public static LidarConfiguration RangeMeter => new LidarConfiguration
@@ -115,5 +117,22 @@ namespace RGLUnityPlugin
             maxRange = 120.0f,
             noiseParams = LidarConfiguration.TypicalNoiseParams,
         };
+
+        //https://autonomoustuff.com/products/luminar-iris
+        public static LidarConfiguration Luminar => new LidarConfiguration
+        {
+            laserArray = LaserArrayLibrary.Luminar,  
+            horizontalResolution = 0.12f,                     // 0.12° horizontal resolution
+            minHAngle = -60f,                                 // 120° Horizontal FOV (-60° to +60°)
+            maxHAngle = 60f,
+            maxRange = 275.0f,                                // Max range > 275 meters
+            noiseParams = new LidarNoiseParams
+            {
+                distanceNoiseStDevBase = 0.02f,               // 2 cm base noise standard deviation
+                distanceNoiseStDevRisePerMeter = 0.0f,        // No additional noise with distance
+            }
+        };
+
+
     }
 }

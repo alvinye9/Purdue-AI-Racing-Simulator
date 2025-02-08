@@ -26,9 +26,9 @@ namespace AWSIM
     public class RglLidarPublisher : MonoBehaviour
     {
         public string pcl24Topic = "lidar/pointcloud";
-        public string pcl48Topic = "/perception/luminar_front/points";
+        public string pcl48Topic = "lidar/pointcloud_ex";
         public string instanceIdTopic = "lidar/instance_id";
-        public string frameID = "base_link";
+        public string frameID = "world";
         public bool publishPCL24 = true;
         public bool publishPCL48 = true;
         public bool publishInstanceId = false;

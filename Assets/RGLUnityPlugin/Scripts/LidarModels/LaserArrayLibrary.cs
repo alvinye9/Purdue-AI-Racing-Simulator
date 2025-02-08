@@ -1,3 +1,4 @@
+// Copyright 2025 Purdue AI Racing
 // Copyright 2022 Robotec.ai.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -436,5 +437,37 @@ namespace RGLUnityPlugin
                 new Laser {horizontalAngularOffsetDeg = -3.108f, verticalAngularOffsetDeg = 16.598f, ringId = 64},
             }
         };
+
+        //https://autonomoustuff.com/products/luminar-iris
+        public static LaserArray Luminar => new LaserArray
+        {
+            centerOfMeasurementVerticalLinearOffsetMm = 0.0f, // No specific offset given, using 0 for now
+            centerOfMeasurementHorizontalLinearOffsetMm = 0.0f,
+            lasers = GenerateLuminarLaserArray()
+        };
+
+        private static Laser[] GenerateLuminarLaserArray()
+        {
+            List<Laser> lasers = new List<Laser>();
+            
+            float verticalFOV = 26.0f;  // Dynamic vertical field of view ±13°
+            int verticalLines = 300;    // Approx. >300 points per square degree (translating to high resolution)
+            float minVerticalAngle = -13.0f;
+            float maxVerticalAngle = 13.0f;
+
+            for (int i = 0; i < verticalLines; i++)
+            {
+                float verticalAngularOffset = minVerticalAngle + (i * (maxVerticalAngle - minVerticalAngle) / (verticalLines - 1));
+                lasers.Add(new Laser
+                {
+                    horizontalAngularOffsetDeg = 0.0f, // Assuming no horizontal offset for each vertical line
+                    verticalAngularOffsetDeg = verticalAngularOffset,
+                    ringId = i + 1
+                });
+            }
+
+            return lasers.ToArray();
+        }
+
     }
 }

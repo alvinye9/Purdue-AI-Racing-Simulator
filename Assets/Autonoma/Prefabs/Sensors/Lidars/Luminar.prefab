@@ -461,10 +461,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87ba9656cbd67467f8119d8666b098aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pcl24Topic: lidar/pointcloud
-  pcl48Topic: lidar/pointcloud_ex
+  pcl24Topic: /perception/luminar_front/points_ex
+  pcl48Topic: /perception/luminar_front/points
   instanceIdTopic: lidar/instance_id
-  frameID: world
+  frameID: base_link
   publishPCL24: 1
   publishPCL48: 1
   publishInstanceId: 0

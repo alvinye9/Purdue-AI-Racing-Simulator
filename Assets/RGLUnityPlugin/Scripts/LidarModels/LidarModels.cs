@@ -1,3 +1,4 @@
+// Copyright 2025 Purdue AI Racing
 // Copyright 2022 Robotec.ai.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
@@ -24,5 +25,6 @@ namespace RGLUnityPlugin
         HesaiPandarQT,
         HesaiPandar40P,
         OusterOS1_64,
+        Luminar,
     }
 }
