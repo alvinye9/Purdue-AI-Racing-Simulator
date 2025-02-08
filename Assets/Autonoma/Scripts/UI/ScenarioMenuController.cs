@@ -476,9 +476,9 @@ public class ScenarioMenuController : MonoBehaviour
             tmpSensorSet.EnableCameraStereoLeft = false;
             tmpSensorSet.EnableCameraStereoRight = false;
 
-            tmpSensorSet.EnableLuminarFront = false;
-            tmpSensorSet.EnableLuminarLeft = false;
-            tmpSensorSet.EnableLuminarRight = false;
+            tmpSensorSet.EnableLuminarFront = true;
+            tmpSensorSet.EnableLuminarLeft = true;
+            tmpSensorSet.EnableLuminarRight = true;
 
             // Gaussian Noise values
             tmpSensorSet.steerMean = 0f;
