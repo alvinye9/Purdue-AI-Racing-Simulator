@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 971c5ed5003b4e047a55c8b4cc21d1e3
+guid: c48299a4325926e16ba217f001c12ef4
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,28 +7,28 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Body_white
-    second: {fileID: 2100000, guid: 9880c9adf0e013c42bbc176e05cd544e, type: 2}
+      name: ColliderMat
+    second: {fileID: 2100000, guid: ebd4613a909e20d47919d8d712965b1e, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: DallaraIL15Caliper
+      name: DallaraIndyLightsBody
+    second: {fileID: 2100000, guid: 1b2aef755a1952141b10a6c4915afa52, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DallaraIndyLightsCaliper
     second: {fileID: 2100000, guid: 0019d55d56d1db549b8d0e9ff1f4f680, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: DallaraIL15CarbonFiber
+      name: DallaraIndyLightsCam
+    second: {fileID: 2100000, guid: d8869f786030b57499bb7f8b338bb1d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DallaraIndyLightsCarbonFiber
     second: {fileID: 2100000, guid: 5f280d60d0b19f944af9a4da90382dfe, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: DallaraIL15LightBrake
-    second: {fileID: 2100000, guid: 55486dee084d9304a8e36781dd7e0eb3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: DallaraIL15MetalSmooth
-    second: {fileID: 2100000, guid: f5e525eb53b3b19428045a62851167d5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -37,25 +37,45 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: DallaraIndyLightsLightBrake
+    second: {fileID: 2100000, guid: 55486dee084d9304a8e36781dd7e0eb3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DallaraIndyLightsMetalRough
+    second: {fileID: 2100000, guid: 35b0eb4f3ed77af47a623d042c826b4b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: DallaraIndyLightsMetalSmooth
     second: {fileID: 2100000, guid: f5e525eb53b3b19428045a62851167d5, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: DallaraIndyLightsMirrors
+    second: {fileID: 2100000, guid: 0555383dfb2f302499a58bedff300b2e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: DallaraIndyLightsNut
+    second: {fileID: 2100000, guid: bd3f0dbbc51f7ee44aa490c893e1ab8a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: DallaraIndyLightsPlasticRough
-    second: {fileID: 2100000, guid: 35b0eb4f3ed77af47a623d042c826b4b, type: 2}
+    second: {fileID: 2100000, guid: 4af575438f413be498f1e4e3b96aa46d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material__261679313
-    second: {fileID: 2100000, guid: f5e525eb53b3b19428045a62851167d5, type: 2}
+      name: DallaraIndyLightsPlasticSmooth
+    second: {fileID: 2100000, guid: d246040d815a8c84b92f46556de7d3e0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: metals_heders
-    second: {fileID: 2100000, guid: f5e525eb53b3b19428045a62851167d5, type: 2}
+      name: DallaraIndyLightsTire
+    second: {fileID: 2100000, guid: 6bec09f10ffa84242b3ac83184a54bc4, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -95,7 +115,7 @@ ModelImporter:
     importCameras: 1
     importLights: 1
     nodeNameCollisionStrategy: 0
-    fileIdsGeneration: 2
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
@@ -149,7 +169,7 @@ ModelImporter:
   animationType: 2
   humanoidOversampling: 1
   avatarSetup: 0
-  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
   remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 

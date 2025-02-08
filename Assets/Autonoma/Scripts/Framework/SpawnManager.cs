@@ -32,6 +32,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject imsBankedPrefab;
     public GameObject waypointPrefab;
     public GameObject monzaPrefab;
+    public GameObject monzaLowPolyPrefab;
+    public GameObject giantSkidpadPrefab;
     public GameObject lvmsPrefab;
     public Material[] materials;
     public RaceControlMenuController raceControlMenu;
@@ -576,7 +578,7 @@ public class SpawnManager : MonoBehaviour
                 Quaternion rotation = Quaternion.Euler(0f, -90f, 0f);  
                 Vector3 position = new Vector3(0f, 6.0f, 0f); 
                 Vector3 scale = new Vector3(1f, 1f, 1f); 
-                GameObject instantiatedTrack = Instantiate(track, position, rotation);
+                GameObject instantiatedTrack = Instantiate(monzaLowPolyPrefab, position, rotation);
                 instantiatedTrack.transform.localScale = scale;
             }
             else if(trackName.Equals("Monza.prefab"))
@@ -591,7 +593,7 @@ public class SpawnManager : MonoBehaviour
             else
             {
                 Debug.Log("INSTANTIATING TRACK: "+ trackName);
-                Instantiate(track);
+                Instantiate(giantSkidpadPrefab);
             }
 
 

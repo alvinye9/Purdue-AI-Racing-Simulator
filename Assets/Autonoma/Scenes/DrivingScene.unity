@@ -122,6 +122,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &134292677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7072217863731950089, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_Name
+      value: RGLSceneManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145055722486604488, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cc197478b1787bffa8b1b92eb7e455e7, type: 3}
 --- !u!1 &257695392
 GameObject:
   m_ObjectHideFlags: 0
@@ -583,7 +640,9 @@ MonoBehaviour:
   imsPrefab: {fileID: 2256583741266157160, guid: cb97f8699b2801abe89ef4378391bfde, type: 3}
   imsBankedPrefab: {fileID: 4126819533775158343, guid: 9483aec99c55745a7b2e6cd3d274383e, type: 3}
   waypointPrefab: {fileID: 7609439648699991924, guid: baeecfd5e36732a649459b76b18afd7a, type: 3}
-  monzaPrefab: {fileID: 7270787047499061872, guid: e1070226ac71760508a9289c74fe4004, type: 3}
+  monzaPrefab: {fileID: 4621512547222755109, guid: 818ded6666f18ea95bdd8fa439ab6cdc, type: 3}
+  monzaLowPolyPrefab: {fileID: 142553828955969809, guid: f8fdcf67c934fd58480313a5bb3102f8, type: 3}
+  giantSkidpadPrefab: {fileID: 3986708672431338700, guid: f388ced04600ac84e8a404332873ff12, type: 3}
   lvmsPrefab: {fileID: 1203136823013889, guid: ba50d632bda3d397fab752ca059ee95d, type: 3}
   materials:
   - {fileID: 2100000, guid: 9880c9adf0e013c42bbc176e05cd544e, type: 2}
