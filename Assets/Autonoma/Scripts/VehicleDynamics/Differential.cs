@@ -27,12 +27,10 @@ public class Differential : MonoBehaviour
             
             if (carController.vehicleParams.rearSolidAxle)
             {
-                // float deltaTorqueDiff = 5f * (wheels[1].omega - wheels[0].omega);
-                // float deltaTorqueSolid = (wheels[1].Fx - wheels[0].Fx)*axleParams.tyreRadius; // = T2-T1
-                // wheels[1].driveTorque = (carController.TAxle + deltaTorqueSolid)/2f - deltaTorqueDiff;
-                // wheels[0].driveTorque = carController.TAxle - wheels[1].driveTorque + deltaTorqueDiff;   
-                wheels[1].driveTorque = (carController.TAxle)/2f;
-                wheels[0].driveTorque = (carController.TAxle)/2f;              
+                float deltaTorqueDiff = 5f * (wheels[1].omega - wheels[0].omega);
+                float deltaTorqueSolid = (wheels[1].Fx - wheels[0].Fx)*axleParams.tyreRadius; // = T2-T1
+                wheels[1].driveTorque = (carController.TAxle + deltaTorqueSolid)/2f - deltaTorqueDiff;
+                wheels[0].driveTorque = carController.TAxle - wheels[1].driveTorque + deltaTorqueDiff;              
             }
             else
             {
