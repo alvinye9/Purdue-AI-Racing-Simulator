@@ -96,25 +96,25 @@ public class VehicleDataSimulator : MonoBehaviour
         ct_state = (byte)sm.current_ct;
 
         fl_tire_temperature = wheelControllers[0].currTyreTemp;
-        fl_damper_linear_potentiometer = 0.0f;
+        fl_damper_linear_potentiometer = wheelControllers[0].springDeflection * 1000f; //mm
         fl_tire_pressure = 35.0f;
         fl_tire_pressure_gauge = 0.0f;
         fl_wheel_load = wheelControllers[0].Fz;
 
         fr_tire_temperature = wheelControllers[1].currTyreTemp;
-        fr_damper_linear_potentiometer = 0.0f;
+        fr_damper_linear_potentiometer = wheelControllers[1].springDeflection * 1000f; //mm
         fr_tire_pressure = 35.0f;
         fr_tire_pressure_gauge = 0.0f;
         fr_wheel_load = wheelControllers[1].Fz;
 
         rl_tire_temperature = wheelControllers[2].currTyreTemp;
-        rl_damper_linear_potentiometer = 0.0f;
+        rl_damper_linear_potentiometer = wheelControllers[2].springDeflection * 1000f; //mm
         rl_tire_pressure = 35.0f;
         rl_tire_pressure_gauge = 0.0f;
         rl_wheel_load = wheelControllers[2].Fz;
 
         rr_tire_temperature = wheelControllers[3].currTyreTemp;
-        rr_damper_linear_potentiometer = 0.0f;
+        rr_damper_linear_potentiometer = wheelControllers[3].springDeflection * 1000f; //mm
         rr_tire_pressure = 35.0f;
         rr_tire_pressure_gauge = 0.0f;
         rr_wheel_load = wheelControllers[3].Fz;
