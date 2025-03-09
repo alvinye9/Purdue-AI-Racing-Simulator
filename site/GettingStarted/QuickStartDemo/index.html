@@ -20,7 +20,7 @@
     
     
       
-        <title>Quick Start Demo - Purdue-AI-Racing Simulator Documentation</title>
+        <title>PAIRSim Workspace Demo - Purdue-AI-Racing Simulator Documentation</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quick-start-demo" class="md-skip">
+        <a href="#pairsim-workspace-demo" class="md-skip">
           Skip to content
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quick Start Demo
+              PAIRSim Workspace Demo
             
           </span>
         </div>
@@ -448,15 +448,78 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PAIRSim Workspace Demo
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Quick Start Demo
+    PAIRSim Workspace Demo
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#demo-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demo configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pairsim-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      PAIRSim Workspace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -621,6 +684,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#demo-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Demo configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Prerequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pairsim-workspace" class="md-nav__link">
+    <span class="md-ellipsis">
+      PAIRSim Workspace
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -637,35 +741,40 @@
   
 
 
-<h1 id="quick-start-demo">Quick Start Demo</h1>
-<p>Demo instructions will be updated soon. </p>
-<!--
-Below you can find instructions on how to setup the self-driving demo of AWSIM simulation controlled by Autoware.
-The instruction assumes using the Ubuntu OS.
-
-![](Image_top.png)
-
-### Demo configuration
-
-The simulation provided in the AWSIM demo is configured as follows:
-
-|AWSIM Demo Settings||
-|:--|:--|
-|Vehicle|Lexus RX 450h|
-|Environment|Japan Tokyo Nishishinjuku|
-|Sensors|Gnss * 1<br> IMU * 1<br> LiDAR * 1<br> Traffic camera * 1|
-|Traffic|Randomized traffic|
-|ROS2|humble|
-
-
-## Prerequisites
-
-!!! warning
-
-    If you use Ubuntu 20.04 and ROS 2 Galactic version, please reffer to [v1.0.2](https://github.com/tier4/AWSIM/releases/tag/v1.0.2) [QuickStartDemo documentation](https://github.com/tier4/AWSIM/blob/v1.0.2/docs/GettingStarted/QuickStartDemo/index.md).
-
-
-### PC specs
+<h1 id="pairsim-workspace-demo">PAIRSim Workspace Demo</h1>
+<p>Below you can find instructions on how to setup an autonomous racing demo in the PAIRSim application by using the provided PAIRSim workspace.
+The provided PAIRSim workspace is an optional demo autonomy stack that serves as a testbed for new users.
+These instructions are for Ubuntu 22.04</p>
+<h3 id="demo-configuration">Demo configuration</h3>
+<p>The PAIRSim workspace provides the following features:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">PAIRSim Workspace Features</th>
+<th style="text-align: left;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Racelines</td>
+<td style="text-align: left;">Monza, IMS, Kentucky Speedway, LVMS</td>
+</tr>
+<tr>
+<td style="text-align: left;">Controllers</td>
+<td style="text-align: left;">PID, MPC, ADRC</td>
+</tr>
+<tr>
+<td style="text-align: left;">Communication</td>
+<td style="text-align: left;">ROS2</td>
+</tr>
+</tbody>
+</table>
+<h2 id="prerequisites">Prerequisites</h2>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Before running the PAIRSim workspace, make sure to correctly setup PAIRSim <a href="https://alvinye9.github.io/Purdue-AI-Racing-Simulator/">here</a>.</p>
+</div>
+<!-- ### PC specs
 
 Please make sure that your machine meets the following requirements in order to run the simulation correctly:
 
@@ -675,179 +784,10 @@ Please make sure that your machine meets the following requirements in order to 
 |CPU|6cores and 12thread or higher|
 |GPU|RTX2080Ti or higher|
 |Nvidia Driver (Windows)|>=472.50|
-|Nvidia Driver (Ubuntu 22)|>=515.43.04|
+|Nvidia Driver (Ubuntu 22)|>=515.43.04| -->
 
-
-### Localhost settings
-
-The simulation is based on the appropriate network setting, which allows for trouble-free communication of the AWSIM simulation with the Autoware software.
-To apply required localhost settings please add the following lines to `~/.bashrc` file.
-
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">ROS_LOCALHOST_ONLY</span><span class="o">=</span><span class="m">1</span>
-<span class="nb">export</span><span class="w"> </span><span class="nv">RMW_IMPLEMENTATION</span><span class="o">=</span>rmw_cyclonedds_cpp
-
-<span class="k">if</span><span class="w"> </span><span class="o">[</span><span class="w"> </span>!<span class="w"> </span>-e<span class="w"> </span>/tmp/cycloneDDS_configured<span class="w"> </span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
-<span class="w">    </span>sudo<span class="w"> </span>sysctl<span class="w"> </span>-w<span class="w"> </span>net.core.rmem_max<span class="o">=</span><span class="m">2147483647</span>
-<span class="w">    </span>sudo<span class="w"> </span>ip<span class="w"> </span>link<span class="w"> </span><span class="nb">set</span><span class="w"> </span>lo<span class="w"> </span>multicast<span class="w"> </span>on
-<span class="w">    </span>touch<span class="w"> </span>/tmp/cycloneDDS_configured
-<span class="k">fi</span>
-</code></pre></div>
-
-## Start the demo
-
-### Running the AWSIM simulation demo
-
-To run the simulator, please follow the steps below.
-
-1. Install Nvidia GPU driver (Skip if already installed).
-    1. Add Nvidia driver to apt repository
-    <div class="highlight"><pre><span></span><code>sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update
-</code></pre></div>
-    2. Install the recommended version of the driver.
-    <div class="highlight"><pre><span></span><code>sudo ubuntu-drivers autoinstall
-</code></pre></div>
-    3. Reboot your machine to make the installed driver detected by the system.
-    <div class="highlight"><pre><span></span><code>sudo reboot
-</code></pre></div>
-    4. Open terminal and check if `nvidia-smi` command is available and outputs summary similar to the one presented below.
-    <div class="highlight"><pre><span></span><code>$ nvidia-smi 
-Fri Oct 14 01:41:05 2022       
-+-----------------------------------------------------------------------------+
-| NVIDIA-SMI 515.65.01    Driver Version: 515.65.01    CUDA Version: 11.7     |
-|-------------------------------+----------------------+----------------------+
-| GPU  Name        Persistence-M| Bus-Id        Disp.A | Volatile Uncorr. ECC |
-| Fan  Temp  Perf  Pwr:Usage/Cap|         Memory-Usage | GPU-Util  Compute M. |
-|                               |                      |               MIG M. |
-|===============================+======================+======================|
-|   0  NVIDIA GeForce ...  Off  | 00000000:01:00.0  On |                  N/A |
-| 37%   31C    P8    30W / 250W |    188MiB / 11264MiB |      3%      Default |
-|                               |                      |                  N/A |
-+-------------------------------+----------------------+----------------------+
-
-+-----------------------------------------------------------------------------+
-| Processes:                                                                  |
-|  GPU   GI   CI        PID   Type   Process name                  GPU Memory |
-|        ID   ID                                                   Usage      |
-|=============================================================================|
-|    0   N/A  N/A      1151      G   /usr/lib/xorg/Xorg                133MiB |
-|    0   N/A  N/A      1470      G   /usr/bin/gnome-shell               45MiB |
-+-----------------------------------------------------------------------------+
-</code></pre></div>
-
-2. Install Vulkan Graphics Library (Skip if already installed).
-    1. Update the environment.
-    <div class="highlight"><pre><span></span><code>sudo apt update
-</code></pre></div>
-    2. Install the library.
-    <div class="highlight"><pre><span></span><code>sudo apt install libvulkan1
-</code></pre></div>
-
-3. Download and Run AWSIM Demo binary.
-
-    1. Download `AWSIM_v1.1.0.zip`.
-
-        [Download AWSIM Demo for ubuntu](https://github.com/tier4/AWSIM/releases/download/v1.1.0/AWSIM_v1.1.0.zip){.md-button .md-button--primary}
-
-    2. Unzip the downloaded file.
-
-    3. Make the `AWSIM_demo.x86_64` file executable.
-
-        Rightclick the `AWSIM_demo.x86_64` file and check the `Execute` checkbox
-
-        ![](Image_1.png)
-
-        or execute the command below.
-
-        <div class="highlight"><pre><span></span><code>chmod +x &lt;path to AWSIM folder&gt;/AWSIM_demo.x86_64
-</code></pre></div>
-
-    4. Launch `AWSIM_demo.x86_64`.
-        <div class="highlight"><pre><span></span><code>./&lt;path to AWSIM folder&gt;/AWSIM_demo.x86_64
-</code></pre></div>
-
-        !!! warning
-
-            It may take some time for the application to start the so please wait until image similar to the one presented below is visible in your application window.
-
-        ![](Image_0.png)
-
-### Launching Autoware
-
-In order to configure and run the Autoware software with the AWSIM demo, please:
-
-1. Download `map files (pcd, osm)` and unzip them.
-
-    [Download Map files (pcd, osm)](https://github.com/tier4/AWSIM/releases/download/v1.1.0/nishishinjuku_autoware_map.zip){.md-button .md-button--primary}
-
-2. Clone [Autoware](https://github.com/autowarefoundation/autoware) and move to the directory.
-<div class="highlight"><pre><span></span><code>git clone https://github.com/autowarefoundation/autoware.git
-cd autoware
-</code></pre></div>
-3. Switch branche to `awsim-stable`. *NOTE: The latest `main` branch is for [ROS 2 humble](https://docs.ros.org/en/rolling/Releases/Release-Humble-Hawksbill.html).*
-<div class="highlight"><pre><span></span><code>git checkout awsim-stable
-</code></pre></div>
-4. Configure the environment. (Skip if Autoware environment has been configured before)
-<div class="highlight"><pre><span></span><code>./setup-dev-env.sh
-</code></pre></div>
-5. Create the `src` directory and clone external dependent repositories into it.
-<div class="highlight"><pre><span></span><code>mkdir src
-vcs import src &lt; autoware.repos
-</code></pre></div>
-6. Install dependent ROS packages.
-<div class="highlight"><pre><span></span><code>source /opt/ros/humble/setup.bash
-rosdep update
-rosdep install -y --from-paths src --ignore-src --rosdistro $ROS_DISTRO
-</code></pre></div>
-7. Build the workspace.
-<div class="highlight"><pre><span></span><code>colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release -DCMAKE_CXX_FLAGS=&quot;-w&quot;
-</code></pre></div>
-8. Launch Autoware.
-
-    !!! warning
-
-        `<your mapfile location>` must be changed arbitrarily. When specifying the path the `~` operator cannot be used - please specify absolute full path.
-<div class="highlight"><pre><span></span><code>source install/setup.bash
-ros2 launch autoware_launch e2e_simulator.launch.xml vehicle_model:=sample_vehicle sensor_model:=awsim_sensor_kit map_path:=&lt;your mapfile location&gt;
-</code></pre></div>
-![](Image_2.png)
-
-## 5. Let's run the self-Driving simulation
-
-1. Launch AWSIM and Autoware according to the steps described earlier in this document.
-![](Image_top.png)
-
-2. The Autoware will automatically set its pose estimation as presented below.
-![](Image_Initial.png)
-
-3. Set the navigation goal for the vehicle.
-![](Image_goal_0.png)
-![](Image_goal_1.png)
-
-4. Optionally, you can define an intermediate point through which the vehicle will travel on its way to the destination.
-![](Image_checkpoint_0.png)
-The generated path can be seen on the image below.
-![](Image_path.png)
-
-5. Enable self-driving.
-
-To make the vehicle start navigating please engage it's operation using the command below.
-
-<div class="highlight"><pre><span></span><code>cd autoware
-source install/setup.bash
-ros2 topic pub /autoware/engage autoware_auto_vehicle_msgs/msg/Engage &#39;{engage: True}&#39; -1
-</code></pre></div>
-
-![](Image_running.png)
-
-The self-driving simulation demo has been successfully launched!
-
-## 6. Troubleshooting
-
-In case of any problems with running the sample AWSIM binary with Autoware, start with checking our [Troubleshooting page](https://tier4.github.io/AWSIM/DeveloperGuide/TroubleShooting/) with the most common problems.
-
-## Appendix
-- [AWSIM ROS2 topic list](../../Components/ROS2/ROS2TopicList/index.md) -->
+<h3 id="pairsim-workspace">PAIRSim Workspace</h3>
+<p>Refer to the PAIRSim Workspace documentation on how to get started <a href="https://github.com/alvinye9/PAIRSim_ws">here</a>.</p>
 
 
 

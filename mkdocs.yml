@@ -37,7 +37,7 @@ nav:
       - Purdue AI Racing Gallery: RacingSim/PAIR/index.md
 
   - Getting started:
-    - Quick Start Demo: GettingStarted/QuickStartDemo/index.md
+    - PAIRSim Workspace Demo: GettingStarted/QuickStartDemo/index.md
     - Setup Unity Project: GettingStarted/SetupUnityProject/index.md
 
 

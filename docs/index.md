@@ -2,6 +2,8 @@
 
 A vehicle simulator for the Dallara AV-24. This simulator improves upon the original AWSIM developed by Autoware, and provides a high-fidelity testbed validated against real-world data. Purdue-AI-Racing-Simulator (PAIRSIM) interfaces with an autonomy stack to allow for testing of autonomous racing software with similar dynamics, sensors, and interface to the real car.
 
+![](GettingStarted/QuickStartDemo/Image_top.png)
+
 ## Documentation
 1. How to use PAIRSIM(this page)
 
@@ -17,7 +19,7 @@ A vehicle simulator for the Dallara AV-24. This simulator improves upon the orig
 
 There are two options to run racing simulations:
 
-1. Download binary (only compatible with Linux) (recommended)
+1. Download Linux-compatible binary (recommended)
 
     a. Download the latest PAIRSIM racing simulator [here](https://github.com/alvinye9/Purdue-AI-Racing-Simulator/releases)
 
@@ -182,7 +184,7 @@ Due to the large number of vehicle/tire parameters, they are not accessible thro
 To start a simulation, click 'Drive' from the 'Scenario Setup' menu.
 ![](RacingSim/Overview/Image_camera1.png)
 
-- 'C' cycles through various camera angles
+- 'Ctrl + C' cycles through various camera angles
 - Pause button -> Restart button relaunches the entire scenario
 - The HUD shows steering motor input, throttle input, brake input, current gear, speed, rpm, ct_state, sys_state, tire tempuratures, and lap times.
 - Inject Steering Disturbance button mimics realistic pulse of steering noise seen in real-life AV24 low-level actuator
