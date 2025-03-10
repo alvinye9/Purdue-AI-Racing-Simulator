@@ -1,6 +1,7 @@
 # Sensors
 
 The AV-24 is instrumented with various sensors for localization, perception, control, and safety.
+PAIRSim simulates most of these sensors.
 
 ## Vehicle sensors
 
@@ -56,7 +57,7 @@ The AV-24 has three GNSS/INS units:
 - 2 Novatel PwrPak7D-E1
 
 ## Lidar
-The AV-24 has four Luminar lidars.
+The AV-24 has three Luminar lidars.
 
 ## Camera
 The AV-24 has six Allied Vision cameras.

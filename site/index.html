@@ -412,6 +412,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lidar-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      LiDAR Sensors
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -665,6 +674,15 @@
   <a href="#camera-sensors" class="md-nav__link">
     <span class="md-ellipsis">
       Camera Sensors
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lidar-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      LiDAR Sensors
     </span>
   </a>
   
@@ -1151,6 +1169,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lidar-sensors" class="md-nav__link">
+    <span class="md-ellipsis">
+      LiDAR Sensors
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1226,9 +1253,9 @@
 <!-- ![](RacingSim/Overview/Image_import2.png) -->
 
 <h2 id="scenario-setup-via-gui">Scenario Setup (via GUI)</h2>
-<p><img alt="" src="RacingSim/Overview/Image_main_menu.png" />
+<p><img alt="" src="RacingSim/Overview/Image_main_menu2.png" />
 In the main menu, click the 'Scenario Setup' button.
-<img alt="" src="RacingSim/Overview/Image_scenario_menu_highlighted.png" /></p>
+<img alt="" src="RacingSim/Overview/Image_scenario_menu_highlighted2.png" /></p>
 <ul>
 <li>
 <p><span style="color:pink;">PINK</span> Select a saved scenario from the dropdown or create a new one (scenario and vehicle setups are saved by default in your ~/PAIRSIM_config folder (Further Vehicle/Tire Parameter Configuration))</p>
@@ -1276,7 +1303,7 @@ In the main menu, click the 'Scenario Setup' button.
 </ul>
 <h2 id="vehicle-setup-via-gui">Vehicle Setup (via GUI)</h2>
 <p>To view or create a setup, click the 'Vehicle Setup' button.
-<img alt="" src="RacingSim/Overview/Image_vehicle_setup.png" />
+<img alt="" src="RacingSim/Overview/Image_vehicle_setup2.png" />
 - Modify an existing setup or save a new one with the 'Save' button
 - To fill in suggested values, press the 'Default' button
 - Differential
@@ -1297,7 +1324,7 @@ In the main menu, click the 'Scenario Setup' button.
 <p>PAIRSIM has input fields under sensor setup to configure the gaussian noise values of the corresponding actuator/sensor values. (Default values are 0.0)</p>
 <p>You can disable high-level or low-level sensors to simulate faults.</p>
 <p>You can also configure the perception sensors.</p>
-<p><img alt="" src="RacingSim/Overview/Image_sensor_setup.png" /></p>
+<p><img alt="" src="RacingSim/Overview/Image_sensor_setup2.png" /></p>
 <h2 id="further-vehicletire-parameter-configuration-via-config-files">Further Vehicle/Tire Parameter configuration (via config files)</h2>
 <h3 id="part-i-loading-setup-configuration-files-via-gui">PART I. Loading Setup Configuration Files via GUI</h3>
 <p>Previously discussed was how to use the dropdowns on the left side of the PAIRSIM GUI to access configuration files (by default saved in ~/PAIRSIM_config)</p>
@@ -1403,6 +1430,10 @@ Due to the large number of vehicle/tire parameters, they are not accessible thro
 <h3 id="camera-sensors">Camera Sensors</h3>
 <p>The publishers for each of the 6 on-board camera sensors will publish a <code>sensor_msgs/Image.msg</code> if previously enabled in the Sensor Setup menu. All 6 cameras may consume a lot of resources so it is recommended you enable only a few at a time.</p>
 <p><img alt="" src="RacingSim/Overview/Image_cameras.png" /></p>
+<h3 id="lidar-sensors">LiDAR Sensors</h3>
+<p>The publishers for each of the 3 on-board LiDAR sensors will publish a <code>sensor_msgs/PointCloud2.msg</code> if previously enabled in the Sensor Setup menu. All 3 LiDARs can run concurrently with little computational strain.
+You can visualize the point cloud with a visualizer like RVIZ2</p>
+<p><img alt="" src="RacingSim/Overview/Image_LiDAR.png" /></p>
 <h2 id="copyright-and-license">Copyright and License</h2>
 <p>Copyright 2024 Purdue AI Racing</p>
 <p>All code is licensed under the Apache 2.0 License. All assets are distributed under the CC BY-NC License.</p>

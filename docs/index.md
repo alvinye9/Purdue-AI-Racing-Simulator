@@ -42,9 +42,9 @@ There are two options to run racing simulations:
 <!-- ![](RacingSim/Overview/Image_import2.png) -->
 
 ## Scenario Setup (via GUI)
-![](RacingSim/Overview/Image_main_menu.png)
+![](RacingSim/Overview/Image_main_menu2.png)
 In the main menu, click the 'Scenario Setup' button.
-![](RacingSim/Overview/Image_scenario_menu_highlighted.png)
+![](RacingSim/Overview/Image_scenario_menu_highlighted2.png)
 
 - <span style="color:pink;">PINK</span> Select a saved scenario from the dropdown or create a new one (scenario and vehicle setups are saved by default in your ~/PAIRSIM_config folder (Further Vehicle/Tire Parameter Configuration))
 
@@ -74,7 +74,7 @@ In the main menu, click the 'Scenario Setup' button.
 
 ## Vehicle Setup (via GUI)
 To view or create a setup, click the 'Vehicle Setup' button.
-![](RacingSim/Overview/Image_vehicle_setup.png)
+![](RacingSim/Overview/Image_vehicle_setup2.png)
 - Modify an existing setup or save a new one with the 'Save' button
 - To fill in suggested values, press the 'Default' button
 - Differential
@@ -100,7 +100,7 @@ You can disable high-level or low-level sensors to simulate faults.
 
 You can also configure the perception sensors.
 
-![](RacingSim/Overview/Image_sensor_setup.png)
+![](RacingSim/Overview/Image_sensor_setup2.png)
 
 ## Further Vehicle/Tire Parameter configuration (via config files)
 
@@ -221,6 +221,13 @@ PAIRSIM supports raceline visualization, where the raceline being sent by the au
 The publishers for each of the 6 on-board camera sensors will publish a `sensor_msgs/Image.msg` if previously enabled in the Sensor Setup menu. All 6 cameras may consume a lot of resources so it is recommended you enable only a few at a time.
 
 ![](RacingSim/Overview/Image_cameras.png)
+
+### LiDAR Sensors
+
+The publishers for each of the 3 on-board LiDAR sensors will publish a `sensor_msgs/PointCloud2.msg` if previously enabled in the Sensor Setup menu. All 3 LiDARs can run concurrently with little computational strain.
+You can visualize the point cloud with a visualizer like RVIZ2
+
+![](RacingSim/Overview/Image_LiDAR.png)
  
 ## Copyright and License
 
