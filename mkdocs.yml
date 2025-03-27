@@ -16,6 +16,8 @@ theme:
     - content.tabs.link
   icon:
     repo: fontawesome/brands/github
+  logo: Logos/Purdue_logo.png
+  favicon: Logos/Purdue_logo.png
 
 markdown_extensions:
   - tables
