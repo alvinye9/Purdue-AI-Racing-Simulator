@@ -1,6 +1,6 @@
 # How to Use PAIRSIM
 
-A vehicle simulator for the Dallara AV-24. This simulator improves upon the original AWSIM developed by Autoware, and provides a high-fidelity testbed validated against real-world data. Purdue-AI-Racing-Simulator (PAIRSIM) interfaces with an autonomy stack to allow for testing of autonomous racing software with similar dynamics, sensors, and interface to the real car.
+A vehicle simulator for the Dallara AV-24. This simulator is built off the original AWSIM developed by tier4, and provides a high-fidelity testbed validated against real-world data. Purdue-AI-Racing-Simulator (PAIRSIM) interfaces with an autonomy stack to allow for testing of autonomous racing software with similar dynamics, sensors, and interface to the real car.
 
 ![](GettingStarted/QuickStartDemo/Image_top.png)
 
@@ -56,7 +56,7 @@ In the main menu, click the 'Scenario Setup' button.
     - The most recently saved scenario will be at the top of the dropdown for convenient testing
     - You can overwrite an existing configuration file of the same name
 
-- <span style="color:purple;">PURPLE</span> The option to "Hot start raptor" will start the low level ECU in sys_state = 9 (as explained in [Sensors - Raptor](../Sensors/index.md))
+- <span style="color:purple;">PURPLE</span> The option to "Hot start raptor" will start the low level ECU in sys_state = 9 
 
 - <span style="color:blue;">BLUE</span> Click "Select a track" dropdown to select a racetrack 
 
@@ -70,7 +70,7 @@ In the main menu, click the 'Scenario Setup' button.
 
 - <span style="color:green;">GREEN</span> Click "Drive" to start simulation with all configurations
 
-- <span style="color:white;">WHITE</span> Select "ROS" for standard operation with autonomy stack, select "TELEOP" to allow control via keyboard. See [ Simulation Operation](#simulation-operation)
+- <span style="color:black;">WHITE</span> Select "ROS" for standard operation with autonomy stack, select "TELEOP" to allow control via keyboard. See [ Simulation Operation](#simulation-operation)
 
 ## Vehicle Setup (via GUI)
 To view or create a setup, click the 'Vehicle Setup' button.
